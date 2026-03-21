@@ -18,7 +18,14 @@ import {
   Globe,
 } from "lucide-react";
 
-const frameworkBadges = ["SOC 2", "ISO 27001", "GDPR", "HIPAA", "PCI DSS", "NIST CSF"];
+const frameworkBadges = [
+  "SOC 2",
+  "ISO 27001",
+  "GDPR",
+  "HIPAA",
+  "PCI DSS",
+  "NIST CSF",
+];
 
 const painPoints = [
   {
@@ -31,23 +38,28 @@ const painPoints = [
   {
     icon: Users,
     pain: "Scattered control ownership",
-    painDesc: "Teams lose track of who owns what and what still needs attention.",
+    painDesc:
+      "Teams lose track of who owns what and what still needs attention.",
     outcome: "Assign owners clearly",
     outcomeDesc: "Track controls, tasks, reviews, and due dates in one place.",
   },
   {
     icon: AlertTriangle,
     pain: "Risk workflows without visibility",
-    painDesc: "Vendor and internal risks live across emails, docs, and tickets.",
+    painDesc:
+      "Vendor and internal risks live across emails, docs, and tickets.",
     outcome: "Centralize risk management",
-    outcomeDesc: "Log, prioritize, review, and remediate risks with an audit trail.",
+    outcomeDesc:
+      "Log, prioritize, review, and remediate risks with an audit trail.",
   },
   {
     icon: Zap,
     pain: "Security reviews drain time",
-    painDesc: "Answering questionnaires repeatedly slows deals and overloads teams.",
+    painDesc:
+      "Answering questionnaires repeatedly slows deals and overloads teams.",
     outcome: "Prove trust faster",
-    outcomeDesc: "Share security information and reduce repetitive review work.",
+    outcomeDesc:
+      "Share security information and reduce repetitive review work.",
   },
 ];
 
@@ -160,15 +172,16 @@ export default function HomePage() {
 
           {/* Headline */}
           <h1 className="heading-display text-white mb-6 max-w-4xl mx-auto">
-            Continuous GRC for{" "}
+            AI-driven continuous GRC for{" "}
             <span className="bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">
               modern cloud teams
             </span>
           </h1>
 
           <p className="text-xl text-slate-300 leading-relaxed mb-10 max-w-2xl mx-auto">
-            CloudAnzen helps you automate compliance, monitor controls continuously, manage vendor
-            and internal risk, and stay audit-ready from one platform.
+            CloudAnzen helps you automate compliance, monitor controls
+            continuously, manage vendor and internal risk, stay audit-ready, and
+            guide teams with AI-assisted GRC workflows from one platform.
           </p>
 
           {/* CTAs */}
@@ -214,12 +227,42 @@ export default function HomePage() {
                 </div>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                   {[
-                    { label: "SOC 2 Readiness", value: "87%", color: "text-teal-400", sub: "13 controls need attention" },
-                    { label: "Control Health", value: "142/163", color: "text-blue-400", sub: "passing continuously" },
-                    { label: "Open Risks", value: "4", color: "text-orange-400", sub: "2 critical, 2 medium" },
-                    { label: "Vendor Reviews", value: "6 pending", color: "text-violet-400", sub: "due this month" },
-                    { label: "Evidence Collected", value: "98%", color: "text-emerald-400", sub: "auto-collected last 30d" },
-                    { label: "Audit Readiness Score", value: "A−", color: "text-blue-300", sub: "improving week over week" },
+                    {
+                      label: "SOC 2 Readiness",
+                      value: "87%",
+                      color: "text-teal-400",
+                      sub: "13 controls need attention",
+                    },
+                    {
+                      label: "Control Health",
+                      value: "142/163",
+                      color: "text-blue-400",
+                      sub: "passing continuously",
+                    },
+                    {
+                      label: "Open Risks",
+                      value: "4",
+                      color: "text-orange-400",
+                      sub: "2 critical, 2 medium",
+                    },
+                    {
+                      label: "Vendor Reviews",
+                      value: "6 pending",
+                      color: "text-violet-400",
+                      sub: "due this month",
+                    },
+                    {
+                      label: "Evidence Collected",
+                      value: "98%",
+                      color: "text-emerald-400",
+                      sub: "auto-collected last 30d",
+                    },
+                    {
+                      label: "Audit Readiness Score",
+                      value: "A−",
+                      color: "text-blue-300",
+                      sub: "improving week over week",
+                    },
                   ].map(({ label, value, color, sub }) => (
                     <div key={label} className="bg-slate-800/80 rounded-lg p-4">
                       <p className="text-xs text-slate-500 mb-1">{label}</p>
@@ -241,16 +284,20 @@ export default function HomePage() {
             Trusted by security-conscious teams
           </p>
           <div className="flex flex-wrap gap-8 justify-center items-center">
-            {["SaaS Companies", "Fintech", "Healthcare", "AI companies", "Cloud-native teams"].map(
-              (t) => (
-                <span
-                  key={t}
-                  className="px-5 py-2.5 rounded-full bg-white border border-slate-200 text-sm text-slate-600 font-medium shadow-sm"
-                >
-                  {t}
-                </span>
-              )
-            )}
+            {[
+              "SaaS Companies",
+              "Fintech",
+              "Healthcare",
+              "AI companies",
+              "Cloud-native teams",
+            ].map((t) => (
+              <span
+                key={t}
+                className="px-5 py-2.5 rounded-full bg-white border border-slate-200 text-sm text-slate-600 font-medium shadow-sm"
+              >
+                {t}
+              </span>
+            ))}
           </div>
         </div>
       </section>
@@ -262,36 +309,48 @@ export default function HomePage() {
             <span className="text-sm font-semibold text-blue-600 uppercase tracking-wider mb-3 block">
               The Problem
             </span>
-            <h2 className="heading-xl text-slate-900 mb-4">Move GRC out of spreadsheets</h2>
+            <h2 className="heading-xl text-slate-900 mb-4">
+              Move GRC out of spreadsheets
+            </h2>
             <p className="text-lg text-slate-500 max-w-2xl mx-auto">
-              Most teams are managing compliance through a combination of spreadsheets, shared
-              drives, and Slack threads. There&apos;s a better way.
+              Most teams are managing compliance through a combination of
+              spreadsheets, shared drives, and Slack threads. There&apos;s a
+              better way.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {painPoints.map(({ icon: Icon, pain, painDesc, outcome, outcomeDesc }) => (
-              <div key={pain} className="group rounded-2xl border border-slate-200 overflow-hidden hover:shadow-lg transition-shadow">
-                {/* Pain */}
-                <div className="p-6 bg-slate-50 border-b border-slate-200">
-                  <div className="w-10 h-10 rounded-lg bg-red-100 flex items-center justify-center mb-4">
-                    <Icon className="w-5 h-5 text-red-500" />
+            {painPoints.map(
+              ({ icon: Icon, pain, painDesc, outcome, outcomeDesc }) => (
+                <div
+                  key={pain}
+                  className="group rounded-2xl border border-slate-200 overflow-hidden hover:shadow-lg transition-shadow"
+                >
+                  {/* Pain */}
+                  <div className="p-6 bg-slate-50 border-b border-slate-200">
+                    <div className="w-10 h-10 rounded-lg bg-red-100 flex items-center justify-center mb-4">
+                      <Icon className="w-5 h-5 text-red-500" />
+                    </div>
+                    <h3 className="font-semibold text-slate-900 mb-2 text-sm">
+                      {pain}
+                    </h3>
+                    <p className="text-sm text-slate-500">{painDesc}</p>
                   </div>
-                  <h3 className="font-semibold text-slate-900 mb-2 text-sm">{pain}</h3>
-                  <p className="text-sm text-slate-500">{painDesc}</p>
-                </div>
-                {/* Outcome */}
-                <div className="p-6 bg-white">
-                  <div className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" />
-                    <div>
-                      <h4 className="font-semibold text-slate-900 text-sm mb-1">{outcome}</h4>
-                      <p className="text-sm text-slate-500">{outcomeDesc}</p>
+                  {/* Outcome */}
+                  <div className="p-6 bg-white">
+                    <div className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <h4 className="font-semibold text-slate-900 text-sm mb-1">
+                          {outcome}
+                        </h4>
+                        <p className="text-sm text-slate-500">{outcomeDesc}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ),
+            )}
           </div>
         </div>
       </section>
@@ -307,8 +366,8 @@ export default function HomePage() {
               One platform for compliance, risk, and trust
             </h2>
             <p className="text-lg text-slate-500 max-w-2xl mx-auto">
-              Every module works together so your controls, evidence, risks, and policies stay
-              synchronized — no duct tape required.
+              Every module works together so your controls, evidence, risks, and
+              policies stay synchronized — no duct tape required.
             </p>
           </div>
 
@@ -325,7 +384,9 @@ export default function HomePage() {
                   <Icon className="w-5 h-5 text-white" />
                 </div>
                 <h3 className="font-semibold text-slate-900 mb-2">{title}</h3>
-                <p className="text-sm text-slate-500 leading-relaxed flex-1">{desc}</p>
+                <p className="text-sm text-slate-500 leading-relaxed flex-1">
+                  {desc}
+                </p>
                 <div className="flex items-center gap-1 text-sm text-blue-600 font-medium mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
                   Learn more <ArrowRight className="w-3.5 h-3.5" />
                 </div>
@@ -362,7 +423,9 @@ export default function HomePage() {
                     <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-600 to-teal-500 flex items-center justify-center shadow-lg">
                       <Icon className="w-6 h-6 text-white" />
                     </div>
-                    <span className="text-4xl font-black text-slate-700">{step}</span>
+                    <span className="text-4xl font-black text-slate-700">
+                      {step}
+                    </span>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{title}</h3>
                   <p className="text-slate-400 leading-relaxed">{desc}</p>
@@ -373,18 +436,21 @@ export default function HomePage() {
 
           {/* Flow diagram */}
           <div className="flex flex-wrap items-center justify-center gap-3 py-6 px-8 rounded-2xl bg-slate-800/60 border border-slate-700">
-            {["Integrations", "Control Monitoring", "Risks & Tasks", "Audit & Trust Center"].map(
-              (step, i) => (
-                <div key={step} className="flex items-center gap-3">
-                  <span className="px-4 py-2 rounded-lg bg-slate-700 text-sm text-slate-200 font-medium border border-slate-600">
-                    {step}
-                  </span>
-                  {i < 3 && (
-                    <ArrowRight className="w-4 h-4 text-blue-400 flex-shrink-0" />
-                  )}
-                </div>
-              )
-            )}
+            {[
+              "Integrations",
+              "Control Monitoring",
+              "Risks & Tasks",
+              "Audit & Trust Center",
+            ].map((step, i) => (
+              <div key={step} className="flex items-center gap-3">
+                <span className="px-4 py-2 rounded-lg bg-slate-700 text-sm text-slate-200 font-medium border border-slate-600">
+                  {step}
+                </span>
+                {i < 3 && (
+                  <ArrowRight className="w-4 h-4 text-blue-400 flex-shrink-0" />
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -401,8 +467,9 @@ export default function HomePage() {
                 Support multiple frameworks without duplicating work
               </h2>
               <p className="text-lg text-slate-500 mb-8">
-                Build once and reuse controls across your security and privacy program. CloudAnzen
-                maps shared controls automatically, so you never duplicate effort across frameworks.
+                Build once and reuse controls across your security and privacy
+                program. CloudAnzen maps shared controls automatically, so you
+                never duplicate effort across frameworks.
               </p>
               <ul className="space-y-3">
                 {[
@@ -426,12 +493,36 @@ export default function HomePage() {
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
               {[
-                { name: "SOC 2", color: "from-blue-600 to-blue-700", href: "/frameworks/soc2" },
-                { name: "ISO 27001", color: "from-indigo-600 to-indigo-700", href: "/frameworks/iso27001" },
-                { name: "GDPR", color: "from-teal-600 to-teal-700", href: "/frameworks/gdpr" },
-                { name: "HIPAA", color: "from-emerald-600 to-emerald-700", href: "/frameworks/hipaa" },
-                { name: "PCI DSS", color: "from-violet-600 to-violet-700", href: "/frameworks/pci-dss" },
-                { name: "NIST CSF", color: "from-sky-600 to-sky-700", href: "/frameworks/nist-csf" },
+                {
+                  name: "SOC 2",
+                  color: "from-blue-600 to-blue-700",
+                  href: "/frameworks/soc2",
+                },
+                {
+                  name: "ISO 27001",
+                  color: "from-indigo-600 to-indigo-700",
+                  href: "/frameworks/iso27001",
+                },
+                {
+                  name: "GDPR",
+                  color: "from-teal-600 to-teal-700",
+                  href: "/frameworks/gdpr",
+                },
+                {
+                  name: "HIPAA",
+                  color: "from-emerald-600 to-emerald-700",
+                  href: "/frameworks/hipaa",
+                },
+                {
+                  name: "PCI DSS",
+                  color: "from-violet-600 to-violet-700",
+                  href: "/frameworks/pci-dss",
+                },
+                {
+                  name: "NIST CSF",
+                  color: "from-sky-600 to-sky-700",
+                  href: "/frameworks/nist-csf",
+                },
               ].map(({ name, color, href }) => (
                 <Link
                   key={name}
@@ -457,14 +548,18 @@ export default function HomePage() {
               Connect the systems your controls already depend on
             </h2>
             <p className="text-lg text-slate-500 max-w-2xl mx-auto">
-              CloudAnzen pulls evidence automatically from your cloud, identity, HR, and
-              engineering tools — so your controls are always up to date.
+              CloudAnzen pulls evidence automatically from your cloud, identity,
+              HR, and engineering tools — so your controls are always up to
+              date.
             </p>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {integrationCategories.map(({ cat, items }) => (
-              <div key={cat} className="bg-white rounded-2xl border border-slate-200 p-6 hover:shadow-md transition-shadow">
+              <div
+                key={cat}
+                className="bg-white rounded-2xl border border-slate-200 p-6 hover:shadow-md transition-shadow"
+              >
                 <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-4">
                   {cat}
                 </p>
@@ -484,7 +579,10 @@ export default function HomePage() {
 
           <p className="text-center text-sm text-slate-500 mt-8">
             And dozens more via API and custom integrations.{" "}
-            <Link href="/platform/integrations" className="text-blue-600 hover:underline">
+            <Link
+              href="/platform/integrations"
+              className="text-blue-600 hover:underline"
+            >
               See all integrations →
             </Link>
           </p>
@@ -526,7 +624,9 @@ export default function HomePage() {
                       <CheckCircle2 className="w-4 h-4 text-teal-600" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-slate-900 mb-1">{title}</h4>
+                      <h4 className="font-semibold text-slate-900 mb-1">
+                        {title}
+                      </h4>
                       <p className="text-sm text-slate-500">{desc}</p>
                     </div>
                   </li>
@@ -544,11 +644,18 @@ export default function HomePage() {
             <div className="rounded-2xl border border-slate-200 overflow-hidden shadow-2xl">
               <div className="bg-slate-900 px-6 py-4 flex items-center gap-2">
                 <Shield className="w-5 h-5 text-teal-400" />
-                <span className="text-white font-semibold text-sm">Trust Center — AcmeCorp</span>
+                <span className="text-white font-semibold text-sm">
+                  Trust Center — AcmeCorp
+                </span>
               </div>
               <div className="bg-white p-6 space-y-4">
                 <div className="flex flex-wrap gap-3">
-                  {["SOC 2 Type II", "ISO 27001", "GDPR Compliant", "HIPAA Ready"].map((b) => (
+                  {[
+                    "SOC 2 Type II",
+                    "ISO 27001",
+                    "GDPR Compliant",
+                    "HIPAA Ready",
+                  ].map((b) => (
                     <span
                       key={b}
                       className="px-3 py-1.5 rounded-full bg-teal-50 border border-teal-200 text-teal-700 text-xs font-semibold"
@@ -570,15 +677,17 @@ export default function HomePage() {
                     >
                       <div className="flex items-center gap-3">
                         <FileText className="w-4 h-4 text-slate-400" />
-                        <span className="text-sm text-slate-700 font-medium">{doc}</span>
+                        <span className="text-sm text-slate-700 font-medium">
+                          {doc}
+                        </span>
                       </div>
                       <span
                         className={`text-xs px-2.5 py-1 rounded-full font-medium ${
                           status === "Public"
                             ? "bg-green-100 text-green-700"
                             : status === "NDA Required"
-                            ? "bg-amber-100 text-amber-700"
-                            : "bg-blue-100 text-blue-700"
+                              ? "bg-amber-100 text-amber-700"
+                              : "bg-blue-100 text-blue-700"
                         }`}
                       >
                         {status}
@@ -603,10 +712,13 @@ export default function HomePage() {
             Built to help lean teams move faster
           </h2>
           <blockquote className="relative">
-            <div className="text-6xl text-white/20 font-serif absolute -top-4 left-0">&ldquo;</div>
+            <div className="text-6xl text-white/20 font-serif absolute -top-4 left-0">
+              &ldquo;
+            </div>
             <p className="text-xl md:text-2xl text-white/90 leading-relaxed italic mb-8 relative z-10">
-              CloudAnzen gave us a single place to manage controls, evidence, vendor reviews, and
-              audit prep. What used to take weeks now feels operational.
+              CloudAnzen gave us a single place to manage controls, evidence,
+              vendor reviews, and audit prep. What used to take weeks now feels
+              operational.
             </p>
           </blockquote>
           <div className="flex items-center justify-center gap-4">
@@ -615,7 +727,9 @@ export default function HomePage() {
             </div>
             <div className="text-left">
               <p className="text-white font-semibold">Jordan Torres</p>
-              <p className="text-blue-200 text-sm">Head of Security, Fintech startup</p>
+              <p className="text-blue-200 text-sm">
+                Head of Security, Fintech startup
+              </p>
             </div>
           </div>
         </div>
@@ -633,8 +747,8 @@ export default function HomePage() {
             Ready to automate your GRC program?
           </h2>
           <p className="text-lg text-slate-400 mb-10 max-w-xl mx-auto">
-            Join security-conscious teams using CloudAnzen to stay audit-ready, reduce risk, and
-            prove trust at scale.
+            Join security-conscious teams using CloudAnzen to stay audit-ready,
+            reduce risk, and prove trust at scale.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

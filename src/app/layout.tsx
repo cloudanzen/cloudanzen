@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import WebsiteAiChatbot from "@/components/WebsiteAiChatbot";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,11 +17,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "CloudAnzen — Continuous GRC for Modern Cloud Teams",
+    default: "CloudAnzen — AI-Driven Continuous GRC for Modern Cloud Teams",
     template: "%s | CloudAnzen",
   },
   description:
-    "CloudAnzen helps modern companies automate compliance, monitor controls continuously, manage vendor and internal risk, and stay audit-ready from one platform. SOC 2, ISO 27001, GDPR, HIPAA and more.",
+    "CloudAnzen helps modern companies run AI-driven continuous GRC with compliance automation, continuous control monitoring, audit readiness, and vendor and internal risk management from one platform.",
   keywords: [
     "GRC platform",
     "compliance automation",
@@ -40,9 +41,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.cloudanzen.com",
     siteName: "CloudAnzen",
-    title: "CloudAnzen — Continuous GRC for Modern Cloud Teams",
+    title: "CloudAnzen — AI-Driven Continuous GRC for Modern Cloud Teams",
     description:
-      "Automate compliance, monitor controls, manage risk, and prove trust — without spreadsheet chaos.",
+      "Run AI-driven continuous GRC with faster audits, clearer control visibility, and less spreadsheet chaos.",
     images: [
       {
         url: "/og-image.png",
@@ -54,9 +55,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "CloudAnzen — Continuous GRC for Modern Cloud Teams",
+    title: "CloudAnzen — AI-Driven Continuous GRC for Modern Cloud Teams",
     description:
-      "Automate compliance, monitor controls, manage risk, and prove trust — without spreadsheet chaos.",
+      "Run AI-driven continuous GRC with faster audits, clearer control visibility, and less spreadsheet chaos.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -79,6 +80,7 @@ export default function RootLayout({
       >
         <Navbar />
         <main>{children}</main>
+        <WebsiteAiChatbot />
         <Footer />
       </body>
     </html>
