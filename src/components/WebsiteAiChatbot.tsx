@@ -2,15 +2,7 @@
 
 import { useMemo, useRef, useState } from "react";
 import Link from "next/link";
-import {
-  ArrowRight,
-  Bot,
-  MessageSquare,
-  Send,
-  ShieldCheck,
-  Sparkles,
-  X,
-} from "lucide-react";
+import { ArrowRight, Send, ShieldCheck, Sparkles, X } from "lucide-react";
 import { CHATBOT_SUGGESTIONS } from "@/lib/chatbot";
 
 type ChatMessage = {
@@ -31,6 +23,78 @@ const INITIAL_MESSAGES: ChatMessage[] = [
     text: "If you want a tailored walkthrough for your team, I can also point you to a live demo.",
   },
 ];
+
+function CloudAnzenAiMark({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 64 64"
+      aria-hidden="true"
+      className={className}
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect
+        x="19"
+        y="4"
+        width="26"
+        height="8"
+        rx="4"
+        fill="currentColor"
+        opacity="0.9"
+      />
+      <path
+        d="M32 12V18"
+        stroke="currentColor"
+        strokeWidth="3"
+        strokeLinecap="round"
+      />
+      <path
+        d="M8 32C13.5 20.5 22.3 15 32 15C41.7 15 50.5 20.5 56 32C50.5 43.5 41.7 49 32 49C22.3 49 13.5 43.5 8 32Z"
+        fill="url(#cloudanzen-ai-fill)"
+        stroke="currentColor"
+        strokeWidth="3"
+        strokeLinejoin="round"
+      />
+      <circle cx="32" cy="32" r="11" fill="currentColor" opacity="0.2" />
+      <circle cx="32" cy="32" r="7" fill="currentColor" />
+      <circle cx="43" cy="23" r="2.5" fill="currentColor" opacity="0.95" />
+      <circle cx="21" cy="23" r="2.5" fill="currentColor" opacity="0.95" />
+      <path
+        d="M25 41C26.9 43.2 29.2 44.2 32 44.2C34.8 44.2 37.1 43.2 39 41"
+        stroke="currentColor"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+      />
+      <path
+        d="M15 26L10 22"
+        stroke="currentColor"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        opacity="0.8"
+      />
+      <path
+        d="M49 26L54 22"
+        stroke="currentColor"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        opacity="0.8"
+      />
+      <defs>
+        <linearGradient
+          id="cloudanzen-ai-fill"
+          x1="8"
+          y1="15"
+          x2="56"
+          y2="49"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="currentColor" stopOpacity="0.14" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0.04" />
+        </linearGradient>
+      </defs>
+    </svg>
+  );
+}
 
 export default function WebsiteAiChatbot() {
   const [isOpen, setIsOpen] = useState(false);
@@ -108,8 +172,8 @@ export default function WebsiteAiChatbot() {
           <div className="bg-[linear-gradient(135deg,#0f172a_0%,#17356b_58%,#0d9488_100%)] px-5 py-4 text-white">
             <div className="flex items-start justify-between gap-4">
               <div className="flex items-start gap-3">
-                <div className="rounded-2xl bg-white/12 p-2.5 backdrop-blur-sm">
-                  <Bot className="h-5 w-5" />
+                <div className="rounded-2xl bg-white/12 p-2.5 text-white backdrop-blur-sm">
+                  <CloudAnzenAiMark className="h-5 w-5" />
                 </div>
                 <div>
                   <p className="text-sm font-semibold">CloudAnzen AI guide</p>
@@ -239,7 +303,7 @@ export default function WebsiteAiChatbot() {
         className="inline-flex items-center gap-3 rounded-full bg-slate-950 px-4 py-3 text-sm font-semibold text-white shadow-[0_20px_50px_rgba(15,23,42,0.35)] transition hover:-translate-y-0.5 hover:bg-slate-800"
       >
         <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[linear-gradient(135deg,#2563eb_0%,#14b8a6_100%)] text-white">
-          <MessageSquare className="h-4 w-4" />
+          <CloudAnzenAiMark className="h-5 w-5" />
         </span>
         <span className="text-left">
           <span className="block text-sm">Ask the AI guide</span>

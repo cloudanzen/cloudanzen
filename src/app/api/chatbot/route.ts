@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import {
+  buildChatbotKnowledgeContext,
   buildFallbackAssistantReply,
   CHATBOT_SYSTEM_PROMPT,
   type ChatMessageInput,
@@ -46,14 +47,18 @@ export async function POST(req: NextRequest) {
 
     if (!apiKey) {
       return NextResponse.json({
-        reply: buildFallbackAssistantReply(latestUserMessage.text),
+        reply: buildFallbackAssistantReply(latestUserMessage.text, messages),
         source: "fallback",
       });
     }
 
     const model = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
+    const knowledgeContext = buildChatbotKnowledgeContext(
+      latestUserMessage.text,
+    );
     const input = [
       { role: "system", content: CHATBOT_SYSTEM_PROMPT },
+      { role: "system", content: `Knowledge context:\n${knowledgeContext}` },
       ...messages.slice(-8).map((message) => ({
         role: message.role,
         content: message.text,
@@ -75,13 +80,17 @@ export async function POST(req: NextRequest) {
     });
 
     if (!response.ok) {
-      const fallback = buildFallbackAssistantReply(latestUserMessage.text);
+      const fallback = buildFallbackAssistantReply(
+        latestUserMessage.text,
+        messages,
+      );
       return NextResponse.json({ reply: fallback, source: "fallback" });
     }
 
     const data = (await response.json()) as OpenAiResponse;
     const reply =
-      extractText(data) || buildFallbackAssistantReply(latestUserMessage.text);
+      extractText(data) ||
+      buildFallbackAssistantReply(latestUserMessage.text, messages);
 
     return NextResponse.json({ reply, source: "openai" });
   } catch (error) {
