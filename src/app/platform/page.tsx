@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import {
   ClipboardCheck, Eye, BarChart3, Building2, FileText,
@@ -89,6 +90,21 @@ export default function PlatformPage() {
         ctaPrimary={{ label: "Book a demo", href: "/demo" }}
         ctaSecondary={{ label: "See integrations", href: "/platform/integrations" }}
       />
+
+      <section className="relative -mt-12 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="rounded-2xl border border-slate-200 shadow-2xl overflow-hidden bg-white">
+            <Image
+              src="/screenshots/Home.png"
+              alt="CloudAnzen unified dashboard"
+              width={1200}
+              height={675}
+              className="w-full h-auto"
+              priority
+            />
+          </div>
+        </div>
+      </section>
 
       <section className="section-pad bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

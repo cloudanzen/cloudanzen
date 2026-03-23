@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import { FileText, CheckCircle2, ArrowRight, Users, Clock } from "lucide-react";
 
@@ -18,6 +19,22 @@ export default function PolicyManagementPage() {
         subtitle="Create, approve, distribute, and track every security policy from one place — with full version history and auditor access."
         ctaPrimary={{ label: "Book a demo", href: "/demo" }}
       />
+
+      <section className="relative -mt-12 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="rounded-2xl border border-slate-200 shadow-2xl overflow-hidden bg-white">
+            <Image
+              src="/screenshots/Compliance_Policy.png"
+              alt="CloudAnzen Policy Management interface"
+              width={1200}
+              height={675}
+              className="w-full h-auto"
+              priority
+            />
+          </div>
+        </div>
+      </section>
+
       <section className="section-pad bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8 mb-20">

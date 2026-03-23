@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import { Globe, Lock, FileText, ArrowRight, CheckCircle2 } from "lucide-react";
 
@@ -19,6 +20,22 @@ export default function TrustCenterPage() {
         subtitle="Publish a branded, always-current trust center that turns security into a competitive advantage and reduces repetitive questionnaire work."
         ctaPrimary={{ label: "Book a demo", href: "/demo" }}
       />
+
+      <section className="relative -mt-12 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="rounded-2xl border border-slate-200 shadow-2xl overflow-hidden bg-white">
+            <Image
+              src="/screenshots/TrustCenter.png"
+              alt="CloudAnzen Trust Center interface"
+              width={1200}
+              height={675}
+              className="w-full h-auto"
+              priority
+            />
+          </div>
+        </div>
+      </section>
+
       <section className="section-pad bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">

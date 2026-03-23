@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import { Building2, ClipboardCheck, ArrowRight, RotateCcw, ShieldAlert } from "lucide-react";
 
@@ -27,6 +28,22 @@ export default function VendorRiskPage() {
         ctaPrimary={{ label: "Book a demo", href: "/demo" }}
         ctaSecondary={{ label: "See platform overview", href: "/platform" }}
       />
+
+      <section className="relative -mt-12 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="rounded-2xl border border-slate-200 shadow-2xl overflow-hidden bg-white">
+            <Image
+              src="/screenshots/Vendor.png"
+              alt="CloudAnzen Vendor Risk Management interface"
+              width={1200}
+              height={675}
+              className="w-full h-auto"
+              priority
+            />
+          </div>
+        </div>
+      </section>
+
       <section className="section-pad bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8 mb-20">

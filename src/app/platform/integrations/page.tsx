@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import { ArrowRight, Plug2 } from "lucide-react";
 
@@ -29,6 +30,22 @@ export default function IntegrationsPage() {
         subtitle="CloudAnzen pulls evidence automatically from 100+ tools so your controls are always up to date and your audit package is never stale."
         ctaPrimary={{ label: "Book a demo", href: "/demo" }}
       />
+
+      <section className="relative -mt-12 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="rounded-2xl border border-slate-200 shadow-2xl overflow-hidden bg-white">
+            <Image
+              src="/screenshots/Integrations.png"
+              alt="CloudAnzen Integrations interface"
+              width={1200}
+              height={675}
+              className="w-full h-auto"
+              priority
+            />
+          </div>
+        </div>
+      </section>
+
       <section className="section-pad bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 mb-16">

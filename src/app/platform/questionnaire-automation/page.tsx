@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import { Zap, ArrowRight, Database, Clock } from "lucide-react";
 
@@ -18,6 +19,22 @@ export default function QuestionnaireAutomationPage() {
         subtitle="Build a reusable answer library, auto-populate common formats like SIG and CAIQ, and respond to security reviews in a fraction of the time."
         ctaPrimary={{ label: "Book a demo", href: "/demo" }}
       />
+
+      <section className="relative -mt-12 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="rounded-2xl border border-slate-200 shadow-2xl overflow-hidden bg-white">
+            <Image
+              src="/screenshots/AIAssistant.png"
+              alt="CloudAnzen Questionnaire Automation interface"
+              width={1200}
+              height={675}
+              className="w-full h-auto"
+              priority
+            />
+          </div>
+        </div>
+      </section>
+
       <section className="section-pad bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8 mb-20">
