@@ -51,6 +51,7 @@ const footerSections = [
       { label: "Templates", href: "/resources/templates" },
       { label: "Glossary", href: "/resources/glossary" },
       { label: "Compliance Checklists", href: "/resources/checklists" },
+      { label: "Help Center", href: "/help" },
     ],
   },
   {

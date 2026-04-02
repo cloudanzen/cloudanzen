@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
-import { BookOpen, FileText, Video, CheckSquare, Book, ArrowRight } from "lucide-react";
+import { BookOpen, FileText, Video, CheckSquare, Book, ArrowRight, LifeBuoy } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Resources",
@@ -60,6 +60,18 @@ const resources = [
       { title: "ISO 27001 Annex A Controls Explained", tag: "Reference", href: "#" },
     ],
     color: "bg-sky-50 text-sky-600",
+  },
+  {
+    icon: LifeBuoy,
+    category: "Help Center",
+    items: [
+      { title: "Getting Started with CloudAnzen", tag: "Guide", href: "/help/getting-started" },
+      { title: "Connecting Integrations", tag: "Guide", href: "/help/integrations" },
+      { title: "Setting Up Continuous Monitoring", tag: "Guide", href: "/help/continuous-monitoring" },
+      { title: "Preparing for Your Audit", tag: "Guide", href: "/help/audit-readiness" },
+      { title: "Browse All Help Articles", tag: "Help", href: "/help" },
+    ],
+    color: "bg-amber-50 text-amber-600",
   },
 ];
 
