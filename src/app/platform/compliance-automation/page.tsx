@@ -2,7 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
-import { CheckCircle2, ArrowRight, ClipboardCheck, FileText, BarChart3, Zap } from "lucide-react";
+import {
+  ArrowRight,
+  ClipboardCheck,
+  FileText,
+  BarChart3,
+  Zap,
+} from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Compliance Automation",
@@ -42,7 +48,10 @@ export default function ComplianceAutomationPage() {
         titleHighlight="eliminate manual effort"
         subtitle="Map controls to every framework you need, collect evidence automatically, and keep your compliance posture current — without spreadsheets."
         ctaPrimary={{ label: "Book a demo", href: "/demo" }}
-        ctaSecondary={{ label: "See supported frameworks", href: "/frameworks/soc2" }}
+        ctaSecondary={{
+          label: "See supported frameworks",
+          href: "/frameworks/soc2",
+        }}
       />
 
       <section className="relative -mt-12 pb-16 px-4 sm:px-6 lg:px-8">
@@ -64,13 +73,18 @@ export default function ComplianceAutomationPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8 mb-20">
             {features.map(({ icon: Icon, title, desc }) => (
-              <div key={title} className="flex gap-5 p-7 rounded-2xl border border-slate-200 bg-slate-50 hover:bg-white hover:shadow-md transition-all">
+              <div
+                key={title}
+                className="flex gap-5 p-7 rounded-2xl border border-slate-200 bg-slate-50 hover:bg-white hover:shadow-md transition-all"
+              >
                 <div className="w-11 h-11 rounded-xl bg-blue-100 flex items-center justify-center flex-shrink-0">
                   <Icon className="w-5 h-5 text-blue-600" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-slate-900 mb-2">{title}</h3>
-                  <p className="text-sm text-slate-500 leading-relaxed">{desc}</p>
+                  <p className="text-sm text-slate-500 leading-relaxed">
+                    {desc}
+                  </p>
                 </div>
               </div>
             ))}
@@ -81,8 +95,8 @@ export default function ComplianceAutomationPage() {
               Start your compliance program today
             </h2>
             <p className="text-slate-400 mb-8 max-w-lg mx-auto">
-              Most teams get their first framework mapped in under a week. Talk to our team to see
-              how CloudAnzen works for your stack.
+              Most teams get their first framework mapped in under a week. Talk
+              to our team to see how CloudAnzen works for your stack.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -105,12 +119,20 @@ export default function ComplianceAutomationPage() {
       {/* Key outcomes */}
       <section className="section-pad bg-slate-50 border-t border-slate-200">
         <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="heading-xl text-slate-900 mb-10">What teams achieve</h2>
+          <h2 className="heading-xl text-slate-900 mb-10">
+            What teams achieve
+          </h2>
           <div className="grid sm:grid-cols-3 gap-8">
             {[
-              { stat: "90%", label: "reduction in manual evidence collection time" },
+              {
+                stat: "90%",
+                label: "reduction in manual evidence collection time",
+              },
               { stat: "60%", label: "faster first audit cycle" },
-              { stat: "100%", label: "evidence coverage across all mapped controls" },
+              {
+                stat: "100%",
+                label: "evidence coverage across all mapped controls",
+              },
             ].map(({ stat, label }) => (
               <div key={label}>
                 <p className="text-4xl font-black text-blue-600 mb-2">{stat}</p>

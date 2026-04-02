@@ -42,7 +42,7 @@ const typeColors: Record<ResourceTypeSlug, string> = {
 
 export default function ResourcesPage() {
   const featuredResources = getFeaturedResources();
-  const latestResources = resourceArticles.slice(0, 8);
+  const latestResources = [...resourceArticles].slice(-8).reverse();
 
   return (
     <div>

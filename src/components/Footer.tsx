@@ -46,11 +46,11 @@ const footerSections = [
   {
     title: "Resources",
     links: [
+      { label: "All Resources", href: "/resources" },
+      { label: "SOC 2 Collection", href: "/collection/soc-2" },
+      { label: "ISO 27001 Collection", href: "/collection/iso-27001" },
+      { label: "Vendor Risk Collection", href: "/collection/vendor-risk" },
       { label: "Blog", href: "/resources/blog" },
-      { label: "Guides", href: "/resources/guides" },
-      { label: "Templates", href: "/resources/templates" },
-      { label: "Glossary", href: "/resources/glossary" },
-      { label: "Compliance Checklists", href: "/resources/checklists" },
       { label: "Help Center", href: "/help" },
     ],
   },

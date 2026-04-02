@@ -519,7 +519,645 @@ SOC 2 is often the first external assurance request for US SaaS sales. ISO 27001
 
 ## Many teams do both
 
-The real decision is sequencing. Shared controls make the second framework easier if you build your operating model carefully from day one.`,
+    The real decision is sequencing. Shared controls make the second framework easier if you build your operating model carefully from day one.`,
+  },
+  {
+    slug: "soc-2-evidence-matrix-template",
+    title: "SOC 2 evidence matrix template",
+    summary:
+      "A simple way to track each control, its evidence source, owner, and review cadence before fieldwork starts.",
+    type: "templates",
+    collection: "soc-2",
+    category: "SOC 2",
+    readTime: "5 min read",
+    tags: ["SOC 2", "Evidence", "Templates"],
+    content: `## Why teams need an evidence matrix
+
+Audit prep breaks down when controls are defined but evidence is still tribal knowledge. An evidence matrix closes that gap.
+
+## Recommended columns
+
+| Field | Why it matters |
+| --- | --- |
+| Control | The exact control being tested |
+| Owner | Who is accountable for the evidence |
+| Evidence source | System, report, or document used |
+| Frequency | How often evidence should refresh |
+| Reviewer | Who confirms it still supports the control |
+| Status | Ready, missing, stale, or under review |
+
+## Operating tip
+
+Do not wait until auditors ask for a sample. Build the matrix while implementing controls so missing evidence shows up early.
+
+## Best use
+
+Use the matrix during weekly readiness reviews to identify stale evidence before it becomes a late-stage blocker.`,
+  },
+  {
+    slug: "iso-27001-risk-register-structure",
+    title: "ISO 27001 risk register structure that teams can maintain",
+    summary:
+      "A practical structure for keeping risk treatment visible without turning the register into an archive.",
+    type: "guides",
+    collection: "iso-27001",
+    category: "ISO 27001",
+    readTime: "6 min read",
+    tags: ["ISO 27001", "Risk management", "Guides"],
+    content: `## The goal of the register
+
+An ISO 27001 risk register should help teams decide what to do next, not just prove that a workshop happened once.
+
+## Keep each entry lightweight
+
+At minimum, track:
+
+- Risk statement
+- Affected asset, system, or process
+- Likelihood and impact
+- Current controls
+- Treatment decision
+- Owner and target date
+
+## Where teams overcomplicate it
+
+They add too many scoring dimensions before they have consistent review discipline. Start with a scoring method your stakeholders will actually use.
+
+## Review cadence
+
+Revisit critical and high risks monthly. Review the full register quarterly. Tie updates to management review so the register stays alive.`,
+  },
+  {
+    slug: "gdpr-vendor-review-questions",
+    title: "GDPR vendor review questions for SaaS teams",
+    summary:
+      "A practical set of privacy-focused questions to ask subprocessors before approving them.",
+    type: "templates",
+    collection: "gdpr",
+    category: "GDPR",
+    readTime: "5 min read",
+    tags: ["GDPR", "Vendor risk", "Templates"],
+    content: `## What this template is for
+
+Use these questions when a vendor will process personal data, support production systems, or introduce transfer risk.
+
+## Core questions
+
+1. What categories of personal data will you process for us?
+2. In which regions will that data be stored or accessed?
+3. Which subprocessors support this service?
+4. What retention and deletion controls are available?
+5. How are security incidents communicated to customers?
+6. Can you support data subject request workflows if needed?
+
+## How to use responses
+
+Answers should inform both procurement approval and your RoPA or vendor inventory updates. If the review ends in email, the organization loses the context later.`,
+  },
+  {
+    slug: "hipaa-access-review-playbook",
+    title: "HIPAA access review playbook",
+    summary:
+      "A repeatable approach for reviewing access to systems that can expose or influence PHI handling.",
+    type: "guides",
+    collection: "hipaa",
+    category: "HIPAA",
+    readTime: "6 min read",
+    tags: ["HIPAA", "Access reviews", "Guides"],
+    content: `## Why access reviews matter
+
+For HIPAA-oriented environments, stale access is more than an admin issue. It becomes a trust, privacy, and evidence problem.
+
+## Scope the review correctly
+
+Start with systems that store PHI, administer PHI-relevant infrastructure, or can materially affect availability and confidentiality.
+
+## Run the review in stages
+
+### 1. Pull the entitlement snapshot
+
+Capture users, roles, MFA status, and last activity.
+
+### 2. Validate business need
+
+Managers and system owners should confirm whether access is still required.
+
+### 3. Remove or reduce unnecessary access
+
+Track removals and exceptions in a central workflow instead of ad hoc tickets alone.
+
+### 4. Preserve evidence
+
+Keep reviewer decisions, timestamps, and follow-up actions tied to the review cycle.`,
+  },
+  {
+    slug: "third-party-risk-review-checklist",
+    title: "Third-party risk review checklist",
+    summary:
+      "A lean checklist for assessing a new vendor without losing the basics during intake.",
+    type: "checklists",
+    collection: "vendor-risk",
+    category: "Vendor Risk",
+    readTime: "5 min read",
+    tags: ["Vendor risk", "Checklists", "Procurement"],
+    content: `## Intake checklist
+
+- [ ] Confirm business owner and intended use case
+- [ ] Identify sensitive data categories involved
+- [ ] Record access level to production systems or internal users
+- [ ] Confirm security documentation requested and received
+- [ ] Assign risk tier and review depth
+- [ ] Capture contractual or privacy dependencies
+- [ ] Set renewal review date and accountable owner
+
+## Practical note
+
+The goal is not to create the longest questionnaire. The goal is to decide quickly whether the vendor fits, needs deeper review, or should be blocked.`,
+  },
+  {
+    slug: "trust-center-launch-checklist",
+    title: "Trust center launch checklist",
+    summary:
+      "A checklist for publishing a trust center that helps sales instead of creating another maintenance burden.",
+    type: "checklists",
+    collection: "trust-center",
+    category: "Trust Center",
+    readTime: "4 min read",
+    tags: ["Trust center", "Checklists", "Sales support"],
+    content: `## Before you publish
+
+- [ ] Define which artifacts are public versus gated
+- [ ] Add a clear security overview and contact path
+- [ ] Confirm framework status and certifications are current
+- [ ] Link core policies or security summaries that buyers ask for often
+- [ ] Provide a request path for deeper evidence
+- [ ] Set an owner for ongoing updates and review cadence
+
+## Keep it current
+
+A stale trust center erodes confidence quickly. Treat it like a product surface with owners and a review schedule.`,
+  },
+  {
+    slug: "what-is-a-control-owner",
+    title: "What is a control owner?",
+    summary:
+      "A quick definition of the person accountable for how a control operates and how its evidence stays reviewable.",
+    type: "glossary",
+    collection: null,
+    category: "Compliance operations",
+    readTime: "2 min read",
+    tags: ["Glossary", "Controls", "Ownership"],
+    content: `## Definition
+
+A control owner is the person accountable for ensuring a control is operating as expected and that evidence exists to show it.
+
+## What they are responsible for
+
+- Understanding how the control works
+- Keeping related evidence current
+- Reviewing failures or exceptions
+- Coordinating remediation when the control drifts
+
+## What they are not
+
+They are not always the system administrator doing every task directly. In mature programs, the owner is accountable even if evidence comes from several teams or tools.`,
+  },
+  {
+    slug: "customer-security-review-intake-guide",
+    title: "Customer security review intake guide",
+    summary:
+      "How to route incoming buyer questionnaires and evidence requests before they derail engineering time.",
+    type: "guides",
+    collection: "trust-center",
+    category: "Trust Center",
+    readTime: "5 min read",
+    tags: ["Questionnaires", "Guides", "Revenue support"],
+    content: `## The intake problem
+
+Security reviews often arrive through sales channels without the context needed to answer them efficiently.
+
+## Build a simple intake process
+
+1. Capture account name, deal stage, due date, and customer requirements.
+2. Check whether the buyer can self-serve from the trust center first.
+3. Route technical questions to the right owner instead of broadcasting them broadly.
+4. Reuse approved answers and attach current evidence.
+5. Track unresolved questions centrally until the review closes.
+
+## Why this matters
+
+    Without intake discipline, every questionnaire feels new. With intake discipline, your team answers faster and learns from each review.`,
+  },
+  {
+    slug: "soc-2-control-owner-operating-model",
+    title: "SOC 2 control owner operating model",
+    summary:
+      "How to assign and run control ownership so readiness does not depend on one compliance lead chasing everyone.",
+    type: "guides",
+    collection: "soc-2",
+    category: "SOC 2",
+    readTime: "6 min read",
+    tags: ["SOC 2", "Controls", "Ownership"],
+    content: `## Why ownership breaks down
+
+Teams often assign control owners on paper, but not in a way that matches operational reality.
+
+## A better model
+
+- Assign one accountable owner per control
+- Identify supporting contributors for evidence and remediation
+- Review ownership quarterly as systems and teams change
+
+## Weekly operating cadence
+
+1. Review failing or stale controls
+2. Confirm owner response and next action
+3. Track remediation dates and exceptions
+
+## What good looks like
+
+Control ownership should make it obvious who reviews the evidence, who fixes the issue, and who signs off when the control is healthy again.`,
+  },
+  {
+    slug: "soc-2-vendor-management-for-audits",
+    title: "SOC 2 vendor management for audits",
+    summary:
+      "How to keep vendor oversight organized so third-party controls do not become late audit surprises.",
+    type: "blog",
+    collection: "soc-2",
+    category: "SOC 2",
+    readTime: "5 min read",
+    tags: ["SOC 2", "Vendor risk", "Audits"],
+    content: `## The common issue
+
+Teams remember to assess new vendors, but they do not maintain a review process for existing ones that support customer systems.
+
+## What auditors look for
+
+- Clear inventory of in-scope vendors
+- Evidence of review or due diligence
+- Contracts and security commitments where relevant
+- Follow-up on material risks or exceptions
+
+## The practical fix
+
+Tie vendor reviews to your broader control program so renewals, exceptions, and evidence live in one place rather than scattered email threads.`,
+  },
+  {
+    slug: "iso-27001-statement-of-applicability-template",
+    title: "ISO 27001 statement of applicability template",
+    summary:
+      "A lightweight way to document which Annex A controls apply, why they apply, and how they are implemented.",
+    type: "templates",
+    collection: "iso-27001",
+    category: "ISO 27001",
+    readTime: "5 min read",
+    tags: ["ISO 27001", "SoA", "Templates"],
+    content: `## What the SoA should capture
+
+Your statement of applicability should connect three things clearly: the control, the implementation decision, and the reason behind it.
+
+## Recommended columns
+
+| Field | Purpose |
+| --- | --- |
+| Control reference | Identifies the Annex A control |
+| Applicable | Yes or no |
+| Justification | Why it applies or does not |
+| Implementation status | Planned, active, or not applicable |
+| Evidence source | Where proof lives |
+
+## Practical advice
+
+Keep the SoA synchronized with your risk treatment logic. If they diverge, reviews become harder than they need to be.`,
+  },
+  {
+    slug: "iso-27001-internal-audit-prep-checklist",
+    title: "ISO 27001 internal audit prep checklist",
+    summary:
+      "A checklist for making internal audits useful, repeatable, and less disruptive to operators.",
+    type: "checklists",
+    collection: "iso-27001",
+    category: "ISO 27001",
+    readTime: "5 min read",
+    tags: ["ISO 27001", "Internal audit", "Checklists"],
+    content: `## Before the audit starts
+
+- [ ] Confirm scope and process areas under review
+- [ ] Gather current policies and procedures
+- [ ] Review recent risk and treatment updates
+- [ ] Confirm evidence owners for sampled controls
+- [ ] Collect previous internal or external findings
+- [ ] Prepare follow-up tracking for observations and actions
+
+## Make the audit valuable
+
+The internal audit should surface system weaknesses early, not just prove that a calendar event happened.`,
+  },
+  {
+    slug: "gdpr-ropa-template-for-saas-products",
+    title: "GDPR RoPA template for SaaS products",
+    summary:
+      "A practical structure for records of processing activities that product and compliance teams can maintain together.",
+    type: "templates",
+    collection: "gdpr",
+    category: "GDPR",
+    readTime: "5 min read",
+    tags: ["GDPR", "RoPA", "Templates"],
+    content: `## Core fields to track
+
+| Field | Why it matters |
+| --- | --- |
+| Process name | Describes the business activity |
+| Data subjects | Clarifies whose data is involved |
+| Data categories | Explains what is processed |
+| Purpose | Captures business reason |
+| Recipients | Identifies sharing or subprocessors |
+| Retention | Shows how long data stays |
+
+## Keep it operational
+
+Your RoPA should connect to product systems and vendors, not sit separately as a legal-only artifact.`,
+  },
+  {
+    slug: "gdpr-dsar-workflow-for-lean-teams",
+    title: "GDPR DSAR workflow for lean teams",
+    summary:
+      "How smaller teams can handle access, deletion, and correction requests without inventing a new process every time.",
+    type: "guides",
+    collection: "gdpr",
+    category: "GDPR",
+    readTime: "6 min read",
+    tags: ["GDPR", "DSAR", "Guides"],
+    content: `## The challenge
+
+Most DSAR pain comes from not knowing where relevant data lives or who needs to respond.
+
+## Build a repeatable flow
+
+1. Intake and verify the requester
+2. Identify systems and vendors in scope
+3. Assign owners for search and response
+4. Review exemptions or edge cases
+5. Respond and preserve an audit trail
+
+## What matters most
+
+Speed is important, but consistency matters more. A visible workflow prevents missed systems and inconsistent decisions.`,
+  },
+  {
+    slug: "hipaa-business-associate-review-template",
+    title: "HIPAA business associate review template",
+    summary:
+      "A review structure for third parties that can create, receive, maintain, or transmit PHI on your behalf.",
+    type: "templates",
+    collection: "hipaa",
+    category: "HIPAA",
+    readTime: "5 min read",
+    tags: ["HIPAA", "Business associates", "Templates"],
+    content: `## Review goals
+
+This template helps teams capture what the vendor does, what PHI exposure exists, and what safeguards or agreements are required.
+
+## Recommended sections
+
+- Service description
+- PHI involvement and data flow
+- Access model and personnel exposure
+- Security controls and evidence requested
+- Contract or BAA status
+- Renewal review date
+
+## Why this matters
+
+Business associate oversight should be visible as part of the ongoing vendor program, not rediscovered during diligence.`,
+  },
+  {
+    slug: "hipaa-incident-response-for-healthtech",
+    title: "HIPAA incident response for healthtech teams",
+    summary:
+      "How to connect incident handling, evidence retention, and stakeholder communication when PHI may be involved.",
+    type: "blog",
+    collection: "hipaa",
+    category: "HIPAA",
+    readTime: "5 min read",
+    tags: ["HIPAA", "Incident response", "Healthtech"],
+    content: `## Where teams struggle
+
+The technical incident response process exists, but PHI-related communication and review steps are not built into it.
+
+## Add these elements
+
+- Flag incidents that may involve regulated data early
+- Capture timestamps, systems, and affected records clearly
+- Coordinate security, legal, and operations review paths
+- Preserve evidence for later diligence or audit questions
+
+## The payoff
+
+You reduce confusion during incidents and make post-incident review far more defensible.`,
+  },
+  {
+    slug: "vendor-security-questionnaire-core-sections",
+    title: "Vendor security questionnaire core sections",
+    summary:
+      "The sections most teams actually need to assess vendor risk without sending a bloated questionnaire.",
+    type: "guides",
+    collection: "vendor-risk",
+    category: "Vendor Risk",
+    readTime: "5 min read",
+    tags: ["Vendor risk", "Questionnaires", "Guides"],
+    content: `## Start with the essentials
+
+Questionnaires should help you evaluate risk, not collect trivia.
+
+## Core sections
+
+- Data handling and retention
+- Access control and MFA
+- Logging and monitoring
+- Incident response and breach notification
+- Infrastructure and subprocessor model
+- Business continuity and recovery
+
+## When to go deeper
+
+Add more depth only when the vendor tier, data sensitivity, or regulatory exposure justifies it.`,
+  },
+  {
+    slug: "vendor-renewal-review-workflow",
+    title: "Vendor renewal review workflow",
+    summary:
+      "How to turn annual vendor re-review into a lightweight operating cycle instead of a last-minute scramble.",
+    type: "blog",
+    collection: "vendor-risk",
+    category: "Vendor Risk",
+    readTime: "4 min read",
+    tags: ["Vendor risk", "Renewals", "Operations"],
+    content: `## The renewal problem
+
+Initial reviews are documented, but annual reassessments often depend on someone remembering to ask.
+
+## Build the loop
+
+1. Assign a renewal date at onboarding
+2. Tier the review depth based on current use and risk
+3. Collect updated evidence only where needed
+4. Record decisions and exceptions centrally
+
+## Result
+
+Renewal oversight becomes predictable and auditable instead of reactive.`,
+  },
+  {
+    slug: "trust-center-content-map",
+    title: "Trust center content map",
+    summary:
+      "A simple framework for deciding what belongs in your trust center, what should be gated, and what should stay internal.",
+    type: "templates",
+    collection: "trust-center",
+    category: "Trust Center",
+    readTime: "4 min read",
+    tags: ["Trust center", "Templates", "Content strategy"],
+    content: `## Divide content into three groups
+
+| Zone | What belongs there |
+| --- | --- |
+| Public | High-level security and compliance information |
+| Gated | Sensitive reports or detailed evidence for qualified buyers |
+| Internal only | Operational runbooks, raw screenshots, and privileged documents |
+
+## Why this works
+
+The map prevents both over-sharing and under-sharing. Buyers get enough confidence early, and your team keeps control of deeper evidence.`,
+  },
+  {
+    slug: "trust-center-metrics-that-matter",
+    title: "Trust center metrics that matter",
+    summary:
+      "A few metrics that show whether your trust center is reducing review friction or just existing on the website.",
+    type: "blog",
+    collection: "trust-center",
+    category: "Trust Center",
+    readTime: "4 min read",
+    tags: ["Trust center", "Metrics", "Revenue support"],
+    content: `## Useful metrics
+
+- Number of buyer requests resolved through self-service
+- Time saved on questionnaire response cycles
+- Most requested documents or topics
+- Gated access requests converted into active deal support
+
+## Why these matter
+
+They show whether the trust center is reducing repetitive work for security and sales teams, not just adding another page to maintain.`,
+  },
+  {
+    slug: "what-is-continuous-compliance",
+    title: "What is continuous compliance?",
+    summary:
+      "A plain-English definition of running compliance as an ongoing operating model instead of a once-a-year push.",
+    type: "glossary",
+    collection: null,
+    category: "Compliance operations",
+    readTime: "2 min read",
+    tags: ["Glossary", "Compliance", "Monitoring"],
+    content: `## Definition
+
+Continuous compliance is the practice of monitoring controls, collecting evidence, and reviewing issues throughout the year instead of preparing only when an audit or customer request appears.
+
+## Why teams adopt it
+
+It reduces audit surprises, improves accountability, and keeps trust work closer to day-to-day operations.`,
+  },
+  {
+    slug: "what-is-an-evidence-owner",
+    title: "What is an evidence owner?",
+    summary:
+      "A quick definition of the person responsible for keeping a control's supporting proof current and reviewable.",
+    type: "glossary",
+    collection: null,
+    category: "Compliance operations",
+    readTime: "2 min read",
+    tags: ["Glossary", "Evidence", "Ownership"],
+    content: `## Definition
+
+An evidence owner is the person responsible for ensuring the proof linked to a control stays current, accurate, and available for review.
+
+## In practice
+
+Evidence owners often work alongside control owners. One is accountable for the control's operation, while the other makes sure the supporting proof remains usable.`,
+  },
+  {
+    slug: "framework-selection-checklist-for-startups",
+    title: "Framework selection checklist for startups",
+    summary:
+      "A checklist for deciding whether SOC 2, ISO 27001, HIPAA, GDPR, or multiple frameworks belong in your near-term roadmap.",
+    type: "checklists",
+    collection: null,
+    category: "Framework strategy",
+    readTime: "5 min read",
+    tags: ["Frameworks", "Startups", "Checklists"],
+    content: `## Checklist
+
+- [ ] Confirm which frameworks buyers ask for most often
+- [ ] Check whether you handle regulated data such as PHI or EU personal data
+- [ ] Review which markets or geographies shape buyer expectations
+- [ ] Estimate internal capacity for policy, evidence, and review workflows
+- [ ] Identify shared controls that reduce future duplicate effort
+- [ ] Decide whether certification, attestation, or operational readiness is the immediate goal
+
+## What this helps avoid
+
+It prevents teams from chasing a framework based on generic advice instead of actual customer and operating requirements.`,
+  },
+  {
+    slug: "audit-request-intake-template",
+    title: "Audit request intake template",
+    summary:
+      "A lightweight template for capturing auditor requests, owners, due dates, and evidence status in one place.",
+    type: "templates",
+    collection: "soc-2",
+    category: "Audit readiness",
+    readTime: "4 min read",
+    tags: ["Audit readiness", "Templates", "SOC 2"],
+    content: `## Track every request with the same fields
+
+| Field | Purpose |
+| --- | --- |
+| Request ID | Unique reference |
+| Control or topic | What the auditor is asking about |
+| Owner | Who responds |
+| Due date | When the response is needed |
+| Evidence link | Where the proof lives |
+| Status | Open, in progress, submitted, closed |
+
+## Why this matters
+
+Audit work gets chaotic when requests are tracked in inboxes. A simple intake structure keeps fieldwork organized and visible.`,
+  },
+  {
+    slug: "privacy-by-design-review-checklist",
+    title: "Privacy-by-design review checklist",
+    summary:
+      "A checklist for reviewing new features or workflows that collect, use, or expose personal data.",
+    type: "checklists",
+    collection: "gdpr",
+    category: "GDPR",
+    readTime: "5 min read",
+    tags: ["GDPR", "Privacy by design", "Checklists"],
+    content: `## Before launch
+
+- [ ] Define the purpose for collecting the data
+- [ ] Confirm the minimum data needed for that purpose
+- [ ] Check where the data is stored and who can access it
+- [ ] Review vendor or subprocessor involvement
+- [ ] Confirm retention and deletion expectations
+- [ ] Identify whether user-facing notices or workflow changes are needed
+
+## Why teams use this
+
+It turns privacy review into a repeatable product workflow instead of a last-minute legal checkpoint.`,
   },
 ];
 
