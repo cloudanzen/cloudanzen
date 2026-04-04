@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Linkedin } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About CloudAnzen",
@@ -37,6 +38,38 @@ export default function AboutPage() {
                 <p className="text-sm text-slate-500">{label}</p>
               </div>
             ))}
+          </div>
+
+          {/* Leadership */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-slate-900 text-center mb-4">Leadership</h2>
+            <p className="text-slate-500 text-center mb-12 max-w-2xl mx-auto">
+              The team behind CloudAnzen brings deep expertise in security, compliance, and cloud infrastructure.
+            </p>
+
+            <div className="flex justify-center">
+              <div className="text-center max-w-xs">
+                <div className="relative w-48 h-48 mx-auto mb-5 rounded-2xl overflow-hidden">
+                  <Image
+                    src="/team/founder.png"
+                    alt="Sumedha Singh"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <h3 className="text-xl font-bold text-slate-900">Sumedha Singh</h3>
+                <p className="text-blue-600 font-medium mb-3">Founder &amp; CEO</p>
+                <a
+                  href="https://www.linkedin.com/in/sumedha-singh-519485400/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-sm text-slate-500 hover:text-blue-600 transition-colors"
+                >
+                  <Linkedin className="w-4 h-4" />
+                  LinkedIn
+                </a>
+              </div>
+            </div>
           </div>
 
           <div className="bg-slate-900 rounded-3xl p-10 text-center">
