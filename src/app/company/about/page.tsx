@@ -19,7 +19,7 @@ export default function AboutPage() {
         subtitle="CloudAnzen was founded by engineers and GRC professionals who spent years drowning in compliance spreadsheets — and decided there had to be a better way."
       />
       <section className="section-pad bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-slate prose-lg max-w-none mb-16">
             <p>CloudAnzen was founded on a simple belief: compliance should be a continuous, operational discipline — not a painful scramble before every audit.</p>
             <p>Most teams treat GRC as a project. They pull together evidence for three months, survive the audit, and repeat the cycle. Meanwhile, controls drift, risks accumulate, and no one quite knows the real state of their security posture.</p>
@@ -42,32 +42,64 @@ export default function AboutPage() {
 
           {/* Leadership */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 text-center mb-4">Leadership</h2>
+            <p className="text-sm font-semibold tracking-widest text-blue-600 uppercase text-center mb-3">Leadership</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 text-center mb-4">Meet our founder</h2>
             <p className="text-slate-500 text-center mb-12 max-w-2xl mx-auto">
-              The team behind CloudAnzen brings deep expertise in security, compliance, and cloud infrastructure.
+              The vision and expertise driving CloudAnzen&apos;s mission to transform compliance into a continuous discipline.
             </p>
 
-            <div className="flex justify-center">
-              <div className="text-center max-w-xs">
-                <div className="relative w-48 h-48 mx-auto mb-5 rounded-2xl overflow-hidden">
-                  <Image
-                    src="/team/founder.png"
-                    alt="Sumedha Singh"
-                    fill
-                    className="object-cover"
-                  />
+            {/* Founder spotlight card */}
+            <div className="rounded-3xl bg-gradient-to-br from-blue-600 to-teal-500 p-[1px]">
+              <div className="rounded-3xl bg-white p-8 sm:p-10">
+                <div className="flex flex-col lg:flex-row gap-10 items-center lg:items-start">
+                  {/* Photo */}
+                  <div className="shrink-0">
+                    <div className="relative w-56 h-56 sm:w-64 sm:h-64 rounded-2xl overflow-hidden shadow-lg">
+                      <Image
+                        src="/team/founder.png"
+                        alt="Sumedha Singh"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="mt-5 text-center">
+                      <h3 className="text-2xl font-bold text-slate-900">Sumedha Singh</h3>
+                      <p className="text-blue-600 font-semibold mt-1">Founder &amp; CEO</p>
+                      <a
+                        href="https://www.linkedin.com/in/sumedha-singh-519485400/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 mt-3 text-sm text-slate-400 hover:text-blue-600 transition-colors"
+                      >
+                        <Linkedin className="w-4 h-4" />
+                        Connect on LinkedIn
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* Bio */}
+                  <div className="flex-1 min-w-0">
+                    <div className="text-slate-600 leading-relaxed space-y-4">
+                      <p>
+                        As the Founder of CloudAnzen, I developed a platform designed to transform compliance into a continuous operational discipline. The platform connects seamlessly with existing systems, enabling real-time monitoring of security and compliance to address organizational challenges and foster ongoing efficiency.
+                      </p>
+                      <p>
+                        My work emphasized collaboration and operational improvement, aiming to eliminate the traditional audit scramble and provide teams with a clear, consistent understanding of their security posture.
+                      </p>
+                      <p>
+                        With an MBA in Finance from JNTUH College of Engineering Hyderabad, I bring expertise in problem solving, IT business analysis, and business process analysis to every initiative. My focus remains on innovating solutions that promote operational resilience and enable organizations to adapt effectively to a dynamic technological landscape.
+                      </p>
+                    </div>
+
+                    <div className="flex flex-wrap gap-2 mt-6">
+                      {["GRC Strategy", "IT Business Analysis", "Process Optimization", "Compliance Automation", "Operational Resilience"].map((tag) => (
+                        <span key={tag} className="px-3 py-1 rounded-full bg-slate-100 text-xs font-medium text-slate-600">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-slate-900">Sumedha Singh</h3>
-                <p className="text-blue-600 font-medium mb-3">Founder &amp; CEO</p>
-                <a
-                  href="https://www.linkedin.com/in/sumedha-singh-519485400/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm text-slate-500 hover:text-blue-600 transition-colors"
-                >
-                  <Linkedin className="w-4 h-4" />
-                  LinkedIn
-                </a>
               </div>
             </div>
           </div>
