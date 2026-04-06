@@ -5,7 +5,6 @@ import {
   Shield,
   BarChart3,
   FileText,
-  Users,
   Zap,
   Lock,
   TrendingUp,
@@ -36,30 +35,30 @@ const painPoints = [
     outcomeDesc: "Connect systems and gather evidence continuously.",
   },
   {
-    icon: Users,
+    icon: Zap,
+    pain: "Security reviews drain time",
+    painDesc:
+      "Answering buyer questionnaires repeatedly slows deals and overloads lean teams.",
+    outcome: "Respond with approved answers",
+    outcomeDesc:
+      "Reuse approved answers and attach supporting evidence from one place.",
+  },
+  {
+    icon: Globe,
+    pain: "Trust requests arrive too early",
+    painDesc:
+      "Prospects want security documents, policy answers, and proof before your team is ready.",
+    outcome: "Publish trust faster",
+    outcomeDesc:
+      "Share trust-center content and supporting evidence from one source of truth.",
+  },
+  {
+    icon: AlertTriangle,
     pain: "Scattered control ownership",
     painDesc:
       "Teams lose track of who owns what and what still needs attention.",
     outcome: "Assign owners clearly",
     outcomeDesc: "Track controls, tasks, reviews, and due dates in one place.",
-  },
-  {
-    icon: AlertTriangle,
-    pain: "Risk workflows without visibility",
-    painDesc:
-      "Vendor and internal risks live across emails, docs, and tickets.",
-    outcome: "Centralize risk management",
-    outcomeDesc:
-      "Log, prioritize, review, and remediate risks with an audit trail.",
-  },
-  {
-    icon: Zap,
-    pain: "Security reviews drain time",
-    painDesc:
-      "Answering questionnaires repeatedly slows deals and overloads teams.",
-    outcome: "Prove trust faster",
-    outcomeDesc:
-      "Share security information and reduce repetitive review work.",
   },
 ];
 
@@ -67,9 +66,23 @@ const modules = [
   {
     icon: ClipboardCheck,
     title: "Compliance Automation",
-    desc: "Map controls, collect evidence, and keep frameworks audit-ready.",
+    desc: "Get SOC 2 and ISO-ready faster with controls, evidence, and audit workflows in one place.",
     href: "/platform/compliance-automation",
     color: "from-blue-500 to-blue-600",
+  },
+  {
+    icon: Globe,
+    title: "Trust Center",
+    desc: "Share security posture, policies, and reports without slowing your team down.",
+    href: "/platform/trust-center",
+    color: "from-cyan-500 to-cyan-600",
+  },
+  {
+    icon: Zap,
+    title: "Questionnaire Automation",
+    desc: "Respond faster to security reviews with reusable answers and supporting evidence.",
+    href: "/platform/questionnaire-automation",
+    color: "from-orange-500 to-orange-600",
   },
   {
     icon: Eye,
@@ -105,20 +118,6 @@ const modules = [
     desc: "Organize evidence and streamline auditor collaboration.",
     href: "/platform/audit-readiness",
     color: "from-emerald-500 to-emerald-600",
-  },
-  {
-    icon: Globe,
-    title: "Trust Center",
-    desc: "Share your security posture proactively with customers and prospects.",
-    href: "/platform/trust-center",
-    color: "from-cyan-500 to-cyan-600",
-  },
-  {
-    icon: Zap,
-    title: "Questionnaire Automation",
-    desc: "Respond faster to security reviews with reusable answers and supporting evidence.",
-    href: "/platform/questionnaire-automation",
-    color: "from-orange-500 to-orange-600",
   },
 ];
 
@@ -167,21 +166,21 @@ export default function HomePage() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/15 border border-blue-400/25 text-blue-300 text-sm font-medium mb-8">
             <TrendingUp className="w-3.5 h-3.5" />
-            Continuous GRC Platform
+            Built for AI-native teams
           </div>
 
           {/* Headline */}
           <h1 className="heading-display text-white mb-6 max-w-4xl mx-auto">
-            AI-driven continuous GRC for{" "}
+            Continuous compliance and trust operations for{" "}
             <span className="bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">
-              modern cloud teams
+              AI-native teams
             </span>
           </h1>
 
           <p className="text-xl text-slate-300 leading-relaxed mb-10 max-w-2xl mx-auto">
-            CloudAnzen helps you automate compliance, monitor controls
-            continuously, manage vendor and internal risk, stay audit-ready, and
-            guide teams with AI-assisted GRC workflows from one platform.
+            CloudAnzen helps AI and SaaS teams get audit-ready faster, automate
+            evidence collection, answer security questionnaires, and run trust
+            workflows without building a large GRC function.
           </p>
 
           {/* CTAs */}
@@ -190,18 +189,19 @@ export default function HomePage() {
               href="/demo"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-base font-semibold bg-blue-600 text-white hover:bg-blue-500 transition-all shadow-lg shadow-blue-900/40 hover:-translate-y-0.5"
             >
-              Book a demo
+              See CloudAnzen in action
               <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
               href="/platform"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-base font-semibold bg-white/10 text-white border border-white/20 hover:bg-white/20 transition-all"
             >
-              See the platform
+              Explore the platform
             </Link>
           </div>
           <p className="text-sm text-slate-400">
-            Built for teams pursuing SOC 2, ISO 27001, GDPR, HIPAA, and more.
+            Built for teams pursuing SOC 2, ISO 27001, and enterprise trust
+            requirements.
           </p>
 
           {/* Micro trust row */}
@@ -285,11 +285,11 @@ export default function HomePage() {
           </p>
           <div className="flex flex-wrap gap-8 justify-center items-center">
             {[
-              "SaaS Companies",
+              "AI startups",
+              "B2B SaaS",
               "Fintech",
               "Healthcare",
-              "AI companies",
-              "Cloud-native teams",
+              "Enterprise software",
             ].map((t) => (
               <span
                 key={t}
@@ -310,12 +310,12 @@ export default function HomePage() {
               The Problem
             </span>
             <h2 className="heading-xl text-slate-900 mb-4">
-              Move GRC out of spreadsheets
+              Security reviews move faster than your compliance ops
             </h2>
             <p className="text-lg text-slate-500 max-w-2xl mx-auto">
-              Most teams are managing compliance through a combination of
-              spreadsheets, shared drives, and Slack threads. There&apos;s a
-              better way.
+              AI-native teams need to prove trust early, but evidence,
+              questionnaires, and audit prep still get stitched together across
+              spreadsheets, shared drives, and Slack threads.
             </p>
           </div>
 
@@ -363,11 +363,11 @@ export default function HomePage() {
               The Platform
             </span>
             <h2 className="heading-xl text-slate-900 mb-4">
-              One platform for compliance, risk, and trust
+              One platform for audit readiness and buyer trust
             </h2>
             <p className="text-lg text-slate-500 max-w-2xl mx-auto">
-              Every module works together so your controls, evidence, risks, and
-              policies stay synchronized — no duct tape required.
+              Start with the workflows that unblock enterprise deals, then grow
+              into broader compliance, risk, and control operations over time.
             </p>
           </div>
 
@@ -408,7 +408,8 @@ export default function HomePage() {
             </span>
             <h2 className="heading-xl text-white mb-4">How CloudAnzen works</h2>
             <p className="text-lg text-slate-400 max-w-2xl mx-auto">
-              Get from zero to continuous compliance in days, not months.
+              Get from scattered security work to audit-ready operations in
+              days, not months.
             </p>
           </div>
 
@@ -744,11 +745,11 @@ export default function HomePage() {
             <Lock className="w-7 h-7 text-white" />
           </div>
           <h2 className="heading-xl text-white mb-4">
-            Ready to automate your GRC program?
+            Ready to become audit-ready faster?
           </h2>
           <p className="text-lg text-slate-400 mb-10 max-w-xl mx-auto">
-            Join security-conscious teams using CloudAnzen to stay audit-ready,
-            reduce risk, and prove trust at scale.
+            Use CloudAnzen to streamline compliance work, answer buyer security
+            reviews faster, and build trust without spreadsheet-heavy ops.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

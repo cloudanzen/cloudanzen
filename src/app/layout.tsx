@@ -17,11 +17,12 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "CloudAnzen — AI-Driven Continuous GRC for Modern Cloud Teams",
+    default:
+      "CloudAnzen — Continuous Compliance and Trust Operations for AI-Native Teams",
     template: "%s | CloudAnzen",
   },
   description:
-    "CloudAnzen helps modern companies run AI-driven continuous GRC with compliance automation, continuous control monitoring, audit readiness, and vendor and internal risk management from one platform.",
+    "CloudAnzen helps AI-native teams get audit-ready faster with compliance workflows, trust center capabilities, continuous monitoring, and AI-assisted security review workflows.",
   keywords: [
     "GRC platform",
     "compliance automation",
@@ -41,9 +42,10 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.cloudanzen.com",
     siteName: "CloudAnzen",
-    title: "CloudAnzen — AI-Driven Continuous GRC for Modern Cloud Teams",
+    title:
+      "CloudAnzen — Continuous Compliance and Trust Operations for AI-Native Teams",
     description:
-      "Run AI-driven continuous GRC with faster audits, clearer control visibility, and less spreadsheet chaos.",
+      "Help AI-native teams get audit-ready faster, automate evidence workflows, and handle buyer trust requests from one platform.",
     images: [
       {
         url: "/og-image.png",
@@ -55,9 +57,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "CloudAnzen — AI-Driven Continuous GRC for Modern Cloud Teams",
+    title:
+      "CloudAnzen — Continuous Compliance and Trust Operations for AI-Native Teams",
     description:
-      "Run AI-driven continuous GRC with faster audits, clearer control visibility, and less spreadsheet chaos.",
+      "Help AI-native teams get audit-ready faster, automate evidence workflows, and handle buyer trust requests from one platform.",
     images: ["/og-image.png"],
   },
   robots: {
