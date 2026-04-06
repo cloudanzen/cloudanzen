@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Twitter, Linkedin, Github } from "lucide-react";
+import { Twitter, Linkedin } from "lucide-react";
 
 const footerSections = [
   {
@@ -95,13 +95,14 @@ export default function Footer() {
             </p>
             <div className="flex gap-3">
               {[
-                { icon: Twitter, href: "#", label: "Twitter" },
-                { icon: Linkedin, href: "#", label: "LinkedIn" },
-                { icon: Github, href: "#", label: "GitHub" },
+                { icon: Twitter, href: "https://x.com/CLOUDANZEN", label: "X (Twitter)" },
+                { icon: Linkedin, href: "https://www.linkedin.com/company/cloudanzen/", label: "LinkedIn" },
               ].map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}
                   href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={label}
                   className="w-8 h-8 rounded-md bg-slate-800 flex items-center justify-center hover:bg-slate-700 transition-colors"
                 >
