@@ -90,13 +90,22 @@ export default function Footer() {
               <span className="font-bold text-white text-lg">CloudAnzen</span>
             </Link>
             <p className="text-sm leading-relaxed mb-6">
-              AI-driven continuous GRC for modern cloud teams. Automate
-              compliance, monitor controls, manage risk.
+              Continuous compliance and trust operations for AI-native teams.
+              Get audit-ready faster, automate evidence, and handle buyer
+              security reviews with less manual work.
             </p>
             <div className="flex gap-3">
               {[
-                { icon: Twitter, href: "https://x.com/CLOUDANZEN", label: "X (Twitter)" },
-                { icon: Linkedin, href: "https://www.linkedin.com/company/cloudanzen/", label: "LinkedIn" },
+                {
+                  icon: Twitter,
+                  href: "https://x.com/CLOUDANZEN",
+                  label: "X (Twitter)",
+                },
+                {
+                  icon: Linkedin,
+                  href: "https://www.linkedin.com/company/cloudanzen/",
+                  label: "LinkedIn",
+                },
               ].map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}
