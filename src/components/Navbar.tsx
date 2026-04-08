@@ -1,49 +1,61 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import { useRouter, usePathname } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-
-const platformLinks = [
-  { label: "Platform Overview", href: "/platform", desc: "See the full platform" },
-  { label: "Compliance Automation", href: "/platform/compliance-automation", desc: "Map controls, collect evidence automatically" },
-  { label: "Continuous Monitoring", href: "/platform/continuous-monitoring", desc: "Track control health in real time" },
-  { label: "Risk Management", href: "/platform/risk-management", desc: "Log, prioritize, and remediate risks" },
-  { label: "Vendor Risk Management", href: "/platform/vendor-risk", desc: "Standardized vendor oversight workflows" },
-  { label: "Policy Management", href: "/platform/policy-management", desc: "Centralize policies and approvals" },
-  { label: "Audit Readiness", href: "/platform/audit-readiness", desc: "Streamline auditor collaboration" },
-  { label: "Trust Center", href: "/platform/trust-center", desc: "Share your security posture proactively" },
-  { label: "Questionnaire Automation", href: "/platform/questionnaire-automation", desc: "Respond to security reviews faster" },
-  { label: "Integrations", href: "/platform/integrations", desc: "Connect 100+ systems" },
-];
-
-const solutionLinks = [
-  { label: "For Startups", href: "/solutions/startups", desc: "SOC 2 fast-track for early-stage teams" },
-  { label: "For Scale-ups", href: "/solutions/scaleups", desc: "Scale your GRC program" },
-  { label: "For Enterprises", href: "/solutions/enterprise", desc: "Enterprise-grade compliance" },
-  { label: "For Security Teams", href: "/solutions/security-teams", desc: "Continuous control monitoring" },
-  { label: "For GRC Teams", href: "/solutions/grc-teams", desc: "Purpose-built GRC workflows" },
-  { label: "For SaaS Companies", href: "/solutions/saas", desc: "Win enterprise deals faster" },
-];
-
-const frameworkLinks = [
-  { label: "SOC 2", href: "/frameworks/soc2" },
-  { label: "ISO 27001", href: "/frameworks/iso27001" },
-  { label: "GDPR", href: "/frameworks/gdpr" },
-  { label: "HIPAA", href: "/frameworks/hipaa" },
-  { label: "PCI DSS", href: "/frameworks/pci-dss" },
-  { label: "NIST CSF", href: "/frameworks/nist-csf" },
-  { label: "Custom Frameworks", href: "/frameworks/custom" },
-];
 
 type DropdownKey = "platform" | "solutions" | "frameworks" | null;
 
 export default function Navbar() {
+  const t = useTranslations("common");
+  const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
+
   const [open, setOpen] = useState<DropdownKey>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const handleLocaleSwitch = (newLocale: string) => {
+    router.replace(pathname, { locale: newLocale });
+  };
+
+  const platformLinks = [
+    { label: t("nav.platformLinks.overview.label"), href: "/platform", desc: t("nav.platformLinks.overview.desc") },
+    { label: t("nav.platformLinks.complianceAutomation.label"), href: "/platform/compliance-automation", desc: t("nav.platformLinks.complianceAutomation.desc") },
+    { label: t("nav.platformLinks.continuousMonitoring.label"), href: "/platform/continuous-monitoring", desc: t("nav.platformLinks.continuousMonitoring.desc") },
+    { label: t("nav.platformLinks.riskManagement.label"), href: "/platform/risk-management", desc: t("nav.platformLinks.riskManagement.desc") },
+    { label: t("nav.platformLinks.vendorRisk.label"), href: "/platform/vendor-risk", desc: t("nav.platformLinks.vendorRisk.desc") },
+    { label: t("nav.platformLinks.policyManagement.label"), href: "/platform/policy-management", desc: t("nav.platformLinks.policyManagement.desc") },
+    { label: t("nav.platformLinks.auditReadiness.label"), href: "/platform/audit-readiness", desc: t("nav.platformLinks.auditReadiness.desc") },
+    { label: t("nav.platformLinks.trustCenter.label"), href: "/platform/trust-center", desc: t("nav.platformLinks.trustCenter.desc") },
+    { label: t("nav.platformLinks.questionnaireAutomation.label"), href: "/platform/questionnaire-automation", desc: t("nav.platformLinks.questionnaireAutomation.desc") },
+    { label: t("nav.platformLinks.integrations.label"), href: "/platform/integrations", desc: t("nav.platformLinks.integrations.desc") },
+  ];
+
+  const solutionLinks = [
+    { label: t("nav.solutionLinks.startups.label"), href: "/solutions/startups", desc: t("nav.solutionLinks.startups.desc") },
+    { label: t("nav.solutionLinks.scaleups.label"), href: "/solutions/scaleups", desc: t("nav.solutionLinks.scaleups.desc") },
+    { label: t("nav.solutionLinks.enterprise.label"), href: "/solutions/enterprise", desc: t("nav.solutionLinks.enterprise.desc") },
+    { label: t("nav.solutionLinks.securityTeams.label"), href: "/solutions/security-teams", desc: t("nav.solutionLinks.securityTeams.desc") },
+    { label: t("nav.solutionLinks.grcTeams.label"), href: "/solutions/grc-teams", desc: t("nav.solutionLinks.grcTeams.desc") },
+    { label: t("nav.solutionLinks.saas.label"), href: "/solutions/saas", desc: t("nav.solutionLinks.saas.desc") },
+  ];
+
+  const frameworkLinks = [
+    { label: t("nav.frameworkLinks.soc2"), href: "/frameworks/soc2" },
+    { label: t("nav.frameworkLinks.iso27001"), href: "/frameworks/iso27001" },
+    { label: t("nav.frameworkLinks.gdpr"), href: "/frameworks/gdpr" },
+    { label: t("nav.frameworkLinks.hipaa"), href: "/frameworks/hipaa" },
+    { label: t("nav.frameworkLinks.pciDss"), href: "/frameworks/pci-dss" },
+    { label: t("nav.frameworkLinks.nistCsf"), href: "/frameworks/nist-csf" },
+    { label: t("nav.frameworkLinks.custom"), href: "/frameworks/custom" },
+  ];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -93,13 +105,13 @@ export default function Navbar() {
             <nav className="hidden lg:flex items-center gap-1">
               {(
                 [
-                  { label: "Platform", key: "platform" as DropdownKey },
-                  { label: "Solutions", key: "solutions" as DropdownKey },
-                  { label: "Frameworks", key: "frameworks" as DropdownKey },
+                  { label: t("nav.platform"), key: "platform" as DropdownKey },
+                  { label: t("nav.solutions"), key: "solutions" as DropdownKey },
+                  { label: t("nav.frameworks"), key: "frameworks" as DropdownKey },
                 ] as { label: string; key: DropdownKey }[]
               ).map(({ label, key }) => (
                 <div
-                  key={label}
+                  key={key}
                   className="relative"
                   onMouseEnter={() => handleMouseEnter(key)}
                   onMouseLeave={handleMouseLeave}
@@ -123,13 +135,13 @@ export default function Navbar() {
                 </div>
               ))}
               {[
-                { label: "Customers", href: "/customers" },
-                { label: "Resources", href: "/resources" },
-                { label: "Pricing", href: "/pricing" },
-                { label: "Help", href: "/help" },
+                { label: t("nav.customers"), href: "/customers" },
+                { label: t("nav.resources"), href: "/resources" },
+                { label: t("nav.pricing"), href: "/pricing" },
+                { label: t("nav.help"), href: "/help" },
               ].map(({ label, href }) => (
                 <Link
-                  key={label}
+                  key={href}
                   href={href}
                   className={cn(
                     "px-3 py-2 rounded-md text-sm font-medium transition-colors",
@@ -145,6 +157,32 @@ export default function Navbar() {
 
             {/* Right CTAs */}
             <div className="hidden lg:flex items-center gap-3">
+              {/* Language toggle */}
+              <div className="flex items-center gap-1.5 text-sm">
+                <button
+                  onClick={() => handleLocaleSwitch("en")}
+                  className={cn(
+                    "px-1 py-0.5 rounded transition-colors",
+                    locale === "en"
+                      ? (scrolled ? "font-semibold text-slate-900" : "font-semibold text-white")
+                      : (scrolled ? "text-slate-400 hover:text-slate-600" : "text-white/50 hover:text-white/80")
+                  )}
+                >
+                  EN
+                </button>
+                <span className={scrolled ? "text-slate-300" : "text-white/30"}>|</span>
+                <button
+                  onClick={() => handleLocaleSwitch("ja")}
+                  className={cn(
+                    "px-1 py-0.5 rounded transition-colors",
+                    locale === "ja"
+                      ? (scrolled ? "font-semibold text-slate-900" : "font-semibold text-white")
+                      : (scrolled ? "text-slate-400 hover:text-slate-600" : "text-white/50 hover:text-white/80")
+                  )}
+                >
+                  日本語
+                </button>
+              </div>
               <Link
                 href="/login"
                 className={cn(
@@ -154,13 +192,13 @@ export default function Navbar() {
                     : "text-white/80 hover:text-white"
                 )}
               >
-                Sign in
+                {t("nav.signIn")}
               </Link>
               <Link
                 href="/demo"
                 className="inline-flex items-center px-4 py-2 rounded-lg text-sm font-semibold bg-blue-600 text-white hover:bg-blue-700 transition-colors shadow-sm"
               >
-                Book a demo
+                {t("nav.bookDemo")}
               </Link>
             </div>
 
@@ -260,15 +298,34 @@ export default function Navbar() {
           />
           <div className="absolute top-0 right-0 bottom-0 w-80 bg-white shadow-xl overflow-y-auto">
             <div className="flex items-center justify-between px-6 h-16 border-b border-slate-200">
-              <span className="font-bold text-slate-900">Menu</span>
+              <span className="font-bold text-slate-900">{t("nav.menu")}</span>
               <button onClick={() => setMobileOpen(false)} aria-label="Close">
                 <X className="w-5 h-5 text-slate-600" />
+              </button>
+            </div>
+            {/* Mobile language toggle */}
+            <div className="flex items-center gap-2 px-6 py-3 border-b border-slate-200 bg-slate-50">
+              <button
+                onClick={() => { handleLocaleSwitch("en"); setMobileOpen(false); }}
+                className={cn("px-3 py-1.5 rounded-full text-sm font-medium transition-colors",
+                  locale === "en" ? "bg-blue-600 text-white" : "bg-slate-200 text-slate-600 hover:bg-slate-300"
+                )}
+              >
+                EN
+              </button>
+              <button
+                onClick={() => { handleLocaleSwitch("ja"); setMobileOpen(false); }}
+                className={cn("px-3 py-1.5 rounded-full text-sm font-medium transition-colors",
+                  locale === "ja" ? "bg-blue-600 text-white" : "bg-slate-200 text-slate-600 hover:bg-slate-300"
+                )}
+              >
+                日本語
               </button>
             </div>
             <div className="px-6 py-6 space-y-6">
               <div>
                 <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">
-                  Platform
+                  {t("nav.platform")}
                 </p>
                 <div className="space-y-1">
                   {platformLinks.slice(0, 6).map((l) => (
@@ -285,7 +342,7 @@ export default function Navbar() {
               </div>
               <div>
                 <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">
-                  Frameworks
+                  {t("nav.frameworks")}
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {frameworkLinks.map((l) => (
@@ -306,14 +363,14 @@ export default function Navbar() {
                   className="block text-center text-sm font-medium text-slate-700 py-2"
                   onClick={() => setMobileOpen(false)}
                 >
-                  Sign in
+                  {t("nav.signIn")}
                 </Link>
                 <Link
                   href="/demo"
                   className="block text-center px-4 py-3 rounded-lg bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 transition-colors"
                   onClick={() => setMobileOpen(false)}
                 >
-                  Book a demo
+                  {t("nav.bookDemo")}
                 </Link>
               </div>
             </div>

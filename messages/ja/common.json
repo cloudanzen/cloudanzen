@@ -1,0 +1,127 @@
+{
+  "meta": {
+    "title": "CloudAnzen — AIネイティブチームのための継続的コンプライアンスとトラストオペレーション",
+    "siteName": "CloudAnzen",
+    "description": "CloudAnzenは、コンプライアンスワークフロー、トラストセンター機能、継続的モニタリング、AI支援によるセキュリティレビューワークフローにより、AIネイティブチームの監査対応を迅速に実現します。",
+    "ogDescription": "AIネイティブチームの監査対応を迅速化し、エビデンスワークフローを自動化し、バイヤーのセキュリティレビューを一つのプラットフォームで管理できます。"
+  },
+  "nav": {
+    "platform": "プラットフォーム",
+    "solutions": "ソリューション",
+    "frameworks": "フレームワーク",
+    "customers": "お客様",
+    "resources": "リソース",
+    "pricing": "料金",
+    "help": "ヘルプ",
+    "signIn": "ログイン",
+    "bookDemo": "デモを予約",
+    "menu": "メニュー",
+    "platformLinks": {
+      "overview": { "label": "プラットフォーム概要", "desc": "プラットフォーム全体をご覧ください" },
+      "complianceAutomation": { "label": "コンプライアンス自動化", "desc": "コントロールのマッピングとエビデンスの自動収集" },
+      "continuousMonitoring": { "label": "継続的モニタリング", "desc": "コントロールの状態をリアルタイムで監視" },
+      "riskManagement": { "label": "リスク管理", "desc": "リスクの記録、優先順位付け、改善対応" },
+      "vendorRisk": { "label": "ベンダーリスク管理", "desc": "標準化されたベンダー管理ワークフロー" },
+      "policyManagement": { "label": "ポリシー管理", "desc": "ポリシーと承認の一元管理" },
+      "auditReadiness": { "label": "監査対応", "desc": "監査人との連携を効率化" },
+      "trustCenter": { "label": "トラストセンター", "desc": "セキュリティ体制を積極的に公開" },
+      "questionnaireAutomation": { "label": "質問票自動化", "desc": "セキュリティレビューへの回答を迅速化" },
+      "integrations": { "label": "インテグレーション", "desc": "100以上のシステムと連携" }
+    },
+    "solutionLinks": {
+      "startups": { "label": "スタートアップ向け", "desc": "アーリーステージチームのためのSOC 2迅速対応" },
+      "scaleups": { "label": "スケールアップ企業向け", "desc": "GRCプログラムの拡張" },
+      "enterprise": { "label": "エンタープライズ向け", "desc": "エンタープライズグレードのコンプライアンス" },
+      "securityTeams": { "label": "セキュリティチーム向け", "desc": "コントロールの継続的モニタリング" },
+      "grcTeams": { "label": "GRCチーム向け", "desc": "GRC専用ワークフロー" },
+      "saas": { "label": "SaaS企業向け", "desc": "エンタープライズ案件をより早く獲得" }
+    },
+    "frameworkLinks": {
+      "soc2": "SOC 2",
+      "iso27001": "ISO 27001",
+      "gdpr": "GDPR",
+      "hipaa": "HIPAA",
+      "pciDss": "PCI DSS",
+      "nistCsf": "NIST CSF",
+      "custom": "カスタムフレームワーク"
+    }
+  },
+  "footer": {
+    "description": "AIネイティブチームのための継続的コンプライアンスとトラストオペレーション。監査対応を迅速化し、エビデンスを自動化し、バイヤーのセキュリティレビューを少ない手作業で管理できます。",
+    "sections": {
+      "platform": "プラットフォーム",
+      "solutions": "ソリューション",
+      "frameworks": "フレームワーク",
+      "resources": "リソース",
+      "company": "会社情報"
+    },
+    "platformLinks": {
+      "overview": "プラットフォーム概要",
+      "complianceAutomation": "コンプライアンス自動化",
+      "continuousMonitoring": "継続的モニタリング",
+      "riskManagement": "リスク管理",
+      "vendorRisk": "ベンダーリスク",
+      "policyManagement": "ポリシー管理",
+      "trustCenter": "トラストセンター",
+      "integrations": "インテグレーション"
+    },
+    "solutionLinks": {
+      "startups": "スタートアップ向け",
+      "scaleups": "スケールアップ企業向け",
+      "enterprise": "エンタープライズ向け",
+      "saas": "SaaS向け",
+      "securityTeams": "セキュリティチーム向け",
+      "grcTeams": "GRCチーム向け"
+    },
+    "frameworkLinks": {
+      "soc2": "SOC 2",
+      "iso27001": "ISO 27001",
+      "gdpr": "GDPR",
+      "hipaa": "HIPAA",
+      "pciDss": "PCI DSS",
+      "nistCsf": "NIST CSF"
+    },
+    "resourceLinks": {
+      "all": "全リソース",
+      "soc2Collection": "SOC 2コレクション",
+      "iso27001Collection": "ISO 27001コレクション",
+      "vendorRiskCollection": "ベンダーリスクコレクション",
+      "blog": "ブログ",
+      "helpCenter": "ヘルプセンター"
+    },
+    "companyLinks": {
+      "about": "会社概要",
+      "careers": "採用情報",
+      "partners": "パートナー",
+      "contact": "お問い合わせ",
+      "security": "セキュリティ"
+    },
+    "copyright": "© {year} CloudAnzen, Inc. All rights reserved.",
+    "privacyPolicy": "プライバシーポリシー",
+    "termsOfService": "利用規約",
+    "security": "セキュリティ",
+    "systemsOperational": "すべてのシステムは正常に稼働中"
+  },
+  "cta": {
+    "bookDemo": "デモを予約",
+    "explorePlatform": "プラットフォームを見る",
+    "learnMore": "詳しく見る",
+    "getStarted": "始める",
+    "seeAll": "すべて見る"
+  },
+  "notFound": {
+    "badge": "404",
+    "title": "このページは移動、削除、またはリンクが古くなっています。",
+    "description": "マーケティングサイトの構成を整理したため、古いパスが一致しない場合があります。以下のリンクから製品、フレームワーク、またはリソースのコンテンツに戻ってください。",
+    "goHome": "ホームへ",
+    "exploreResources": "リソースを探す",
+    "links": {
+      "homepage": { "title": "ホームページへ", "description": "CloudAnzenのプラットフォーム概要と主要ページからやり直す。" },
+      "resources": { "title": "リソースを探す", "description": "ガイド、チェックリスト、テンプレート、コンプライアンスコレクションを読む。" },
+      "help": { "title": "ヘルプセンターを開く", "description": "セットアップ、インテグレーション、モニタリング、監査対応のガイダンスを見つける。" },
+      "demo": { "title": "デモを予約", "description": "プラットフォームを評価しようとしていた場合は、チームにお話しください。" }
+    },
+    "openPage": "ページを開く",
+    "backToCloudAnzen": "CloudAnzenに戻る"
+  }
+}
