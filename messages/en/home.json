@@ -1,0 +1,145 @@
+{
+  "meta": {
+    "title": "CloudAnzen — Continuous Compliance and Trust Operations for AI-Native Teams",
+    "description": "CloudAnzen helps AI-native teams get audit-ready faster with compliance workflows, trust center capabilities, continuous monitoring, and AI-assisted security review workflows."
+  },
+  "hero": {
+    "badge": "Built for AI-native teams",
+    "title": "Continuous compliance and trust operations for",
+    "titleHighlight": "AI-native teams",
+    "subtitle": "CloudAnzen helps AI and SaaS teams get audit-ready faster, automate evidence collection, answer security questionnaires, and run trust workflows without building a large GRC function.",
+    "ctaPrimary": "See CloudAnzen in action",
+    "ctaSecondary": "Explore the platform",
+    "trustNote": "Built for teams pursuing SOC 2, ISO 27001, and enterprise trust requirements."
+  },
+  "dashboard": {
+    "soc2Readiness": { "label": "SOC 2 Readiness", "value": "87%", "sub": "13 controls need attention" },
+    "controlHealth": { "label": "Control Health", "value": "142/163", "sub": "passing continuously" },
+    "openRisks": { "label": "Open Risks", "value": "4", "sub": "2 critical, 2 medium" },
+    "vendorReviews": { "label": "Vendor Reviews", "value": "6 pending", "sub": "due this month" },
+    "evidenceCollected": { "label": "Evidence Collected", "value": "98%", "sub": "auto-collected last 30d" },
+    "auditReadinessScore": { "label": "Audit Readiness Score", "value": "A−", "sub": "improving week over week" }
+  },
+  "socialProof": {
+    "title": "Trusted by security-conscious teams",
+    "badges": ["AI startups", "B2B SaaS", "Fintech", "Healthcare", "Enterprise software"]
+  },
+  "problem": {
+    "label": "The Problem",
+    "title": "Security reviews move faster than your compliance ops",
+    "subtitle": "AI-native teams need to prove trust early, but evidence, questionnaires, and audit prep still get stitched together across spreadsheets, shared drives, and Slack threads.",
+    "items": [
+      {
+        "pain": "Manual evidence collection",
+        "painDesc": "Chasing screenshots and documents slows every audit cycle.",
+        "outcome": "Automate evidence collection",
+        "outcomeDesc": "Connect systems and gather evidence continuously."
+      },
+      {
+        "pain": "Security reviews drain time",
+        "painDesc": "Answering buyer questionnaires repeatedly slows deals and overloads lean teams.",
+        "outcome": "Respond with approved answers",
+        "outcomeDesc": "Reuse approved answers and attach supporting evidence from one place."
+      },
+      {
+        "pain": "Trust requests arrive too early",
+        "painDesc": "Prospects want security documents, policy answers, and proof before your team is ready.",
+        "outcome": "Publish trust faster",
+        "outcomeDesc": "Share trust-center content and supporting evidence from one source of truth."
+      },
+      {
+        "pain": "Scattered control ownership",
+        "painDesc": "Teams lose track of who owns what and what still needs attention.",
+        "outcome": "Assign owners clearly",
+        "outcomeDesc": "Track controls, tasks, reviews, and due dates in one place."
+      }
+    ]
+  },
+  "platformModules": {
+    "label": "The Platform",
+    "title": "One platform for audit readiness and buyer trust",
+    "subtitle": "Start with the workflows that unblock enterprise deals, then grow into broader compliance, risk, and control operations over time.",
+    "modules": [
+      { "title": "Compliance Automation", "desc": "Get SOC 2 and ISO-ready faster with controls, evidence, and audit workflows in one place." },
+      { "title": "Trust Center", "desc": "Share security posture, policies, and reports without slowing your team down." },
+      { "title": "Questionnaire Automation", "desc": "Respond faster to security reviews with reusable answers and supporting evidence." },
+      { "title": "Continuous Monitoring", "desc": "Track control health continuously instead of relying on point-in-time checks." },
+      { "title": "Risk Management", "desc": "Record risks, assign owners, track treatment plans, and maintain visibility." },
+      { "title": "Vendor Risk Management", "desc": "Review vendors with standardized workflows and ongoing oversight." },
+      { "title": "Policy Management", "desc": "Centralize policies, approvals, reviews, and version history." },
+      { "title": "Audit Readiness", "desc": "Organize evidence and streamline auditor collaboration." }
+    ]
+  },
+  "howItWorks": {
+    "label": "How it works",
+    "title": "How CloudAnzen works",
+    "subtitle": "Get from scattered security work to audit-ready operations in days, not months.",
+    "steps": [
+      { "step": "01", "title": "Connect your systems", "desc": "Integrate cloud infrastructure, identity providers, ticketing tools, HR systems, and collaboration apps in minutes." },
+      { "step": "02", "title": "Monitor controls and collect evidence", "desc": "CloudAnzen maps evidence to controls and highlights gaps before they become audit problems." },
+      { "step": "03", "title": "Manage risk and prove trust", "desc": "Track remediation, review vendors, and share trust artifacts with customers from one source of truth." }
+    ],
+    "flowSteps": ["Integrations", "Control Monitoring", "Risks & Tasks", "Audit & Trust Center"]
+  },
+  "frameworks": {
+    "label": "Frameworks",
+    "title": "Support multiple frameworks without duplicating work",
+    "subtitle": "Build once and reuse controls across your security and privacy program. CloudAnzen maps shared controls automatically, so you never duplicate effort across frameworks.",
+    "features": [
+      "Shared control library across all frameworks",
+      "Automatic evidence mapping to multiple audits",
+      "Custom framework support for internal standards",
+      "Auditor collaboration portals per engagement"
+    ],
+    "exploreLink": "Explore frameworks"
+  },
+  "integrations": {
+    "label": "Integrations",
+    "title": "Connect the systems your controls already depend on",
+    "subtitle": "CloudAnzen pulls evidence automatically from your cloud, identity, HR, and engineering tools — so your controls are always up to date.",
+    "categories": {
+      "cloud": "Cloud",
+      "identity": "Identity",
+      "sourceControl": "Source Control",
+      "hris": "HRIS",
+      "ticketing": "Ticketing",
+      "collaboration": "Collaboration"
+    },
+    "seeAll": "And dozens more via API and custom integrations.",
+    "seeAllLink": "See all integrations →"
+  },
+  "trustCenter": {
+    "label": "Trust Center",
+    "title": "Turn security into a business advantage",
+    "features": [
+      { "title": "Publish a trust center", "desc": "Give customers and prospects a dedicated page showing your security posture." },
+      { "title": "Share policies and reports securely", "desc": "Gate access to documents with NDA workflows and access request flows." },
+      { "title": "Reduce repetitive questionnaire work", "desc": "Reuse approved answers and evidence packages across all security reviews." },
+      { "title": "Help buyers evaluate you faster", "desc": "Remove friction from enterprise procurement with always-current compliance badges." }
+    ],
+    "ctaLabel": "See Trust Center",
+    "mock": {
+      "header": "Trust Center — AcmeCorp",
+      "badges": ["SOC 2 Type II", "ISO 27001", "GDPR Compliant", "HIPAA Ready"],
+      "docs": [
+        { "doc": "Security Overview", "status": "Public" },
+        { "doc": "SOC 2 Report", "status": "NDA Required" },
+        { "doc": "Penetration Test", "status": "Request Access" },
+        { "doc": "Security Policies", "status": "Public" }
+      ]
+    }
+  },
+  "testimonial": {
+    "label": "Customer story",
+    "title": "Built to help lean teams move faster",
+    "quote": "CloudAnzen gave us a single place to manage controls, evidence, vendor reviews, and audit prep. What used to take weeks now feels operational.",
+    "author": "Jordan Torres",
+    "role": "Head of Security, Fintech startup"
+  },
+  "finalCta": {
+    "title": "Ready to become audit-ready faster?",
+    "subtitle": "Use CloudAnzen to streamline compliance work, answer buyer security reviews faster, and build trust without spreadsheet-heavy ops.",
+    "ctaPrimary": "Book a demo",
+    "ctaSecondary": "Explore the platform"
+  }
+}

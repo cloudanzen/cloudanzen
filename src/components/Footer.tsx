@@ -1,72 +1,77 @@
-import Link from "next/link";
-import { Twitter, Linkedin } from "lucide-react";
+"use client";
 
-const footerSections = [
-  {
-    title: "Platform",
-    links: [
-      { label: "Platform Overview", href: "/platform" },
-      {
-        label: "Compliance Automation",
-        href: "/platform/compliance-automation",
-      },
-      {
-        label: "Continuous Monitoring",
-        href: "/platform/continuous-monitoring",
-      },
-      { label: "Risk Management", href: "/platform/risk-management" },
-      { label: "Vendor Risk", href: "/platform/vendor-risk" },
-      { label: "Policy Management", href: "/platform/policy-management" },
-      { label: "Trust Center", href: "/platform/trust-center" },
-      { label: "Integrations", href: "/platform/integrations" },
-    ],
-  },
-  {
-    title: "Solutions",
-    links: [
-      { label: "For Startups", href: "/solutions/startups" },
-      { label: "For Scale-ups", href: "/solutions/scaleups" },
-      { label: "For Enterprises", href: "/solutions/enterprise" },
-      { label: "For SaaS", href: "/solutions/saas" },
-      { label: "For Security Teams", href: "/solutions/security-teams" },
-      { label: "For GRC Teams", href: "/solutions/grc-teams" },
-    ],
-  },
-  {
-    title: "Frameworks",
-    links: [
-      { label: "SOC 2", href: "/frameworks/soc2" },
-      { label: "ISO 27001", href: "/frameworks/iso27001" },
-      { label: "GDPR", href: "/frameworks/gdpr" },
-      { label: "HIPAA", href: "/frameworks/hipaa" },
-      { label: "PCI DSS", href: "/frameworks/pci-dss" },
-      { label: "NIST CSF", href: "/frameworks/nist-csf" },
-    ],
-  },
-  {
-    title: "Resources",
-    links: [
-      { label: "All Resources", href: "/resources" },
-      { label: "SOC 2 Collection", href: "/collection/soc-2" },
-      { label: "ISO 27001 Collection", href: "/collection/iso-27001" },
-      { label: "Vendor Risk Collection", href: "/collection/vendor-risk" },
-      { label: "Blog", href: "/resources/blog" },
-      { label: "Help Center", href: "/help" },
-    ],
-  },
-  {
-    title: "Company",
-    links: [
-      { label: "About", href: "/company/about" },
-      { label: "Careers", href: "/company/careers" },
-      { label: "Partners", href: "/company/partners" },
-      { label: "Contact", href: "/contact" },
-      { label: "Security", href: "/security" },
-    ],
-  },
-];
+import { Link } from "@/i18n/navigation";
+import { Twitter, Linkedin } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function Footer() {
+  const t = useTranslations("common");
+
+  const footerSections = [
+    {
+      title: t("footer.sections.platform"),
+      links: [
+        { label: t("footer.platformLinks.overview"), href: "/platform" },
+        {
+          label: t("footer.platformLinks.complianceAutomation"),
+          href: "/platform/compliance-automation",
+        },
+        {
+          label: t("footer.platformLinks.continuousMonitoring"),
+          href: "/platform/continuous-monitoring",
+        },
+        { label: t("footer.platformLinks.riskManagement"), href: "/platform/risk-management" },
+        { label: t("footer.platformLinks.vendorRisk"), href: "/platform/vendor-risk" },
+        { label: t("footer.platformLinks.policyManagement"), href: "/platform/policy-management" },
+        { label: t("footer.platformLinks.trustCenter"), href: "/platform/trust-center" },
+        { label: t("footer.platformLinks.integrations"), href: "/platform/integrations" },
+      ],
+    },
+    {
+      title: t("footer.sections.solutions"),
+      links: [
+        { label: t("footer.solutionLinks.startups"), href: "/solutions/startups" },
+        { label: t("footer.solutionLinks.scaleups"), href: "/solutions/scaleups" },
+        { label: t("footer.solutionLinks.enterprise"), href: "/solutions/enterprise" },
+        { label: t("footer.solutionLinks.saas"), href: "/solutions/saas" },
+        { label: t("footer.solutionLinks.securityTeams"), href: "/solutions/security-teams" },
+        { label: t("footer.solutionLinks.grcTeams"), href: "/solutions/grc-teams" },
+      ],
+    },
+    {
+      title: t("footer.sections.frameworks"),
+      links: [
+        { label: t("footer.frameworkLinks.soc2"), href: "/frameworks/soc2" },
+        { label: t("footer.frameworkLinks.iso27001"), href: "/frameworks/iso27001" },
+        { label: t("footer.frameworkLinks.gdpr"), href: "/frameworks/gdpr" },
+        { label: t("footer.frameworkLinks.hipaa"), href: "/frameworks/hipaa" },
+        { label: t("footer.frameworkLinks.pciDss"), href: "/frameworks/pci-dss" },
+        { label: t("footer.frameworkLinks.nistCsf"), href: "/frameworks/nist-csf" },
+      ],
+    },
+    {
+      title: t("footer.sections.resources"),
+      links: [
+        { label: t("footer.resourceLinks.all"), href: "/resources" },
+        { label: t("footer.resourceLinks.soc2Collection"), href: "/collection/soc-2" },
+        { label: t("footer.resourceLinks.iso27001Collection"), href: "/collection/iso-27001" },
+        { label: t("footer.resourceLinks.vendorRiskCollection"), href: "/collection/vendor-risk" },
+        { label: t("footer.resourceLinks.blog"), href: "/resources/blog" },
+        { label: t("footer.resourceLinks.helpCenter"), href: "/help" },
+      ],
+    },
+    {
+      title: t("footer.sections.company"),
+      links: [
+        { label: t("footer.companyLinks.about"), href: "/company/about" },
+        { label: t("footer.companyLinks.careers"), href: "/company/careers" },
+        { label: t("footer.companyLinks.partners"), href: "/company/partners" },
+        { label: t("footer.companyLinks.contact"), href: "/contact" },
+        { label: t("footer.companyLinks.security"), href: "/security" },
+      ],
+    },
+  ];
+
   return (
     <footer className="bg-slate-900 text-slate-400">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
@@ -90,9 +95,7 @@ export default function Footer() {
               <span className="font-bold text-white text-lg">CloudAnzen</span>
             </Link>
             <p className="text-sm leading-relaxed mb-6">
-              Continuous compliance and trust operations for AI-native teams.
-              Get audit-ready faster, automate evidence, and handle buyer
-              security reviews with less manual work.
+              {t("footer.description")}
             </p>
             <div className="flex gap-3">
               {[
@@ -146,14 +149,13 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-slate-500">
-            &copy; {new Date().getFullYear()} CloudAnzen, Inc. All rights
-            reserved.
+            {t("footer.copyright", { year: new Date().getFullYear() })}
           </p>
           <div className="flex gap-6">
             {[
-              { label: "Privacy Policy", href: "/privacy" },
-              { label: "Terms of Service", href: "/terms" },
-              { label: "Security", href: "/security" },
+              { label: t("footer.privacyPolicy"), href: "/privacy" },
+              { label: t("footer.termsOfService"), href: "/terms" },
+              { label: t("footer.security"), href: "/security" },
             ].map(({ label, href }) => (
               <Link
                 key={label}
@@ -166,7 +168,7 @@ export default function Footer() {
           </div>
           <div className="flex items-center gap-1.5 text-xs text-slate-500">
             <div className="w-1.5 h-1.5 rounded-full bg-teal-400 animate-pulse" />
-            All systems operational
+            {t("footer.systemsOperational")}
           </div>
         </div>
       </div>
