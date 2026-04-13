@@ -82,7 +82,6 @@ export function HomeHeroStory() {
       { key: "vulnerability", icon: TriangleAlert },
       { key: "evidence", icon: FolderCheck },
       { key: "control", icon: ShieldCheck },
-      { key: "policy", icon: Braces },
     ],
     [],
   );
@@ -91,7 +90,6 @@ export function HomeHeroStory() {
     () => [
       { key: "questionnaire", icon: ClipboardCheck },
       { key: "risk", icon: ShieldAlert },
-      { key: "evidence", icon: FileSearch },
       { key: "fix", icon: GitBranchPlus },
     ],
     [],
@@ -118,7 +116,7 @@ export function HomeHeroStory() {
 
   const activeScene = prefersReducedMotion ? SCENE_COUNT - 1 : scene;
   const currentScene = scenes[activeScene];
-  const signalProgress = activeScene === 0 ? 1 : 5;
+  const signalProgress = activeScene === 0 ? 1 : 4;
   const actionsActive = activeScene >= 2;
   const approvalVisible = activeScene >= 3;
   const resolved = activeScene >= 4;
@@ -137,7 +135,7 @@ export function HomeHeroStory() {
                 <Sparkles className="h-3.5 w-3.5 text-blue-300" />
                 {t("eyebrow")}
               </div>
-              <div className="mt-2 min-h-[4.25rem] lg:min-h-[4.75rem]">
+              <div className="mt-2 min-h-[4rem] lg:min-h-[4.5rem]">
                 <p className="text-sm font-semibold text-white sm:text-[15px]">
                   {currentScene.title}
                 </p>
@@ -280,7 +278,7 @@ export function HomeHeroStory() {
                     </div>
                   </div>
 
-                  <div className="space-y-4">
+                  <div className="space-y-3">
                     <div className="relative overflow-hidden rounded-[20px] border border-blue-400/25 bg-[linear-gradient(180deg,rgba(37,99,235,0.2),rgba(15,23,42,0.96))] px-4 py-3.5 shadow-[0_0_36px_rgba(59,130,246,0.16)]">
                       <div className="absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-cyan-300/60 to-transparent" />
                       <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-2xl bg-blue-500/15 text-blue-200 ai-hero-pulse">

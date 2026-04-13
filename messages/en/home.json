@@ -5,12 +5,12 @@
   },
   "hero": {
     "badge": "Bring your own AI. Operate with proof.",
-    "title": "Connect your AI agent to",
-    "titleHighlight": "trust operations",
+    "title": "Turn AI into",
+    "titleHighlight": "governed trust operations",
     "subtitle": "Use your own AI key with CloudAnzen MCP to automate questionnaires, translate vulnerabilities into risks, validate evidence, and guide posture fixes with humans in control.",
     "ctaPrimary": "See CloudAnzen in action",
     "ctaSecondary": "Explore the platform",
-    "trustNote": "AI-guided. Validated. Always traceable.",
+    "trustNote": "Live context, human approval, and auditable outcomes in one workflow.",
     "productTransition": {
       "badge": "Enterprise trust operations workspace",
       "title": "Operate AI-assisted trust workflows in one controlled system",
@@ -36,11 +36,11 @@
         },
         "assemble": {
           "title": "Assemble trust context through MCP",
-          "description": "Questionnaires, vulnerabilities, evidence, controls, and policy context stream into one structured layer your model can reason over safely."
+          "description": "Questionnaires, vulnerabilities, evidence, and control state stream into one structured layer your model can reason over safely."
         },
         "act": {
           "title": "Run high-value trust workflows",
-          "description": "The agent drafts answers, translates findings into risks, validates supporting evidence, and proposes the next posture fix from the same operating model."
+          "description": "The agent drafts answers, translates findings into risks, and proposes the next posture fix from the same operating model."
         },
         "approve": {
           "title": "Keep humans in control for high-impact changes",
@@ -89,10 +89,6 @@
           "risk": {
             "title": "Translate findings into business risk",
             "description": "Map vulnerabilities into owned, prioritized risk records with context."
-          },
-          "evidence": {
-            "title": "Validate supporting evidence",
-            "description": "Check whether uploaded proof actually supports the claimed control."
           },
           "fix": {
             "title": "Recommend the next posture fix",
