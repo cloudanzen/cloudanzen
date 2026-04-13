@@ -29,7 +29,6 @@ function usePrefersReducedMotion() {
 
     update();
     mediaQuery.addEventListener("change", update);
-
     return () => mediaQuery.removeEventListener("change", update);
   }, []);
 
@@ -165,15 +164,15 @@ export function HomeHeroStory() {
             </div>
           </div>
 
-          <div className="mt-4 grid gap-4 xl:grid-cols-[0.88fr_1.12fr]">
+          <div className="mt-5 grid gap-4 lg:grid-cols-[0.92fr_1.08fr]">
             <div className="space-y-4">
               <div className="rounded-[22px] border border-white/10 bg-white/[0.04] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]">
-                <div className="flex items-start justify-between gap-3">
+                <div className="flex items-start justify-between gap-4">
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
                       {t("prompt.label")}
                     </p>
-                    <p className="mt-2.5 text-sm leading-6 text-slate-100">
+                    <p className="mt-2.5 text-base leading-7 text-slate-100 text-balance">
                       {t("prompt.value")}
                     </p>
                   </div>
@@ -198,31 +197,32 @@ export function HomeHeroStory() {
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
                   {t("signals.label")}
                 </p>
-                <div className="mt-3 grid gap-2 sm:grid-cols-2 xl:grid-cols-1">
+                <div className="mt-3 space-y-2.5">
                   {signals.map(({ key, icon: Icon }, index) => {
                     const active = index < signalProgress;
 
                     return (
                       <div
                         key={key}
-                        className={`flex items-center gap-3 rounded-2xl border px-3 py-2.5 transition-all duration-500 ${
+                        className={`flex items-center justify-between gap-3 rounded-2xl border px-3 py-3 transition-all duration-700 ${
                           active
                             ? "border-blue-400/25 bg-blue-500/10 text-slate-100"
                             : "border-white/6 bg-white/[0.02] text-slate-500"
                         }`}
                       >
-                        <div
-                          className={`rounded-xl p-2 ${
-                            active
-                              ? "bg-blue-400/20 text-blue-200 ai-hero-pulse"
-                              : "bg-white/5"
-                          }`}
-                        >
-                          <Icon className="h-4 w-4" />
+                        <div className="flex items-center gap-3">
+                          <div
+                            className={`rounded-xl p-2 ${active ? "bg-blue-400/20 text-blue-200 ai-hero-pulse" : "bg-white/5"}`}
+                          >
+                            <Icon className="h-4 w-4" />
+                          </div>
+                          <span className="text-sm leading-5">
+                            {t(`signals.items.${key}`)}
+                          </span>
                         </div>
-                        <span className="text-sm leading-5">
-                          {t(`signals.items.${key}`)}
-                        </span>
+                        <span
+                          className={`h-2.5 w-2.5 rounded-full ${active ? "bg-blue-300" : "bg-white/18"}`}
+                        />
                       </div>
                     );
                   })}
@@ -232,180 +232,141 @@ export function HomeHeroStory() {
 
             <div className="space-y-4">
               <div className="relative overflow-hidden rounded-[22px] border border-white/10 bg-white/[0.04] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]">
-                <div className="absolute inset-x-8 top-1/2 hidden h-px -translate-y-1/2 bg-gradient-to-r from-transparent via-blue-400/40 to-transparent lg:block" />
+                <div className="pointer-events-none absolute left-7 top-16 bottom-20 hidden w-px bg-gradient-to-b from-blue-400/0 via-blue-400/35 to-cyan-300/0 lg:block" />
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
                   {t("engine.label")}
                 </p>
 
-                <div className="relative mt-3 rounded-[24px] border border-white/8 bg-slate-950/55 p-4">
-                  <div className="rounded-full border border-white/8 bg-white/[0.03] px-3 py-1 text-[11px] font-medium text-slate-400 w-fit">
-                    {t("engine.contextLabel")}
-                  </div>
-
-                  <div className="mt-4 grid gap-3 sm:grid-cols-2">
-                    {signals.slice(0, 4).map(({ key, icon: Icon }, index) => {
-                      const active = index < signalProgress - 1;
-
-                      return (
-                        <div
-                          key={key}
-                          className={`rounded-2xl border p-3 text-sm transition-all duration-500 ${
-                            active
-                              ? "border-cyan-400/25 bg-cyan-500/10 text-slate-100"
-                              : "border-white/6 bg-white/[0.02] text-slate-500"
-                          }`}
-                        >
-                          <div className="flex items-center gap-2">
-                            <Icon
-                              className={`h-4 w-4 ${active ? "text-cyan-200" : "text-slate-500"}`}
-                            />
-                            <span>{t(`signals.items.${key}`)}</span>
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </div>
-
-                  <div className="relative mx-auto mt-4 max-w-md overflow-hidden rounded-[24px] border border-blue-400/25 bg-[linear-gradient(180deg,rgba(37,99,235,0.18),rgba(15,23,42,0.96))] px-5 py-5 text-center shadow-[0_0_50px_rgba(59,130,246,0.18)]">
-                    <div className="absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-cyan-300/60 to-transparent" />
-                    <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-500/15 text-blue-200 ai-hero-pulse">
-                      <Braces className="h-6 w-6" />
+                <div className="mt-3 grid gap-4 xl:grid-cols-[1.14fr_0.86fr]">
+                  <div className="rounded-[24px] border border-white/8 bg-slate-950/55 p-4">
+                    <div className="rounded-full border border-white/8 bg-white/[0.03] px-3 py-1 text-[11px] font-medium text-slate-400 w-fit">
+                      {t("engine.contextLabel")}
                     </div>
-                    <p className="mt-3 text-sm font-semibold text-white">
-                      {t("engine.title")}
-                    </p>
-                    <p className="mt-1.5 text-sm leading-5 text-slate-300 text-balance">
-                      {t("engine.description")}
-                    </p>
 
-                    <div className="mt-4 flex flex-wrap items-center justify-center gap-2 text-xs text-slate-300">
-                      <span className="rounded-full border border-emerald-400/20 bg-emerald-500/10 px-2.5 py-1">
-                        {t("engine.tags.controls")}
-                      </span>
-                      <span className="rounded-full border border-violet-400/20 bg-violet-500/10 px-2.5 py-1">
-                        {t("engine.tags.evidence")}
-                      </span>
-                      <span className="rounded-full border border-amber-400/20 bg-amber-500/10 px-2.5 py-1">
-                        {t("engine.tags.risks")}
-                      </span>
+                    <div className="mt-4 space-y-3">
+                      {actions.map(({ key, icon: Icon }, index) => {
+                        const isLive = actionsActive && index <= activeScene;
+                        const isDone = resolved;
+
+                        return (
+                          <div
+                            key={key}
+                            className={`rounded-2xl border p-3 transition-all duration-700 ${
+                              isDone
+                                ? "border-emerald-400/20 bg-emerald-500/10"
+                                : isLive
+                                  ? "border-blue-400/25 bg-blue-500/10"
+                                  : "border-white/6 bg-white/[0.02]"
+                            }`}
+                          >
+                            <div className="flex items-start gap-3">
+                              <div
+                                className={`rounded-xl p-2 ${isDone ? "bg-emerald-500/15 text-emerald-200" : isLive ? "bg-blue-500/15 text-blue-200 ai-hero-pulse" : "bg-white/5 text-slate-500"}`}
+                              >
+                                <Icon className="h-4 w-4" />
+                              </div>
+                              <div>
+                                <p className="text-sm font-semibold text-white">
+                                  {t(`actions.items.${key}.title`)}
+                                </p>
+                                <p className="mt-1 text-sm leading-5 text-slate-400">
+                                  {t(`actions.items.${key}.description`)}
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+
+                  <div className="space-y-4">
+                    <div className="relative overflow-hidden rounded-[24px] border border-blue-400/25 bg-[linear-gradient(180deg,rgba(37,99,235,0.2),rgba(15,23,42,0.96))] px-5 py-5 shadow-[0_0_50px_rgba(59,130,246,0.18)]">
+                      <div className="absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-cyan-300/60 to-transparent" />
+                      <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-500/15 text-blue-200 ai-hero-pulse">
+                        <Braces className="h-6 w-6" />
+                      </div>
+                      <p className="mt-3 text-center text-sm font-semibold text-white">
+                        {t("engine.title")}
+                      </p>
+                      <p className="mt-1.5 text-center text-sm leading-5 text-slate-300 text-balance">
+                        {t("engine.description")}
+                      </p>
+
+                      <div className="mt-4 flex flex-wrap items-center justify-center gap-2 text-xs text-slate-300">
+                        <span className="rounded-full border border-emerald-400/20 bg-emerald-500/10 px-2.5 py-1">
+                          {t("engine.tags.controls")}
+                        </span>
+                        <span className="rounded-full border border-violet-400/20 bg-violet-500/10 px-2.5 py-1">
+                          {t("engine.tags.evidence")}
+                        </span>
+                        <span className="rounded-full border border-amber-400/20 bg-amber-500/10 px-2.5 py-1">
+                          {t("engine.tags.risks")}
+                        </span>
+                      </div>
+                    </div>
+
+                    <div
+                      className={`rounded-[22px] border p-4 transition-all duration-700 ${
+                        approvalVisible
+                          ? resolved
+                            ? "border-emerald-400/20 bg-emerald-500/10"
+                            : "border-amber-400/25 bg-amber-500/10"
+                          : "border-white/6 bg-white/[0.02]"
+                      }`}
+                    >
+                      <div className="flex items-center justify-between gap-3">
+                        <div>
+                          <p className="text-sm font-semibold text-white">
+                            {t("approval.title")}
+                          </p>
+                          <p className="mt-1 text-sm leading-5 text-slate-400">
+                            {t("approval.description")}
+                          </p>
+                        </div>
+                        <span
+                          className={`rounded-full px-3 py-1 text-xs font-semibold ${resolved ? "bg-emerald-500/15 text-emerald-200" : approvalVisible ? "bg-amber-500/15 text-amber-200" : "bg-white/6 text-slate-500"}`}
+                        >
+                          {resolved
+                            ? t("approval.applied")
+                            : t("approval.pending")}
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="grid gap-4 lg:grid-cols-[1.05fr_0.95fr]">
-                <div className="rounded-[22px] border border-white/10 bg-white/[0.04] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]">
-                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
-                    {t("outcomes.label")}
-                  </p>
+              <div className="rounded-[22px] border border-white/10 bg-white/[0.04] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
+                  {t("outcomes.label")}
+                </p>
+                <div className="mt-3 flex flex-wrap gap-2.5">
+                  {outcomes.map(({ key, tone }, index) => {
+                    const show = resolved || (approvalVisible && index < 2);
 
-                  <div className="mt-3 space-y-2.5">
-                    {actions.map(({ key, icon: Icon }, index) => {
-                      const isLive = actionsActive && index <= activeScene;
-                      const isDone = resolved;
-
-                      return (
-                        <div
-                          key={key}
-                          className={`rounded-2xl border p-3 transition-all duration-500 ${
-                            isDone
-                              ? "border-emerald-400/20 bg-emerald-500/10"
-                              : isLive
-                                ? "border-blue-400/25 bg-blue-500/10"
-                                : "border-white/6 bg-white/[0.02]"
-                          }`}
-                        >
-                          <div className="flex items-start gap-3">
-                            <div
-                              className={`rounded-xl p-2 ${
-                                isDone
-                                  ? "bg-emerald-500/15 text-emerald-200"
-                                  : isLive
-                                    ? "bg-blue-500/15 text-blue-200 ai-hero-pulse"
-                                    : "bg-white/5 text-slate-500"
-                              }`}
-                            >
-                              <Icon className="h-4 w-4" />
-                            </div>
-                            <div>
-                              <p className="text-sm font-semibold text-white">
-                                {t(`actions.items.${key}.title`)}
-                              </p>
-                              <p className="mt-1 text-sm leading-5 text-slate-400">
-                                {t(`actions.items.${key}.description`)}
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
-
-                <div className="space-y-4">
-                  <div
-                    className={`rounded-[22px] border p-4 transition-all duration-500 ${
-                      approvalVisible
-                        ? resolved
-                          ? "border-emerald-400/20 bg-emerald-500/10"
-                          : "border-amber-400/25 bg-amber-500/10"
-                        : "border-white/6 bg-white/[0.02]"
-                    }`}
-                  >
-                    <div className="flex items-center justify-between gap-3">
-                      <div>
-                        <p className="text-sm font-semibold text-white">
-                          {t("approval.title")}
-                        </p>
-                        <p className="mt-1 text-sm leading-5 text-slate-400">
-                          {t("approval.description")}
-                        </p>
-                      </div>
+                    return (
                       <span
-                        className={`rounded-full px-3 py-1 text-xs font-semibold ${
-                          resolved
-                            ? "bg-emerald-500/15 text-emerald-200"
-                            : approvalVisible
-                              ? "bg-amber-500/15 text-amber-200"
-                              : "bg-white/6 text-slate-500"
+                        key={key}
+                        className={`inline-flex items-center gap-2 rounded-full border px-3 py-2 text-xs font-medium transition-all duration-700 ${
+                          show
+                            ? tone
+                            : "border-white/6 bg-white/[0.02] text-slate-500"
                         }`}
                       >
-                        {resolved
-                          ? t("approval.applied")
-                          : t("approval.pending")}
+                        {show ? (
+                          <CheckCircle2 className="h-3.5 w-3.5" />
+                        ) : (
+                          <span className="h-2 w-2 rounded-full bg-current opacity-60" />
+                        )}
+                        {t(`outcomes.items.${key}`)}
                       </span>
-                    </div>
-                  </div>
+                    );
+                  })}
+                </div>
 
-                  <div className="rounded-[22px] border border-white/10 bg-white/[0.04] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]">
-                    <div className="flex flex-wrap gap-2.5">
-                      {outcomes.map(({ key, tone }, index) => {
-                        const show = resolved || (approvalVisible && index < 2);
-
-                        return (
-                          <span
-                            key={key}
-                            className={`inline-flex items-center gap-2 rounded-full border px-3 py-2 text-xs font-medium transition-all duration-500 ${
-                              show
-                                ? tone
-                                : "border-white/6 bg-white/[0.02] text-slate-500"
-                            }`}
-                          >
-                            {show ? (
-                              <CheckCircle2 className="h-3.5 w-3.5" />
-                            ) : (
-                              <span className="h-2 w-2 rounded-full bg-current opacity-60" />
-                            )}
-                            {t(`outcomes.items.${key}`)}
-                          </span>
-                        );
-                      })}
-                    </div>
-
-                    <div className="mt-4 rounded-2xl border border-cyan-400/20 bg-cyan-500/10 p-4 text-sm text-cyan-100">
-                      <p className="font-semibold">{t("caption")}</p>
-                    </div>
-                  </div>
+                <div className="mt-4 rounded-2xl border border-cyan-400/20 bg-cyan-500/10 p-4 text-sm text-cyan-100">
+                  <p className="font-semibold">{t("caption")}</p>
                 </div>
               </div>
             </div>
