@@ -126,14 +126,14 @@ export default async function HomePage({
   return (
     <div className="overflow-x-hidden">
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
-      <section className="relative gradient-hero overflow-hidden pt-20 pb-8 lg:flex lg:min-h-[calc(100vh-3rem)] lg:items-center lg:pt-20 lg:pb-8">
+      <section className="relative gradient-hero overflow-hidden pt-28 pb-10 lg:flex lg:min-h-[calc(100vh-4rem)] lg:items-center lg:pt-32 lg:pb-10">
         <div className="absolute inset-0 bg-grid opacity-40" />
         <div className="absolute top-20 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl" />
         <div className="absolute bottom-10 right-1/4 w-80 h-80 bg-teal-500/15 rounded-full blur-3xl" />
 
-        <div className="relative mx-auto w-full max-w-[1600px] px-4 sm:px-6 lg:px-10">
-          <div className="grid items-start gap-5 lg:grid-cols-[minmax(0,0.52fr)_minmax(0,1.48fr)] lg:gap-7">
-            <div className="max-w-lg self-start pt-5 text-center lg:sticky lg:top-24 lg:pl-2 lg:text-left">
+        <div className="relative mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid items-start gap-6 lg:grid-cols-[minmax(0,0.5fr)_minmax(0,1.5fr)] lg:gap-8">
+            <div className="max-w-lg self-start pt-2 text-center lg:text-left">
               <p className="max-w-sm text-sm font-medium leading-5 text-slate-300 lg:text-[14px]">
                 {t("hero.trustNote")}
               </p>
