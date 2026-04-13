@@ -4,25 +4,145 @@
     "description": "CloudAnzen helps AI-native teams get audit-ready faster with compliance workflows, trust center capabilities, continuous monitoring, and AI-assisted security review workflows."
   },
   "hero": {
-    "badge": "Built for AI-native teams",
-    "title": "Continuous compliance and trust operations for",
-    "titleHighlight": "AI-native teams",
-    "subtitle": "CloudAnzen helps AI and SaaS teams get audit-ready faster, automate evidence collection, answer security questionnaires, and run trust workflows without building a large GRC function.",
+    "badge": "Bring your own AI. Operate with proof.",
+    "title": "Connect your AI agent to",
+    "titleHighlight": "trust operations",
+    "subtitle": "Use your own AI key with CloudAnzen MCP to automate questionnaires, translate vulnerabilities into risks, validate evidence, and guide posture fixes with humans in control.",
     "ctaPrimary": "See CloudAnzen in action",
     "ctaSecondary": "Explore the platform",
-    "trustNote": "Built for teams pursuing SOC 2, ISO 27001, and enterprise trust requirements."
+    "trustNote": "AI-guided. Validated. Always traceable.",
+    "story": {
+      "eyebrow": "Live product story",
+      "scenes": {
+        "ask": {
+          "title": "Ask your AI agent to operate with context",
+          "description": "CloudAnzen starts with the request, not a static dashboard. Your AI agent gets directed into real trust operations work with the right guardrails."
+        },
+        "assemble": {
+          "title": "Assemble trust context through MCP",
+          "description": "Questionnaires, vulnerabilities, evidence, controls, and policy context stream into one structured layer your model can reason over safely."
+        },
+        "act": {
+          "title": "Run high-value trust workflows",
+          "description": "The agent drafts answers, translates findings into risks, validates supporting evidence, and proposes the next posture fix from the same operating model."
+        },
+        "approve": {
+          "title": "Keep humans in control for high-impact changes",
+          "description": "CloudAnzen pauses sensitive actions behind approval gates so security teams can review, approve, and preserve an audit trail."
+        },
+        "resolve": {
+          "title": "Finish with validated outcomes",
+          "description": "The result is not more AI output. It is a ready draft, a registered risk, verified evidence, and a tracked remediation task tied back to the change."
+        }
+      },
+      "prompt": {
+        "label": "Agent prompt",
+        "value": "Review our latest security posture, prepare buyer trust responses, and queue the next fixes."
+      },
+      "chips": {
+        "byoKey": "BYO AI key",
+        "mcp": "Connected via MCP"
+      },
+      "signals": {
+        "label": "Live context",
+        "items": {
+          "questionnaire": "Customer questionnaire",
+          "vulnerability": "New vulnerability",
+          "evidence": "Evidence package",
+          "control": "Control state",
+          "policy": "Policy context"
+        }
+      },
+      "engine": {
+        "label": "CloudAnzen orchestration layer",
+        "contextLabel": "Structured context",
+        "title": "CloudAnzen MCP context engine",
+        "description": "Your model reasons across controls, evidence, risks, fixes, and approvals without losing traceability or workflow state.",
+        "tags": {
+          "controls": "Controls",
+          "evidence": "Evidence",
+          "risks": "Risks"
+        }
+      },
+      "actions": {
+        "items": {
+          "questionnaire": {
+            "title": "Draft questionnaire answers",
+            "description": "Pull approved answers and current proof instead of rewriting every response."
+          },
+          "risk": {
+            "title": "Translate findings into business risk",
+            "description": "Map vulnerabilities into owned, prioritized risk records with context."
+          },
+          "evidence": {
+            "title": "Validate supporting evidence",
+            "description": "Check whether uploaded proof actually supports the claimed control."
+          },
+          "fix": {
+            "title": "Recommend the next posture fix",
+            "description": "Turn posture gaps into tracked remediation work instead of loose suggestions."
+          }
+        }
+      },
+      "approval": {
+        "title": "Human approval gate",
+        "description": "High-impact actions pause for review before CloudAnzen updates posture and downstream trust artifacts.",
+        "pending": "Approval required",
+        "applied": "Applied with audit trail"
+      },
+      "outcomes": {
+        "label": "Validated outcomes",
+        "items": {
+          "draft": "Questionnaire draft ready",
+          "risk": "Risk registered",
+          "evidence": "Evidence verified",
+          "task": "Fix workflow triggered"
+        }
+      },
+      "caption": "AI-guided. Validated. Always traceable."
+    }
   },
   "dashboard": {
-    "soc2Readiness": { "label": "SOC 2 Readiness", "value": "87%", "sub": "13 controls need attention" },
-    "controlHealth": { "label": "Control Health", "value": "142/163", "sub": "passing continuously" },
-    "openRisks": { "label": "Open Risks", "value": "4", "sub": "2 critical, 2 medium" },
-    "vendorReviews": { "label": "Vendor Reviews", "value": "6 pending", "sub": "due this month" },
-    "evidenceCollected": { "label": "Evidence Collected", "value": "98%", "sub": "auto-collected last 30d" },
-    "auditReadinessScore": { "label": "Audit Readiness Score", "value": "A−", "sub": "improving week over week" }
+    "soc2Readiness": {
+      "label": "SOC 2 Readiness",
+      "value": "87%",
+      "sub": "13 controls need attention"
+    },
+    "controlHealth": {
+      "label": "Control Health",
+      "value": "142/163",
+      "sub": "passing continuously"
+    },
+    "openRisks": {
+      "label": "Open Risks",
+      "value": "4",
+      "sub": "2 critical, 2 medium"
+    },
+    "vendorReviews": {
+      "label": "Vendor Reviews",
+      "value": "6 pending",
+      "sub": "due this month"
+    },
+    "evidenceCollected": {
+      "label": "Evidence Collected",
+      "value": "98%",
+      "sub": "auto-collected last 30d"
+    },
+    "auditReadinessScore": {
+      "label": "Audit Readiness Score",
+      "value": "A−",
+      "sub": "improving week over week"
+    }
   },
   "socialProof": {
     "title": "Trusted by security-conscious teams",
-    "badges": ["AI startups", "B2B SaaS", "Fintech", "Healthcare", "Enterprise software"]
+    "badges": [
+      "AI startups",
+      "B2B SaaS",
+      "Fintech",
+      "Healthcare",
+      "Enterprise software"
+    ]
   },
   "problem": {
     "label": "The Problem",
@@ -60,14 +180,38 @@
     "title": "One platform for audit readiness and buyer trust",
     "subtitle": "Start with the workflows that unblock enterprise deals, then grow into broader compliance, risk, and control operations over time.",
     "modules": [
-      { "title": "Compliance Automation", "desc": "Get SOC 2 and ISO-ready faster with controls, evidence, and audit workflows in one place." },
-      { "title": "Trust Center", "desc": "Share security posture, policies, and reports without slowing your team down." },
-      { "title": "Questionnaire Automation", "desc": "Respond faster to security reviews with reusable answers and supporting evidence." },
-      { "title": "Continuous Monitoring", "desc": "Track control health continuously instead of relying on point-in-time checks." },
-      { "title": "Risk Management", "desc": "Record risks, assign owners, track treatment plans, and maintain visibility." },
-      { "title": "Vendor Risk Management", "desc": "Review vendors with standardized workflows and ongoing oversight." },
-      { "title": "Policy Management", "desc": "Centralize policies, approvals, reviews, and version history." },
-      { "title": "Audit Readiness", "desc": "Organize evidence and streamline auditor collaboration." }
+      {
+        "title": "Compliance Automation",
+        "desc": "Get SOC 2 and ISO-ready faster with controls, evidence, and audit workflows in one place."
+      },
+      {
+        "title": "Trust Center",
+        "desc": "Share security posture, policies, and reports without slowing your team down."
+      },
+      {
+        "title": "Questionnaire Automation",
+        "desc": "Respond faster to security reviews with reusable answers and supporting evidence."
+      },
+      {
+        "title": "Continuous Monitoring",
+        "desc": "Track control health continuously instead of relying on point-in-time checks."
+      },
+      {
+        "title": "Risk Management",
+        "desc": "Record risks, assign owners, track treatment plans, and maintain visibility."
+      },
+      {
+        "title": "Vendor Risk Management",
+        "desc": "Review vendors with standardized workflows and ongoing oversight."
+      },
+      {
+        "title": "Policy Management",
+        "desc": "Centralize policies, approvals, reviews, and version history."
+      },
+      {
+        "title": "Audit Readiness",
+        "desc": "Organize evidence and streamline auditor collaboration."
+      }
     ]
   },
   "howItWorks": {
@@ -75,11 +219,28 @@
     "title": "How CloudAnzen works",
     "subtitle": "Get from scattered security work to audit-ready operations in days, not months.",
     "steps": [
-      { "step": "01", "title": "Connect your systems", "desc": "Integrate cloud infrastructure, identity providers, ticketing tools, HR systems, and collaboration apps in minutes." },
-      { "step": "02", "title": "Monitor controls and collect evidence", "desc": "CloudAnzen maps evidence to controls and highlights gaps before they become audit problems." },
-      { "step": "03", "title": "Manage risk and prove trust", "desc": "Track remediation, review vendors, and share trust artifacts with customers from one source of truth." }
+      {
+        "step": "01",
+        "title": "Connect your systems",
+        "desc": "Integrate cloud infrastructure, identity providers, ticketing tools, HR systems, and collaboration apps in minutes."
+      },
+      {
+        "step": "02",
+        "title": "Monitor controls and collect evidence",
+        "desc": "CloudAnzen maps evidence to controls and highlights gaps before they become audit problems."
+      },
+      {
+        "step": "03",
+        "title": "Manage risk and prove trust",
+        "desc": "Track remediation, review vendors, and share trust artifacts with customers from one source of truth."
+      }
     ],
-    "flowSteps": ["Integrations", "Control Monitoring", "Risks & Tasks", "Audit & Trust Center"]
+    "flowSteps": [
+      "Integrations",
+      "Control Monitoring",
+      "Risks & Tasks",
+      "Audit & Trust Center"
+    ]
   },
   "frameworks": {
     "label": "Frameworks",
@@ -112,10 +273,22 @@
     "label": "Trust Center",
     "title": "Turn security into a business advantage",
     "features": [
-      { "title": "Publish a trust center", "desc": "Give customers and prospects a dedicated page showing your security posture." },
-      { "title": "Share policies and reports securely", "desc": "Gate access to documents with NDA workflows and access request flows." },
-      { "title": "Reduce repetitive questionnaire work", "desc": "Reuse approved answers and evidence packages across all security reviews." },
-      { "title": "Help buyers evaluate you faster", "desc": "Remove friction from enterprise procurement with always-current compliance badges." }
+      {
+        "title": "Publish a trust center",
+        "desc": "Give customers and prospects a dedicated page showing your security posture."
+      },
+      {
+        "title": "Share policies and reports securely",
+        "desc": "Gate access to documents with NDA workflows and access request flows."
+      },
+      {
+        "title": "Reduce repetitive questionnaire work",
+        "desc": "Reuse approved answers and evidence packages across all security reviews."
+      },
+      {
+        "title": "Help buyers evaluate you faster",
+        "desc": "Remove friction from enterprise procurement with always-current compliance badges."
+      }
     ],
     "ctaLabel": "See Trust Center",
     "mock": {
