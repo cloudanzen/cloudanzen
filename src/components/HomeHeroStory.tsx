@@ -137,7 +137,7 @@ export function HomeHeroStory() {
                 <Sparkles className="h-3.5 w-3.5 text-blue-300" />
                 {t("eyebrow")}
               </div>
-              <div className="mt-2">
+              <div className="mt-2 min-h-[4.25rem] lg:min-h-[4.75rem]">
                 <p className="text-sm font-semibold text-white sm:text-[15px]">
                   {currentScene.title}
                 </p>
@@ -206,13 +206,13 @@ export function HomeHeroStory() {
                         key={key}
                         className={`flex items-center justify-between gap-3 rounded-2xl border px-3 py-2.5 transition-all duration-700 ${
                           active
-                            ? "border-blue-400/25 bg-blue-500/10 text-slate-100"
-                            : "border-white/6 bg-white/[0.02] text-slate-500"
+                            ? "border-cyan-300/60 bg-cyan-400/18 text-white shadow-[0_0_22px_rgba(34,211,238,0.16)]"
+                            : "border-white/6 bg-white/[0.01] text-slate-600"
                         }`}
                       >
                         <div className="flex items-center gap-3">
                           <div
-                            className={`rounded-xl p-2 ${active ? "bg-blue-400/20 text-blue-200 ai-hero-pulse" : "bg-white/5"}`}
+                            className={`rounded-xl p-2 ${active ? "bg-cyan-300/25 text-cyan-100 ai-hero-pulse" : "bg-white/5"}`}
                           >
                             <Icon className="h-4 w-4" />
                           </div>
@@ -221,7 +221,7 @@ export function HomeHeroStory() {
                           </span>
                         </div>
                         <span
-                          className={`h-2.5 w-2.5 rounded-full ${active ? "bg-blue-300" : "bg-white/18"}`}
+                          className={`h-2.5 w-2.5 rounded-full ${active ? "bg-cyan-200 shadow-[0_0_12px_rgba(103,232,249,0.7)]" : "bg-white/18"}`}
                         />
                       </div>
                     );
@@ -253,15 +253,15 @@ export function HomeHeroStory() {
                             key={key}
                             className={`rounded-2xl border p-2.5 transition-all duration-700 ${
                               isDone
-                                ? "border-emerald-400/20 bg-emerald-500/10"
+                                ? "border-emerald-300/60 bg-emerald-400/18 shadow-[0_0_22px_rgba(52,211,153,0.14)]"
                                 : isLive
-                                  ? "border-blue-400/25 bg-blue-500/10"
-                                  : "border-white/6 bg-white/[0.02]"
+                                  ? "border-blue-300/60 bg-blue-400/18 shadow-[0_0_22px_rgba(96,165,250,0.16)]"
+                                  : "border-white/6 bg-white/[0.01]"
                             }`}
                           >
                             <div className="flex items-start gap-3">
                               <div
-                                className={`rounded-xl p-2 ${isDone ? "bg-emerald-500/15 text-emerald-200" : isLive ? "bg-blue-500/15 text-blue-200 ai-hero-pulse" : "bg-white/5 text-slate-500"}`}
+                                className={`rounded-xl p-2 ${isDone ? "bg-emerald-300/25 text-emerald-100" : isLive ? "bg-blue-300/25 text-blue-100 ai-hero-pulse" : "bg-white/5 text-slate-500"}`}
                               >
                                 <Icon className="h-4 w-4" />
                               </div>
@@ -310,9 +310,9 @@ export function HomeHeroStory() {
                       className={`rounded-[18px] border p-3 transition-all duration-700 ${
                         approvalVisible
                           ? resolved
-                            ? "border-emerald-400/20 bg-emerald-500/10"
-                            : "border-amber-400/25 bg-amber-500/10"
-                          : "border-white/6 bg-white/[0.02]"
+                            ? "border-emerald-300/60 bg-emerald-400/18 shadow-[0_0_22px_rgba(52,211,153,0.14)]"
+                            : "border-amber-300/60 bg-amber-400/18 shadow-[0_0_22px_rgba(251,191,36,0.12)]"
+                          : "border-white/6 bg-white/[0.01]"
                       }`}
                     >
                       <div className="flex items-center justify-between gap-3">
@@ -325,7 +325,7 @@ export function HomeHeroStory() {
                           </p>
                         </div>
                         <span
-                          className={`rounded-full px-3 py-1 text-xs font-semibold ${resolved ? "bg-emerald-500/15 text-emerald-200" : approvalVisible ? "bg-amber-500/15 text-amber-200" : "bg-white/6 text-slate-500"}`}
+                          className={`rounded-full px-3 py-1 text-xs font-semibold ${resolved ? "bg-emerald-300/25 text-emerald-100" : approvalVisible ? "bg-amber-300/25 text-amber-100" : "bg-white/6 text-slate-500"}`}
                         >
                           {resolved
                             ? t("approval.applied")
@@ -351,7 +351,7 @@ export function HomeHeroStory() {
                         className={`inline-flex items-center gap-2 rounded-full border px-2.5 py-1.5 text-xs font-medium transition-all duration-700 ${
                           show
                             ? tone
-                            : "border-white/6 bg-white/[0.02] text-slate-500"
+                            : "border-white/6 bg-white/[0.01] text-slate-600"
                         }`}
                       >
                         {show ? (

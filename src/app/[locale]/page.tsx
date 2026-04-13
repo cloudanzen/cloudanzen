@@ -131,13 +131,17 @@ export default async function HomePage({
         <div className="absolute top-20 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl" />
         <div className="absolute bottom-10 right-1/4 w-80 h-80 bg-teal-500/15 rounded-full blur-3xl" />
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid items-center gap-5 lg:grid-cols-[minmax(0,0.6fr)_minmax(0,1.4fr)] lg:gap-6">
-            <div className="max-w-xl text-center lg:text-left">
+        <div className="relative mx-auto w-full max-w-[1600px] px-4 sm:px-6 lg:px-10">
+          <div className="grid items-start gap-5 lg:grid-cols-[minmax(0,0.54fr)_minmax(0,1.46fr)] lg:gap-6">
+            <div className="max-w-xl self-start pt-2 text-center lg:sticky lg:top-24 lg:text-left">
               <div className="inline-flex items-center gap-2 rounded-full border border-blue-400/20 bg-blue-500/10 px-3 py-1.5 text-sm font-medium text-blue-200 shadow-[0_0_30px_rgba(59,130,246,0.12)]">
                 <span className="h-2 w-2 rounded-full bg-blue-300" />
                 {t("hero.badge")}
               </div>
+
+              <p className="mt-3 max-w-md text-sm leading-5 text-slate-300 lg:text-[14px]">
+                {t("hero.trustNote")}
+              </p>
 
               <h1 className="heading-display max-w-lg text-white">
                 {t("hero.title")}{" "}
@@ -161,10 +165,6 @@ export default async function HomePage({
                   {t("hero.ctaSecondary")}
                 </Link>
               </div>
-
-              <p className="mt-3 max-w-md text-sm leading-5 text-slate-400 lg:text-[14px]">
-                {t("hero.trustNote")}
-              </p>
             </div>
 
             <HomeHeroStory />
