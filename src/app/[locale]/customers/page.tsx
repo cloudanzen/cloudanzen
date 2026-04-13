@@ -55,7 +55,7 @@ export default function CustomersPage() {
       />
 
       <section className="section-pad bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="page-shell">
           <h2 className="heading-xl text-slate-900 mb-12 text-center">What customers say</h2>
           <div className="grid md:grid-cols-2 gap-8 mb-20">
             {testimonials.map(({ quote, name, role, tag }) => (

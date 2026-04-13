@@ -46,7 +46,7 @@ export default function NotFound() {
       <div className="absolute top-24 left-1/4 w-80 h-80 bg-blue-600/20 rounded-full blur-3xl" />
       <div className="absolute bottom-10 right-1/4 w-80 h-80 bg-teal-500/15 rounded-full blur-3xl" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+      <div className="page-shell relative pt-32 pb-20">
         <div className="max-w-3xl mb-14">
           <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/8 border border-white/10 text-blue-200 text-sm font-medium mb-6">
             404

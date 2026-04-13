@@ -1,13 +1,12 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import {
   Bot,
   Braces,
   CheckCircle2,
   ClipboardCheck,
-  FileSearch,
   FolderCheck,
   GitBranchPlus,
   KeyRound,
@@ -18,8 +17,6 @@ import {
 } from "lucide-react";
 
 const SCENE_COUNT = 5;
-const SCENE_INTERVAL_MS = 1800;
-
 function usePrefersReducedMotion() {
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
 
@@ -39,15 +36,55 @@ export function HomeHeroStory() {
   const t = useTranslations("home.hero.story");
   const prefersReducedMotion = usePrefersReducedMotion();
   const [scene, setScene] = useState(0);
+  const storyRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (prefersReducedMotion) return;
 
-    const timer = window.setInterval(() => {
-      setScene((current) => (current + 1) % SCENE_COUNT);
-    }, SCENE_INTERVAL_MS);
+    let frame = 0;
 
-    return () => window.clearInterval(timer);
+    const updateSceneFromScroll = () => {
+      frame = 0;
+
+      const story = storyRef.current;
+
+      if (!story) return;
+
+      const rect = story.getBoundingClientRect();
+      const viewportHeight = window.innerHeight || 1;
+      const storyTop = window.scrollY + rect.top;
+      const progressStart = Math.max(0, storyTop - viewportHeight * 0.45);
+      const progressRange = Math.max(viewportHeight * 1.1, rect.height * 0.9);
+      const progress = Math.min(
+        1,
+        Math.max(0, (window.scrollY - progressStart) / progressRange),
+      );
+      const nextScene = Math.min(
+        SCENE_COUNT - 1,
+        Math.floor(progress * SCENE_COUNT),
+      );
+
+      setScene((current) => (current === nextScene ? current : nextScene));
+    };
+
+    const requestUpdate = () => {
+      if (frame) return;
+
+      frame = window.requestAnimationFrame(updateSceneFromScroll);
+    };
+
+    requestUpdate();
+    window.addEventListener("scroll", requestUpdate, { passive: true });
+    window.addEventListener("resize", requestUpdate);
+
+    return () => {
+      if (frame) {
+        window.cancelAnimationFrame(frame);
+      }
+
+      window.removeEventListener("scroll", requestUpdate);
+      window.removeEventListener("resize", requestUpdate);
+    };
   }, [prefersReducedMotion]);
 
   const scenes = useMemo(
@@ -114,7 +151,7 @@ export function HomeHeroStory() {
     [],
   );
 
-  const activeScene = prefersReducedMotion ? SCENE_COUNT - 1 : scene;
+  const activeScene = prefersReducedMotion ? 0 : scene;
   const currentScene = scenes[activeScene];
   const signalProgress = activeScene === 0 ? 1 : 4;
   const actionsActive = activeScene >= 2;
@@ -122,7 +159,10 @@ export function HomeHeroStory() {
   const resolved = activeScene >= 4;
 
   return (
-    <div className="mt-4 w-full lg:mt-0">
+    <div
+      ref={storyRef}
+      className="mt-4 w-full lg:mt-0 lg:ml-auto lg:max-w-[1020px] lg:justify-self-end xl:translate-x-10"
+    >
       <div className="ai-hero-sheen relative overflow-hidden rounded-[24px] border border-white/12 bg-slate-950/75 p-1.5 shadow-[0_24px_72px_rgba(15,23,42,0.4)] backdrop-blur-xl">
         <div className="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-cyan-300/60 to-transparent" />
         <div className="pointer-events-none absolute -left-8 top-8 h-32 w-32 rounded-full bg-blue-500/10 blur-3xl" />

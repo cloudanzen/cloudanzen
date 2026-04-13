@@ -68,7 +68,7 @@ export default async function CategoryPage({
         <div className="absolute inset-0 bg-grid opacity-30" />
         <div className="absolute top-20 left-1/3 w-80 h-80 bg-blue-600/15 rounded-full blur-3xl" />
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="page-shell relative">
           {/* Breadcrumb */}
           <nav className="flex items-center gap-2 text-sm text-slate-400 mb-8">
             <Link

@@ -84,7 +84,7 @@ export default function HelpCenterPage() {
         <div className="absolute top-20 left-1/3 w-80 h-80 bg-blue-600/15 rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-teal-500/10 rounded-full blur-3xl" />
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="page-shell relative text-center">
           <span className="inline-block text-xs font-semibold text-blue-300 uppercase tracking-widest mb-5 px-3 py-1 rounded-full bg-blue-500/15 border border-blue-400/20">
             Help Center
           </span>
@@ -128,7 +128,7 @@ export default function HelpCenterPage() {
       </section>
 
       {/* Category Grid */}
-      <section className="section-pad max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="section-pad page-shell">
         <div className="text-center mb-12">
           <h2 className="heading-xl text-slate-900 mb-3">Browse by Topic</h2>
           <p className="text-lg text-slate-500 max-w-2xl mx-auto">

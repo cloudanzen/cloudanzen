@@ -5,10 +5,10 @@
   },
   "hero": {
     "badge": "Bring your own AI. Operate with proof.",
-    "title": "Turn AI into",
-    "titleHighlight": "governed trust operations",
+    "title": "AI Driven",
+    "titleHighlight": "Trust Platform",
     "subtitle": "Use your own AI key with CloudAnzen MCP to automate questionnaires, translate vulnerabilities into risks, validate evidence, and guide posture fixes with humans in control.",
-    "ctaPrimary": "See CloudAnzen in action",
+    "ctaPrimary": "Get Started",
     "ctaSecondary": "Explore the platform",
     "trustNote": "Live context, human approval, and auditable outcomes in one workflow.",
     "productTransition": {
@@ -28,7 +28,7 @@
       ]
     },
     "story": {
-      "eyebrow": "Live product story",
+      "eyebrow": "Guided trust operations",
       "scenes": {
         "ask": {
           "title": "Ask your AI agent to operate with context",
@@ -98,7 +98,7 @@
       },
       "approval": {
         "title": "Human approval gate",
-        "description": "High-impact actions pause for review before CloudAnzen updates posture and downstream trust artifacts.",
+        "description": "High-impact actions reviewed.",
         "pending": "Approval required",
         "applied": "Applied with audit trail"
       },

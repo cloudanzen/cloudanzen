@@ -19,7 +19,7 @@ export default function PartnersPage() {
         ctaPrimary={{ label: "Apply to partner program", href: "/contact" }}
       />
       <section className="section-pad bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="page-shell">
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {[
               { type: "Audit & Consulting Partners", desc: "CPA firms and GRC consultants who use CloudAnzen to deliver compliance engagements for their clients.", perks: ["Co-delivery on customer accounts", "Referral revenue sharing", "Training and certification", "Partner portal and resources"] },

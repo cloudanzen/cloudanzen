@@ -27,7 +27,7 @@ export default function PageHero({
       <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-teal-500/10 rounded-full blur-3xl" />
 
       <div
-        className={`relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${
+        className={`page-shell relative ${
           centered ? "text-center" : ""
         }`}
       >

@@ -62,7 +62,7 @@ export default function SecurityPage() {
       />
 
       <section className="section-pad bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="page-shell">
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             {sections.map(({ icon: Icon, title, items }) => (
               <div key={title} className="p-8 rounded-2xl border border-slate-200 bg-slate-50">

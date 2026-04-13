@@ -47,7 +47,7 @@ export default function IntegrationsPage() {
       </section>
 
       <section className="section-pad bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="page-shell">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 mb-16">
             {categories.map(({ cat, color, items }) => (
               <div key={cat} className={`rounded-2xl border p-6 ${color}`}>

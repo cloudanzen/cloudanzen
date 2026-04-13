@@ -37,7 +37,7 @@ export default function TrustCenterPage() {
       </section>
 
       <section className="section-pad bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="page-shell">
           <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
             <div>
               <h2 className="heading-lg text-slate-900 mb-6">Stop re-explaining your security posture to every buyer</h2>

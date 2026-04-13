@@ -5,10 +5,10 @@
   },
   "hero": {
     "badge": "AIは持ち込み。運用は証跡付きで。",
-    "title": "AI を",
-    "titleHighlight": "統制されたトラスト運用へ",
+    "title": "AI主導の",
+    "titleHighlight": "トラストプラットフォーム",
     "subtitle": "CloudAnzen MCP に独自の AI キーを接続し、質問票の自動化、脆弱性からリスクへの変換、エビデンス検証、セキュリティ体制改善を、人の承認を保ったまま進められます。",
-    "ctaPrimary": "CloudAnzenのデモを見る",
+    "ctaPrimary": "始める",
     "ctaSecondary": "プラットフォームを見る",
     "trustNote": "ライブ文脈、人による承認、監査可能な成果を 1 つのワークフローで実現。",
     "productTransition": {
@@ -28,7 +28,7 @@
       ]
     },
     "story": {
-      "eyebrow": "ライブプロダクトストーリー",
+      "eyebrow": "ガイド付きトラスト運用",
       "scenes": {
         "ask": {
           "title": "AI エージェントに文脈付きで仕事を任せる",
@@ -98,7 +98,7 @@
       },
       "approval": {
         "title": "人による承認ゲート",
-        "description": "影響の大きいアクションは、CloudAnzen が体制と外部公開物を更新する前にレビュー対象として止められます。",
+        "description": "影響の大きいアクションをレビュー。",
         "pending": "承認が必要",
         "applied": "監査証跡付きで適用済み"
       },

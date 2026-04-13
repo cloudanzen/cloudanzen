@@ -131,24 +131,24 @@ export default async function HomePage({
         <div className="absolute top-20 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl" />
         <div className="absolute bottom-10 right-1/4 w-80 h-80 bg-teal-500/15 rounded-full blur-3xl" />
 
-        <div className="relative mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid items-start gap-6 lg:grid-cols-[minmax(0,0.5fr)_minmax(0,1.5fr)] lg:gap-8">
-            <div className="max-w-lg self-start pt-2 text-center lg:text-left">
-              <p className="max-w-sm text-sm font-medium leading-5 text-slate-300 lg:text-[14px]">
-                {t("hero.trustNote")}
-              </p>
-
-              <h1 className="mt-4 heading-display max-w-xl text-white">
-                {t("hero.title")}{" "}
-                <span className="bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">
+        <div className="page-shell relative">
+          <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,0.48fr)_minmax(0,1.52fr)] lg:gap-16 xl:grid-cols-[minmax(0,0.44fr)_minmax(0,1.56fr)] xl:gap-20">
+            <div className="mx-auto max-w-[36rem] pt-2 text-center lg:sticky lg:top-1/2 lg:mr-0 lg:-translate-y-1/2">
+              <h1 className="mx-auto max-w-[12ch] text-[2.2rem] font-extrabold leading-[1.02] tracking-[-0.02em] text-white sm:text-[2.65rem] lg:text-[2.9rem] xl:text-[3.1rem]">
+                <span className="block">{t("hero.title")}</span>
+                <span className="block bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">
                   {t("hero.titleHighlight")}
                 </span>
               </h1>
 
-              <div className="mt-5 flex justify-center lg:justify-start">
+              <p className="mx-auto mt-4 max-w-md text-sm font-medium leading-6 text-slate-300 lg:text-[14px]">
+                {t("hero.trustNote")}
+              </p>
+
+              <div className="mt-5 flex justify-center">
                 <Link
                   href="/demo"
-                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-base font-semibold text-white transition-all shadow-lg shadow-blue-900/40 hover:-translate-y-0.5 hover:bg-blue-500"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-5 py-2.5 text-[15px] font-semibold text-white transition-all shadow-lg shadow-blue-900/40 hover:-translate-y-0.5 hover:bg-blue-500"
                 >
                   {t("hero.ctaPrimary")}
                   <ArrowRight className="w-4 h-4" />
@@ -217,7 +217,7 @@ export default async function HomePage({
 
       {/* ── SOCIAL PROOF ─────────────────────────────────────────────────── */}
       <section className="py-14 bg-slate-50 border-y border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="page-shell">
           <p className="text-center text-sm font-medium text-slate-500 mb-8 uppercase tracking-widest">
             {t("socialProof.title")}
           </p>
@@ -236,7 +236,7 @@ export default async function HomePage({
 
       {/* ── PROBLEM → OUTCOME ────────────────────────────────────────────── */}
       <section className="section-pad bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="page-shell">
           <div className="text-center mb-16">
             <span className="text-sm font-semibold text-blue-600 uppercase tracking-wider mb-3 block">
               {t("problem.label")}
@@ -287,7 +287,7 @@ export default async function HomePage({
 
       {/* ── PLATFORM MODULES ─────────────────────────────────────────────── */}
       <section className="section-pad gradient-section">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="page-shell">
           <div className="text-center mb-16">
             <span className="text-sm font-semibold text-blue-600 uppercase tracking-wider mb-3 block">
               {t("platformModules.label")}
@@ -333,7 +333,7 @@ export default async function HomePage({
         <div className="absolute inset-0 bg-grid opacity-20" />
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-3xl" />
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="page-shell relative">
           <div className="text-center mb-16">
             <span className="text-sm font-semibold text-blue-400 uppercase tracking-wider mb-3 block">
               {t("howItWorks.label")}
@@ -389,7 +389,7 @@ export default async function HomePage({
 
       {/* ── FRAMEWORKS ───────────────────────────────────────────────────── */}
       <section className="section-pad bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="page-shell">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <span className="text-sm font-semibold text-blue-600 uppercase tracking-wider mb-3 block">
@@ -433,7 +433,7 @@ export default async function HomePage({
 
       {/* ── INTEGRATIONS ─────────────────────────────────────────────────── */}
       <section className="section-pad bg-slate-50 border-y border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="page-shell">
           <div className="text-center mb-14">
             <span className="text-sm font-semibold text-blue-600 uppercase tracking-wider mb-3 block">
               {t("integrations.label")}
@@ -483,7 +483,7 @@ export default async function HomePage({
 
       {/* ── TRUST / PROOF ────────────────────────────────────────────────── */}
       <section className="section-pad bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="page-shell">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <span className="text-sm font-semibold text-blue-600 uppercase tracking-wider mb-3 block">

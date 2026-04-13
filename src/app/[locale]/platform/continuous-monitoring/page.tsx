@@ -61,7 +61,7 @@ export default function ContinuousMonitoringPage() {
       </section>
 
       <section className="section-pad bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="page-shell">
           <div className="grid md:grid-cols-2 gap-8 mb-20">
             {features.map(({ icon: Icon, title, desc }) => (
               <div

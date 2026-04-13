@@ -107,7 +107,7 @@ export default function PlatformPage() {
       </section>
 
       <section className="section-pad bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="page-shell">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {modules.map(({ icon: Icon, title, desc, href, color }) => (
               <Link

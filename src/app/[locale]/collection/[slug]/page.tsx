@@ -47,7 +47,7 @@ export default async function CollectionPage({
     <div>
       <section className="relative gradient-hero overflow-hidden pt-32 pb-16 lg:pt-40 lg:pb-20">
         <div className="absolute inset-0 bg-grid opacity-30" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="page-shell relative">
           <nav className="flex items-center gap-2 text-sm text-slate-400 mb-8">
             <Link
               href="/resources"
@@ -74,7 +74,7 @@ export default async function CollectionPage({
       </section>
 
       <section className="section-pad bg-white border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-[1.2fr_0.8fr] gap-10 items-start">
+        <div className="page-shell grid items-start gap-10 lg:grid-cols-[1.2fr_0.8fr]">
           <div>
             <p className="text-sm font-semibold text-slate-500 uppercase tracking-[0.18em] mb-4">
               What this collection helps you do
@@ -111,7 +111,7 @@ export default async function CollectionPage({
       </section>
 
       <section className="section-pad bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="page-shell">
           <div className="flex items-center justify-between gap-6 mb-10">
             <div>
               <p className="text-sm font-semibold text-blue-700 uppercase tracking-[0.18em] mb-3">

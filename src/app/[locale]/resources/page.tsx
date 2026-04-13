@@ -56,7 +56,7 @@ export default function ResourcesPage() {
       />
 
       <section className="section-pad bg-white border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="page-shell">
           <div className="flex items-center justify-between gap-6 mb-10">
             <div>
               <p className="text-sm font-semibold text-blue-700 uppercase tracking-[0.18em] mb-3">
@@ -100,7 +100,7 @@ export default function ResourcesPage() {
       </section>
 
       <section className="section-pad bg-slate-50 border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="page-shell">
           <div className="flex items-center gap-3 mb-10">
             <div className="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center">
               <Layers3 className="w-5 h-5" />
@@ -147,7 +147,7 @@ export default function ResourcesPage() {
       </section>
 
       <section className="section-pad bg-white border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="page-shell">
           <div className="flex items-center justify-between gap-6 mb-10">
             <div>
               <p className="text-sm font-semibold text-blue-700 uppercase tracking-[0.18em] mb-3">
@@ -187,7 +187,7 @@ export default function ResourcesPage() {
       </section>
 
       <section className="section-pad bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="page-shell">
           <div className="flex items-center justify-between gap-6 mb-10">
             <div>
               <p className="text-sm font-semibold text-slate-500 uppercase tracking-[0.18em] mb-3">

@@ -74,7 +74,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-slate-900 text-slate-400">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
+      <div className="page-shell pt-16 pb-8">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 pb-12 border-b border-slate-800">
           {/* Brand column */}
           <div className="col-span-2 md:col-span-3 lg:col-span-1">

@@ -39,6 +39,24 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.page-shell {
+  max-width: 92rem;
+  margin-inline: 1rem;
+}
+
+@media (min-width: 640px) {
+  .page-shell {
+    margin-inline: 1.375rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-shell {
+    margin-left: 10%;
+    margin-right: 3.5rem;
+  }
+}
+
 .ai-hero-float {
   animation: ai-hero-float 6.5s ease-in-out infinite;
 }
