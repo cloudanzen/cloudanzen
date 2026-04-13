@@ -126,11 +126,15 @@ export function HomeHeroStory() {
 
   return (
     <div className="mt-8 w-full lg:mt-0">
-      <div className="rounded-[28px] border border-white/12 bg-slate-950/75 p-2 shadow-[0_30px_90px_rgba(15,23,42,0.42)] backdrop-blur-xl">
-        <div className="rounded-[24px] border border-white/6 bg-[radial-gradient(circle_at_top,_rgba(59,130,246,0.18),_transparent_35%),linear-gradient(160deg,rgba(15,23,42,0.98),rgba(15,23,42,0.88))] p-4 sm:p-5 lg:p-5">
+      <div className="ai-hero-sheen relative overflow-hidden rounded-[28px] border border-white/12 bg-slate-950/75 p-2 shadow-[0_34px_100px_rgba(15,23,42,0.46)] backdrop-blur-xl">
+        <div className="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-cyan-300/60 to-transparent" />
+        <div className="pointer-events-none absolute -left-8 top-8 h-32 w-32 rounded-full bg-blue-500/10 blur-3xl" />
+        <div className="pointer-events-none absolute -right-6 bottom-10 h-28 w-28 rounded-full bg-teal-400/8 blur-3xl" />
+
+        <div className="relative rounded-[24px] border border-white/6 bg-[radial-gradient(circle_at_top,_rgba(59,130,246,0.18),_transparent_35%),linear-gradient(160deg,rgba(15,23,42,0.98),rgba(15,23,42,0.88))] p-4 sm:p-5 lg:p-5">
           <div className="flex flex-col gap-3 border-b border-white/8 pb-4 lg:flex-row lg:items-center lg:justify-between">
             <div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-300">
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-300 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
                 <Sparkles className="h-3.5 w-3.5 text-blue-300" />
                 {t("eyebrow")}
               </div>
@@ -138,13 +142,13 @@ export function HomeHeroStory() {
                 <p className="text-sm font-semibold text-white sm:text-[15px]">
                   {currentScene.title}
                 </p>
-                <p className="mt-1 max-w-2xl text-sm leading-5 text-slate-400">
+                <p className="mt-1 max-w-2xl text-sm leading-5 text-slate-400 text-balance">
                   {currentScene.description}
                 </p>
               </div>
             </div>
 
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 rounded-full border border-white/8 bg-white/[0.03] px-2 py-1">
               {scenes.map((sceneItem, index) => (
                 <button
                   key={sceneItem.title}
@@ -163,7 +167,7 @@ export function HomeHeroStory() {
 
           <div className="mt-4 grid gap-4 xl:grid-cols-[0.88fr_1.12fr]">
             <div className="space-y-4">
-              <div className="rounded-[22px] border border-white/10 bg-white/[0.04] p-4">
+              <div className="rounded-[22px] border border-white/10 bg-white/[0.04] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]">
                 <div className="flex items-start justify-between gap-3">
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
@@ -190,7 +194,7 @@ export function HomeHeroStory() {
                 </div>
               </div>
 
-              <div className="rounded-[22px] border border-white/8 bg-slate-950/60 p-4">
+              <div className="rounded-[22px] border border-white/8 bg-slate-950/60 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]">
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
                   {t("signals.label")}
                 </p>
@@ -227,7 +231,7 @@ export function HomeHeroStory() {
             </div>
 
             <div className="space-y-4">
-              <div className="relative overflow-hidden rounded-[22px] border border-white/10 bg-white/[0.04] p-4">
+              <div className="relative overflow-hidden rounded-[22px] border border-white/10 bg-white/[0.04] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]">
                 <div className="absolute inset-x-8 top-1/2 hidden h-px -translate-y-1/2 bg-gradient-to-r from-transparent via-blue-400/40 to-transparent lg:block" />
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
                   {t("engine.label")}
@@ -262,14 +266,15 @@ export function HomeHeroStory() {
                     })}
                   </div>
 
-                  <div className="relative mx-auto mt-4 max-w-md rounded-[24px] border border-blue-400/25 bg-[linear-gradient(180deg,rgba(37,99,235,0.18),rgba(15,23,42,0.96))] px-5 py-5 text-center shadow-[0_0_50px_rgba(59,130,246,0.18)]">
+                  <div className="relative mx-auto mt-4 max-w-md overflow-hidden rounded-[24px] border border-blue-400/25 bg-[linear-gradient(180deg,rgba(37,99,235,0.18),rgba(15,23,42,0.96))] px-5 py-5 text-center shadow-[0_0_50px_rgba(59,130,246,0.18)]">
+                    <div className="absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-cyan-300/60 to-transparent" />
                     <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-500/15 text-blue-200 ai-hero-pulse">
                       <Braces className="h-6 w-6" />
                     </div>
                     <p className="mt-3 text-sm font-semibold text-white">
                       {t("engine.title")}
                     </p>
-                    <p className="mt-1.5 text-sm leading-5 text-slate-300">
+                    <p className="mt-1.5 text-sm leading-5 text-slate-300 text-balance">
                       {t("engine.description")}
                     </p>
 
@@ -289,7 +294,7 @@ export function HomeHeroStory() {
               </div>
 
               <div className="grid gap-4 lg:grid-cols-[1.05fr_0.95fr]">
-                <div className="rounded-[22px] border border-white/10 bg-white/[0.04] p-4">
+                <div className="rounded-[22px] border border-white/10 bg-white/[0.04] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]">
                   <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
                     {t("outcomes.label")}
                   </p>
@@ -372,7 +377,7 @@ export function HomeHeroStory() {
                     </div>
                   </div>
 
-                  <div className="rounded-[22px] border border-white/10 bg-white/[0.04] p-4">
+                  <div className="rounded-[22px] border border-white/10 bg-white/[0.04] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]">
                     <div className="flex flex-wrap gap-2.5">
                       {outcomes.map(({ key, tone }, index) => {
                         const show = resolved || (approvalVisible && index < 2);

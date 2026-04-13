@@ -133,6 +133,11 @@ export default async function HomePage({
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,0.66fr)_minmax(0,1.34fr)] lg:gap-10">
             <div className="max-w-xl text-center lg:text-left">
+              <div className="inline-flex items-center gap-2 rounded-full border border-blue-400/20 bg-blue-500/10 px-3 py-1.5 text-sm font-medium text-blue-200 shadow-[0_0_30px_rgba(59,130,246,0.12)]">
+                <span className="h-2 w-2 rounded-full bg-blue-300" />
+                {t("hero.badge")}
+              </div>
+
               <h1 className="heading-display max-w-lg text-white">
                 {t("hero.title")}{" "}
                 <span className="bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">
@@ -155,6 +160,10 @@ export default async function HomePage({
                   {t("hero.ctaSecondary")}
                 </Link>
               </div>
+
+              <p className="mt-5 max-w-md text-sm leading-6 text-slate-400 lg:text-[15px]">
+                {t("hero.trustNote")}
+              </p>
             </div>
 
             <HomeHeroStory />
