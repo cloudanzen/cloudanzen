@@ -14,6 +14,7 @@ import {
   Building2,
   Globe,
 } from "lucide-react";
+import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { locales } from "@/i18n/config";
@@ -167,6 +168,60 @@ export default async function HomePage({
             </div>
 
             <HomeHeroStory />
+          </div>
+        </div>
+      </section>
+
+      <section className="relative -mt-4 px-4 pb-14 sm:px-6 lg:-mt-8 lg:px-8 lg:pb-18">
+        <div className="mx-auto max-w-7xl">
+          <div className="overflow-hidden rounded-[32px] border border-slate-200 bg-white shadow-[0_30px_90px_rgba(15,23,42,0.12)]">
+            <div className="grid items-center gap-0 lg:grid-cols-[0.42fr_0.58fr]">
+              <div className="border-b border-slate-200 bg-[linear-gradient(180deg,#f8fbff_0%,#eef6ff_100%)] p-6 sm:p-8 lg:border-b-0 lg:border-r lg:p-10">
+                <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-blue-700">
+                  {t("hero.productTransition.badge")}
+                </div>
+                <h2 className="mt-4 text-2xl font-bold tracking-tight text-slate-900 sm:text-[2rem]">
+                  {t("hero.productTransition.title")}
+                </h2>
+                <p className="mt-3 max-w-md text-sm leading-7 text-slate-600 sm:text-[15px]">
+                  {t("hero.productTransition.description")}
+                </p>
+
+                <div className="mt-6 space-y-3">
+                  {([0, 1] as const).map((index) => (
+                    <div
+                      key={index}
+                      className="flex items-start gap-3 rounded-2xl border border-slate-200 bg-white/80 px-4 py-3 shadow-sm"
+                    >
+                      <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-blue-600" />
+                      <div>
+                        <p className="text-sm font-semibold text-slate-900">
+                          {t(`hero.productTransition.points.${index}.title`)}
+                        </p>
+                        <p className="mt-1 text-sm leading-6 text-slate-500">
+                          {t(
+                            `hero.productTransition.points.${index}.description`,
+                          )}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="bg-slate-950 p-3 sm:p-4">
+                <div className="overflow-hidden rounded-[24px] border border-white/10 bg-slate-900 shadow-[0_24px_70px_rgba(15,23,42,0.35)]">
+                  <Image
+                    src="/screenshots/AIAssistant.png"
+                    alt={t("hero.productTransition.imageAlt")}
+                    width={1200}
+                    height={675}
+                    className="h-auto w-full"
+                    priority
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -11,6 +11,22 @@
     "ctaPrimary": "CloudAnzenのデモを見る",
     "ctaSecondary": "プラットフォームを見る",
     "trustNote": "AI 主導でも、検証され、常に追跡可能。",
+    "productTransition": {
+      "badge": "ストーリーから実画面へ",
+      "title": "実際の CloudAnzen ワークスペースで AI ワークフローを見る",
+      "description": "このヒーローは概念アニメーションではありません。CloudAnzen では、AI 支援の質問票対応、証跡に基づく回答、トラストオペレーションを 1 つのシステムで実行できます。",
+      "imageAlt": "CloudAnzen AI アシスタントのワークスペース画面",
+      "points": [
+        {
+          "title": "ライブのトラスト文脈に基づく AI",
+          "description": "承認済み回答、最新エビデンス、コントロール状態が、実務を進めるその場で利用できます。"
+        },
+        {
+          "title": "生成テキストで終わらない運用成果",
+          "description": "チームは回答ドラフトから、追跡可能な是正対応と検証済み証跡まで、同じワークフローで進められます。"
+        }
+      ]
+    },
     "story": {
       "eyebrow": "ライブプロダクトストーリー",
       "scenes": {

@@ -11,6 +11,22 @@
     "ctaPrimary": "See CloudAnzen in action",
     "ctaSecondary": "Explore the platform",
     "trustNote": "AI-guided. Validated. Always traceable.",
+    "productTransition": {
+      "badge": "From story to product",
+      "title": "See the AI workflow in a real CloudAnzen workspace",
+      "description": "The hero is not a concept animation. CloudAnzen already gives teams a live interface to run AI-assisted questionnaire work, evidence-backed answers, and trust operations from one system.",
+      "imageAlt": "CloudAnzen AI assistant workspace screenshot",
+      "points": [
+        {
+          "title": "AI grounded in live trust context",
+          "description": "Approved answers, current evidence, and control state are available where the work happens."
+        },
+        {
+          "title": "Operational output, not just generated text",
+          "description": "Teams move from draft responses to tracked remediation and validated proof inside the same workflow."
+        }
+      ]
+    },
     "story": {
       "eyebrow": "Live product story",
       "scenes": {
