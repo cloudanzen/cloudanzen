@@ -125,7 +125,7 @@ export function HomeHeroStory() {
   const resolved = activeScene >= 4;
 
   return (
-    <div className="mt-16 max-w-6xl mx-auto">
+    <div className="mt-12 w-full lg:mt-0">
       <div className="rounded-[32px] border border-white/12 bg-slate-950/75 p-2 shadow-[0_40px_120px_rgba(15,23,42,0.45)] backdrop-blur-xl">
         <div className="rounded-[28px] border border-white/6 bg-[radial-gradient(circle_at_top,_rgba(59,130,246,0.18),_transparent_35%),linear-gradient(160deg,rgba(15,23,42,0.98),rgba(15,23,42,0.86))] p-5 sm:p-6 lg:p-7">
           <div className="flex flex-col gap-4 border-b border-white/8 pb-5 lg:flex-row lg:items-end lg:justify-between">

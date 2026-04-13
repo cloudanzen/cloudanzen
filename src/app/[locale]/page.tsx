@@ -6,7 +6,6 @@ import {
   FileText,
   Zap,
   Lock,
-  TrendingUp,
   AlertTriangle,
   CloudCog,
   ShieldCheck,
@@ -19,15 +18,6 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { locales } from "@/i18n/config";
 import { HomeHeroStory } from "@/components/HomeHeroStory";
-
-const frameworkBadges = [
-  "SOC 2",
-  "ISO 27001",
-  "GDPR",
-  "HIPAA",
-  "PCI DSS",
-  "NIST CSF",
-];
 
 const painPointIcons = [FileText, Zap, Globe, AlertTriangle];
 
@@ -140,52 +130,35 @@ export default async function HomePage({
         <div className="absolute top-20 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl" />
         <div className="absolute bottom-10 right-1/4 w-80 h-80 bg-teal-500/15 rounded-full blur-3xl" />
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/15 border border-blue-400/25 text-blue-300 text-sm font-medium mb-8">
-            <TrendingUp className="w-3.5 h-3.5" />
-            {t("hero.badge")}
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,0.72fr)_minmax(0,1.28fr)] lg:gap-12">
+            <div className="max-w-xl text-center lg:text-left">
+              <h1 className="heading-display text-white">
+                {t("hero.title")}{" "}
+                <span className="bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">
+                  {t("hero.titleHighlight")}
+                </span>
+              </h1>
+
+              <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
+                <Link
+                  href="/demo"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-base font-semibold bg-blue-600 text-white hover:bg-blue-500 transition-all shadow-lg shadow-blue-900/40 hover:-translate-y-0.5"
+                >
+                  {t("hero.ctaPrimary")}
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link
+                  href="/platform"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-base font-semibold bg-white/10 text-white border border-white/20 hover:bg-white/20 transition-all"
+                >
+                  {t("hero.ctaSecondary")}
+                </Link>
+              </div>
+            </div>
+
+            <HomeHeroStory />
           </div>
-
-          <h1 className="heading-display text-white mb-6 max-w-4xl mx-auto">
-            {t("hero.title")}{" "}
-            <span className="bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">
-              {t("hero.titleHighlight")}
-            </span>
-          </h1>
-
-          <p className="text-xl text-slate-300 leading-relaxed mb-10 max-w-2xl mx-auto">
-            {t("hero.subtitle")}
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-            <Link
-              href="/demo"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-base font-semibold bg-blue-600 text-white hover:bg-blue-500 transition-all shadow-lg shadow-blue-900/40 hover:-translate-y-0.5"
-            >
-              {t("hero.ctaPrimary")}
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-            <Link
-              href="/platform"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-base font-semibold bg-white/10 text-white border border-white/20 hover:bg-white/20 transition-all"
-            >
-              {t("hero.ctaSecondary")}
-            </Link>
-          </div>
-          <p className="text-sm text-slate-400">{t("hero.trustNote")}</p>
-
-          <div className="flex flex-wrap gap-3 justify-center mt-10">
-            {frameworkBadges.map((fw) => (
-              <span
-                key={fw}
-                className="px-3 py-1.5 rounded-full bg-white/8 border border-white/12 text-white/75 text-xs font-medium"
-              >
-                {fw}
-              </span>
-            ))}
-          </div>
-
-          <HomeHeroStory />
         </div>
       </section>
 
