@@ -124,24 +124,24 @@ export function HomeHeroStory() {
   const resolved = activeScene >= 4;
 
   return (
-    <div className="mt-8 w-full lg:mt-0">
-      <div className="ai-hero-sheen relative overflow-hidden rounded-[28px] border border-white/12 bg-slate-950/75 p-2 shadow-[0_34px_100px_rgba(15,23,42,0.46)] backdrop-blur-xl">
+    <div className="mt-4 w-full lg:mt-0">
+      <div className="ai-hero-sheen relative overflow-hidden rounded-[24px] border border-white/12 bg-slate-950/75 p-1.5 shadow-[0_24px_72px_rgba(15,23,42,0.4)] backdrop-blur-xl">
         <div className="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-cyan-300/60 to-transparent" />
         <div className="pointer-events-none absolute -left-8 top-8 h-32 w-32 rounded-full bg-blue-500/10 blur-3xl" />
         <div className="pointer-events-none absolute -right-6 bottom-10 h-28 w-28 rounded-full bg-teal-400/8 blur-3xl" />
 
-        <div className="relative rounded-[24px] border border-white/6 bg-[radial-gradient(circle_at_top,_rgba(59,130,246,0.18),_transparent_35%),linear-gradient(160deg,rgba(15,23,42,0.98),rgba(15,23,42,0.88))] p-4 sm:p-5 lg:p-5">
-          <div className="flex flex-col gap-3 border-b border-white/8 pb-4 lg:flex-row lg:items-center lg:justify-between">
+        <div className="relative rounded-[20px] border border-white/6 bg-[radial-gradient(circle_at_top,_rgba(59,130,246,0.18),_transparent_35%),linear-gradient(160deg,rgba(15,23,42,0.98),rgba(15,23,42,0.88))] p-3 sm:p-3.5 lg:p-3.5">
+          <div className="flex flex-col gap-2.5 border-b border-white/8 pb-3 lg:flex-row lg:items-center lg:justify-between">
             <div>
               <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-300 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
                 <Sparkles className="h-3.5 w-3.5 text-blue-300" />
                 {t("eyebrow")}
               </div>
-              <div className="mt-2.5">
+              <div className="mt-2">
                 <p className="text-sm font-semibold text-white sm:text-[15px]">
                   {currentScene.title}
                 </p>
-                <p className="mt-1 max-w-2xl text-sm leading-5 text-slate-400 text-balance">
+                <p className="mt-1 max-w-2xl text-[13px] leading-5 text-slate-400 text-balance lg:text-sm">
                   {currentScene.description}
                 </p>
               </div>
@@ -164,24 +164,24 @@ export function HomeHeroStory() {
             </div>
           </div>
 
-          <div className="mt-5 grid gap-4 lg:grid-cols-[0.92fr_1.08fr]">
-            <div className="space-y-4">
-              <div className="rounded-[22px] border border-white/10 bg-white/[0.04] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]">
+          <div className="mt-3.5 grid gap-3 lg:grid-cols-[0.9fr_1.1fr]">
+            <div className="space-y-3">
+              <div className="rounded-[18px] border border-white/10 bg-white/[0.04] p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]">
                 <div className="flex items-start justify-between gap-4">
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
                       {t("prompt.label")}
                     </p>
-                    <p className="mt-2.5 text-base leading-7 text-slate-100 text-balance">
+                    <p className="mt-2 text-sm leading-6 text-slate-100 text-balance lg:text-[15px]">
                       {t("prompt.value")}
                     </p>
                   </div>
-                  <div className="rounded-2xl border border-blue-400/25 bg-blue-500/10 p-3 text-blue-200 ai-hero-float">
-                    <Bot className="h-5 w-5" />
+                  <div className="rounded-2xl border border-blue-400/25 bg-blue-500/10 p-2.5 text-blue-200 ai-hero-float">
+                    <Bot className="h-4 w-4" />
                   </div>
                 </div>
 
-                <div className="mt-4 flex flex-wrap gap-2">
+                <div className="mt-3 flex flex-wrap gap-2">
                   <span className="inline-flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-500/10 px-3 py-1.5 text-xs font-medium text-emerald-200">
                     <KeyRound className="h-3.5 w-3.5" />
                     {t("chips.byoKey")}
@@ -193,18 +193,18 @@ export function HomeHeroStory() {
                 </div>
               </div>
 
-              <div className="rounded-[22px] border border-white/8 bg-slate-950/60 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]">
+              <div className="rounded-[18px] border border-white/8 bg-slate-950/60 p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]">
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
                   {t("signals.label")}
                 </p>
-                <div className="mt-3 space-y-2.5">
+                <div className="mt-2.5 grid gap-2 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
                   {signals.map(({ key, icon: Icon }, index) => {
                     const active = index < signalProgress;
 
                     return (
                       <div
                         key={key}
-                        className={`flex items-center justify-between gap-3 rounded-2xl border px-3 py-3 transition-all duration-700 ${
+                        className={`flex items-center justify-between gap-3 rounded-2xl border px-3 py-2.5 transition-all duration-700 ${
                           active
                             ? "border-blue-400/25 bg-blue-500/10 text-slate-100"
                             : "border-white/6 bg-white/[0.02] text-slate-500"
@@ -216,7 +216,7 @@ export function HomeHeroStory() {
                           >
                             <Icon className="h-4 w-4" />
                           </div>
-                          <span className="text-sm leading-5">
+                          <span className="text-[13px] leading-5 lg:text-sm">
                             {t(`signals.items.${key}`)}
                           </span>
                         </div>
@@ -230,20 +230,20 @@ export function HomeHeroStory() {
               </div>
             </div>
 
-            <div className="space-y-4">
-              <div className="relative overflow-hidden rounded-[22px] border border-white/10 bg-white/[0.04] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]">
+            <div className="space-y-3">
+              <div className="relative overflow-hidden rounded-[18px] border border-white/10 bg-white/[0.04] p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]">
                 <div className="pointer-events-none absolute left-7 top-16 bottom-20 hidden w-px bg-gradient-to-b from-blue-400/0 via-blue-400/35 to-cyan-300/0 lg:block" />
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
                   {t("engine.label")}
                 </p>
 
-                <div className="mt-3 grid gap-4 xl:grid-cols-[1.14fr_0.86fr]">
-                  <div className="rounded-[24px] border border-white/8 bg-slate-950/55 p-4">
+                <div className="mt-2.5 grid gap-3 xl:grid-cols-[1.14fr_0.86fr]">
+                  <div className="rounded-[20px] border border-white/8 bg-slate-950/55 p-3">
                     <div className="rounded-full border border-white/8 bg-white/[0.03] px-3 py-1 text-[11px] font-medium text-slate-400 w-fit">
                       {t("engine.contextLabel")}
                     </div>
 
-                    <div className="mt-4 space-y-3">
+                    <div className="mt-3 space-y-2">
                       {actions.map(({ key, icon: Icon }, index) => {
                         const isLive = actionsActive && index <= activeScene;
                         const isDone = resolved;
@@ -251,7 +251,7 @@ export function HomeHeroStory() {
                         return (
                           <div
                             key={key}
-                            className={`rounded-2xl border p-3 transition-all duration-700 ${
+                            className={`rounded-2xl border p-2.5 transition-all duration-700 ${
                               isDone
                                 ? "border-emerald-400/20 bg-emerald-500/10"
                                 : isLive
@@ -266,10 +266,10 @@ export function HomeHeroStory() {
                                 <Icon className="h-4 w-4" />
                               </div>
                               <div>
-                                <p className="text-sm font-semibold text-white">
+                                <p className="text-[13px] font-semibold text-white lg:text-sm">
                                   {t(`actions.items.${key}.title`)}
                                 </p>
-                                <p className="mt-1 text-sm leading-5 text-slate-400">
+                                <p className="mt-1 text-[13px] leading-5 text-slate-400 lg:text-sm">
                                   {t(`actions.items.${key}.description`)}
                                 </p>
                               </div>
@@ -281,19 +281,19 @@ export function HomeHeroStory() {
                   </div>
 
                   <div className="space-y-4">
-                    <div className="relative overflow-hidden rounded-[24px] border border-blue-400/25 bg-[linear-gradient(180deg,rgba(37,99,235,0.2),rgba(15,23,42,0.96))] px-5 py-5 shadow-[0_0_50px_rgba(59,130,246,0.18)]">
+                    <div className="relative overflow-hidden rounded-[20px] border border-blue-400/25 bg-[linear-gradient(180deg,rgba(37,99,235,0.2),rgba(15,23,42,0.96))] px-4 py-3.5 shadow-[0_0_36px_rgba(59,130,246,0.16)]">
                       <div className="absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-cyan-300/60 to-transparent" />
-                      <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-500/15 text-blue-200 ai-hero-pulse">
-                        <Braces className="h-6 w-6" />
+                      <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-2xl bg-blue-500/15 text-blue-200 ai-hero-pulse">
+                        <Braces className="h-5 w-5" />
                       </div>
-                      <p className="mt-3 text-center text-sm font-semibold text-white">
+                      <p className="mt-2.5 text-center text-sm font-semibold text-white">
                         {t("engine.title")}
                       </p>
-                      <p className="mt-1.5 text-center text-sm leading-5 text-slate-300 text-balance">
+                      <p className="mt-1 text-center text-[13px] leading-5 text-slate-300 text-balance lg:text-sm">
                         {t("engine.description")}
                       </p>
 
-                      <div className="mt-4 flex flex-wrap items-center justify-center gap-2 text-xs text-slate-300">
+                      <div className="mt-2.5 flex flex-wrap items-center justify-center gap-1.5 text-xs text-slate-300">
                         <span className="rounded-full border border-emerald-400/20 bg-emerald-500/10 px-2.5 py-1">
                           {t("engine.tags.controls")}
                         </span>
@@ -307,7 +307,7 @@ export function HomeHeroStory() {
                     </div>
 
                     <div
-                      className={`rounded-[22px] border p-4 transition-all duration-700 ${
+                      className={`rounded-[18px] border p-3 transition-all duration-700 ${
                         approvalVisible
                           ? resolved
                             ? "border-emerald-400/20 bg-emerald-500/10"
@@ -320,7 +320,7 @@ export function HomeHeroStory() {
                           <p className="text-sm font-semibold text-white">
                             {t("approval.title")}
                           </p>
-                          <p className="mt-1 text-sm leading-5 text-slate-400">
+                          <p className="mt-1 text-[13px] leading-5 text-slate-400 lg:text-sm">
                             {t("approval.description")}
                           </p>
                         </div>
@@ -337,18 +337,18 @@ export function HomeHeroStory() {
                 </div>
               </div>
 
-              <div className="rounded-[22px] border border-white/10 bg-white/[0.04] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]">
+              <div className="rounded-[18px] border border-white/10 bg-white/[0.04] p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]">
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
                   {t("outcomes.label")}
                 </p>
-                <div className="mt-3 flex flex-wrap gap-2.5">
+                <div className="mt-2 flex flex-wrap gap-1.5">
                   {outcomes.map(({ key, tone }, index) => {
                     const show = resolved || (approvalVisible && index < 2);
 
                     return (
                       <span
                         key={key}
-                        className={`inline-flex items-center gap-2 rounded-full border px-3 py-2 text-xs font-medium transition-all duration-700 ${
+                        className={`inline-flex items-center gap-2 rounded-full border px-2.5 py-1.5 text-xs font-medium transition-all duration-700 ${
                           show
                             ? tone
                             : "border-white/6 bg-white/[0.02] text-slate-500"
@@ -365,7 +365,7 @@ export function HomeHeroStory() {
                   })}
                 </div>
 
-                <div className="mt-4 rounded-2xl border border-cyan-400/20 bg-cyan-500/10 p-4 text-sm text-cyan-100">
+                <div className="mt-2.5 rounded-2xl border border-cyan-400/20 bg-cyan-500/10 p-3 text-sm text-cyan-100">
                   <p className="font-semibold">{t("caption")}</p>
                 </div>
               </div>

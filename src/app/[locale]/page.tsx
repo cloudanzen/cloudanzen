@@ -126,13 +126,13 @@ export default async function HomePage({
   return (
     <div className="overflow-x-hidden">
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
-      <section className="relative gradient-hero overflow-hidden pt-28 pb-16 lg:flex lg:min-h-[calc(100vh-4.5rem)] lg:items-center lg:pt-32 lg:pb-18">
+      <section className="relative gradient-hero overflow-hidden pt-20 pb-8 lg:flex lg:min-h-[calc(100vh-3rem)] lg:items-center lg:pt-20 lg:pb-8">
         <div className="absolute inset-0 bg-grid opacity-40" />
         <div className="absolute top-20 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl" />
         <div className="absolute bottom-10 right-1/4 w-80 h-80 bg-teal-500/15 rounded-full blur-3xl" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,0.66fr)_minmax(0,1.34fr)] lg:gap-10">
+          <div className="grid items-center gap-5 lg:grid-cols-[minmax(0,0.6fr)_minmax(0,1.4fr)] lg:gap-6">
             <div className="max-w-xl text-center lg:text-left">
               <div className="inline-flex items-center gap-2 rounded-full border border-blue-400/20 bg-blue-500/10 px-3 py-1.5 text-sm font-medium text-blue-200 shadow-[0_0_30px_rgba(59,130,246,0.12)]">
                 <span className="h-2 w-2 rounded-full bg-blue-300" />
@@ -146,23 +146,23 @@ export default async function HomePage({
                 </span>
               </h1>
 
-              <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
+              <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:justify-center lg:justify-start">
                 <Link
                   href="/demo"
-                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-7 py-3.5 text-base font-semibold text-white transition-all shadow-lg shadow-blue-900/40 hover:-translate-y-0.5 hover:bg-blue-500"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-base font-semibold text-white transition-all shadow-lg shadow-blue-900/40 hover:-translate-y-0.5 hover:bg-blue-500"
                 >
                   {t("hero.ctaPrimary")}
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
                   href="/platform"
-                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/10 px-7 py-3.5 text-base font-semibold text-white transition-all hover:bg-white/20"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition-all hover:bg-white/20"
                 >
                   {t("hero.ctaSecondary")}
                 </Link>
               </div>
 
-              <p className="mt-5 max-w-md text-sm leading-6 text-slate-400 lg:text-[15px]">
+              <p className="mt-3 max-w-md text-sm leading-5 text-slate-400 lg:text-[14px]">
                 {t("hero.trustNote")}
               </p>
             </div>
