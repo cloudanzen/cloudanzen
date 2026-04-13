@@ -125,32 +125,32 @@ export default async function HomePage({
   return (
     <div className="overflow-x-hidden">
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
-      <section className="relative gradient-hero overflow-hidden pt-32 pb-24 lg:pt-44 lg:pb-32">
+      <section className="relative gradient-hero overflow-hidden pt-28 pb-16 lg:flex lg:min-h-[calc(100vh-4.5rem)] lg:items-center lg:pt-32 lg:pb-18">
         <div className="absolute inset-0 bg-grid opacity-40" />
         <div className="absolute top-20 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl" />
         <div className="absolute bottom-10 right-1/4 w-80 h-80 bg-teal-500/15 rounded-full blur-3xl" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,0.72fr)_minmax(0,1.28fr)] lg:gap-12">
+          <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,0.66fr)_minmax(0,1.34fr)] lg:gap-10">
             <div className="max-w-xl text-center lg:text-left">
-              <h1 className="heading-display text-white">
+              <h1 className="heading-display max-w-lg text-white">
                 {t("hero.title")}{" "}
                 <span className="bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">
                   {t("hero.titleHighlight")}
                 </span>
               </h1>
 
-              <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
+              <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
                 <Link
                   href="/demo"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-base font-semibold bg-blue-600 text-white hover:bg-blue-500 transition-all shadow-lg shadow-blue-900/40 hover:-translate-y-0.5"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-7 py-3.5 text-base font-semibold text-white transition-all shadow-lg shadow-blue-900/40 hover:-translate-y-0.5 hover:bg-blue-500"
                 >
                   {t("hero.ctaPrimary")}
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
                   href="/platform"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-base font-semibold bg-white/10 text-white border border-white/20 hover:bg-white/20 transition-all"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/10 px-7 py-3.5 text-base font-semibold text-white transition-all hover:bg-white/20"
                 >
                   {t("hero.ctaSecondary")}
                 </Link>
