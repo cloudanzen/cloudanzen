@@ -71,7 +71,7 @@ export default async function ResourceTypePage({
               <Link
                 key={article.slug}
                 href={`/resources/${article.type}/${article.slug}`}
-                className="block rounded-2xl border border-slate-200 p-6 hover:border-blue-300 hover:shadow-sm transition-all"
+                className="block rounded-2xl border border-slate-200 p-6 transition-all hover:border-fuchsia-200 hover:shadow-sm"
               >
                 <div className="flex flex-wrap items-center gap-2 mb-3">
                   <span className="text-xs px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 font-medium">
@@ -87,7 +87,7 @@ export default async function ResourceTypePage({
                 <p className="text-sm text-slate-600 leading-relaxed mb-4">
                   {article.summary}
                 </p>
-                <span className="inline-flex items-center gap-2 text-sm font-semibold text-blue-700">
+                <span className="inline-flex items-center gap-2 text-sm font-semibold text-fuchsia-600">
                   Read article <ArrowRight className="w-4 h-4" />
                 </span>
               </Link>

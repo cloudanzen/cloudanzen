@@ -22,9 +22,9 @@ export default function PageHero({
 }: PageHeroProps) {
   return (
     <section className="relative gradient-hero overflow-hidden pt-32 pb-20 lg:pt-40 lg:pb-28">
-      <div className="absolute inset-0 bg-grid opacity-30" />
-      <div className="absolute top-20 left-1/3 w-80 h-80 bg-blue-600/15 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-teal-500/10 rounded-full blur-3xl" />
+      <div className="absolute inset-0 bg-grid opacity-10" />
+      <div className="absolute top-20 left-1/3 h-80 w-80 rounded-full bg-amber-200/35 blur-3xl" />
+      <div className="absolute bottom-0 right-1/4 h-64 w-64 rounded-full bg-emerald-200/30 blur-3xl" />
 
       <div
         className={`page-shell relative ${
@@ -32,20 +32,20 @@ export default function PageHero({
         }`}
       >
         {badge && (
-          <span className="inline-block text-xs font-semibold text-blue-300 uppercase tracking-widest mb-5 px-3 py-1 rounded-full bg-blue-500/15 border border-blue-400/20">
+          <span className="mb-5 inline-block rounded-full border border-fuchsia-100 bg-white/85 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-slate-600">
             {badge}
           </span>
         )}
-        <h1 className="heading-display text-white mb-6 max-w-4xl mx-auto">
+        <h1 className="heading-display mx-auto mb-6 max-w-4xl text-slate-950">
           {title}{" "}
           {titleHighlight && (
-            <span className="bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-fuchsia-500 via-violet-500 to-emerald-500 bg-clip-text text-transparent">
               {titleHighlight}
             </span>
           )}
         </h1>
         <p
-          className={`text-xl text-slate-300 leading-relaxed mb-10 ${
+          className={`mb-10 text-xl leading-relaxed text-slate-600 ${
             centered ? "max-w-2xl mx-auto" : "max-w-xl"
           }`}
         >
@@ -58,7 +58,7 @@ export default function PageHero({
             {ctaPrimary && (
               <Link
                 href={ctaPrimary.href}
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl text-base font-semibold bg-blue-600 text-white hover:bg-blue-500 transition-all shadow-lg"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-950 px-7 py-3.5 text-base font-semibold text-white transition-all shadow-lg shadow-slate-900/10 hover:bg-slate-800"
               >
                 {ctaPrimary.label}
                 <ArrowRight className="w-4 h-4" />
@@ -67,7 +67,7 @@ export default function PageHero({
             {ctaSecondary && (
               <Link
                 href={ctaSecondary.href}
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl text-base font-semibold bg-white/10 text-white border border-white/20 hover:bg-white/20 transition-all"
+                className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white/80 px-7 py-3.5 text-base font-semibold text-slate-700 transition-all hover:bg-white"
               >
                 {ctaSecondary.label}
               </Link>

@@ -70,7 +70,7 @@ export default function HelpSearch() {
                 setFocused(false);
                 setQuery("");
               }}
-              className="block px-5 py-3.5 hover:bg-blue-50 transition-colors border-b border-slate-100 last:border-b-0"
+              className="block border-b border-slate-100 px-5 py-3.5 transition-colors hover:bg-fuchsia-50 last:border-b-0"
             >
               <p className="text-sm font-semibold text-slate-900">
                 {article.title}
@@ -91,7 +91,7 @@ export default function HelpSearch() {
             </p>
             <p className="text-xs text-slate-400 mt-1">
               Try different keywords or{" "}
-              <Link href="/contact" className="text-blue-600 hover:underline">
+              <Link href="/contact" className="text-fuchsia-600 hover:underline">
                 contact support
               </Link>
             </p>

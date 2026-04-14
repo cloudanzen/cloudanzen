@@ -92,7 +92,7 @@
           },
           "fix": {
             "title": "Recommend the next posture fix",
-            "description": "Turn posture gaps into tracked remediation work instead of loose suggestions."
+            "description": "Turn posture gaps into tracked remediation."
           }
         }
       },

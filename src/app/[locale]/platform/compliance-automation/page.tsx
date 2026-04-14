@@ -77,8 +77,8 @@ export default function ComplianceAutomationPage() {
                 key={title}
                 className="flex gap-5 p-7 rounded-2xl border border-slate-200 bg-slate-50 hover:bg-white hover:shadow-md transition-all"
               >
-                <div className="w-11 h-11 rounded-xl bg-blue-100 flex items-center justify-center flex-shrink-0">
-                  <Icon className="w-5 h-5 text-blue-600" />
+                <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl bg-fuchsia-100">
+                  <Icon className="w-5 h-5 text-fuchsia-600" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-slate-900 mb-2">{title}</h3>
@@ -90,24 +90,24 @@ export default function ComplianceAutomationPage() {
             ))}
           </div>
 
-          <div className="rounded-3xl bg-slate-900 p-10 lg:p-16 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">
+          <div className="rounded-3xl border border-white/80 bg-[linear-gradient(135deg,#fdf4ff_0%,#fff7ed_50%,#ecfdf5_100%)] p-10 text-center shadow-[0_18px_40px_rgba(15,23,42,0.06)] lg:p-16">
+            <h2 className="mb-4 text-3xl font-bold text-slate-900">
               Start your compliance program today
             </h2>
-            <p className="text-slate-400 mb-8 max-w-lg mx-auto">
+            <p className="mx-auto mb-8 max-w-lg text-slate-600">
               Most teams get their first framework mapped in under a week. Talk
               to our team to see how CloudAnzen works for your stack.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/demo"
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-500 transition-colors"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-950 px-7 py-3.5 font-semibold text-white transition-colors hover:bg-slate-800"
               >
                 Book a demo <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href="/frameworks/soc2"
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-white/10 text-white border border-white/20 font-semibold hover:bg-white/20 transition-colors"
+                className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white/85 px-7 py-3.5 font-semibold text-slate-700 transition-colors hover:bg-white"
               >
                 See SOC 2 details
               </Link>
@@ -135,7 +135,7 @@ export default function ComplianceAutomationPage() {
               },
             ].map(({ stat, label }) => (
               <div key={label}>
-                <p className="text-4xl font-black text-blue-600 mb-2">{stat}</p>
+                <p className="mb-2 text-4xl font-black text-fuchsia-600">{stat}</p>
                 <p className="text-sm text-slate-500">{label}</p>
               </div>
             ))}

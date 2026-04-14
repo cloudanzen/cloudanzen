@@ -103,7 +103,7 @@ export default async function ResourceArticlePage({
             {collection ? (
               <Link
                 href={`/collection/${collection.slug}`}
-                className="text-xs px-2.5 py-1 rounded-full bg-blue-500/20 text-blue-100 border border-blue-300/20 hover:bg-blue-500/30 transition-colors"
+                className="rounded-full border border-fuchsia-200 bg-fuchsia-50 px-2.5 py-1 text-xs text-fuchsia-700 transition-colors hover:bg-fuchsia-100"
               >
                 {collection.title} collection
               </Link>
@@ -121,7 +121,7 @@ export default async function ResourceArticlePage({
 
       <section className="pb-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="rounded-3xl bg-slate-900 p-8 lg:p-10">
-          <p className="text-sm font-semibold text-blue-300 uppercase tracking-[0.18em] mb-3">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-fuchsia-600">
             Keep the momentum
           </p>
           <h2 className="text-2xl font-bold text-white mb-3">
@@ -134,7 +134,7 @@ export default async function ResourceArticlePage({
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href="/demo"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-500 transition-colors"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-950 px-6 py-3 font-semibold text-white transition-colors hover:bg-slate-800"
             >
               Book a demo <ArrowRight className="w-4 h-4" />
             </Link>
@@ -154,12 +154,12 @@ export default async function ResourceArticlePage({
             {prevArticle ? (
               <Link
                 href={`/resources/${prevArticle.type}/${prevArticle.slug}`}
-                className="group flex items-center gap-3 p-4 rounded-xl border border-slate-200 hover:border-blue-300 hover:shadow-sm transition-all flex-1 min-w-0"
+                className="group flex min-w-0 flex-1 items-center gap-3 rounded-xl border border-slate-200 p-4 transition-all hover:border-fuchsia-200 hover:shadow-sm"
               >
-                <ArrowLeft className="w-4 h-4 text-slate-400 group-hover:text-blue-600 transition-all flex-shrink-0" />
+                <ArrowLeft className="w-4 h-4 flex-shrink-0 text-slate-400 transition-all group-hover:text-fuchsia-600" />
                 <div className="min-w-0">
                   <p className="text-xs text-slate-400 mb-0.5">Previous</p>
-                  <p className="text-sm font-semibold text-slate-800 group-hover:text-blue-700 truncate">
+                  <p className="truncate text-sm font-semibold text-slate-800 group-hover:text-fuchsia-700">
                     {prevArticle.title}
                   </p>
                 </div>
@@ -170,15 +170,15 @@ export default async function ResourceArticlePage({
             {nextArticle ? (
               <Link
                 href={`/resources/${nextArticle.type}/${nextArticle.slug}`}
-                className="group flex items-center justify-end gap-3 p-4 rounded-xl border border-slate-200 hover:border-blue-300 hover:shadow-sm transition-all flex-1 min-w-0 text-right"
+                className="group flex min-w-0 flex-1 items-center justify-end gap-3 rounded-xl border border-slate-200 p-4 text-right transition-all hover:border-fuchsia-200 hover:shadow-sm"
               >
                 <div className="min-w-0">
                   <p className="text-xs text-slate-400 mb-0.5">Next</p>
-                  <p className="text-sm font-semibold text-slate-800 group-hover:text-blue-700 truncate">
+                  <p className="truncate text-sm font-semibold text-slate-800 group-hover:text-fuchsia-700">
                     {nextArticle.title}
                   </p>
                 </div>
-                <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-blue-600 transition-all flex-shrink-0" />
+                <ArrowRight className="w-4 h-4 flex-shrink-0 text-slate-400 transition-all group-hover:text-fuchsia-600" />
               </Link>
             ) : (
               <div />
@@ -188,7 +188,7 @@ export default async function ResourceArticlePage({
           <div className="mt-8 text-center">
             <Link
               href={`/resources/${article.type}`}
-              className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 hover:text-blue-800 transition-colors"
+              className="inline-flex items-center gap-2 text-sm font-medium text-fuchsia-600 transition-colors hover:text-fuchsia-700"
             >
               <ArrowLeft className="w-3.5 h-3.5" />
               Back to {article.type}

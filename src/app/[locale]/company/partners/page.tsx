@@ -32,17 +32,17 @@ export default function PartnersPage() {
                 <ul className="space-y-2">
                   {perks.map((p) => (
                     <li key={p} className="flex items-center gap-2 text-sm text-slate-600">
-                      <CheckCircle2 className="w-4 h-4 text-teal-500 flex-shrink-0" />{p}
+                      <CheckCircle2 className="h-4 w-4 flex-shrink-0 text-emerald-500" />{p}
                     </li>
                   ))}
                 </ul>
               </div>
             ))}
           </div>
-          <div className="bg-blue-600 rounded-3xl p-10 text-center">
-            <h2 className="text-2xl font-bold text-white mb-4">Interested in partnering?</h2>
-            <p className="text-blue-100 mb-8">Tell us about your practice and we&apos;ll explore how to build something together.</p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-white text-blue-700 font-semibold hover:bg-blue-50 transition-colors">
+          <div className="rounded-3xl border border-white/80 bg-[linear-gradient(135deg,#fdf4ff_0%,#fff7ed_50%,#ecfdf5_100%)] p-10 text-center shadow-[0_18px_40px_rgba(15,23,42,0.06)]">
+            <h2 className="mb-4 text-2xl font-bold text-slate-900">Interested in partnering?</h2>
+            <p className="mb-8 text-slate-600">Tell us about your practice and we&apos;ll explore how to build something together.</p>
+            <Link href="/contact" className="inline-flex items-center gap-2 rounded-xl bg-slate-950 px-7 py-3.5 font-semibold text-white transition-colors hover:bg-slate-800">
               Get in touch <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

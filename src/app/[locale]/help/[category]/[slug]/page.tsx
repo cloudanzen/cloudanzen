@@ -93,12 +93,12 @@ export default async function ArticlePage({
             {prevArticle ? (
               <Link
                 href={`/help/${category.slug}/${prevArticle.slug}`}
-                className="group flex items-center gap-3 p-4 rounded-xl border border-slate-200 hover:border-blue-300 hover:shadow-sm transition-all flex-1 min-w-0"
+                className="group flex min-w-0 flex-1 items-center gap-3 rounded-xl border border-slate-200 p-4 transition-all hover:border-fuchsia-200 hover:shadow-sm"
               >
-                <ArrowLeft className="w-4 h-4 text-slate-400 group-hover:text-blue-600 group-hover:-translate-x-0.5 transition-all flex-shrink-0" />
+                <ArrowLeft className="w-4 h-4 flex-shrink-0 text-slate-400 transition-all group-hover:-translate-x-0.5 group-hover:text-fuchsia-600" />
                 <div className="min-w-0">
                   <p className="text-xs text-slate-400 mb-0.5">Previous</p>
-                  <p className="text-sm font-semibold text-slate-800 group-hover:text-blue-700 truncate">
+                  <p className="truncate text-sm font-semibold text-slate-800 group-hover:text-fuchsia-700">
                     {prevArticle.title}
                   </p>
                 </div>
@@ -109,15 +109,15 @@ export default async function ArticlePage({
             {nextArticle ? (
               <Link
                 href={`/help/${category.slug}/${nextArticle.slug}`}
-                className="group flex items-center justify-end gap-3 p-4 rounded-xl border border-slate-200 hover:border-blue-300 hover:shadow-sm transition-all flex-1 min-w-0 text-right"
+                className="group flex min-w-0 flex-1 items-center justify-end gap-3 rounded-xl border border-slate-200 p-4 text-right transition-all hover:border-fuchsia-200 hover:shadow-sm"
               >
                 <div className="min-w-0">
                   <p className="text-xs text-slate-400 mb-0.5">Next</p>
-                  <p className="text-sm font-semibold text-slate-800 group-hover:text-blue-700 truncate">
+                  <p className="truncate text-sm font-semibold text-slate-800 group-hover:text-fuchsia-700">
                     {nextArticle.title}
                   </p>
                 </div>
-                <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-blue-600 group-hover:translate-x-0.5 transition-all flex-shrink-0" />
+                <ArrowRight className="w-4 h-4 flex-shrink-0 text-slate-400 transition-all group-hover:translate-x-0.5 group-hover:text-fuchsia-600" />
               </Link>
             ) : (
               <div />
@@ -129,7 +129,7 @@ export default async function ArticlePage({
         <div className="mt-8 text-center">
           <Link
             href={`/help/${category.slug}`}
-            className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 hover:text-blue-800 transition-colors"
+            className="inline-flex items-center gap-2 text-sm font-medium text-fuchsia-600 transition-colors hover:text-fuchsia-700"
           >
             <ArrowLeft className="w-3.5 h-3.5" />
             All {category.title} articles

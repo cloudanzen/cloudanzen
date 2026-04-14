@@ -80,21 +80,21 @@ export default function HelpCenterPage() {
     <>
       {/* Hero with search */}
       <section className="relative gradient-hero overflow-hidden pt-32 pb-20 lg:pt-40 lg:pb-24">
-        <div className="absolute inset-0 bg-grid opacity-30" />
-        <div className="absolute top-20 left-1/3 w-80 h-80 bg-blue-600/15 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-teal-500/10 rounded-full blur-3xl" />
+        <div className="absolute inset-0 bg-grid opacity-10" />
+        <div className="absolute top-20 left-1/3 h-80 w-80 rounded-full bg-amber-200/35 blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 h-64 w-64 rounded-full bg-emerald-200/30 blur-3xl" />
 
         <div className="page-shell relative text-center">
-          <span className="inline-block text-xs font-semibold text-blue-300 uppercase tracking-widest mb-5 px-3 py-1 rounded-full bg-blue-500/15 border border-blue-400/20">
+          <span className="mb-5 inline-block rounded-full border border-fuchsia-100 bg-white/85 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-slate-600">
             Help Center
           </span>
-          <h1 className="heading-display text-white mb-4 max-w-3xl mx-auto">
+          <h1 className="heading-display mb-4 max-w-3xl mx-auto text-slate-950">
             How can we{" "}
-            <span className="bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-fuchsia-500 via-violet-500 to-emerald-500 bg-clip-text text-transparent">
               help you?
             </span>
           </h1>
-          <p className="text-xl text-slate-300 leading-relaxed mb-10 max-w-2xl mx-auto">
+          <p className="mb-10 max-w-2xl mx-auto text-xl leading-relaxed text-slate-600">
             Find answers, guides, and resources to get the most out of
             CloudAnzen.
           </p>
@@ -113,12 +113,12 @@ export default function HelpCenterPage() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="group flex flex-col items-center text-center p-3 rounded-xl hover:bg-blue-50 transition-colors"
+                className="group flex flex-col items-center rounded-xl p-3 text-center transition-colors hover:bg-fuchsia-50"
               >
-                <div className="w-10 h-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center mb-2 group-hover:bg-blue-100 transition-colors">
+                <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-lg bg-fuchsia-50 text-fuchsia-600 transition-colors group-hover:bg-fuchsia-100">
                   {link.icon}
                 </div>
-                <span className="text-xs font-medium text-slate-700 group-hover:text-blue-700 leading-tight">
+                <span className="text-xs font-medium leading-tight text-slate-700 group-hover:text-fuchsia-700">
                   {link.title}
                 </span>
               </Link>
@@ -141,12 +141,12 @@ export default function HelpCenterPage() {
             <Link
               key={category.slug}
               href={`/help/${category.slug}`}
-              className="group relative flex flex-col p-6 rounded-2xl border border-slate-200 hover:border-blue-300 hover:shadow-lg transition-all bg-white"
+              className="group relative flex flex-col rounded-2xl border border-slate-200 bg-white p-6 transition-all hover:border-fuchsia-200 hover:shadow-lg"
             >
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-50 to-teal-50 text-blue-600 flex items-center justify-center mb-4 group-hover:from-blue-100 group-hover:to-teal-100 transition-colors">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-fuchsia-50 to-emerald-50 text-fuchsia-600 transition-colors group-hover:from-fuchsia-100 group-hover:to-emerald-100">
                 {iconMap[category.icon]}
               </div>
-              <h3 className="text-base font-semibold text-slate-900 mb-1.5 group-hover:text-blue-700 transition-colors">
+              <h3 className="mb-1.5 text-base font-semibold text-slate-900 transition-colors group-hover:text-fuchsia-700">
                 {category.title}
               </h3>
               <p className="text-sm text-slate-500 leading-relaxed mb-4 flex-1">
@@ -157,7 +157,7 @@ export default function HelpCenterPage() {
                   {category.articles.length}{" "}
                   {category.articles.length === 1 ? "article" : "articles"}
                 </span>
-                <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-blue-600 group-hover:translate-x-0.5 transition-all" />
+                <ArrowRight className="h-4 w-4 text-slate-400 transition-all group-hover:translate-x-0.5 group-hover:text-fuchsia-600" />
               </div>
             </Link>
           ))}
@@ -167,24 +167,24 @@ export default function HelpCenterPage() {
       {/* CTA */}
       <section className="gradient-cta py-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="heading-lg text-white mb-4">
+          <h2 className="heading-lg mb-4 text-slate-900">
             Can&apos;t find what you&apos;re looking for?
           </h2>
-          <p className="text-lg text-white/80 mb-8">
+          <p className="mb-8 text-lg text-slate-600">
             Our support team is here to help. Reach out and we&apos;ll get back
             to you within one business day.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl text-base font-semibold bg-white text-blue-700 hover:bg-blue-50 transition-all shadow-lg"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-950 px-7 py-3.5 text-base font-semibold text-white transition-all shadow-lg shadow-slate-900/10 hover:bg-slate-800"
             >
               Contact Support
               <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
               href="/demo"
-              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl text-base font-semibold bg-white/10 text-white border border-white/20 hover:bg-white/20 transition-all"
+              className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white/85 px-7 py-3.5 text-base font-semibold text-slate-700 transition-all hover:bg-white"
             >
               Book a Demo
             </Link>

@@ -49,8 +49,8 @@ export default function DemoForm() {
   if (state === "success") {
     return (
       <div className="bg-white rounded-3xl border border-slate-200 shadow-xl p-8 lg:p-10 flex flex-col items-center justify-center text-center min-h-[520px]">
-        <div className="w-16 h-16 rounded-full bg-teal-100 flex items-center justify-center mb-6">
-          <CheckCircle2 className="w-8 h-8 text-teal-600" />
+        <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-emerald-100">
+          <CheckCircle2 className="h-8 w-8 text-emerald-600" />
         </div>
         <h2 className="text-2xl font-bold text-slate-900 mb-3">Request received!</h2>
         <p className="text-slate-500 max-w-sm">
@@ -195,7 +195,7 @@ export default function DemoForm() {
         <button
           type="submit"
           disabled={state === "loading"}
-          className="w-full py-3.5 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-colors shadow-sm flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+          className="flex w-full items-center justify-center gap-2 rounded-xl bg-slate-950 py-3.5 font-semibold text-white shadow-sm transition-colors hover:bg-slate-800 disabled:cursor-not-allowed disabled:opacity-70"
         >
           {state === "loading" ? (
             <>
