@@ -643,7 +643,7 @@ export function HomeHeroStory() {
         <div className="pointer-events-none absolute -right-6 bottom-10 h-28 w-28 rounded-full bg-emerald-200/30 blur-3xl" />
         <div className="relative rounded-[24px] border border-white/80 bg-[radial-gradient(circle_at_top,_rgba(244,114,182,0.14),_transparent_36%),linear-gradient(160deg,rgba(255,255,255,0.96),rgba(248,250,252,0.92))] p-2.5 sm:p-3.5">
           <div className="relative aspect-[1600/920] min-h-[280px] overflow-hidden rounded-[20px] bg-transparent sm:min-h-0">
-            <div className="absolute inset-0 scale-110">
+            <div className="absolute inset-0 translate-x-[3%] -translate-y-[4%] scale-110">
               <AnimatedDiagram time={time} />
             </div>
           </div>
