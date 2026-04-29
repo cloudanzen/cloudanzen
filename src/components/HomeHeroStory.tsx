@@ -246,7 +246,7 @@ const gearSpecs = [
   { label: "Evidence Synthesis\n& Mapping", r: 46, color: CA.teal, teeth: 12, speed: 0.7, dir: -1, icon: "clipboard" },
   { label: "Policy\nManagement", r: 42, color: CA.blueLt, teeth: 10, speed: 0.85, dir: 1, icon: "shield" },
   { label: "Asset\nInventory", r: 42, color: CA.teal500, teeth: 10, speed: 0.85, dir: -1, icon: "database" },
-  { label: "Vendor\nManagement", r: 42, color: CA.blueLt, teeth: 10, speed: 0.85, dir: 1, icon: "package" },
+  { label: "Vendor & Risk\nManagement", r: 42, color: CA.blueLt, teeth: 10, speed: 0.85, dir: 1, icon: "package" },
   { label: "Access\nManagement", r: 42, color: CA.teal500, teeth: 10, speed: 0.85, dir: -1, icon: "userCheck" },
 ] satisfies { label: string; r: number; color: string; teeth: number; speed: number; dir: 1 | -1; icon: IconName }[];
 
@@ -551,7 +551,7 @@ function AnimatedDiagram({ time }: { time: number }) {
         strokeLinejoin="round"
       />
       <text x={HOPPER_X - 22} y={HOPPER_TOP_Y - 86} textAnchor="middle" fontSize="11" fontWeight="700" fill={CA.slate} letterSpacing="0.08em">
-        INTAKE
+        INTIGRATION
       </text>
 
       {feedPackages.map((feedPackage) => {
