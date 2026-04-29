@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
+import { Link } from "@/i18n/navigation";
 import { Shield, Lock, Eye, Server, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -89,12 +90,12 @@ export default function SecurityPage() {
             <p className="mb-8 text-slate-600">
               SOC 2 reports, penetration test summaries, security policies, and our completed questionnaires are available through our trust center.
             </p>
-            <a
+            <Link
               href="/platform/trust-center"
               className="inline-flex items-center gap-2 rounded-xl bg-slate-950 px-7 py-3.5 font-semibold text-white transition-colors hover:bg-slate-800"
             >
               Visit our Trust Center
-            </a>
+            </Link>
           </div>
         </div>
       </section>
