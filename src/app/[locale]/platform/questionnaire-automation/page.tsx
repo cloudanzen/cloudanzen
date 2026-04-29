@@ -36,7 +36,7 @@ export default function QuestionnaireAutomationPage() {
       </section>
 
       <section className="section-pad bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="page-shell">
           <div className="grid md:grid-cols-3 gap-8 mb-20">
             {[
               { icon: Database, title: "Answer library", desc: "Build a curated library of approved answers vetted by security, legal, and leadership. Reuse across every questionnaire." },

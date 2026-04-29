@@ -30,15 +30,15 @@ export default function CareersPage() {
           <h2 className="heading-xl text-slate-900 mb-8">Open roles</h2>
           <div className="space-y-4 mb-16">
             {roles.map(({ title, team, location }) => (
-              <div key={title} className="flex items-center justify-between p-6 rounded-2xl border border-slate-200 hover:border-blue-300 hover:shadow-sm transition-all group">
+              <div key={title} className="group flex items-center justify-between rounded-2xl border border-slate-200 p-6 transition-all hover:border-fuchsia-200 hover:shadow-sm">
                 <div>
-                  <h3 className="font-semibold text-slate-900 group-hover:text-blue-700 mb-1">{title}</h3>
+                  <h3 className="mb-1 font-semibold text-slate-900 group-hover:text-fuchsia-700">{title}</h3>
                   <div className="flex gap-3">
-                    <span className="text-xs text-blue-600 font-medium bg-blue-50 px-2.5 py-0.5 rounded-full">{team}</span>
+                    <span className="rounded-full bg-fuchsia-50 px-2.5 py-0.5 text-xs font-medium text-fuchsia-600">{team}</span>
                     <span className="text-xs text-slate-500">{location}</span>
                   </div>
                 </div>
-                <ArrowRight className="w-5 h-5 text-slate-400 group-hover:text-blue-600 transition-colors" />
+                <ArrowRight className="h-5 w-5 text-slate-400 transition-colors group-hover:text-fuchsia-600" />
               </div>
             ))}
           </div>

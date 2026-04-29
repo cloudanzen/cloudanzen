@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 };
 
 const categories = [
-  { cat: "Cloud Infrastructure", color: "bg-blue-50 border-blue-200", items: ["Amazon Web Services", "Google Cloud Platform", "Microsoft Azure", "DigitalOcean", "Heroku"] },
-  { cat: "Identity & SSO", color: "bg-teal-50 border-teal-200", items: ["Okta", "Google Workspace", "Microsoft Entra ID", "JumpCloud", "OneLogin"] },
+  { cat: "Cloud Infrastructure", color: "bg-fuchsia-50 border-fuchsia-200", items: ["Amazon Web Services", "Google Cloud Platform", "Microsoft Azure", "DigitalOcean", "Heroku"] },
+  { cat: "Identity & SSO", color: "bg-emerald-50 border-emerald-200", items: ["Okta", "Google Workspace", "Microsoft Entra ID", "JumpCloud", "OneLogin"] },
   { cat: "Source Control", color: "bg-indigo-50 border-indigo-200", items: ["GitHub", "GitLab", "Bitbucket", "Azure DevOps"] },
   { cat: "HRIS", color: "bg-violet-50 border-violet-200", items: ["BambooHR", "HiBob", "Rippling", "Workday", "Gusto"] },
   { cat: "Ticketing", color: "bg-sky-50 border-sky-200", items: ["Jira", "Linear", "ServiceNow", "Asana", "GitHub Issues"] },
@@ -47,7 +47,7 @@ export default function IntegrationsPage() {
       </section>
 
       <section className="section-pad bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="page-shell">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 mb-16">
             {categories.map(({ cat, color, items }) => (
               <div key={cat} className={`rounded-2xl border p-6 ${color}`}>
@@ -63,10 +63,10 @@ export default function IntegrationsPage() {
               </div>
             ))}
           </div>
-          <div className="rounded-3xl bg-slate-900 p-10 text-center">
-            <h2 className="text-2xl font-bold text-white mb-4">Don&apos;t see your tool?</h2>
-            <p className="text-slate-400 mb-8">CloudAnzen supports custom integrations via API and webhooks. Talk to our team to discuss your stack.</p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-500 transition-colors">
+          <div className="rounded-3xl border border-white/80 bg-[linear-gradient(135deg,#fdf4ff_0%,#fff7ed_50%,#ecfdf5_100%)] p-10 text-center shadow-[0_18px_40px_rgba(15,23,42,0.06)]">
+            <h2 className="mb-4 text-2xl font-bold text-slate-900">Don&apos;t see your tool?</h2>
+            <p className="mb-8 text-slate-600">CloudAnzen supports custom integrations via API and webhooks. Talk to our team to discuss your stack.</p>
+            <Link href="/contact" className="inline-flex items-center gap-2 rounded-xl bg-slate-950 px-7 py-3.5 font-semibold text-white transition-colors hover:bg-slate-800">
               Contact us <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

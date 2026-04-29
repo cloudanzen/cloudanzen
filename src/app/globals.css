@@ -39,45 +39,93 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.page-shell {
+  width: min(calc(100% - 2rem), 92rem);
+  margin-inline: auto;
+}
+
+@media (min-width: 640px) {
+  .page-shell {
+    width: min(calc(100% - 2.75rem), 92rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-shell {
+    width: min(calc(100% - 3.5rem), 92rem);
+  }
+}
+
 .ai-hero-float {
-  animation: ai-hero-float 4.8s ease-in-out infinite;
+  animation: ai-hero-float 6.5s ease-in-out infinite;
 }
 
 .ai-hero-pulse {
-  animation: ai-hero-pulse 2.4s ease-in-out infinite;
+  animation: ai-hero-pulse 3.4s ease-in-out infinite;
+}
+
+.ai-hero-sheen::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg,
+      transparent 20%,
+      rgba(255, 255, 255, 0.06) 45%,
+      transparent 70%);
+  transform: translateX(-120%);
+  animation: ai-hero-sheen 12s ease-in-out infinite;
+  pointer-events: none;
+  opacity: 0.5;
 }
 
 @keyframes ai-hero-float {
+
   0%,
   100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-6px);
   }
 }
 
 @keyframes ai-hero-pulse {
+
   0%,
   100% {
     box-shadow: 0 0 0 0 rgba(96, 165, 250, 0.14);
   }
+
   50% {
     box-shadow: 0 0 0 10px rgba(96, 165, 250, 0);
   }
 }
 
+@keyframes ai-hero-sheen {
+
+  0%,
+  100% {
+    transform: translateX(-120%);
+  }
+
+  45%,
+  55% {
+    transform: translateX(120%);
+  }
+}
+
 /* Gradient utilities */
 .gradient-hero {
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f2d5e 100%);
+  background: linear-gradient(135deg, #fffdf8 0%, #f8fafc 42%, #f6fffb 100%);
 }
 
 .gradient-section {
-  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  background: linear-gradient(180deg, #fffaf5 0%, #ffffff 100%);
 }
 
 .gradient-cta {
-  background: linear-gradient(135deg, #1d4ed8 0%, #0d9488 100%);
+  background: linear-gradient(135deg, #fdf4ff 0%, #fff7ed 50%, #ecfdf5 100%);
 }
 
 /* Glassmorphism card */
@@ -92,7 +140,7 @@ body {
   border: 1px solid transparent;
   background-clip: padding-box;
   background-image:
-    linear-gradient(#fff, #fff), linear-gradient(135deg, #1d4ed8, #0d9488);
+    linear-gradient(#fff, #fff), linear-gradient(135deg, #d946ef, #10b981);
   background-origin: border-box;
 }
 
@@ -151,7 +199,8 @@ body {
   }
 
   .ai-hero-float,
-  .ai-hero-pulse {
+  .ai-hero-pulse,
+  .ai-hero-sheen::after {
     animation: none !important;
   }
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
+import { Link } from "@/i18n/navigation";
 import { Shield, Lock, Eye, Server, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -62,20 +63,20 @@ export default function SecurityPage() {
       />
 
       <section className="section-pad bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="page-shell">
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             {sections.map(({ icon: Icon, title, items }) => (
               <div key={title} className="p-8 rounded-2xl border border-slate-200 bg-slate-50">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center">
-                    <Icon className="w-5 h-5 text-blue-600" />
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-fuchsia-100">
+                    <Icon className="w-5 h-5 text-fuchsia-600" />
                   </div>
                   <h3 className="font-semibold text-slate-900">{title}</h3>
                 </div>
                 <ul className="space-y-3">
                   {items.map((item) => (
                     <li key={item} className="flex items-start gap-3 text-sm text-slate-600">
-                      <CheckCircle2 className="w-4 h-4 text-teal-500 flex-shrink-0 mt-0.5" />
+                      <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-500" />
                       {item}
                     </li>
                   ))}
@@ -84,17 +85,17 @@ export default function SecurityPage() {
             ))}
           </div>
 
-          <div className="bg-slate-900 rounded-3xl p-10 text-center">
-            <h2 className="text-2xl font-bold text-white mb-4">Need our security documentation?</h2>
-            <p className="text-slate-400 mb-8">
+          <div className="rounded-3xl border border-white/80 bg-[linear-gradient(135deg,#fdf4ff_0%,#fff7ed_50%,#ecfdf5_100%)] p-10 text-center shadow-[0_18px_40px_rgba(15,23,42,0.06)]">
+            <h2 className="mb-4 text-2xl font-bold text-slate-900">Need our security documentation?</h2>
+            <p className="mb-8 text-slate-600">
               SOC 2 reports, penetration test summaries, security policies, and our completed questionnaires are available through our trust center.
             </p>
-            <a
+            <Link
               href="/platform/trust-center"
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-500 transition-colors"
+              className="inline-flex items-center gap-2 rounded-xl bg-slate-950 px-7 py-3.5 font-semibold text-white transition-colors hover:bg-slate-800"
             >
               Visit our Trust Center
-            </a>
+            </Link>
           </div>
         </div>
       </section>

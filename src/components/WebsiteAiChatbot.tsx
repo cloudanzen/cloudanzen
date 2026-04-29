@@ -213,7 +213,7 @@ export default function WebsiteAiChatbot() {
 
             <div className="rounded-2xl border border-slate-200 bg-white p-3">
               <div className="mb-2 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
-                <Sparkles className="h-3.5 w-3.5 text-blue-600" />
+                <Sparkles className="h-3.5 w-3.5 text-fuchsia-600" />
                 Suggested questions
               </div>
               <div className="flex flex-wrap gap-2">
@@ -223,7 +223,7 @@ export default function WebsiteAiChatbot() {
                     type="button"
                     onClick={() => sendMessage(suggestion)}
                     disabled={isLoading}
-                    className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-left text-xs font-medium text-slate-600 transition hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700"
+                    className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-left text-xs font-medium text-slate-600 transition hover:border-fuchsia-200 hover:bg-fuchsia-50 hover:text-fuchsia-700"
                   >
                     {suggestion}
                   </button>
@@ -240,9 +240,9 @@ export default function WebsiteAiChatbot() {
             )}
 
             {showDemoNudge && (
-              <div className="rounded-2xl border border-teal-200 bg-teal-50 px-4 py-3 text-sm text-slate-700">
+              <div className="rounded-2xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-slate-700">
                 <div className="flex items-start gap-3">
-                  <ShieldCheck className="mt-0.5 h-4 w-4 flex-shrink-0 text-teal-700" />
+                  <ShieldCheck className="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-700" />
                   <div>
                     <p className="font-semibold text-slate-900">
                       Want tailored guidance for your team?
@@ -253,7 +253,7 @@ export default function WebsiteAiChatbot() {
                     </p>
                     <Link
                       href="/demo"
-                      className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-teal-700 transition hover:text-teal-800"
+                      className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 transition hover:text-emerald-800"
                     >
                       Book a demo
                       <ArrowRight className="h-4 w-4" />
@@ -276,7 +276,7 @@ export default function WebsiteAiChatbot() {
                   }
                 }}
                 placeholder="Ask about SOC 2, audits, controls, or readiness..."
-                className="h-11 flex-1 rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm text-slate-700 outline-none transition focus:border-blue-400 focus:bg-white"
+                className="h-11 flex-1 rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm text-slate-700 outline-none transition focus:border-fuchsia-300 focus:bg-white"
                 disabled={isLoading}
               />
               <button

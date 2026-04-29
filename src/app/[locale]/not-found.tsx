@@ -41,20 +41,20 @@ const recoveryLinks = [
 
 export default function NotFound() {
   return (
-    <div className="min-h-[calc(100vh-8rem)] bg-slate-950 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-grid opacity-30" />
-      <div className="absolute top-24 left-1/4 w-80 h-80 bg-blue-600/20 rounded-full blur-3xl" />
-      <div className="absolute bottom-10 right-1/4 w-80 h-80 bg-teal-500/15 rounded-full blur-3xl" />
+    <div className="relative min-h-[calc(100vh-8rem)] overflow-hidden bg-[linear-gradient(135deg,#fffdf8_0%,#f8fafc_42%,#f6fffb_100%)] text-slate-900">
+      <div className="absolute inset-0 bg-grid opacity-10" />
+      <div className="absolute top-24 left-1/4 h-80 w-80 rounded-full bg-amber-200/35 blur-3xl" />
+      <div className="absolute bottom-10 right-1/4 h-80 w-80 rounded-full bg-emerald-200/30 blur-3xl" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+      <div className="page-shell relative pt-32 pb-20">
         <div className="max-w-3xl mb-14">
-          <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/8 border border-white/10 text-blue-200 text-sm font-medium mb-6">
+          <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-fuchsia-100 bg-white/85 px-3 py-1.5 text-sm font-medium text-fuchsia-600">
             404
           </span>
-          <h1 className="heading-display text-white mb-5">
+          <h1 className="heading-display mb-5 text-slate-950">
             The page moved, never existed, or the link is outdated.
           </h1>
-          <p className="text-xl text-slate-300 leading-relaxed max-w-2xl mb-8">
+          <p className="mb-8 max-w-2xl text-xl leading-relaxed text-slate-600">
             We tightened the marketing site structure, so some older paths may
             no longer match. Use one of the routes below to get back to product,
             framework, or resources content quickly.
@@ -63,13 +63,13 @@ export default function NotFound() {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href="/"
-              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl text-base font-semibold bg-blue-600 text-white hover:bg-blue-500 transition-all shadow-lg"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-950 px-7 py-3.5 text-base font-semibold text-white transition-all shadow-lg shadow-slate-900/10 hover:bg-slate-800"
             >
               Go home <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
               href="/resources"
-              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl text-base font-semibold bg-white/10 text-white border border-white/20 hover:bg-white/20 transition-all"
+              className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white/85 px-7 py-3.5 text-base font-semibold text-slate-700 transition-all hover:bg-white"
             >
               Explore resources
             </Link>
@@ -81,16 +81,16 @@ export default function NotFound() {
             <Link
               key={href}
               href={href}
-              className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-6 hover:bg-white/8 hover:border-white/15 transition-all"
+              className="rounded-2xl border border-white/80 bg-white/75 p-6 backdrop-blur-sm transition-all hover:border-fuchsia-100 hover:bg-white"
             >
-              <div className="w-11 h-11 rounded-xl bg-blue-500/15 text-blue-300 flex items-center justify-center mb-4">
+                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-fuchsia-50 text-fuchsia-600">
                 <Icon className="w-5 h-5" />
               </div>
-              <h2 className="text-lg font-semibold text-white mb-2">{title}</h2>
-              <p className="text-sm text-slate-300 leading-relaxed mb-4">
+              <h2 className="mb-2 text-lg font-semibold text-slate-900">{title}</h2>
+              <p className="mb-4 text-sm leading-relaxed text-slate-600">
                 {description}
               </p>
-              <span className="inline-flex items-center gap-2 text-sm font-semibold text-blue-300">
+              <span className="inline-flex items-center gap-2 text-sm font-semibold text-fuchsia-600">
                 Open page <ArrowRight className="w-4 h-4" />
               </span>
             </Link>
@@ -99,7 +99,7 @@ export default function NotFound() {
 
         <Link
           href="/"
-          className="inline-flex items-center gap-2 text-sm font-medium text-slate-300 hover:text-white transition-colors"
+          className="inline-flex items-center gap-2 text-sm font-medium text-slate-500 transition-colors hover:text-slate-900"
         >
           <ArrowLeft className="w-4 h-4" />
           Back to CloudAnzen

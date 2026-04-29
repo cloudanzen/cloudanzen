@@ -33,7 +33,7 @@ export default function StartupsPage() {
         name: "Alex Morgan",
         role: "CTO, Early-stage SaaS",
       }}
-      accentColor="bg-blue-700"
+      accentColor="bg-[linear-gradient(135deg,#fdf4ff_0%,#fff7ed_50%,#ecfdf5_100%)] border border-white/80 shadow-[0_18px_40px_rgba(15,23,42,0.06)]"
     />
   );
 }

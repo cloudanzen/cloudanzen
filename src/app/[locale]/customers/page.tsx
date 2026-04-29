@@ -55,15 +55,15 @@ export default function CustomersPage() {
       />
 
       <section className="section-pad bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="page-shell">
           <h2 className="heading-xl text-slate-900 mb-12 text-center">What customers say</h2>
           <div className="grid md:grid-cols-2 gap-8 mb-20">
             {testimonials.map(({ quote, name, role, tag }) => (
               <div key={name} className="rounded-2xl border border-slate-200 bg-slate-50 p-8">
-                <span className="text-xs font-semibold text-blue-600 bg-blue-50 border border-blue-200 px-3 py-1 rounded-full">{tag}</span>
+                <span className="rounded-full border border-fuchsia-200 bg-fuchsia-50 px-3 py-1 text-xs font-semibold text-fuchsia-600">{tag}</span>
                 <blockquote className="mt-5 mb-6 text-slate-700 italic leading-relaxed">&ldquo;{quote}&rdquo;</blockquote>
                 <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-xs">
+                  <div className="flex h-9 w-9 items-center justify-center rounded-full bg-fuchsia-100 text-xs font-bold text-fuchsia-600">
                     {name.split(" ").map((n) => n[0]).join("")}
                   </div>
                   <div>
@@ -78,10 +78,10 @@ export default function CustomersPage() {
           <h2 className="heading-xl text-slate-900 mb-10 text-center">By industry</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-16">
             {industries.map(({ name, href, desc }) => (
-              <Link key={name} href={href} className="group flex flex-col p-6 rounded-2xl border border-slate-200 bg-white hover:border-blue-300 hover:shadow-md transition-all">
-                <h3 className="font-semibold text-slate-900 mb-2 group-hover:text-blue-700">{name}</h3>
+              <Link key={name} href={href} className="group flex flex-col rounded-2xl border border-slate-200 bg-white p-6 transition-all hover:border-fuchsia-200 hover:shadow-md">
+                <h3 className="mb-2 font-semibold text-slate-900 group-hover:text-fuchsia-700">{name}</h3>
                 <p className="text-xs text-slate-500 flex-1">{desc}</p>
-                <ArrowRight className="w-4 h-4 text-blue-500 mt-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                <ArrowRight className="mt-4 h-4 w-4 text-fuchsia-500 opacity-0 transition-opacity group-hover:opacity-100" />
               </Link>
             ))}
           </div>

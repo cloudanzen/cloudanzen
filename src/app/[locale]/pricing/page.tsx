@@ -75,14 +75,14 @@ export default function PricingPage() {
       />
 
       <section className="section-pad bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="page-shell">
           <div className="grid md:grid-cols-3 gap-8 mb-20">
             {plans.map(({ name, price, period, desc, highlight, features, cta, href }) => (
               <div
                 key={name}
                 className={`rounded-3xl border p-8 flex flex-col ${
                   highlight
-                    ? "border-blue-500 bg-blue-600 text-white shadow-2xl shadow-blue-200 scale-[1.02]"
+                    ? "border-fuchsia-300 bg-[linear-gradient(135deg,#d946ef_0%,#8b5cf6_45%,#10b981_100%)] text-white shadow-2xl shadow-fuchsia-100 scale-[1.02]"
                     : "border-slate-200 bg-white"
                 }`}
               >
@@ -94,17 +94,17 @@ export default function PricingPage() {
                 <h3 className={`text-xl font-bold mb-1 ${highlight ? "text-white" : "text-slate-900"}`}>
                   {name}
                 </h3>
-                <p className={`text-sm mb-6 ${highlight ? "text-blue-100" : "text-slate-500"}`}>{desc}</p>
+                <p className={`text-sm mb-6 ${highlight ? "text-white/80" : "text-slate-500"}`}>{desc}</p>
                 <div className={`text-4xl font-black mb-1 ${highlight ? "text-white" : "text-slate-900"}`}>
                   {price}
-                  <span className={`text-base font-normal ${highlight ? "text-blue-200" : "text-slate-400"}`}>
+                  <span className={`text-base font-normal ${highlight ? "text-white/75" : "text-slate-400"}`}>
                     {period}
                   </span>
                 </div>
                 <ul className="space-y-3 my-8 flex-1">
                   {features.map((f) => (
-                    <li key={f} className={`flex items-start gap-3 text-sm ${highlight ? "text-blue-100" : "text-slate-600"}`}>
-                      <CheckCircle2 className={`w-4 h-4 flex-shrink-0 mt-0.5 ${highlight ? "text-white" : "text-teal-500"}`} />
+                    <li key={f} className={`flex items-start gap-3 text-sm ${highlight ? "text-white/85" : "text-slate-600"}`}>
+                      <CheckCircle2 className={`w-4 h-4 flex-shrink-0 mt-0.5 ${highlight ? "text-white" : "text-emerald-500"}`} />
                       {f}
                     </li>
                   ))}
@@ -113,7 +113,7 @@ export default function PricingPage() {
                   href={href}
                   className={`inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm transition-colors ${
                     highlight
-                      ? "bg-white text-blue-700 hover:bg-blue-50"
+                        ? "bg-white text-fuchsia-700 hover:bg-fuchsia-50"
                       : "bg-slate-900 text-white hover:bg-slate-800"
                   }`}
                 >

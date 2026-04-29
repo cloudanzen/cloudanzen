@@ -33,9 +33,9 @@ const typeIcons: Record<ResourceTypeSlug, typeof Newspaper> = {
 };
 
 const typeColors: Record<ResourceTypeSlug, string> = {
-  blog: "bg-blue-50 text-blue-700",
+  blog: "bg-fuchsia-50 text-fuchsia-700",
   guides: "bg-violet-50 text-violet-700",
-  templates: "bg-teal-50 text-teal-700",
+  templates: "bg-emerald-50 text-emerald-700",
   glossary: "bg-sky-50 text-sky-700",
   checklists: "bg-emerald-50 text-emerald-700",
 };
@@ -56,17 +56,17 @@ export default function ResourcesPage() {
       />
 
       <section className="section-pad bg-white border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="page-shell">
           <div className="flex items-center justify-between gap-6 mb-10">
             <div>
-              <p className="text-sm font-semibold text-blue-700 uppercase tracking-[0.18em] mb-3">
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-fuchsia-600">
                 Resource Types
               </p>
               <h2 className="heading-lg text-slate-900">Browse by format</h2>
             </div>
             <Link
               href="/resources/guides"
-              className="hidden md:inline-flex items-center gap-2 text-sm font-semibold text-blue-700 hover:text-blue-800"
+              className="hidden md:inline-flex items-center gap-2 text-sm font-semibold text-fuchsia-600 hover:text-fuchsia-700"
             >
               Start with guides <ArrowRight className="w-4 h-4" />
             </Link>
@@ -79,7 +79,7 @@ export default function ResourcesPage() {
                 <Link
                   key={type.slug}
                   href={`/resources/${type.slug}`}
-                  className="rounded-2xl border border-slate-200 p-5 hover:border-blue-300 hover:shadow-sm transition-all"
+                  className="rounded-2xl border border-slate-200 p-5 transition-all hover:border-fuchsia-200 hover:shadow-sm"
                 >
                   <div
                     className={`w-10 h-10 rounded-xl flex items-center justify-center mb-4 ${typeColors[type.slug]}`}
@@ -100,7 +100,7 @@ export default function ResourcesPage() {
       </section>
 
       <section className="section-pad bg-slate-50 border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="page-shell">
           <div className="flex items-center gap-3 mb-10">
             <div className="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center">
               <Layers3 className="w-5 h-5" />
@@ -124,7 +124,7 @@ export default function ResourcesPage() {
               >
                 <div className={`h-2 bg-gradient-to-r ${collection.accent}`} />
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-slate-900 mb-2 group-hover:text-blue-700 transition-colors">
+                  <h3 className="mb-2 text-xl font-semibold text-slate-900 transition-colors group-hover:text-fuchsia-700">
                     {collection.title}
                   </h3>
                   <p className="text-sm text-slate-600 leading-relaxed mb-5">
@@ -136,7 +136,7 @@ export default function ResourcesPage() {
                   <p className="text-sm text-slate-700 leading-relaxed mb-5">
                     {collection.audience}
                   </p>
-                  <span className="inline-flex items-center gap-2 text-sm font-semibold text-blue-700">
+                  <span className="inline-flex items-center gap-2 text-sm font-semibold text-fuchsia-600">
                     View collection <ArrowRight className="w-4 h-4" />
                   </span>
                 </div>
@@ -147,10 +147,10 @@ export default function ResourcesPage() {
       </section>
 
       <section className="section-pad bg-white border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="page-shell">
           <div className="flex items-center justify-between gap-6 mb-10">
             <div>
-              <p className="text-sm font-semibold text-blue-700 uppercase tracking-[0.18em] mb-3">
+               <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-fuchsia-600">
                 Featured
               </p>
               <h2 className="heading-lg text-slate-900">
@@ -164,7 +164,7 @@ export default function ResourcesPage() {
               <Link
                 key={article.slug}
                 href={`/resources/${article.type}/${article.slug}`}
-                className="rounded-2xl border border-slate-200 p-6 hover:border-blue-300 hover:shadow-sm transition-all"
+                className="rounded-2xl border border-slate-200 p-6 transition-all hover:border-fuchsia-200 hover:shadow-sm"
               >
                 <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-slate-400 mb-4">
                   <span>{article.category}</span>
@@ -177,7 +177,7 @@ export default function ResourcesPage() {
                 <p className="text-sm text-slate-600 leading-relaxed mb-5">
                   {article.summary}
                 </p>
-                <span className="inline-flex items-center gap-2 text-sm font-semibold text-blue-700">
+                <span className="inline-flex items-center gap-2 text-sm font-semibold text-fuchsia-600">
                   Read resource <ArrowRight className="w-4 h-4" />
                 </span>
               </Link>
@@ -187,7 +187,7 @@ export default function ResourcesPage() {
       </section>
 
       <section className="section-pad bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="page-shell">
           <div className="flex items-center justify-between gap-6 mb-10">
             <div>
               <p className="text-sm font-semibold text-slate-500 uppercase tracking-[0.18em] mb-3">
@@ -207,7 +207,7 @@ export default function ResourcesPage() {
               <Link
                 key={article.slug}
                 href={`/resources/${article.type}/${article.slug}`}
-                className="rounded-2xl border border-slate-200 p-6 hover:border-blue-300 hover:shadow-sm transition-all"
+                className="rounded-2xl border border-slate-200 p-6 transition-all hover:border-fuchsia-200 hover:shadow-sm"
               >
                 <div className="flex flex-wrap items-center gap-2 mb-4">
                   <span className="text-xs px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 font-medium">
@@ -216,7 +216,7 @@ export default function ResourcesPage() {
                         ?.title
                     }
                   </span>
-                  <span className="text-xs px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 font-medium">
+                  <span className="text-xs px-2.5 py-1 rounded-full bg-fuchsia-50 text-fuchsia-700 font-medium">
                     {article.category}
                   </span>
                   <span className="text-xs text-slate-400">

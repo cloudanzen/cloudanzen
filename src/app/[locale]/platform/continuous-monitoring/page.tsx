@@ -61,15 +61,15 @@ export default function ContinuousMonitoringPage() {
       </section>
 
       <section className="section-pad bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="page-shell">
           <div className="grid md:grid-cols-2 gap-8 mb-20">
             {features.map(({ icon: Icon, title, desc }) => (
               <div
                 key={title}
                 className="flex gap-5 p-7 rounded-2xl border border-slate-200 bg-slate-50 hover:bg-white hover:shadow-md transition-all"
               >
-                <div className="w-11 h-11 rounded-xl bg-teal-100 flex items-center justify-center flex-shrink-0">
-                  <Icon className="w-5 h-5 text-teal-600" />
+                <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl bg-emerald-100">
+                  <Icon className="w-5 h-5 text-emerald-600" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-slate-900 mb-2">{title}</h3>
@@ -80,17 +80,17 @@ export default function ContinuousMonitoringPage() {
               </div>
             ))}
           </div>
-          <div className="bg-teal-600 rounded-3xl p-10 text-center">
-            <h2 className="text-2xl font-bold text-white mb-4">
+          <div className="rounded-3xl border border-white/80 bg-[linear-gradient(135deg,#fdf4ff_0%,#fff7ed_50%,#ecfdf5_100%)] p-10 text-center shadow-[0_18px_40px_rgba(15,23,42,0.06)]">
+            <h2 className="mb-4 text-2xl font-bold text-slate-900">
               Stop auditing once a year. Monitor every day.
             </h2>
-            <p className="text-teal-100 mb-8 max-w-lg mx-auto">
+            <p className="mx-auto mb-8 max-w-lg text-slate-600">
               Talk to our team to see how continuous monitoring works in your
               environment.
             </p>
             <Link
               href="/demo"
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-white text-teal-700 font-semibold hover:bg-teal-50 transition-colors"
+              className="inline-flex items-center gap-2 rounded-xl bg-slate-950 px-7 py-3.5 font-semibold text-white transition-colors hover:bg-slate-800"
             >
               Book a demo <ArrowRight className="w-4 h-4" />
             </Link>

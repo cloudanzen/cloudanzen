@@ -47,7 +47,7 @@ export default async function CollectionPage({
     <div>
       <section className="relative gradient-hero overflow-hidden pt-32 pb-16 lg:pt-40 lg:pb-20">
         <div className="absolute inset-0 bg-grid opacity-30" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="page-shell relative">
           <nav className="flex items-center gap-2 text-sm text-slate-400 mb-8">
             <Link
               href="/resources"
@@ -60,13 +60,13 @@ export default async function CollectionPage({
           </nav>
 
           <div className="max-w-3xl">
-            <span className="inline-block text-xs font-semibold text-blue-300 uppercase tracking-widest mb-5 px-3 py-1 rounded-full bg-blue-500/15 border border-blue-400/20">
+            <span className="mb-5 inline-block rounded-full border border-fuchsia-100 bg-white/85 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-slate-600">
               Compliance Collection
             </span>
-            <h1 className="heading-display text-white mb-5">
+            <h1 className="heading-display mb-5 text-slate-950">
               {collection.title}
             </h1>
-            <p className="text-xl text-slate-300 leading-relaxed">
+            <p className="text-xl leading-relaxed text-slate-600">
               {collection.description}
             </p>
           </div>
@@ -74,7 +74,7 @@ export default async function CollectionPage({
       </section>
 
       <section className="section-pad bg-white border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-[1.2fr_0.8fr] gap-10 items-start">
+        <div className="page-shell grid items-start gap-10 lg:grid-cols-[1.2fr_0.8fr]">
           <div>
             <p className="text-sm font-semibold text-slate-500 uppercase tracking-[0.18em] mb-4">
               What this collection helps you do
@@ -102,7 +102,7 @@ export default async function CollectionPage({
             </p>
             <Link
               href="/demo"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-blue-700 hover:text-blue-800"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-fuchsia-600 hover:text-fuchsia-700"
             >
               Talk to CloudAnzen <ArrowRight className="w-4 h-4" />
             </Link>
@@ -111,10 +111,10 @@ export default async function CollectionPage({
       </section>
 
       <section className="section-pad bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="page-shell">
           <div className="flex items-center justify-between gap-6 mb-10">
             <div>
-              <p className="text-sm font-semibold text-blue-700 uppercase tracking-[0.18em] mb-3">
+               <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-fuchsia-600">
                 Collection Articles
               </p>
               <h2 className="heading-lg text-slate-900">Browse the full set</h2>
@@ -129,7 +129,7 @@ export default async function CollectionPage({
               <Link
                 key={article.slug}
                 href={`/resources/${article.type}/${article.slug}`}
-                className="rounded-2xl border border-slate-200 p-6 hover:border-blue-300 hover:shadow-sm transition-all"
+                className="rounded-2xl border border-slate-200 p-6 transition-all hover:border-fuchsia-200 hover:shadow-sm"
               >
                 <div className="flex flex-wrap items-center gap-2 mb-4">
                   <span className="text-xs px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 font-medium">
@@ -148,7 +148,7 @@ export default async function CollectionPage({
                 <p className="text-sm text-slate-600 leading-relaxed mb-4">
                   {article.summary}
                 </p>
-                <span className="inline-flex items-center gap-2 text-sm font-semibold text-blue-700">
+                <span className="inline-flex items-center gap-2 text-sm font-semibold text-fuchsia-600">
                   Open resource <ArrowRight className="w-4 h-4" />
                 </span>
               </Link>

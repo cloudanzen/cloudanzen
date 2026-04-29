@@ -74,12 +74,12 @@ export default function Footer() {
 
   return (
     <footer className="bg-slate-900 text-slate-400">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
+      <div className="page-shell pt-16 pb-8">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 pb-12 border-b border-slate-800">
           {/* Brand column */}
           <div className="col-span-2 md:col-span-3 lg:col-span-1">
             <Link href="/" className="flex items-center gap-2.5 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-teal-400 flex items-center justify-center">
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-fuchsia-500 via-violet-500 to-emerald-500">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="170 110 515 420"
@@ -167,7 +167,7 @@ export default function Footer() {
             ))}
           </div>
           <div className="flex items-center gap-1.5 text-xs text-slate-500">
-            <div className="w-1.5 h-1.5 rounded-full bg-teal-400 animate-pulse" />
+            <div className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
             {t("footer.systemsOperational")}
           </div>
         </div>

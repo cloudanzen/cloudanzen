@@ -65,29 +65,29 @@ export default async function CategoryPage({
     <>
       {/* Hero */}
       <section className="relative gradient-hero overflow-hidden pt-32 pb-16 lg:pt-40 lg:pb-20">
-        <div className="absolute inset-0 bg-grid opacity-30" />
-        <div className="absolute top-20 left-1/3 w-80 h-80 bg-blue-600/15 rounded-full blur-3xl" />
+        <div className="absolute inset-0 bg-grid opacity-10" />
+        <div className="absolute top-20 left-1/3 h-80 w-80 rounded-full bg-amber-200/35 blur-3xl" />
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="page-shell relative">
           {/* Breadcrumb */}
           <nav className="flex items-center gap-2 text-sm text-slate-400 mb-8">
             <Link
               href="/help"
-              className="hover:text-white transition-colors"
+              className="transition-colors hover:text-slate-700"
             >
               Help Center
             </Link>
             <ChevronRight className="w-3.5 h-3.5" />
-            <span className="text-white">{category.title}</span>
+            <span className="text-slate-900">{category.title}</span>
           </nav>
 
           <div className="flex items-start gap-5">
-            <div className="w-14 h-14 rounded-2xl bg-white/10 backdrop-blur-sm flex items-center justify-center text-blue-300 flex-shrink-0">
+            <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-2xl bg-white/80 text-fuchsia-600 shadow-sm backdrop-blur-sm">
               {iconMap[category.icon]}
             </div>
             <div>
-              <h1 className="heading-xl text-white mb-2">{category.title}</h1>
-              <p className="text-lg text-slate-300 max-w-2xl">
+              <h1 className="heading-xl mb-2 text-slate-900">{category.title}</h1>
+              <p className="max-w-2xl text-lg text-slate-600">
                 {category.description}
               </p>
             </div>
@@ -106,17 +106,17 @@ export default async function CategoryPage({
             <Link
               key={article.slug}
               href={`/help/${category.slug}/${article.slug}`}
-              className="group flex items-center justify-between p-5 rounded-xl border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all bg-white"
+              className="group flex items-center justify-between rounded-xl border border-slate-200 bg-white p-5 transition-all hover:border-fuchsia-200 hover:shadow-md"
             >
               <div className="flex-1 min-w-0">
-                <h3 className="text-base font-semibold text-slate-900 group-hover:text-blue-700 transition-colors mb-1">
+                <h3 className="mb-1 text-base font-semibold text-slate-900 transition-colors group-hover:text-fuchsia-700">
                   {article.title}
                 </h3>
                 <p className="text-sm text-slate-500 truncate">
                   {article.summary}
                 </p>
               </div>
-              <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-blue-600 group-hover:translate-x-0.5 transition-all ml-4 flex-shrink-0" />
+              <ArrowRight className="ml-4 h-4 w-4 flex-shrink-0 text-slate-400 transition-all group-hover:translate-x-0.5 group-hover:text-fuchsia-600" />
             </Link>
           ))}
         </div>
@@ -135,13 +135,13 @@ export default async function CategoryPage({
               <Link
                 key={cat.slug}
                 href={`/help/${cat.slug}`}
-                className="group flex items-center gap-3 p-4 rounded-xl border border-slate-200 hover:border-blue-300 hover:shadow-sm transition-all bg-white"
+                className="group flex items-center gap-3 rounded-xl border border-slate-200 bg-white p-4 transition-all hover:border-fuchsia-200 hover:shadow-sm"
               >
-                <div className="w-9 h-9 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-100 transition-colors">
+                <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg bg-fuchsia-50 text-fuchsia-600 transition-colors group-hover:bg-fuchsia-100">
                   <span className="scale-75">{iconMap[cat.icon]}</span>
                 </div>
                 <div className="min-w-0">
-                  <p className="text-sm font-semibold text-slate-800 group-hover:text-blue-700 transition-colors truncate">
+                  <p className="truncate text-sm font-semibold text-slate-800 transition-colors group-hover:text-fuchsia-700">
                     {cat.title}
                   </p>
                   <p className="text-xs text-slate-400">

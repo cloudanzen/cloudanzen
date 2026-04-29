@@ -5,14 +5,30 @@
   },
   "hero": {
     "badge": "Bring your own AI. Operate with proof.",
-    "title": "Connect your AI agent to",
-    "titleHighlight": "trust operations",
+    "title": "AI Driven",
+    "titleHighlight": "Trust Platform",
     "subtitle": "Use your own AI key with CloudAnzen MCP to automate questionnaires, translate vulnerabilities into risks, validate evidence, and guide posture fixes with humans in control.",
-    "ctaPrimary": "See CloudAnzen in action",
+    "ctaPrimary": "Get Started",
     "ctaSecondary": "Explore the platform",
-    "trustNote": "AI-guided. Validated. Always traceable.",
+    "trustNote": "Live context, human approval, and auditable outcomes in one workflow.",
+    "productTransition": {
+      "badge": "Enterprise trust operations workspace",
+      "title": "Operate AI-assisted trust workflows in one controlled system",
+      "description": "CloudAnzen gives security and compliance teams a production workspace for questionnaire operations, evidence-backed responses, and governed AI execution across trust workflows.",
+      "imageAlt": "CloudAnzen AI assistant workspace screenshot",
+      "points": [
+        {
+          "title": "Governed AI with live control context",
+          "description": "Approved answers, current evidence, and control state stay available inside the operational workflow, not in a disconnected prompt."
+        },
+        {
+          "title": "Enterprise workflow from draft to validated outcome",
+          "description": "Teams move from response generation to tracked remediation, approval, and validated proof without leaving the same system of record."
+        }
+      ]
+    },
     "story": {
-      "eyebrow": "Live product story",
+      "eyebrow": "Guided trust operations",
       "scenes": {
         "ask": {
           "title": "Ask your AI agent to operate with context",
@@ -20,11 +36,11 @@
         },
         "assemble": {
           "title": "Assemble trust context through MCP",
-          "description": "Questionnaires, vulnerabilities, evidence, controls, and policy context stream into one structured layer your model can reason over safely."
+          "description": "Questionnaires, vulnerabilities, evidence, and control state stream into one structured layer your model can reason over safely."
         },
         "act": {
           "title": "Run high-value trust workflows",
-          "description": "The agent drafts answers, translates findings into risks, validates supporting evidence, and proposes the next posture fix from the same operating model."
+          "description": "The agent drafts answers, translates findings into risks, and proposes the next posture fix from the same operating model."
         },
         "approve": {
           "title": "Keep humans in control for high-impact changes",
@@ -74,19 +90,15 @@
             "title": "Translate findings into business risk",
             "description": "Map vulnerabilities into owned, prioritized risk records with context."
           },
-          "evidence": {
-            "title": "Validate supporting evidence",
-            "description": "Check whether uploaded proof actually supports the claimed control."
-          },
           "fix": {
             "title": "Recommend the next posture fix",
-            "description": "Turn posture gaps into tracked remediation work instead of loose suggestions."
+            "description": "Turn posture gaps into tracked remediation."
           }
         }
       },
       "approval": {
         "title": "Human approval gate",
-        "description": "High-impact actions pause for review before CloudAnzen updates posture and downstream trust artifacts.",
+        "description": "High-impact actions reviewed.",
         "pending": "Approval required",
         "applied": "Applied with audit trail"
       },
