@@ -40,6 +40,10 @@ type PackageLane = "trust" | "audit" | "byoa";
 
 const W = 1600;
 const H = 920;
+const VIEWBOX_X = -95;
+const VIEWBOX_Y = -70;
+const VIEWBOX_W = 1480;
+const VIEWBOX_H = 1030;
 const LOOP_SECONDS = 9;
 const BELT_SPEED = 220;
 
@@ -259,8 +263,8 @@ const gearPositions = gearSpecs.map((gear, i) => ({
 const destTrust = { x: BAY_X, y: TRUST_Y - DEST_H / 2, icon: "chat", title: "Trust Center", color: CA.blue, bg: CA.blue50, border: "#bfdbfe" } satisfies DestCardProps;
 const destAudit = { x: BAY_X, y: AUDIT_Y - DEST_H / 2, icon: "clipboard", title: "Auditor", color: CA.teal, bg: CA.teal50, border: "#99f6e4" } satisfies DestCardProps;
 const destByoa = { x: BAY_X, y: BYOA_Y - DEST_H / 2, icon: "bot", title: "Agentic AI", color: CA.blue, bg: CA.blue100, border: "#bfdbfe" } satisfies DestCardProps;
-const destHuman = { x: 470, y: BOTTOM_Y - DEST_H / 2, icon: "userCheck", title: "Human\nApproval", color: CA.purple, bg: CA.purple100, border: "#ddd6fe" } satisfies DestCardProps;
-const destRemediate = { x: 760, y: BOTTOM_Y - DEST_H / 2, icon: "bot", title: "Automated\nRemediation", color: CA.teal, bg: CA.teal50, border: "#99f6e4" } satisfies DestCardProps;
+const destRemediate = { x: 470, y: BOTTOM_Y - DEST_H / 2, icon: "bot", title: "Automated\nRemediation", color: CA.teal, bg: CA.teal50, border: "#99f6e4" } satisfies DestCardProps;
+const destHuman = { x: 760, y: BOTTOM_Y - DEST_H / 2, icon: "userCheck", title: "Human\nApproval", color: CA.purple, bg: CA.purple100, border: "#ddd6fe" } satisfies DestCardProps;
 
 const sourceFeeds = sourcePos.map((_, i) => {
   const start = sourceRight(i);
@@ -490,8 +494,8 @@ function AnimatedDiagram({ time }: { time: number }) {
   const aiOutY = BYOA_Y + DEST_H / 2;
   const humanInX = destHuman.x + DEST_W / 2;
   const humanInY = BOTTOM_Y - DEST_H / 2;
-  const humanRightX = destHuman.x + DEST_W;
-  const remLeftX = destRemediate.x;
+  const humanLeftX = destHuman.x;
+  const remRightX = destRemediate.x + DEST_W;
   const remOutX = destRemediate.x + DEST_W / 2;
   const remOutY = BOTTOM_Y + DEST_H / 2;
   const saasIdx = sources.length - 1;
@@ -500,7 +504,7 @@ function AnimatedDiagram({ time }: { time: number }) {
   const loopBottomY = BOTTOM_Y + DEST_H / 2 + 50;
 
   return (
-    <svg className="h-full w-full" viewBox={`0 0 ${W} ${H}`} role="img" aria-label="Time-based CloudAnzen automation flow animation">
+    <svg className="h-full w-full" viewBox={`${VIEWBOX_X} ${VIEWBOX_Y} ${VIEWBOX_W} ${VIEWBOX_H}`} role="img" aria-label="Time-based CloudAnzen automation flow animation">
       <defs>
         <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
           <feDropShadow dx="0" dy="14" stdDeviation="18" floodColor="#0f172a" floodOpacity="0.12" />
@@ -601,8 +605,8 @@ function AnimatedDiagram({ time }: { time: number }) {
 
       <path d={`M ${aiOutX} ${aiOutY} L ${aiOutX} ${humanInY - 30} L ${humanInX} ${humanInY - 30} L ${humanInX} ${humanInY - 6}`} stroke={CA.purple} strokeWidth="2" fill="none" strokeLinecap="round" />
       <ArrowHead x={humanInX} y={humanInY - 6} dir="down" color={CA.purple} />
-      <line x1={humanRightX} y1={BOTTOM_Y} x2={remLeftX - 6} y2={BOTTOM_Y} stroke={CA.teal} strokeWidth="2" strokeLinecap="round" />
-      <ArrowHead x={remLeftX - 6} y={BOTTOM_Y} dir="right" color={CA.teal} />
+      <line x1={humanLeftX} y1={BOTTOM_Y} x2={remRightX + 6} y2={BOTTOM_Y} stroke={CA.teal} strokeWidth="2" strokeLinecap="round" />
+      <ArrowHead x={remRightX + 6} y={BOTTOM_Y} dir="left" color={CA.teal} />
       <path d={`M ${remOutX} ${remOutY} L ${remOutX} ${loopBottomY} L ${saasLeftX - 30} ${loopBottomY} L ${saasLeftX - 30} ${saasMidY} L ${saasLeftX - 6} ${saasMidY}`} stroke={CA.teal} strokeWidth="2" fill="none" strokeLinecap="round" strokeDasharray="6 5" />
       <ArrowHead x={saasLeftX - 6} y={saasMidY} dir="right" color={CA.teal} />
       <text x={(saasLeftX - 30 + remOutX) / 2} y={loopBottomY - 8} textAnchor="middle" fontSize="11" fontWeight="700" fill={CA.teal} letterSpacing="0.08em">
@@ -642,10 +646,8 @@ export function HomeHeroStory() {
         <div className="pointer-events-none absolute -left-8 top-8 h-32 w-32 rounded-full bg-amber-200/35 blur-3xl" />
         <div className="pointer-events-none absolute -right-6 bottom-10 h-28 w-28 rounded-full bg-emerald-200/30 blur-3xl" />
         <div className="relative rounded-[24px] border border-white/80 bg-[radial-gradient(circle_at_top,_rgba(244,114,182,0.14),_transparent_36%),linear-gradient(160deg,rgba(255,255,255,0.96),rgba(248,250,252,0.92))] p-2.5 sm:p-3.5">
-          <div className="relative aspect-[1600/920] min-h-[280px] overflow-hidden rounded-[20px] bg-transparent sm:min-h-0">
-            <div className="absolute inset-0 translate-x-[3%] -translate-y-[4%] scale-110">
-              <AnimatedDiagram time={time} />
-            </div>
+          <div className="relative aspect-[1480/1030] min-h-[360px] overflow-hidden rounded-[20px] bg-transparent sm:min-h-0">
+            <AnimatedDiagram time={time} />
           </div>
         </div>
       </div>
