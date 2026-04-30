@@ -126,27 +126,27 @@ export default async function HomePage({
   return (
     <div className="overflow-x-hidden">
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-[linear-gradient(135deg,#fffdf8_0%,#f8fafc_42%,#f6fffb_100%)] pt-28 pb-10 lg:flex lg:min-h-[calc(100vh-4rem)] lg:items-center lg:pt-32 lg:pb-10">
+      <section className="relative overflow-hidden bg-[linear-gradient(135deg,#fffdf8_0%,#f8fafc_42%,#f6fffb_100%)] pt-24 pb-8 sm:pt-28 sm:pb-10 lg:flex lg:min-h-[calc(100vh-4rem)] lg:items-center lg:pt-32 lg:pb-10">
         <div className="absolute inset-0 bg-grid opacity-10" />
         <div className="absolute top-16 left-[18%] h-96 w-96 rounded-full bg-amber-200/35 blur-3xl" />
         <div className="absolute bottom-4 right-[18%] h-80 w-80 rounded-full bg-emerald-200/35 blur-3xl" />
         <div className="absolute right-[34%] top-24 h-72 w-72 rounded-full bg-rose-200/25 blur-3xl" />
 
         <div className="page-shell relative lg:ml-[12.5%] lg:mr-[3.5rem]">
-          <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,0.48fr)_minmax(0,1.52fr)] lg:gap-16 xl:grid-cols-[minmax(0,0.44fr)_minmax(0,1.56fr)] xl:gap-20">
-            <div className="mx-auto max-w-[36rem] pt-2 text-center lg:sticky lg:top-1/2 lg:mr-0 lg:-translate-y-1/2">
-              <h1 className="mx-auto max-w-[12ch] text-[2.2rem] font-extrabold leading-[1.02] tracking-[-0.02em] text-slate-950 sm:text-[2.65rem] lg:text-[2.9rem] xl:text-[3.1rem]">
+          <div className="grid items-start gap-6 sm:gap-8 lg:grid-cols-[minmax(0,0.48fr)_minmax(0,1.52fr)] lg:gap-16 xl:grid-cols-[minmax(0,0.44fr)_minmax(0,1.56fr)] xl:gap-20">
+            <div className="mx-auto max-w-[36rem] pt-0 text-center sm:pt-2 lg:sticky lg:top-1/2 lg:mr-0 lg:-translate-y-1/2">
+              <h1 className="mx-auto max-w-[13ch] text-[2rem] font-extrabold leading-[1.02] tracking-[-0.02em] text-slate-950 sm:max-w-[12ch] sm:text-[2.65rem] lg:text-[2.9rem] xl:text-[3.1rem]">
                 <span className="block">{t("hero.title")}</span>
                 <span className="block bg-gradient-to-r from-fuchsia-500 via-violet-500 to-emerald-500 bg-clip-text text-transparent">
                   {t("hero.titleHighlight")}
                 </span>
               </h1>
 
-              <p className="mx-auto mt-4 max-w-md text-sm font-medium leading-6 text-slate-600 lg:text-[14px]">
+              <p className="mx-auto mt-3 max-w-md text-sm font-medium leading-6 text-slate-600 sm:mt-4 lg:text-[14px]">
                 {t("hero.trustNote")}
               </p>
 
-              <div className="mt-5 flex justify-center">
+              <div className="mt-4 flex justify-center sm:mt-5">
                 <Link
                   href="/demo"
                   className="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-950 px-5 py-2.5 text-[15px] font-semibold text-white transition-all shadow-lg shadow-slate-900/15 hover:-translate-y-0.5 hover:bg-slate-800"
