@@ -504,7 +504,7 @@ function AnimatedDiagram({ time }: { time: number }) {
   const loopBottomY = BOTTOM_Y + DEST_H / 2 + 50;
 
   return (
-    <svg className="h-full w-full" viewBox={`${VIEWBOX_X} ${VIEWBOX_Y} ${VIEWBOX_W} ${VIEWBOX_H}`} role="img" aria-label="Time-based CloudAnzen automation flow animation">
+    <svg className="h-full w-full" viewBox={`${VIEWBOX_X} ${VIEWBOX_Y} ${VIEWBOX_W} ${VIEWBOX_H}`} preserveAspectRatio="xMidYMid meet" role="img" aria-label="Time-based CloudAnzen automation flow animation">
       <defs>
         <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
           <feDropShadow dx="0" dy="14" stdDeviation="18" floodColor="#0f172a" floodOpacity="0.12" />
@@ -640,13 +640,13 @@ export function HomeHeroStory() {
   const time = prefersReducedMotion ? LOOP_SECONDS * 0.42 : loopTime;
 
   return (
-    <div className="mt-4 w-full lg:mt-0 lg:ml-auto lg:max-w-[1020px] lg:justify-self-end xl:translate-x-8 2xl:translate-x-10">
-      <div className="ai-hero-sheen relative overflow-hidden rounded-[28px] border border-white/70 bg-white/70 p-1.5 shadow-[0_18px_45px_rgba(15,23,42,0.08)] backdrop-blur-xl">
+    <div className="mt-2 w-full sm:mt-4 lg:mt-0 lg:ml-auto lg:max-w-[1020px] lg:justify-self-end xl:translate-x-8 2xl:translate-x-10">
+      <div className="ai-hero-sheen relative overflow-hidden rounded-[22px] border border-white/70 bg-white/70 p-1 shadow-[0_14px_34px_rgba(15,23,42,0.08)] backdrop-blur-xl sm:rounded-[28px] sm:p-1.5 sm:shadow-[0_18px_45px_rgba(15,23,42,0.08)]">
         <div className="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-fuchsia-300/70 to-transparent" />
         <div className="pointer-events-none absolute -left-8 top-8 h-32 w-32 rounded-full bg-amber-200/35 blur-3xl" />
         <div className="pointer-events-none absolute -right-6 bottom-10 h-28 w-28 rounded-full bg-emerald-200/30 blur-3xl" />
-        <div className="relative rounded-[24px] border border-white/80 bg-[radial-gradient(circle_at_top,_rgba(244,114,182,0.14),_transparent_36%),linear-gradient(160deg,rgba(255,255,255,0.96),rgba(248,250,252,0.92))] p-2.5 sm:p-3.5">
-          <div className="relative aspect-[1480/1030] min-h-[360px] overflow-hidden rounded-[20px] bg-transparent sm:min-h-0">
+        <div className="relative rounded-[20px] border border-white/80 bg-[radial-gradient(circle_at_top,_rgba(244,114,182,0.14),_transparent_36%),linear-gradient(160deg,rgba(255,255,255,0.96),rgba(248,250,252,0.92))] p-1.5 sm:rounded-[24px] sm:p-3.5">
+          <div className="relative aspect-[4/3] min-h-[260px] overflow-hidden rounded-[18px] bg-transparent sm:aspect-[1480/1030] sm:min-h-0 sm:rounded-[20px]">
             <AnimatedDiagram time={time} />
           </div>
         </div>
