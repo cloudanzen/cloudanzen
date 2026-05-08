@@ -24,7 +24,7 @@ export default function QuestionnaireAutomationPage() {
         <div className="max-w-6xl mx-auto">
           <div className="rounded-2xl border border-slate-200 shadow-2xl overflow-hidden bg-white">
             <Image
-              src="/screenshots/AIAssistant.png"
+              src="/screenshots/AI.png"
               alt="CloudAnzen Questionnaire Automation interface"
               width={1200}
               height={675}
