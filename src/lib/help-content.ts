@@ -301,11 +301,11 @@ Each framework has a dedicated dashboard showing:
 - **Risk indicators** — Failing controls sorted by severity.
 - **Timeline view** — Progress over the past 30, 60, or 90 days.
 
-### Generating Reports
+### Generating Progress Reports
 
 Export framework progress reports for stakeholders:
 
-1. Navigate to **Frameworks → [Your Framework] → Reports**.
+1. Navigate to **Frameworks → [Your Framework] → Progress**.
 2. Select the report type (Executive Summary, Detailed Status, or Gap Analysis).
 3. Choose the date range and format (PDF or CSV).
 4. Click **Generate Report**.
@@ -1426,7 +1426,7 @@ Tasks can be created from multiple places:
 
 The task dashboard shows:
 
-- **My Tasks** — Tasks assigned to you.
+- **ToDo** — Tasks assigned to you.
 - **Team Tasks** — All tasks across your organization.
 - **Overdue** — Tasks past their due date.
 - **Completed** — Recently completed tasks.
