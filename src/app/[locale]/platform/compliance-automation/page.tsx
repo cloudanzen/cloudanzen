@@ -58,7 +58,7 @@ export default function ComplianceAutomationPage() {
         <div className="max-w-6xl mx-auto">
           <div className="rounded-2xl border border-slate-200 shadow-2xl overflow-hidden bg-white">
             <Image
-              src="/screenshots/Compliance_Framework.png"
+              src="/screenshots/Framework.png"
               alt="CloudAnzen Compliance Automation interface"
               width={1200}
               height={675}

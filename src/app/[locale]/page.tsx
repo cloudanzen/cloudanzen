@@ -202,7 +202,7 @@ export default async function HomePage({
               <div className="bg-[linear-gradient(180deg,#fff7ed_0%,#faf5ff_100%)] p-3 sm:p-4">
                 <div className="overflow-hidden rounded-[24px] border border-white/80 bg-white shadow-[0_18px_45px_rgba(15,23,42,0.10)]">
                   <Image
-                    src="/screenshots/AIAssistant.png"
+                    src="/screenshots/AI.png"
                     alt={t("hero.productTransition.imageAlt")}
                     width={1200}
                     height={675}

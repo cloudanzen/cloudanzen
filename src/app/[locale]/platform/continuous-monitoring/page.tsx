@@ -49,7 +49,7 @@ export default function ContinuousMonitoringPage() {
         <div className="max-w-6xl mx-auto">
           <div className="rounded-2xl border border-slate-200 shadow-2xl overflow-hidden bg-white">
             <Image
-              src="/screenshots/Test.png"
+              src="/screenshots/Validations.png"
               alt="CloudAnzen Continuous Monitoring interface"
               width={1200}
               height={675}
