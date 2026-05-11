@@ -90,9 +90,17 @@ export default function Navbar() {
               className="flex items-center gap-2.5 flex-shrink-0"
               onClick={(e) => {
                 setMobileOpen(false);
-                if (pathname === "/") {
+                const path = window.location.pathname;
+                const isHome =
+                  path === "/" ||
+                  path === `/${locale}` ||
+                  path === `/${locale}/`;
+                if (isHome) {
                   e.preventDefault();
+                  e.stopPropagation();
                   window.scrollTo({ top: 0, behavior: "smooth" });
+                  document.documentElement.scrollTo({ top: 0, behavior: "smooth" });
+                  document.body.scrollTo({ top: 0, behavior: "smooth" });
                 }
               }}
             >
