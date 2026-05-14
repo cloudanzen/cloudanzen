@@ -3,11 +3,11 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import {
-  getArticlesByCollection,
   getCollection,
   resourceCollections,
   resourceTypes,
 } from "@/lib/resources-content";
+import { getArticleMetasByCollection } from "@/lib/articles";
 
 export async function generateStaticParams() {
   return resourceCollections.map((collection) => ({ slug: collection.slug }));
@@ -41,7 +41,7 @@ export default async function CollectionPage({
 
   if (!collection) notFound();
 
-  const articles = getArticlesByCollection(collection.slug);
+  const articles = getArticleMetasByCollection(collection.slug);
 
   return (
     <div>

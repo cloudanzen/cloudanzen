@@ -2,16 +2,17 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, ChevronRight } from "lucide-react";
+import { getCollection } from "@/lib/resources-content";
 import {
-  getArticlesByType,
-  getCollection,
+  getArticleIndex,
+  getArticleMetasByType,
   getResourceArticle,
-  resourceArticles,
-} from "@/lib/resources-content";
+  getResourceArticleMeta,
+} from "@/lib/articles";
 import { markdownToHtml } from "@/lib/markdown-to-html";
 
 export async function generateStaticParams() {
-  return resourceArticles.map((article) => ({
+  return getArticleIndex().map((article) => ({
     type: article.type,
     slug: article.slug,
   }));
@@ -23,7 +24,7 @@ export async function generateMetadata({
   params: Promise<{ type: string; slug: string }>;
 }): Promise<Metadata> {
   const { type, slug } = await params;
-  const article = getResourceArticle(type, slug);
+  const article = getResourceArticleMeta(type, slug);
 
   if (!article) {
     return { title: "Not Found" };
@@ -45,7 +46,7 @@ export default async function ResourceArticlePage({
 
   if (!article) notFound();
 
-  const typeArticles = getArticlesByType(article.type);
+  const typeArticles = getArticleMetasByType(article.type);
   const articleIndex = typeArticles.findIndex(
     (entry) => entry.slug === article.slug,
   );

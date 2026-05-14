@@ -11,12 +11,15 @@ import {
   Newspaper,
 } from "lucide-react";
 import {
-  getFeaturedResources,
-  resourceArticles,
   resourceCollections,
   resourceTypes,
   type ResourceTypeSlug,
 } from "@/lib/resources-content";
+import {
+  getArticleIndex,
+  getFeaturedArticleMetas,
+  getLatestArticleMetas,
+} from "@/lib/articles";
 
 export const metadata: Metadata = {
   title: "Resources",
@@ -41,8 +44,9 @@ const typeColors: Record<ResourceTypeSlug, string> = {
 };
 
 export default function ResourcesPage() {
-  const featuredResources = getFeaturedResources();
-  const latestResources = [...resourceArticles].slice(-8).reverse();
+  const featuredResources = getFeaturedArticleMetas();
+  const latestResources = getLatestArticleMetas(8);
+  const totalResources = getArticleIndex().length;
 
   return (
     <div>
@@ -198,7 +202,7 @@ export default function ResourcesPage() {
               </h2>
             </div>
             <p className="text-sm text-slate-500">
-              {resourceArticles.length} resources live
+              {totalResources} resources live
             </p>
           </div>
 

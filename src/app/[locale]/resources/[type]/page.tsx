@@ -3,11 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import PageHero from "@/components/PageHero";
-import {
-  getArticlesByType,
-  getResourceType,
-  resourceTypes,
-} from "@/lib/resources-content";
+import { getResourceType, resourceTypes } from "@/lib/resources-content";
+import { getArticleMetasByType } from "@/lib/articles";
 
 export async function generateStaticParams() {
   return resourceTypes.map((type) => ({ type: type.slug }));
@@ -41,7 +38,7 @@ export default async function ResourceTypePage({
 
   if (!resourceType) notFound();
 
-  const articles = getArticlesByType(resourceType.slug);
+  const articles = getArticleMetasByType(resourceType.slug);
 
   return (
     <div>

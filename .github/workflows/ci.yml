@@ -4,8 +4,9 @@ on:
   pull_request:
     branches: [main]
     paths-ignore:
-      - '**/*.md'
       - 'docs/**'
+      - '*.md'
+      - 'scripts/blog/README.md'
 
 permissions:
   contents: read
@@ -16,7 +17,7 @@ concurrency:
 
 jobs:
   checks:
-    name: Lint, Typecheck, Build
+    name: Lint, Typecheck, Validate Content, Build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -35,4 +36,10 @@ jobs:
         run: npm run lint
 
       - name: Typecheck
-        run: npx tsc --noEmit
+        run: npm run typecheck
+
+      - name: Validate article content
+        run: npm run blog:validate-content
+
+      - name: Build
+        run: npm run build
