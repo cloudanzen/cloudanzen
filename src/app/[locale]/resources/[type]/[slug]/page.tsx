@@ -65,17 +65,17 @@ export default async function ResourceArticlePage({
         <div className="absolute inset-0 bg-grid opacity-30" />
 
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="flex flex-wrap items-center gap-2 text-sm text-slate-400 mb-8">
+          <nav className="flex flex-wrap items-center gap-2 text-sm text-slate-500 mb-8">
             <Link
               href="/resources"
-              className="hover:text-white transition-colors"
+              className="transition-colors hover:text-slate-800"
             >
               Resources
             </Link>
             <ChevronRight className="w-3.5 h-3.5" />
             <Link
               href={`/resources/${article.type}`}
-              className="hover:text-white transition-colors"
+              className="transition-colors hover:text-slate-800"
             >
               {article.type === "blog"
                 ? "Blog"
@@ -88,16 +88,16 @@ export default async function ResourceArticlePage({
                       : "Compliance Checklists"}
             </Link>
             <ChevronRight className="w-3.5 h-3.5" />
-            <span className="text-white truncate max-w-[280px]">
+            <span className="max-w-[280px] truncate text-slate-900">
               {article.title}
             </span>
           </nav>
 
           <div className="flex flex-wrap gap-2 mb-5">
-            <span className="text-xs px-2.5 py-1 rounded-full bg-white/10 text-white border border-white/15">
+            <span className="rounded-full border border-slate-200 bg-white/85 px-2.5 py-1 text-xs font-medium text-slate-700 shadow-sm">
               {article.category}
             </span>
-            <span className="text-xs px-2.5 py-1 rounded-full bg-white/10 text-white border border-white/15">
+            <span className="rounded-full border border-slate-200 bg-white/85 px-2.5 py-1 text-xs font-medium text-slate-700 shadow-sm">
               {article.readTime}
             </span>
             {collection ? (
@@ -110,8 +110,8 @@ export default async function ResourceArticlePage({
             ) : null}
           </div>
 
-          <h1 className="heading-xl text-white mb-3">{article.title}</h1>
-          <p className="text-lg text-slate-300 max-w-2xl">{article.summary}</p>
+          <h1 className="heading-xl mb-3 text-slate-950">{article.title}</h1>
+          <p className="max-w-2xl text-lg text-slate-600">{article.summary}</p>
         </div>
       </section>
 
