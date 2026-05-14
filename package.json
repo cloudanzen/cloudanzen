@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "blog:validate": "node scripts/blog/validate-article.mjs",
+    "blog:append": "node scripts/blog/append-article.mjs",
+    "blog:dry-run": "node scripts/blog/append-article.mjs --dry-run"
   },
   "dependencies": {
     "clsx": "^2.1.1",

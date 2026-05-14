@@ -1,0 +1,162 @@
+[
+  {
+    "title": "How to scope ISO 27001 ISMS for a Series B SaaS",
+    "category": "ISO 27001",
+    "collection": "iso-27001",
+    "suggestedKeywords": ["ISO 27001 scope", "ISMS boundaries", "SaaS compliance"],
+    "suggestedSources": [
+      "https://www.iso.org/standard/27001",
+      "https://www.isms.online/iso-27001/"
+    ]
+  },
+  {
+    "title": "Annex A control mappings every SOC 2 founder gets wrong",
+    "category": "SOC 2",
+    "collection": "soc-2",
+    "suggestedKeywords": ["SOC 2 controls", "Annex A mapping", "Founder compliance"],
+    "suggestedSources": [
+      "https://www.aicpa.org/soc4so",
+      "https://www.securitycompass.com/blog/regulatory-security-compliance-frameworks-standards/"
+    ]
+  },
+  {
+    "title": "Vendor risk reviews: what evidence is actually worth keeping",
+    "category": "Vendor risk",
+    "collection": null,
+    "suggestedKeywords": ["vendor risk", "TPRM evidence", "vendor assessments"],
+    "suggestedSources": ["https://www.isms.online/vendor-risk-management/"]
+  },
+  {
+    "title": "Continuous monitoring for SOC 2 without alert fatigue",
+    "category": "SOC 2",
+    "collection": "soc-2",
+    "suggestedKeywords": ["continuous monitoring", "SOC 2 automation", "alert fatigue"],
+    "suggestedSources": ["https://www.securitycompass.com/blog/"]
+  },
+  {
+    "title": "Mapping GDPR Article 32 to engineering controls",
+    "category": "GDPR",
+    "collection": null,
+    "suggestedKeywords": ["GDPR Article 32", "data protection engineering"],
+    "suggestedSources": ["https://gdpr-info.eu/art-32-gdpr/"]
+  },
+  {
+    "title": "Why your trust center should not just be a PDF",
+    "category": "Trust center",
+    "collection": null,
+    "suggestedKeywords": ["trust center", "security portal", "buyer trust"],
+    "suggestedSources": ["https://www.isms.online/"]
+  },
+  {
+    "title": "Risk register patterns that survive your first audit",
+    "category": "Risk management",
+    "collection": null,
+    "suggestedKeywords": ["risk register", "risk management", "audit readiness"],
+    "suggestedSources": ["https://www.iso.org/standard/31000"]
+  },
+  {
+    "title": "What auditors really look for in evidence collection",
+    "category": "Audit strategy",
+    "collection": null,
+    "suggestedKeywords": ["audit evidence", "compliance audit", "evidence collection"],
+    "suggestedSources": ["https://www.aicpa.org/"]
+  },
+  {
+    "title": "Policy management: from PDF library to living document",
+    "category": "Policy management",
+    "collection": null,
+    "suggestedKeywords": ["policy management", "compliance policies", "policy lifecycle"],
+    "suggestedSources": ["https://www.isms.online/"]
+  },
+  {
+    "title": "HIPAA compliance for health-tech SaaS: the first 90 days",
+    "category": "HIPAA",
+    "collection": null,
+    "suggestedKeywords": ["HIPAA compliance", "health-tech SaaS", "BAA"],
+    "suggestedSources": ["https://www.hhs.gov/hipaa/"]
+  },
+  {
+    "title": "Security questionnaire automation: what to standardise first",
+    "category": "Questionnaires",
+    "collection": null,
+    "suggestedKeywords": ["security questionnaire", "questionnaire automation", "vendor due diligence"],
+    "suggestedSources": ["https://www.isms.online/"]
+  },
+  {
+    "title": "PCI DSS 4.0 changes that catch startups off guard",
+    "category": "PCI DSS",
+    "collection": null,
+    "suggestedKeywords": ["PCI DSS 4.0", "payment compliance"],
+    "suggestedSources": ["https://www.pcisecuritystandards.org/"]
+  },
+  {
+    "title": "NIST CSF 2.0 mapping for SaaS security teams",
+    "category": "NIST CSF",
+    "collection": null,
+    "suggestedKeywords": ["NIST CSF 2.0", "framework mapping"],
+    "suggestedSources": ["https://www.nist.gov/cyberframework"]
+  },
+  {
+    "title": "MDM for compliance: device inventory that holds up at audit",
+    "category": "MDM",
+    "collection": null,
+    "suggestedKeywords": ["MDM compliance", "device inventory", "endpoint compliance"],
+    "suggestedSources": ["https://www.isms.online/"]
+  },
+  {
+    "title": "Access reviews without the spreadsheet pain",
+    "category": "Access control",
+    "collection": null,
+    "suggestedKeywords": ["access reviews", "user access", "least privilege"],
+    "suggestedSources": ["https://www.isms.online/"]
+  },
+  {
+    "title": "Incident response runbooks that survive contact with reality",
+    "category": "Incident response",
+    "collection": null,
+    "suggestedKeywords": ["incident response", "runbooks", "security operations"],
+    "suggestedSources": ["https://www.cisa.gov/"]
+  },
+  {
+    "title": "Continuous compliance vs point-in-time: pick your evidence model",
+    "category": "Compliance strategy",
+    "collection": null,
+    "suggestedKeywords": ["continuous compliance", "evidence model"],
+    "suggestedSources": ["https://www.securitycompass.com/blog/"]
+  },
+  {
+    "title": "Asset inventory that actually maps to controls",
+    "category": "Asset management",
+    "collection": null,
+    "suggestedKeywords": ["asset inventory", "asset management", "control mapping"],
+    "suggestedSources": ["https://www.isms.online/"]
+  },
+  {
+    "title": "Choosing a compliance framework when buyers ask for everything",
+    "category": "Compliance strategy",
+    "collection": null,
+    "suggestedKeywords": ["framework selection", "SOC 2 vs ISO 27001"],
+    "suggestedSources": ["https://www.securitycompass.com/blog/regulatory-security-compliance-frameworks-standards/"]
+  },
+  {
+    "title": "Data classification that engineers will actually follow",
+    "category": "Data protection",
+    "collection": null,
+    "suggestedKeywords": ["data classification", "data protection", "engineering compliance"],
+    "suggestedSources": ["https://gdpr-info.eu/"]
+  },
+  {
+    "title": "Building a GRC team of one: what to outsource and what to own",
+    "category": "GRC operations",
+    "collection": null,
+    "suggestedKeywords": ["GRC team", "solo GRC", "compliance operations"],
+    "suggestedSources": ["https://www.isms.online/"]
+  },
+  {
+    "title": "Mapping HIPAA Security Rule safeguards to AWS controls",
+    "category": "HIPAA",
+    "collection": null,
+    "suggestedKeywords": ["HIPAA AWS", "HIPAA Security Rule", "cloud compliance"],
+    "suggestedSources": ["https://aws.amazon.com/compliance/hipaa-compliance/"]
+  }
+]
