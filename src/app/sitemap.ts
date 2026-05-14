@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
-import { resourceTypes, resourceArticles } from "@/lib/resources-content";
+import { resourceTypes } from "@/lib/resources-content";
+import { getArticleIndex } from "@/lib/articles";
 import { helpCategories } from "@/lib/help-content";
 
 const BASE_URL = "https://www.cloudanzen.com";
@@ -103,7 +104,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   // Resource articles
-  for (const article of resourceArticles) {
+  for (const article of getArticleIndex()) {
     const enUrl = `${BASE_URL}/resources/${article.type}/${article.slug}`;
     const jaUrl = `${BASE_URL}/ja/resources/${article.type}/${article.slug}`;
     entries.push(

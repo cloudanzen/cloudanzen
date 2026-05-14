@@ -1,11 +1,11 @@
 #!/usr/bin/env node
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, "..", "..");
-const ARTICLES_FILE = path.join(REPO_ROOT, "src", "lib", "resources-content.ts");
+const ARTICLES_DIR = path.join(REPO_ROOT, "content", "articles");
 
 const BLOCKLIST = [
   "vanta",
@@ -65,9 +65,10 @@ function checkShape(article) {
 }
 
 function checkUniqueSlug(article) {
-  const source = readFileSync(ARTICLES_FILE, "utf8");
-  const re = new RegExp(`slug:\\s*["\`']${article.slug}["\`']`);
-  if (re.test(source)) fail(`slug "${article.slug}" already exists in resourceArticles`);
+  const target = path.join(ARTICLES_DIR, `${article.slug}.md`);
+  if (existsSync(target)) {
+    fail(`slug "${article.slug}" already exists at ${path.relative(REPO_ROOT, target)}`);
+  }
 }
 
 function wordCount(content) {

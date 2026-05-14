@@ -1,0 +1,188 @@
+{
+  "sourceFile": "src/lib/resources-content.ts",
+  "outDir": "content/articles",
+  "preMigrationCount": 36,
+  "extractedCount": 36,
+  "hashes": [
+    {
+      "slug": "soc-2-continuous-monitoring-alert-fatigue",
+      "sortOrder": 0,
+      "sha256": "a06415295c41be6225e63ff9dc68479176dee64f14a5f7b2dc9c0634438cab1c"
+    },
+    {
+      "slug": "soc-2-readiness-roadmap-for-saas",
+      "sortOrder": 1,
+      "sha256": "6291bb33769d9709510c5f516aed736cb258d7fab3225d2c2074846f3581f459"
+    },
+    {
+      "slug": "how-to-scope-soc-2-without-over-auditing",
+      "sortOrder": 2,
+      "sha256": "a214b6978255b97db4a22a824847513b0a1ea10343967ebcb6dc6a48487ecaa6"
+    },
+    {
+      "slug": "iso-27001-isms-operating-rhythm",
+      "sortOrder": 3,
+      "sha256": "79bfb0db841a63132a17c55c8dd0bfe81a70cd1270e19a63a7e97b8d7c1b2af8"
+    },
+    {
+      "slug": "vendor-risk-tiering-template",
+      "sortOrder": 4,
+      "sha256": "347add1eac6f1548dac67aed890efca29864adfdbe4c277615b2dee5e701fa49"
+    },
+    {
+      "slug": "gdpr-data-inventory-checklist",
+      "sortOrder": 5,
+      "sha256": "fb129cf4a6804e8d4d893b18aa5ddaaa8a7ea90144b1bb5a992cc3a73bbbdd5a"
+    },
+    {
+      "slug": "what-is-a-trust-center",
+      "sortOrder": 6,
+      "sha256": "2d2af1be3cb7fc473f59efe93178ae4faaa9d788bf965f66dcb376238fccf481"
+    },
+    {
+      "slug": "hipaa-security-rule-checklist-for-cloud-teams",
+      "sortOrder": 7,
+      "sha256": "76a0b26e6ab42e8244eb0620d09c60eeb425de9797205c5a51560da58ec4b469"
+    },
+    {
+      "slug": "security-questionnaire-response-template",
+      "sortOrder": 8,
+      "sha256": "1e90c136adee7461ca2eedf684aa4a1ecdcd7ec70776fd2c7d8d33c0eb598e48"
+    },
+    {
+      "slug": "continuous-control-monitoring-vs-point-in-time-audits",
+      "sortOrder": 9,
+      "sha256": "ed503c9f7916f3bce7eb1ac2662b1531e9c331f8a126e7db785aba19e7f0debe"
+    },
+    {
+      "slug": "iso-27001-vs-soc-2-for-b2b-saas",
+      "sortOrder": 10,
+      "sha256": "c6f91a25155487eca41b55d0a9195a6f9aa420cfc59f91b12bf14687f0817dee"
+    },
+    {
+      "slug": "soc-2-evidence-matrix-template",
+      "sortOrder": 11,
+      "sha256": "759bf0ebcff2ff43c16c46efd0929c15c05c20e35788c5ba008a01cc8ba64320"
+    },
+    {
+      "slug": "iso-27001-risk-register-structure",
+      "sortOrder": 12,
+      "sha256": "0895f04c87359a9a1c202fe2e1cc8d62c28e539649220ef8b5d07138012776f1"
+    },
+    {
+      "slug": "gdpr-vendor-review-questions",
+      "sortOrder": 13,
+      "sha256": "a3188a119d097e26f8fa5789b1c1d634c312f96dd6238e1863f57e8bec2436c6"
+    },
+    {
+      "slug": "hipaa-access-review-playbook",
+      "sortOrder": 14,
+      "sha256": "52fd19c4422f7bc229e21180b178a5b45a51db50beda8442bcf938cff1712fa3"
+    },
+    {
+      "slug": "third-party-risk-review-checklist",
+      "sortOrder": 15,
+      "sha256": "7ea6c2d8054b7870198e971fedf6c6c0d59473f6c7664d2c2304cad5dcfb79c5"
+    },
+    {
+      "slug": "trust-center-launch-checklist",
+      "sortOrder": 16,
+      "sha256": "0e6b249a231386eba23e1840ab560a43cadbaf8eba1033f48d8bbefefd9560ef"
+    },
+    {
+      "slug": "what-is-a-control-owner",
+      "sortOrder": 17,
+      "sha256": "db54a49d46d0b1c9da3cf8a3bb69cc72b35497b3402f5178c710161d728cd963"
+    },
+    {
+      "slug": "customer-security-review-intake-guide",
+      "sortOrder": 18,
+      "sha256": "04c33b09e0f1831854e91475e16c694d3431f6c7037fc3123b4c3c1a567d5059"
+    },
+    {
+      "slug": "soc-2-control-owner-operating-model",
+      "sortOrder": 19,
+      "sha256": "e93d110d443752f776653e238074d101acdf3a9e61765cb6a7a90c16da612bbd"
+    },
+    {
+      "slug": "soc-2-vendor-management-for-audits",
+      "sortOrder": 20,
+      "sha256": "9aae55401927892cfeb46490cfeea7e69837367b197ec1796770c30b447c66f9"
+    },
+    {
+      "slug": "iso-27001-statement-of-applicability-template",
+      "sortOrder": 21,
+      "sha256": "37c44e5c265bfd57d24252a3b7b5b9d5ca352f2d5b6212e0405e69d77300a510"
+    },
+    {
+      "slug": "iso-27001-internal-audit-prep-checklist",
+      "sortOrder": 22,
+      "sha256": "6e320bbe6b67f76a1968f52452b4cf8440f55b448932d9226752b2d98bf57aa6"
+    },
+    {
+      "slug": "gdpr-ropa-template-for-saas-products",
+      "sortOrder": 23,
+      "sha256": "49c3dcfd2f4da45ec485540290c6779b8a374c758425fea77dad1a54b2ff0fb8"
+    },
+    {
+      "slug": "gdpr-dsar-workflow-for-lean-teams",
+      "sortOrder": 24,
+      "sha256": "237ac6bfb97c6e8ff589f09345b0064e6fa7c7e0536f5d1ecb01735fdd3d4008"
+    },
+    {
+      "slug": "hipaa-business-associate-review-template",
+      "sortOrder": 25,
+      "sha256": "1bbf9ba7df3864f4807d848e9da892c9d3a29f54f410b4a295614a215d936e55"
+    },
+    {
+      "slug": "hipaa-incident-response-for-healthtech",
+      "sortOrder": 26,
+      "sha256": "0517708e4d636ec944d3d361e099b14d4ba52beb71b2f4e5ca226a34ba362922"
+    },
+    {
+      "slug": "vendor-security-questionnaire-core-sections",
+      "sortOrder": 27,
+      "sha256": "b005b5379bac2bf8b756997977a46270f3c8c65490d911e8e82aa9905e53d101"
+    },
+    {
+      "slug": "vendor-renewal-review-workflow",
+      "sortOrder": 28,
+      "sha256": "1cab70482acc2f1ba2ff8decd0a501799df23d684cd33833674e2cbc505d61a8"
+    },
+    {
+      "slug": "trust-center-content-map",
+      "sortOrder": 29,
+      "sha256": "5d38fe2bd4f7830673063e55c07368fb728d4f9bb177ff8205e11765429a4647"
+    },
+    {
+      "slug": "trust-center-metrics-that-matter",
+      "sortOrder": 30,
+      "sha256": "772c9c63d492ac2e7d524610ce767578576033090c4403ebf4b2224db65b7205"
+    },
+    {
+      "slug": "what-is-continuous-compliance",
+      "sortOrder": 31,
+      "sha256": "b67ccce355579092daa86d178c0bb5d7911fdb7c457eb3dff1271693bce82d68"
+    },
+    {
+      "slug": "what-is-an-evidence-owner",
+      "sortOrder": 32,
+      "sha256": "9562ff999c13e81e9ea3a9aa956f1eb31513386ac01239e8c5ac2bc9109555ef"
+    },
+    {
+      "slug": "framework-selection-checklist-for-startups",
+      "sortOrder": 33,
+      "sha256": "0a0bed2bfef34ff0f2afc45d3e5ce14790031ecfaaff42ec777bc8cc5dbab8e6"
+    },
+    {
+      "slug": "audit-request-intake-template",
+      "sortOrder": 34,
+      "sha256": "fe192585883faf7860ac5708ba8a57c50379acd69f16d5ccd9fded54ef7e16d6"
+    },
+    {
+      "slug": "privacy-by-design-review-checklist",
+      "sortOrder": 35,
+      "sha256": "765cdad16682f40ce327c46e5073c668a942c81f39b849ba813a1fbc49e66208"
+    }
+  ]
+}

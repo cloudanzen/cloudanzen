@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "typecheck": "tsc --noEmit",
     "blog:validate": "node scripts/blog/validate-article.mjs",
+    "blog:validate-content": "node scripts/blog/validate-content.mjs",
     "blog:append": "node scripts/blog/append-article.mjs",
     "blog:dry-run": "node scripts/blog/append-article.mjs --dry-run"
   },
