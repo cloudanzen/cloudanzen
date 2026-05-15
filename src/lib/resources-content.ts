@@ -25,6 +25,7 @@ export interface ResourceArticle {
   readTime: string;
   tags: string[];
   featured?: boolean;
+  author?: string;
   content: string;
 }
 

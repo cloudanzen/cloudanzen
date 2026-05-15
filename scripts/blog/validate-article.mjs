@@ -71,6 +71,20 @@ function checkUniqueSlug(article) {
   }
 }
 
+function checkAuthorIfPresent(article) {
+  if (article.author === undefined) return;
+  const writersSrc = readFileSync(
+    path.join(REPO_ROOT, "src", "lib", "writers.ts"),
+    "utf8",
+  );
+  const known = new Set(
+    [...writersSrc.matchAll(/slug:\s*"([a-z0-9-]+)"/g)].map((m) => m[1]),
+  );
+  if (typeof article.author !== "string" || !known.has(article.author)) {
+    fail(`unknown author slug: ${JSON.stringify(article.author)}`);
+  }
+}
+
 function wordCount(content) {
   return content.trim().split(/\s+/).filter(Boolean).length;
 }
@@ -114,6 +128,7 @@ function checkBlocklist(article) {
 const article = readArticleJson();
 checkShape(article);
 checkUniqueSlug(article);
+checkAuthorIfPresent(article);
 checkLength(article);
 checkStructure(article);
 checkCitations(article);

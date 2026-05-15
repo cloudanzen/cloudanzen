@@ -7,6 +7,7 @@ category: "Vendor Risk"
 readTime: "5 min read"
 tags: ["Vendor risk","Checklists","Procurement"]
 sortOrder: 15
+author: "maria-rodriguez"
 ---
 ## Intake checklist
 

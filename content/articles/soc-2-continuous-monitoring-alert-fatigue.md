@@ -7,6 +7,7 @@ category: "SOC 2"
 readTime: "7 min read"
 tags: ["SOC 2","continuous monitoring","alert fatigue","evidence management"]
 sortOrder: 0
+author: "chloe-thompson"
 ---
 You set up automated alerting across your AWS environment, Okta logs, and GitHub audit trail. Six weeks before your SOC 2 Type II window closes, the team is ignoring most alerts because too many fire on routine activity. Continuous monitoring is supposed to keep you audit-ready. Done wrong, it creates a second job: triaging noise. Here is how to build a program that catches real control failures without burying the people responsible for them.
 

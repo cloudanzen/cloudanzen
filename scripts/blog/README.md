@@ -8,9 +8,9 @@ Routine reference: REQ-15, EPIC-15, PRJ-13. Cron: Mondays 09:00 IST.
 
 | File | Purpose |
 |------|---------|
-| `validate-article.mjs` | Validates article JSON (schema, length, citations, blocklist, unique slug). Exits non-zero on failure. |
-| `append-article.mjs` | Writes a validated article to `content/articles/<slug>.md` with JSON-valued frontmatter. Supports `--dry-run` (writes generated markdown to stdout, does not touch disk). |
-| `validate-content.mjs` | Walks every `content/articles/*.md` file and checks frontmatter shape, taxonomy, dedup of slugs and `sortOrder`, blocklist, and raw HTML. Run in CI. |
+| `validate-article.mjs` | Validates article JSON (schema, length, citations, blocklist, unique slug, optional author). Exits non-zero on failure. |
+| `append-article.mjs` | Writes a validated article to `content/articles/<slug>.md` with JSON-valued frontmatter. Auto-assigns `author` via topic match against `src/lib/writers.ts` when the JSON does not include one. Supports `--dry-run` (writes generated markdown to stdout, does not touch disk). |
+| `validate-content.mjs` | Walks every `content/articles/*.md` file and checks frontmatter shape, taxonomy, writer slugs, dedup of slugs and `sortOrder`, blocklist, and raw HTML. Run in CI. |
 | `evergreen-topics.json` | Fallback topic list when the Notion Content Backlog has no `Status = Idea` rows. |
 
 ## Article JSON shape
@@ -29,7 +29,7 @@ Routine reference: REQ-15, EPIC-15, PRJ-13. Cron: Mondays 09:00 IST.
 }
 ```
 
-`collection` can be `null`. `featured` may be set to `true` but routine never sets it. `publishedAt` is optional (`YYYY-MM-DD`); the append script defaults to today when omitted.
+`collection` can be `null`. `featured` may be set to `true` but routine never sets it. `publishedAt` is optional (`YYYY-MM-DD`); the append script defaults to today when omitted. `author` is optional in the JSON; when omitted the append script picks the best-matching writer from `src/lib/writers.ts` via keyword score on the article's title, summary, category, and tags.
 
 ## Validation rules (validate-article.mjs)
 

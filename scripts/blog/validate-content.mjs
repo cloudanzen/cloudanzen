@@ -37,6 +37,7 @@ const REQUIRED_FIELDS = [
   "readTime",
   "tags",
   "sortOrder",
+  "author",
 ];
 const ALLOWED_FIELDS = new Set([
   ...REQUIRED_FIELDS,
@@ -73,7 +74,15 @@ function readTaxonomy() {
   const collections = new Set(
     [...collBlockMatch[1].matchAll(/slug:\s*"([a-z0-9-]+)"/g)].map((m) => m[1]),
   );
-  return { types, collections };
+
+  const writersSrc = readFileSync(
+    path.join(REPO_ROOT, "src", "lib", "writers.ts"),
+    "utf8",
+  );
+  const writers = new Set(
+    [...writersSrc.matchAll(/slug:\s*"([a-z0-9-]+)"/g)].map((m) => m[1]),
+  );
+  return { types, collections, writers };
 }
 
 function parseFrontmatter(file, raw) {
@@ -163,6 +172,9 @@ function validateMeta(file, slug, meta, taxonomy) {
     if (typeof meta.publishedAt !== "string" || !DATE_RE.test(meta.publishedAt)) {
       err(file, "publishedAt must be YYYY-MM-DD string");
     }
+  }
+  if (typeof meta.author !== "string" || !taxonomy.writers.has(meta.author)) {
+    err(file, `invalid author: ${JSON.stringify(meta.author)}`);
   }
 }
 

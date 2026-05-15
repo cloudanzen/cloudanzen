@@ -4,10 +4,10 @@ summary: "Scope decisions shape cost, effort, and audit friction more than most 
 type: "blog"
 collection: "soc-2"
 category: "SOC 2"
-readTime: "5 min read"
-readTime: "7 min read"
 tags: ["SOC 2","Scoping","Audit strategy"]
 sortOrder: 2
+author: "james-peterson"
+readTime: "7 min read"
 ---
 ## The scoping mistake most teams make
 

@@ -7,6 +7,7 @@ category: "GDPR"
 readTime: "6 min read"
 tags: ["GDPR","DSAR","Guides"]
 sortOrder: 24
+author: "sarah-jenkins"
 ---
 ## The challenge
 

@@ -7,6 +7,7 @@ category: "Compliance operations"
 readTime: "2 min read"
 tags: ["Glossary","Evidence","Ownership"]
 sortOrder: 32
+author: "sarah-jenkins"
 ---
 ## Definition
 

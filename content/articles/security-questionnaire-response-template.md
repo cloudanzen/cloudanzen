@@ -7,6 +7,7 @@ category: "Trust Center"
 readTime: "5 min read"
 tags: ["Questionnaires","Templates","Sales support"]
 sortOrder: 8
+author: "maria-rodriguez"
 ---
 ## Use this structure
 
