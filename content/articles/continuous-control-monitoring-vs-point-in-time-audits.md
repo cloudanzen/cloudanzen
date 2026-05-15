@@ -4,12 +4,22 @@ summary: "Why modern teams are shifting from seasonal evidence scrambles to cont
 type: "blog"
 collection: null
 category: "Continuous Monitoring"
+readTime: "4 min read"
 readTime: "7 min read"
 tags: ["Monitoring","Controls","Audit readiness"]
 sortOrder: 9
 ---
 ## The old model
 
+Point-in-time audits create a familiar rhythm: quiet months, then a sudden rush before fieldwork. Teams chase screenshots, reopen old tickets, ask engineers to explain changes from months ago, and try to reconstruct whether controls were operating consistently. The audit may still pass, but the process is stressful because the organization is looking backward.
+
+This model made more sense when systems changed slowly and evidence lived in a small number of places. Modern SaaS environments are different. Access changes daily. Infrastructure is modified through code. Vendors are added and renewed throughout the year. Incidents, exceptions, and change approvals happen continuously. If your assurance process only wakes up near audit time, it will always feel behind.
+
+Point-in-time audits are not useless. They provide external validation and a formal report. The problem is using the audit as the main mechanism for discovering whether controls work.
+
+## The better model
+
+Continuous monitoring keeps control health visible throughout the year. That changes the conversation from evidence assembly to issue management.
 Point-in-time audits create a familiar rhythm: quiet months, then a sudden rush before fieldwork. Teams chase screenshots, reopen old tickets, ask engineers to explain changes from months ago, and try to reconstruct whether controls were operating consistently. The audit may still pass, but the process is stressful because the organization is looking backward.
 
 This model made more sense when systems changed slowly and evidence lived in a small number of places. Modern SaaS environments are different. Access changes daily. Infrastructure is modified through code. Vendors are added and renewed throughout the year. Incidents, exceptions, and change approvals happen continuously. If your assurance process only wakes up near audit time, it will always feel behind.
@@ -38,6 +48,44 @@ The control cadence should match the risk and the business process.
 - Fewer surprise failures during audit prep
 - Better ownership across engineering, IT, and GRC
 - Cleaner historical evidence for auditors
+- Less dependence on individual memory
+- Faster remediation because failures are found closer to the event
+- Stronger management reporting on control health
+
+The biggest benefit is not automation by itself. It is accountability. A control with an owner, a data source, a status, and a remediation path is much easier to manage than a control that only exists in a spreadsheet.
+
+## What continuous monitoring should cover first
+
+Start with controls that are high-impact, easy to observe, and painful to reconstruct later.
+
+Good candidates include:
+
+- Production access membership
+- Admin role changes
+- MFA status for workforce accounts
+- Device encryption and screen lock status
+- Branch protection and code review settings
+- Deployment approvals
+- Cloud storage exposure settings
+- Backup and logging configuration
+- Vendor review due dates
+- Policy review and acceptance status
+
+These are the areas where stale evidence creates audit friction. They are also areas where small failures can become meaningful risk if nobody notices them.
+
+Avoid starting with low-value vanity metrics. A dashboard with dozens of checks is not useful if nobody owns the failures. Begin with fewer checks and make sure each one has a clear owner and response expectation.
+
+## Point-in-time evidence still has a place
+
+Continuous monitoring does not eliminate audit requests. Auditors may still ask for samples, policy copies, screenshots, tickets, approvals, and explanations. The difference is that the evidence is already organized.
+
+For example, an auditor might ask how access was reviewed during the observation period. In a point-in-time model, the team searches for spreadsheets, calendar invites, and email confirmations. In a continuous model, access review campaigns have timestamps, reviewer names, decisions, exceptions, and completion records.
+
+The audit still happens at a point in time. The control evidence does not have to be created at that point in time.
+
+## Where teams get stuck
+
+They collect data, but they do not tie it back to a control owner or review workflow. Monitoring only matters when someone knows what to do next.
 - Less dependence on individual memory
 - Faster remediation because failures are found closer to the event
 - Stronger management reporting on control health
