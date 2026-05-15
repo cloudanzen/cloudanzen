@@ -4,10 +4,10 @@ summary: "How to turn annual vendor re-review into a lightweight operating cycle
 type: "blog"
 collection: "vendor-risk"
 category: "Vendor Risk"
-readTime: "4 min read"
-readTime: "6 min read"
 tags: ["Vendor risk","Renewals","Operations"]
 sortOrder: 28
+author: "maria-rodriguez"
+readTime: "6 min read"
 ---
 ## The renewal problem
 

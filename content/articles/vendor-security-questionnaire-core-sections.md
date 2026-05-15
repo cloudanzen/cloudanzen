@@ -7,6 +7,7 @@ category: "Vendor Risk"
 readTime: "5 min read"
 tags: ["Vendor risk","Questionnaires","Guides"]
 sortOrder: 27
+author: "james-peterson"
 ---
 ## Start with the essentials
 

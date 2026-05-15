@@ -4,10 +4,10 @@ summary: "A few metrics that show whether your trust center is reducing review f
 type: "blog"
 collection: "trust-center"
 category: "Trust Center"
-readTime: "4 min read"
-readTime: "6 min read"
 tags: ["Trust center","Metrics","Revenue support"]
 sortOrder: 30
+author: "james-peterson"
+readTime: "6 min read"
 ---
 ## Useful metrics
 

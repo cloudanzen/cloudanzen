@@ -7,6 +7,7 @@ category: "HIPAA"
 readTime: "6 min read"
 tags: ["HIPAA","Access reviews","Guides"]
 sortOrder: 14
+author: "sarah-jenkins"
 ---
 ## Why access reviews matter
 

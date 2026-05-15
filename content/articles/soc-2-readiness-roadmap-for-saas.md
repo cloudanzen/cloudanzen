@@ -8,6 +8,7 @@ readTime: "8 min read"
 tags: ["SOC 2","Startups","Audit readiness"]
 featured: true
 sortOrder: 1
+author: "chloe-thompson"
 ---
 ## Why teams stall on SOC 2
 

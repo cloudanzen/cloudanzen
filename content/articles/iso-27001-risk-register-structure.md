@@ -7,6 +7,7 @@ category: "ISO 27001"
 readTime: "6 min read"
 tags: ["ISO 27001","Risk management","Guides"]
 sortOrder: 12
+author: "james-peterson"
 ---
 ## The goal of the register
 

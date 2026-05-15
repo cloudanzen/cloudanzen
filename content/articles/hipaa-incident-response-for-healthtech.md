@@ -4,10 +4,10 @@ summary: "How to connect incident handling, evidence retention, and stakeholder 
 type: "blog"
 collection: "hipaa"
 category: "HIPAA"
-readTime: "5 min read"
-readTime: "7 min read"
 tags: ["HIPAA","Incident response","Healthtech"]
 sortOrder: 26
+author: "maria-rodriguez"
+readTime: "7 min read"
 ---
 ## Where teams struggle
 

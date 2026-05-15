@@ -7,6 +7,7 @@ category: "Audit readiness"
 readTime: "4 min read"
 tags: ["Audit readiness","Templates","SOC 2"]
 sortOrder: 34
+author: "chloe-thompson"
 ---
 ## Track every request with the same fields
 

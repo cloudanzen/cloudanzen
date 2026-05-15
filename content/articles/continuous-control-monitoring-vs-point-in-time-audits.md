@@ -4,10 +4,10 @@ summary: "Why modern teams are shifting from seasonal evidence scrambles to cont
 type: "blog"
 collection: null
 category: "Continuous Monitoring"
-readTime: "4 min read"
-readTime: "7 min read"
 tags: ["Monitoring","Controls","Audit readiness"]
 sortOrder: 9
+author: "sarah-jenkins"
+readTime: "7 min read"
 ---
 ## The old model
 

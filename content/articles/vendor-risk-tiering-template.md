@@ -8,6 +8,7 @@ readTime: "4 min read"
 tags: ["Vendor risk","Templates","Procurement"]
 featured: true
 sortOrder: 4
+author: "maria-rodriguez"
 ---
 ## Goal
 

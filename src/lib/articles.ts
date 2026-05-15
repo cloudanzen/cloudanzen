@@ -5,10 +5,12 @@ import type {
   ResourceTypeSlug,
 } from "@/lib/resources-content";
 import { resourceCollections, resourceTypes } from "@/lib/resources-content";
+import { writerSlugs } from "@/lib/writers";
 
 export type ResourceArticleMeta = Omit<ResourceArticle, "content"> & {
   sortOrder: number;
   publishedAt?: string;
+  author?: string;
 };
 
 type StoredArticle = {
@@ -33,6 +35,7 @@ const ALLOWED_FIELDS = new Set<string>([
   "collection",
   "featured",
   "publishedAt",
+  "author",
 ]);
 
 const validTypes: ReadonlySet<ResourceTypeSlug> = new Set(
@@ -121,6 +124,11 @@ function parseFrontmatter(
   if ("publishedAt" in out && typeof out.publishedAt !== "string") {
     fail(file, "publishedAt must be string");
   }
+  if ("author" in out) {
+    if (typeof out.author !== "string" || !writerSlugs.has(out.author)) {
+      fail(file, `invalid author: ${JSON.stringify(out.author)}`);
+    }
+  }
 
   const meta: Omit<ResourceArticleMeta, "slug"> = {
     title: out.title as string,
@@ -134,6 +142,7 @@ function parseFrontmatter(
   };
   if ("featured" in out) meta.featured = out.featured as boolean;
   if ("publishedAt" in out) meta.publishedAt = out.publishedAt as string;
+  if ("author" in out) meta.author = out.author as string;
   return { meta, body };
 }
 
@@ -218,7 +227,7 @@ export function getResourceArticle(
     (a) => a.meta.type === type && a.meta.slug === slug,
   );
   if (!found) return null;
-  const { slug: foundSlug, title, summary, type: t, collection, category, readTime, tags, featured } = found.meta;
+  const { slug: foundSlug, title, summary, type: t, collection, category, readTime, tags, featured, author } = found.meta;
   return {
     slug: foundSlug,
     title,
@@ -229,6 +238,7 @@ export function getResourceArticle(
     readTime,
     tags,
     ...(featured !== undefined ? { featured } : {}),
+    ...(author !== undefined ? { author } : {}),
     content: found.body,
   };
 }

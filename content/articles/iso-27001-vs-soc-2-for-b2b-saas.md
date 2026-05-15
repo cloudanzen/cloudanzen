@@ -4,10 +4,10 @@ summary: "How to evaluate the two most common security assurance paths for growt
 type: "blog"
 collection: null
 category: "Framework strategy"
-readTime: "6 min read"
-readTime: "8 min read"
 tags: ["ISO 27001","SOC 2","Frameworks"]
 sortOrder: 10
+author: "james-peterson"
+readTime: "8 min read"
 ---
 ## The short answer
 

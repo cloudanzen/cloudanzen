@@ -10,6 +10,8 @@ import {
   getResourceArticleMeta,
 } from "@/lib/articles";
 import { markdownToHtml } from "@/lib/markdown-to-html";
+import { getWriter } from "@/lib/writers";
+import ArticleByline from "@/components/ArticleByline";
 
 export async function generateStaticParams() {
   return getArticleIndex().map((article) => ({
@@ -59,6 +61,7 @@ export default async function ResourceArticlePage({
     ? getCollection(article.collection)
     : null;
   const contentHtml = markdownToHtml(article.content);
+  const writer = article.author ? getWriter(article.author) : null;
 
   return (
     <>
@@ -98,9 +101,6 @@ export default async function ResourceArticlePage({
             <span className="rounded-full border border-slate-200 bg-white/85 px-2.5 py-1 text-xs font-medium text-slate-700 shadow-sm">
               {article.category}
             </span>
-            <span className="rounded-full border border-slate-200 bg-white/85 px-2.5 py-1 text-xs font-medium text-slate-700 shadow-sm">
-              {article.readTime}
-            </span>
             {collection ? (
               <Link
                 href={`/collection/${collection.slug}`}
@@ -113,6 +113,9 @@ export default async function ResourceArticlePage({
 
           <h1 className="heading-xl mb-3 text-slate-950">{article.title}</h1>
           <p className="max-w-2xl text-lg text-slate-600">{article.summary}</p>
+          {writer ? (
+            <ArticleByline writer={writer} readTime={article.readTime} />
+          ) : null}
         </div>
       </section>
 

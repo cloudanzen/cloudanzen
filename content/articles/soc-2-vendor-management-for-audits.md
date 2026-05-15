@@ -4,10 +4,10 @@ summary: "How to keep vendor oversight organized so third-party controls do not 
 type: "blog"
 collection: "soc-2"
 category: "SOC 2"
-readTime: "5 min read"
-readTime: "7 min read"
 tags: ["SOC 2","Vendor risk","Audits"]
 sortOrder: 20
+author: "maria-rodriguez"
+readTime: "7 min read"
 ---
 ## The common issue
 
