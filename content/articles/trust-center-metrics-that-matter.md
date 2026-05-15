@@ -4,6 +4,7 @@ summary: "A few metrics that show whether your trust center is reducing review f
 type: "blog"
 collection: "trust-center"
 category: "Trust Center"
+readTime: "4 min read"
 readTime: "6 min read"
 tags: ["Trust center","Metrics","Revenue support"]
 sortOrder: 30
@@ -14,6 +15,10 @@ sortOrder: 30
 - Time saved on questionnaire response cycles
 - Most requested documents or topics
 - Gated access requests converted into active deal support
+
+## Why these matter
+
+They show whether the trust center is reducing repetitive work for security and sales teams, not just adding another page to maintain.
 - Repeat requests for the same evidence
 - Average approval time for protected documents
 - Sales cycle touchpoints involving security review

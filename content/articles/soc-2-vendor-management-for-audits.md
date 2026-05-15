@@ -4,12 +4,14 @@ summary: "How to keep vendor oversight organized so third-party controls do not 
 type: "blog"
 collection: "soc-2"
 category: "SOC 2"
+readTime: "5 min read"
 readTime: "7 min read"
 tags: ["SOC 2","Vendor risk","Audits"]
 sortOrder: 20
 ---
 ## The common issue
 
+Teams remember to assess new vendors, but they do not maintain a review process for existing ones that support customer systems.
 Teams usually remember to assess new vendors during onboarding. The harder part is maintaining oversight after the contract is signed. By the time SOC 2 evidence is due, vendor records may be scattered across procurement emails, security questionnaires, contract folders, renewal notices, and ticket comments.
 
 That creates audit friction because vendor management is not only about choosing vendors once. It is about showing that the company understands which third parties affect the system, reviews them at an appropriate cadence, and responds to risks or exceptions.
@@ -22,6 +24,10 @@ For SaaS teams, vendor oversight is especially important because critical contro
 - Evidence of review or due diligence
 - Contracts and security commitments where relevant
 - Follow-up on material risks or exceptions
+
+## The practical fix
+
+Tie vendor reviews to your broader control program so renewals, exceptions, and evidence live in one place rather than scattered email threads.
 - A risk-based review cadence
 - Ownership for vendor relationships
 - Evidence that reviews happened before or during the audit period

@@ -4,12 +4,14 @@ summary: "How to connect incident handling, evidence retention, and stakeholder 
 type: "blog"
 collection: "hipaa"
 category: "HIPAA"
+readTime: "5 min read"
 readTime: "7 min read"
 tags: ["HIPAA","Incident response","Healthtech"]
 sortOrder: 26
 ---
 ## Where teams struggle
 
+The technical incident response process exists, but PHI-related communication and review steps are not built into it.
 Healthtech teams often have a technical incident response process before they have a healthcare-specific incident process. Engineering knows how to triage an alert, isolate a system, review logs, and restore service. But when protected health information may be involved, the response needs more structure.
 
 The challenge is not only technical containment. The team also needs to understand what data may be affected, who needs to review the situation, what evidence must be preserved, and how communication decisions will be made. If those steps are improvised during a stressful event, the organization can lose time and create an incomplete record.
@@ -22,6 +24,10 @@ HIPAA incident response should connect security operations, privacy review, lega
 - Capture timestamps, systems, and affected records clearly
 - Coordinate security, legal, and operations review paths
 - Preserve evidence for later diligence or audit questions
+
+## The payoff
+
+You reduce confusion during incidents and make post-incident review far more defensible.
 - Track containment, eradication, and recovery actions
 - Record who made notification and escalation decisions
 - Maintain a post-incident review that updates controls

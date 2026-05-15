@@ -4,12 +4,14 @@ summary: "How to turn annual vendor re-review into a lightweight operating cycle
 type: "blog"
 collection: "vendor-risk"
 category: "Vendor Risk"
+readTime: "4 min read"
 readTime: "6 min read"
 tags: ["Vendor risk","Renewals","Operations"]
 sortOrder: 28
 ---
 ## The renewal problem
 
+Initial reviews are documented, but annual reassessments often depend on someone remembering to ask.
 Initial vendor reviews usually happen because a purchase is blocked until security, legal, or procurement approves it. Renewal reviews are different. The vendor is already in use, the business owner wants to continue, and the deadline may be hidden inside a contract calendar. That is why annual reassessments often depend on someone remembering to ask.
 
 When renewal review is reactive, the team learns about risk too late. A vendor may have changed its product, added subprocessors, expanded data access, or allowed security evidence to expire. By the time the renewal is due, there is pressure to approve quickly because the business depends on the service.
@@ -22,6 +24,10 @@ A good renewal workflow turns reassessment into a lightweight operating cycle. I
 2. Tier the review depth based on current use and risk
 3. Collect updated evidence only where needed
 4. Record decisions and exceptions centrally
+
+## Result
+
+Renewal oversight becomes predictable and auditable instead of reactive.
 5. Notify the business owner before the renewal window
 6. Confirm whether the vendor is still needed
 7. Track open actions through completion
