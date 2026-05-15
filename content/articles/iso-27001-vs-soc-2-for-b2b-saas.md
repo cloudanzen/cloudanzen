@@ -41,6 +41,14 @@ The tradeoff is that SOC 2 does not create a certification badge in the same way
 - You need a certifiable ISMS model
 - You operate across multiple regions with stronger ISO expectations
 - You want governance rhythms around continual improvement
+- Your company needs a security management system beyond a single product report
+- Your buyers, partners, or regulators recognize ISO certification more readily
+
+ISO 27001 is built around an Information Security Management System, usually called an ISMS. The ISMS includes governance, risk assessment, treatment planning, internal audit, management review, and continual improvement. The certification signals that the organization has implemented and maintained that management system against the standard.
+
+For B2B SaaS companies, ISO 27001 can be especially useful when security assurance needs to cover the company as an operating system, not only one service. It gives leadership a recurring rhythm for risk review, control improvement, internal audit, and management accountability.
+
+The tradeoff is that ISO 27001 can feel heavier at the governance layer if the team is not ready to maintain it. A certificate is not just a launch project. It requires operating discipline after the first audit.
 
 ## Many teams do both
 

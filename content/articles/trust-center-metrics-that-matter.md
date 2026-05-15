@@ -15,6 +15,12 @@ readTime: "6 min read"
 - Time saved on questionnaire response cycles
 - Most requested documents or topics
 - Gated access requests converted into active deal support
+- Repeat requests for the same evidence
+- Average approval time for protected documents
+- Sales cycle touchpoints involving security review
+- Documents that are viewed but still followed by manual questions
+
+A trust center is not valuable because it exists. It is valuable when it reduces friction for buyers, sales teams, security teams, and customer success. Metrics help you see whether the page is doing that job or just collecting static content.
 
 ## Why these matter
 
