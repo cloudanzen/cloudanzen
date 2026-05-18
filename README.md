@@ -20,6 +20,18 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Demo form configuration
+
+The `/api/demo` route uses Resend to email demo requests.
+
+```bash
+RESEND_API_KEY=your_resend_api_key
+DEMO_FROM_EMAIL="CloudAnzen Demo <hello@cloudanzen.com>"
+DEMO_TO_EMAIL=vineet@cloudanzen.com
+```
+
+`DEMO_FROM_EMAIL` must use a sender address or domain that is verified in Resend. If these values are missing or rejected by Resend, the demo form will show a fallback message asking the visitor to email CloudAnzen directly.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
