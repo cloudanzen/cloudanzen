@@ -56,25 +56,29 @@ export default async function ArticlePage({
 
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
-          <nav className="flex items-center gap-2 text-sm text-slate-500 mb-8">
-            <Link href="/help" className="hover:text-slate-700 transition-colors">
+          <nav className="help-article-hero-text flex items-center gap-2 text-sm mb-8">
+            <Link href="/help" className="transition-colors hover:opacity-80">
               Help Center
             </Link>
             <ChevronRight className="w-3.5 h-3.5" />
             <Link
               href={`/help/${category.slug}`}
-              className="hover:text-slate-700 transition-colors"
+              className="transition-colors hover:opacity-80"
             >
               {category.title}
             </Link>
             <ChevronRight className="w-3.5 h-3.5" />
-            <span className="text-slate-900 truncate max-w-[200px]">
+            <span className="help-article-hero-title truncate max-w-[200px]">
               {article.title}
             </span>
           </nav>
 
-          <h1 className="heading-xl text-slate-950 mb-3">{article.title}</h1>
-          <p className="text-lg text-slate-600 max-w-2xl">{article.summary}</p>
+          <h1 className="help-article-hero-title heading-xl mb-3">
+            {article.title}
+          </h1>
+          <p className="help-article-hero-text text-lg max-w-2xl">
+            {article.summary}
+          </p>
         </div>
       </section>
 
