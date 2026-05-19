@@ -18,176 +18,523 @@ export const helpCategories: HelpCategory[] = [
     slug: "getting-started",
     title: "Getting Started",
     description:
-      "Your starting point for learning CloudAnzen, with quick access to essential setup and onboarding resources.",
+      "Practical onboarding guides for setting up CloudAnzen, inviting your team, connecting evidence sources, and building your first operating rhythm.",
     icon: "Rocket",
     articles: [
       {
         slug: "welcome-to-cloudanzen",
         title: "Welcome to CloudAnzen",
         summary:
-          "An overview of CloudAnzen and how it helps you achieve continuous GRC.",
+          "Understand how CloudAnzen helps teams run compliance, risk, audits, vendors, and trust workflows from one connected workspace.",
         content: `## Welcome to CloudAnzen
 
-CloudAnzen is an AI-driven continuous GRC (Governance, Risk, and Compliance) platform designed for modern cloud teams. Whether you're a startup pursuing your first SOC 2 or an enterprise managing multiple frameworks, CloudAnzen automates the heavy lifting so you can focus on building.
+CloudAnzen is a continuous GRC workspace for modern software teams. It helps you turn security and compliance from a seasonal scramble into an operating system: controls have owners, evidence stays fresh, risks are visible, policies are reviewed, vendors are tracked, and audit work happens in one place.
+
+Most teams start CloudAnzen because they need to answer customer security reviews, prepare for SOC 2 or ISO 27001, organize HIPAA or privacy work, or give leadership a clearer view of security readiness. The platform is designed to help with all of those jobs without forcing your team to manage dozens of spreadsheets, shared folders, and one-off reminders.
 
 ### What You Can Do with CloudAnzen
 
-- **Automate compliance** — Map controls to frameworks, collect evidence automatically, and stay audit-ready year-round.
-- **Monitor continuously** — Track control health in real time with automated checks across your infrastructure.
-- **Manage risk** — Log, prioritize, and treat risks with a centralized risk register.
-- **Streamline audits** — Collaborate with auditors directly in the platform, share evidence rooms, and close findings faster.
-- **Oversee vendors** — Assess and monitor third-party risk with standardized workflows.
+- **Run framework readiness** — Activate SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS, NIST CSF, or internal frameworks and map requirements to a common control set.
+- **Assign clear ownership** — Give controls, evidence, policies, risks, vendors, and validations accountable owners so work does not disappear into shared inboxes.
+- **Collect evidence continuously** — Connect cloud, identity, code, ticketing, MDM, and SaaS tools so CloudAnzen can collect and refresh evidence automatically where possible.
+- **Review control health** — Use validations and monitoring signals to see which controls are passing, stale, failing, or waiting for human review.
+- **Manage policies** — Draft, approve, publish, review, and track acceptance of policy documents.
+- **Coordinate audits** — Share scoped evidence, respond to audit requests, track findings, and keep the audit trail close to the controls it supports.
+- **Oversee vendors** — Maintain a vendor inventory, collect security documents, run periodic reviews, and connect vendor controls to your own readiness program.
+- **Support trust reviews** — Publish trust-center materials and reduce repetitive customer security review work.
+
+### How CloudAnzen Is Organized
+
+CloudAnzen is easiest to understand as a set of connected operating areas:
+
+| Area | What it helps you manage |
+|------|--------------------------|
+| Frameworks | Requirements, mapped controls, readiness progress, and framework-specific gaps |
+| Controls | Security and compliance practices your organization must operate consistently |
+| Validations | Automated or manual checks that show whether controls are working |
+| Evidence | Files, snapshots, integrations, and artifacts used to prove control operation |
+| Policies | Policy drafting, approval, publishing, review cadence, and acceptance tracking |
+| Risks | Risk register, treatment plans, owners, due dates, and business impact |
+| Vendors | Third-party inventory, review cadence, documents, and vendor risk decisions |
+| Audits | Audit scope, evidence rooms, auditor requests, findings, and final reports |
+| Trust Center | Customer-facing security, compliance, and privacy materials |
+
+### The First Outcomes to Aim For
+
+Do not try to configure everything on day one. A healthy first rollout usually aims for these outcomes:
+
+- **A clear compliance target** — Pick the framework or customer requirement that matters most right now.
+- **A core team** — Invite the people who own infrastructure, security, HR, legal, engineering, and vendor work.
+- **A few live integrations** — Connect the systems that produce the highest-value evidence first.
+- **A reviewed control set** — Confirm which controls apply, who owns them, and which ones need evidence.
+- **A working Todo rhythm** — Use assigned work and notifications so the platform becomes part of weekly operations.
+- **An audit-ready trail** — Keep decisions, evidence, status changes, and reviews inside CloudAnzen instead of scattered across documents.
+
+### A Simple First-Week Path
+
+1. Create your organization and confirm company details.
+2. Invite your core team and assign appropriate roles.
+3. Activate your first framework.
+4. Connect your primary cloud provider and identity provider.
+5. Review mapped controls and assign owners.
+6. Check automatically collected evidence.
+7. Upload missing manual evidence.
+8. Review open risks, vendors, and policy gaps.
+9. Use the dashboard and Todo page to build a weekly operating rhythm.
 
 ### Next Steps
 
 1. [Set up your account](/help/getting-started/account-setup) and invite your team.
 2. [Connect your first integrations](/help/integrations/connecting-integrations) to start collecting evidence automatically.
-3. [Choose your compliance framework](/help/compliance-frameworks/choosing-a-framework) and map your controls.`,
+3. [Choose your compliance framework](/help/compliance-frameworks/choosing-a-framework) and map your controls.
+4. [Use the quick start checklist](/help/getting-started/quick-start-checklist) to turn setup into a first-week plan.`,
       },
       {
         slug: "account-setup",
         title: "Setting Up Your Account",
         summary:
-          "Step-by-step guide to configuring your CloudAnzen workspace for the first time.",
+          "Configure your CloudAnzen workspace, invite the right people, choose roles, and avoid common first-week setup mistakes.",
         content: `## Setting Up Your Account
 
-Getting started with CloudAnzen takes just a few minutes. Follow these steps to configure your workspace.
+Your CloudAnzen account becomes the system of record for compliance work, so it is worth setting it up intentionally. A clean setup makes it easier to assign ownership, connect evidence, onboard auditors, and keep customer-facing trust materials accurate.
 
-### Step 1: Create Your Organization
+### Before You Start
 
-After signing up, you'll be prompted to create your organization. Enter your company name, industry, and estimated team size. This information helps CloudAnzen tailor recommendations for your compliance journey.
+Gather a few details before creating your workspace:
+
+- Legal company name and common customer-facing name.
+- Primary industry and region.
+- Target framework or audit objective, such as SOC 2 Type I, SOC 2 Type II, ISO 27001, HIPAA, or customer security review readiness.
+- Core systems to connect first, such as AWS, Google Workspace, GitHub, Jira, Slack, MDM, or ticketing.
+- Names of the people who own security, engineering, HR, IT, legal, vendor management, and compliance.
+
+### Step 1: Create Your Organization Profile
+
+After signing up, create your organization profile. Enter your company name, industry, approximate team size, and primary compliance objective. This information helps CloudAnzen tailor framework suggestions, onboarding tasks, and operating defaults.
+
+Use the name your customers and auditors recognize. If your legal entity name differs from your product brand, use the customer-facing name in the workspace and keep legal details in policy and audit documents.
 
 ### Step 2: Configure Your Profile
 
-Set up your personal profile including your name, role, and notification preferences. As the account creator, you'll have the **Owner** role by default.
+Set your name, role, timezone, and notification preferences. These details affect assignment notifications, Todo views, audit collaboration, and reminders.
 
-### Step 3: Invite Team Members
+For the first admin user, choose a durable account owned by someone who can manage users and integrations. Avoid making a temporary contractor or test account the only admin.
 
-Navigate to **Settings → Team** to invite colleagues. Assign roles based on their responsibilities:
+### Step 3: Invite the Core Team
 
-- **Owner** — Full administrative access including billing and account deletion.
-- **Admin** — Can manage settings, integrations, and team members.
-- **Compliance Manager** — Can manage controls, evidence, policies, and risk.
-- **Contributor** — Can complete assigned tasks and upload evidence.
-- **Viewer** — Read-only access to dashboards and reports.
+Navigate to **Settings -> Team** to invite colleagues. Start with the small group required to make progress:
 
-### Step 4: Connect Integrations
+- Security or compliance lead.
+- Infrastructure owner.
+- Identity or IT owner.
+- Engineering manager or platform owner.
+- HR or people operations owner if personnel controls apply.
+- Legal or operations owner for policies and vendors.
+- Executive sponsor if you need dashboard visibility or approvals.
 
-Head to **Settings → Integrations** to connect your cloud infrastructure, identity provider, and other services. CloudAnzen supports 100+ integrations out of the box.
+### Step 4: Choose Roles Carefully
 
-### Step 5: Choose Your Framework
+Assign roles based on day-to-day responsibility, not job title alone.
 
-Select one or more compliance frameworks from the **Frameworks** section. CloudAnzen will automatically map relevant controls and begin monitoring.`,
+| Role | Best for | Typical work |
+|------|----------|--------------|
+| Owner | Company administrator or founder | Billing, organization-level settings, critical access decisions |
+| Admin | Security or compliance lead | Team settings, integrations, frameworks, controls, and reports |
+| Compliance Manager | GRC operator or security program owner | Controls, evidence, policies, vendors, risks, and audits |
+| Contributor | Engineering, IT, HR, or operations owner | Completing assigned tasks, uploading evidence, responding to requests |
+| Viewer | Executives, auditors, or observers | Reviewing dashboards, reports, and shared audit materials |
+
+### Step 5: Connect Your First Systems
+
+Head to **Settings -> Integrations** and connect the systems that will produce the most evidence. For most SaaS teams, this means:
+
+- Cloud provider: AWS, GCP, or Azure.
+- Identity provider: Google Workspace, Okta, Microsoft Entra ID, or similar.
+- Code hosting: GitHub, GitLab, or Bitbucket.
+- Device or MDM source: Fleet, Kandji, Jamf, Intune, or equivalent.
+- Ticketing or change management: Jira, Linear, ServiceNow, or similar.
+
+Start with two or three high-value integrations. A smaller complete setup is better than connecting every tool before owners are ready to review the results.
+
+### Step 6: Choose Your Framework
+
+Select one or more compliance frameworks from the **Frameworks** section. CloudAnzen maps relevant controls and helps you see what is already covered by existing evidence.
+
+If you are unsure where to start:
+
+- Choose **SOC 2** if customers are asking for a SOC 2 report.
+- Choose **ISO 27001** if you sell globally or need a formal information security management system.
+- Choose **HIPAA** if you handle protected health information.
+- Choose **GDPR** if you process EU personal data.
+- Choose **NIST CSF** if you need a flexible security maturity baseline.
+
+### Step 7: Set Your Operating Defaults
+
+Before assigning lots of work, configure these defaults:
+
+- Notification preferences for admins and contributors.
+- Evidence review cadence.
+- Policy review cadence.
+- Vendor review cadence.
+- Risk severity and due-date expectations.
+- Integration sync expectations.
+
+### Common Setup Mistakes to Avoid
+
+- Inviting everyone before you have clear owners.
+- Connecting many integrations without assigning someone to review the findings.
+- Activating too many frameworks at once.
+- Treating Viewer users as task owners.
+- Leaving controls unassigned after framework activation.
+- Uploading evidence without linking it to the right control or request.
+
+### What Good Setup Looks Like
+
+By the end of setup, you should be able to answer:
+
+- Which framework are we working toward first?
+- Who owns each major control area?
+- Which systems are connected for automated evidence?
+- Which evidence must be uploaded manually?
+- Where will team members see their assigned work?
+- How often will we review open gaps?`,
       },
       {
         slug: "navigating-the-dashboard",
         title: "Navigating the Dashboard",
         summary:
-          "Learn how to use the CloudAnzen dashboard to monitor your compliance posture at a glance.",
+          "Use the dashboard to understand readiness, prioritize work, track owners, and turn compliance signals into weekly action.",
         content: `## Navigating the Dashboard
 
-The CloudAnzen dashboard gives you a real-time overview of your compliance posture. Here's what each section shows you.
+The CloudAnzen dashboard is designed to answer one practical question: what needs attention now? It brings together framework readiness, control health, assigned work, evidence freshness, risks, vendor reviews, policy activity, and recent changes so your team can operate from a shared view.
+
+Use the dashboard during weekly compliance reviews, audit preparation, customer security reviews, and leadership updates.
 
 ### Compliance Score
 
-The compliance score at the top of your dashboard shows your overall readiness as a percentage. It's calculated based on the ratio of passing controls to total controls across all active frameworks.
+The compliance score gives you a directional view of readiness across active frameworks. It is not a substitute for an auditor's judgment, but it helps you see whether the program is moving in the right direction.
+
+Use the score to spot trends:
+
+- A rising score usually means owners are closing gaps, evidence is being linked, and validations are passing.
+- A flat score may mean work is blocked, controls are waiting for manual review, or evidence is stale.
+- A falling score often means new framework scope, failed validations, expired evidence, or integration drift.
+
+Do not optimize only for the score. Review the underlying controls, risks, and evidence so you understand why the score changed.
 
 ### Control Health
 
-The control health panel displays the status of all mapped controls:
+Control health shows whether mapped controls appear to be operating as expected. This is where compliance work becomes concrete.
 
-- **Passing** (green) — The control is meeting requirements and evidence is up to date.
-- **Failing** (red) — The control has issues that need attention.
-- **Needs Review** (yellow) — Evidence has been collected but requires manual review.
-- **Not Started** (gray) — The control hasn't been configured yet.
+- **Passing** — The control has current evidence and no open blocking issues.
+- **Failing** — A validation, evidence review, or integration signal indicates a problem.
+- **Needs Review** — Evidence or a control decision needs human review.
+- **Not Started** — The control has not been configured, assigned, or evidenced yet.
+- **Not Applicable** — The control has been excluded with a documented justification.
+
+When reviewing control health, ask:
+
+- Is there a named owner?
+- Is evidence current?
+- Is the control mapped to the right framework requirements?
+- Are failures tied to a remediation owner?
+- Is the status supported by evidence, or is it just a manual assertion?
 
 ### Recent Activity
 
-The activity feed shows the latest actions taken across your organization, including evidence uploads, policy approvals, risk updates, and integration sync events.
+The activity feed shows what changed recently: evidence uploads, policy approvals, validation results, risk updates, vendor reviews, audit comments, and integration syncs. It is useful for spotting movement and for reconstructing what happened during an audit period.
+
+Use recent activity to answer:
+
+- Who changed a control or evidence item?
+- Which integrations synced recently?
+- Which policies were approved or published?
+- Which risks or vendors changed status?
+- Which audit requests or findings were updated?
+
+### Todo and Assigned Work
+
+The Todo area helps individuals find their own work. Depending on your role, this can include validation ownership, onboarding tasks, evidence requests, policy acknowledgments, access review tasks, or audit request responses.
+
+For admins, Todo is a good way to verify whether owners actually have actionable work. For contributors, it should become the default starting point.
+
+### Framework Progress
+
+Framework progress shows readiness by framework, requirement family, or domain. This is useful when you are preparing for a specific audit or customer request.
+
+Look for:
+
+- Domains with many incomplete controls.
+- Requirements that depend on manual evidence.
+- Shared controls that improve multiple frameworks at once.
+- Requirements marked not applicable without a clear justification.
+
+### Risk and Vendor Signals
+
+CloudAnzen connects risk and vendor work to compliance readiness. A control might look complete until you notice an untreated risk or overdue vendor review tied to the same area.
+
+During dashboard review, pay attention to:
+
+- Critical or high risks without treatment plans.
+- Vendor reviews past their renewal date.
+- Vendors missing security documents.
+- Risks created from failed validations.
+- Audit findings that should be linked to remediation work.
 
 ### Quick Actions
 
 Use the quick action buttons to:
 
-- Upload evidence
-- Create a new risk
-- Assign a task
-- Start an audit
+- Upload evidence.
+- Create a risk.
+- Assign work to an owner.
+- Start an audit.
+- Review policies.
+- Add or review vendors.
+- Open framework progress.
 
-### Framework Progress
+### Weekly Dashboard Review
 
-If you have multiple frameworks active, the framework progress section shows a breakdown of readiness for each one.`,
+For a practical weekly operating rhythm, review the dashboard in this order:
+
+1. Look at readiness changes since last week.
+2. Review failing or stale controls.
+3. Check overdue assigned work.
+4. Confirm evidence freshness for critical controls.
+5. Review new high or critical risks.
+6. Check vendor reviews due soon.
+7. Review policy approvals and acceptances.
+8. Assign next actions before the meeting ends.
+
+### Reading the Dashboard During Audit Prep
+
+Before an audit, use the dashboard to find gaps that could slow down fieldwork:
+
+- Controls without current evidence.
+- Evidence without a clear owner.
+- Policies past review date.
+- Risks without treatment status.
+- Vendors missing recent review.
+- Audit requests waiting for assignee response.
+- Failed validations that need remediation notes.
+
+The dashboard should help you move from "Are we ready?" to "Here are the specific owners and blockers."`,
       },
       {
         slug: "quick-start-checklist",
         title: "Quick Start Checklist",
         summary:
-          "A checklist of essential tasks to complete in your first week with CloudAnzen.",
+          "A practical first-week checklist for launching CloudAnzen without overloading your team.",
         content: `## Quick Start Checklist
 
-Complete these tasks in your first week to get the most out of CloudAnzen.
+Use this checklist to turn your first week in CloudAnzen into a focused rollout. The goal is not to finish every compliance task immediately. The goal is to establish the right owners, connect the most important evidence sources, and create a repeatable operating rhythm.
 
 ### Day 1: Foundation
 
-- [ ] Create your organization and set your company profile
-- [ ] Invite your core compliance team (at least 2-3 members)
-- [ ] Connect your primary cloud provider (AWS, GCP, or Azure)
-- [ ] Connect your identity provider (Okta, Google Workspace, Azure AD)
+- [ ] Create your organization and set the company profile.
+- [ ] Confirm the first compliance objective, such as SOC 2 readiness, ISO 27001 implementation, HIPAA readiness, or customer security review support.
+- [ ] Invite the core team: security, compliance, infrastructure, identity/IT, engineering, HR, legal, and vendor owner as applicable.
+- [ ] Assign roles intentionally. Keep admin access limited and use Contributor for task owners.
+- [ ] Review notification settings so owners receive assignment and reminder alerts.
+- [ ] Confirm who will run the weekly compliance review.
 
 ### Day 2: Framework Setup
 
-- [ ] Select your target compliance framework(s)
-- [ ] Review the automatically mapped controls
-- [ ] Customize control mappings if needed
-- [ ] Assign control owners to team members
+- [ ] Activate the first target framework.
+- [ ] Review the automatically mapped controls.
+- [ ] Mark clearly irrelevant controls as not applicable with justification.
+- [ ] Assign owners for the highest-impact control groups.
+- [ ] Identify controls that require manual evidence.
+- [ ] Note which controls can be satisfied by integrations.
+- [ ] Avoid activating extra frameworks until the first one has owners and evidence moving.
 
-### Day 3: Policies
+### Day 3: Integrations and Evidence
 
-- [ ] Review the policy templates provided by CloudAnzen
-- [ ] Customize policies to match your organization's practices
-- [ ] Set up policy approval workflows
-- [ ] Distribute policies to team members for acknowledgment
+- [ ] Connect your primary cloud provider.
+- [ ] Connect your identity provider.
+- [ ] Connect code hosting or change management tools if they support your controls.
+- [ ] Connect device or MDM tooling if personnel workstation controls apply.
+- [ ] Review the first sync results.
+- [ ] Confirm evidence is linked to the right controls.
+- [ ] Upload one or two examples of manual evidence so owners understand the pattern.
 
-### Day 4: Evidence & Monitoring
+### Day 4: Policies and People Controls
 
-- [ ] Review automatically collected evidence
-- [ ] Upload any manual evidence for controls that require it
-- [ ] Configure alerting thresholds for control monitoring
-- [ ] Set up notification channels (email, Slack)
+- [ ] Review the policy library and choose the policies you need first.
+- [ ] Customize policy templates to reflect how your company actually works.
+- [ ] Assign policy owners and reviewers.
+- [ ] Publish the first policy only after it has been reviewed.
+- [ ] Set an acceptance deadline for employees where required.
+- [ ] Confirm onboarding tasks such as security training, MDM enrollment, and policy acceptance.
 
-### Day 5: Risk & Vendors
+### Day 5: Risks, Vendors, and Review Rhythm
 
-- [ ] Set up your risk register with initial risks
-- [ ] Add your critical vendors to the vendor inventory
-- [ ] Send vendor assessment questionnaires
-- [ ] Review your dashboard and compliance score`,
+- [ ] Add known risks to the risk register.
+- [ ] Assign owners and due dates for high-priority risks.
+- [ ] Add critical vendors and record review status.
+- [ ] Upload vendor security documents where available.
+- [ ] Review the dashboard with the core team.
+- [ ] Convert open gaps into assigned Todo items.
+- [ ] Schedule the next weekly compliance review.
+
+### Week 2: Turn Setup Into Operations
+
+- [ ] Review all failed or stale validations.
+- [ ] Add remediation notes for control gaps.
+- [ ] Check whether owners are completing assigned work.
+- [ ] Link evidence to controls and audit requests where relevant.
+- [ ] Review vendor renewal dates.
+- [ ] Confirm policy acceptance progress.
+- [ ] Prepare an executive summary of remaining gaps.
+
+### First 30 Days
+
+By the end of the first month, aim for:
+
+- Every in-scope control has an owner.
+- Critical integrations are connected and syncing.
+- Manual evidence requirements are identified.
+- Policy review and acceptance workflows are running.
+- High risks have treatment plans.
+- Critical vendors have review status and documents.
+- The dashboard is reviewed weekly.
+- Audit preparation work is tracked inside CloudAnzen rather than in spreadsheets.
+
+### What to Defer
+
+It is normal to defer some setup. You can wait on:
+
+- Secondary frameworks that are not tied to an immediate customer or audit need.
+- Low-risk vendor records.
+- Custom policy workflows if a basic approval flow works for now.
+- Complex custom role design.
+- Historical evidence cleanup that is not needed for the current audit period.
+
+### Success Criteria
+
+Your first week is successful if the team knows:
+
+- What framework or readiness goal matters first.
+- Who owns each major workstream.
+- Which systems are producing automated evidence.
+- Which controls still need manual evidence.
+- Where owners go to find their work.
+- When the team will review progress again.`,
       },
       {
         slug: "roles-and-permissions",
         title: "Roles and Permissions",
         summary:
-          "Understand the different user roles in CloudAnzen and what each can access.",
+          "Choose the right roles for admins, auditors, contributors, viewers, and control owners without overexposing sensitive workflows.",
         content: `## Roles and Permissions
 
-CloudAnzen uses role-based access control (RBAC) to ensure team members only access what they need.
+CloudAnzen uses role-based access control to keep sensitive security and compliance work limited to the people who need it. Good role design helps you move faster because owners can complete their tasks without giving everyone full administrative access.
+
+Role assignment should reflect what a person needs to do in the platform. A senior title does not always mean admin access is required, and a contributor may need action permissions for only a specific set of work.
 
 ### Available Roles
 
-| Role | Description |
-|------|-------------|
-| **Owner** | Full access to all features, billing, and account management. Only one owner per organization. |
-| **Admin** | Can manage settings, integrations, team members, and all compliance features. Cannot delete the organization or transfer ownership. |
-| **Compliance Manager** | Can manage controls, evidence, policies, risks, and vendors. Cannot modify integrations or team settings. |
-| **Contributor** | Can complete assigned tasks, upload evidence, and update risks assigned to them. |
-| **Viewer** | Read-only access to dashboards, reports, and audit rooms. |
+| Role | Best fit | Typical responsibilities |
+|------|----------|--------------------------|
+| **Owner** | Founder, security executive, or primary workspace owner | Organization-level access, billing, high-risk administrative changes, final ownership decisions |
+| **Admin** | Security lead, compliance lead, or GRC operator | Team management, integrations, frameworks, controls, reports, and workspace configuration |
+| **Compliance Manager** | Person running the compliance program | Controls, evidence, policies, risks, vendors, audits, readiness tracking |
+| **Contributor** | Engineering, IT, HR, legal, vendor, or operations owner | Assigned Todo work, evidence uploads, remediation updates, request responses |
+| **Viewer** | Executive, observer, or read-only stakeholder | Dashboards, reports, and shared materials without edit permissions |
+
+### Common Role Assignments
+
+Use these examples as a starting point:
+
+- Security or compliance lead: Admin or Compliance Manager.
+- Infrastructure owner: Contributor, unless they also manage integrations.
+- HR owner: Contributor for personnel controls, training, and policy evidence.
+- Legal or privacy owner: Contributor or Compliance Manager depending on scope.
+- Engineering manager: Contributor for change management, code review, and remediation tasks.
+- Executive sponsor: Viewer unless they need approval or owner-level control.
+- External auditor: Viewer or auditor-specific access where available, depending on the audit workflow.
+
+### Principle of Least Privilege
+
+Give each user the minimum access needed to complete their work. This reduces accidental changes and makes audit trails cleaner.
+
+Practical examples:
+
+- Do not make every control owner an Admin.
+- Do not give integration management access to people who only upload evidence.
+- Use Viewer for people who only need dashboards or reports.
+- Review Admin access periodically.
+- Remove access for people who leave the project or company.
+
+### Permission Boundaries to Watch
+
+Some areas are more sensitive than others:
+
+- **Integrations** can expose infrastructure and identity configuration.
+- **Policies** may include internal security commitments.
+- **Audits** may include customer or auditor communications.
+- **Risks** can include sensitive business impact details.
+- **Vendor records** may include contracts, security reports, and review decisions.
+- **Trust Center content** may become visible to customers.
+
+Assign access with those boundaries in mind.
 
 ### Changing Roles
 
-Owners and Admins can change a user's role from **Settings → Team**. Click the role badge next to a user's name to change it.
+Owners and Admins can change a user's role from **Settings -> Team**. Click the role badge next to a user's name and choose the new role.
+
+Before changing a role, check:
+
+- Does this user still own active work?
+- Will the new role remove access they need for assigned tasks?
+- Should someone else receive their open assignments?
+- Does the role change affect policy approvals, audit requests, or evidence ownership?
+- Should the change be documented for audit purposes?
+
+### Offboarding Users
+
+When someone leaves the company or no longer participates in compliance work:
+
+1. Reassign their open controls, risks, vendors, evidence requests, and audit requests.
+2. Remove or downgrade their role.
+3. Confirm integrations or service accounts are not tied to their personal account.
+4. Review recent activity if the departure is sensitive.
+5. Preserve audit history rather than deleting records.
+
+### Working with Auditors
+
+Auditors usually need focused access to audit materials, not broad workspace administration. When possible, give auditors access only to the audit, evidence, reports, and requests relevant to their engagement.
+
+For external auditors:
+
+- Confirm which audit they are reviewing.
+- Limit access to the engagement scope.
+- Use audit requests to collect follow-up evidence.
+- Keep comments and request responses inside the audit workspace.
+- Remove access after the engagement closes if no longer needed.
+
+### Role Review Cadence
+
+Review roles at least quarterly, and always before a major audit. During review, check:
+
+- Admin and Owner users.
+- Inactive users.
+- Users with no current assignments.
+- External users.
+- Former employees or contractors.
+- Users who changed job functions.
 
 ### Custom Roles
 
-Enterprise plan customers can create custom roles with granular permissions. Contact your account manager or reach out to support to learn more.`,
+Enterprise plan customers can create custom roles with more granular permissions. Custom roles are useful when you need to separate responsibilities such as integration administration, policy approval, risk management, vendor review, or audit collaboration.
+
+Before creating custom roles, document:
+
+- Which actions each persona needs.
+- Which data each persona should not see.
+- Who approves role changes.
+- How often custom role membership is reviewed.
+- Whether the role affects audit evidence or customer-facing materials.`,
       },
     ],
   },
