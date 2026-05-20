@@ -41,6 +41,7 @@ export default function Footer() {
     {
       title: t("footer.sections.frameworks"),
       links: [
+        { label: t("footer.frameworkLinks.iso42001"), href: "/frameworks/iso42001" },
         { label: t("footer.frameworkLinks.soc2"), href: "/frameworks/soc2" },
         { label: t("footer.frameworkLinks.iso27001"), href: "/frameworks/iso27001" },
         { label: t("footer.frameworkLinks.gdpr"), href: "/frameworks/gdpr" },

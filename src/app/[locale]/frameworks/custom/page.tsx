@@ -25,7 +25,7 @@ export default function CustomFrameworksPage() {
             {[
               "Build frameworks from scratch or import from spreadsheets",
               "Map custom controls to evidence collection rules",
-              "Cross-reference custom controls with SOC 2, ISO 27001, and other built-in frameworks",
+              "Cross-reference custom controls with ISO 42001, SOC 2, ISO 27001, and other built-in frameworks",
               "Assign control owners, set due dates, and track completion",
               "Generate custom audit reports for internal or external stakeholders",
               "Version custom frameworks as requirements evolve",

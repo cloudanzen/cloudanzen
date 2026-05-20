@@ -30,11 +30,11 @@ export const helpCategories: HelpCategory[] = [
 
 CloudAnzen is a continuous GRC workspace for modern software teams. It helps you turn security and compliance from a seasonal scramble into an operating system: controls have owners, evidence stays fresh, risks are visible, policies are reviewed, vendors are tracked, and audit work happens in one place.
 
-Most teams start CloudAnzen because they need to answer customer security reviews, prepare for SOC 2 or ISO 27001, organize HIPAA or privacy work, or give leadership a clearer view of security readiness. The platform is designed to help with all of those jobs without forcing your team to manage dozens of spreadsheets, shared folders, and one-off reminders.
+Most teams start CloudAnzen because they need to answer customer security reviews, prepare for ISO 42001, SOC 2, or ISO 27001, organize HIPAA or privacy work, or give leadership a clearer view of security readiness. The platform is designed to help with all of those jobs without forcing your team to manage dozens of spreadsheets, shared folders, and one-off reminders.
 
 ### What You Can Do with CloudAnzen
 
-- **Run framework readiness** — Activate SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS, NIST CSF, or internal frameworks and map requirements to a common control set.
+- **Run framework readiness** — Activate ISO 42001, SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS, NIST CSF, or internal frameworks and map requirements to a common control set.
 - **Assign clear ownership** — Give controls, evidence, policies, risks, vendors, and validations accountable owners so work does not disappear into shared inboxes.
 - **Collect evidence continuously** — Connect cloud, identity, code, ticketing, MDM, and SaaS tools so CloudAnzen can collect and refresh evidence automatically where possible.
 - **Review control health** — Use validations and monitoring signals to see which controls are passing, stale, failing, or waiting for human review.
@@ -104,7 +104,7 @@ Gather a few details before creating your workspace:
 
 - Legal company name and common customer-facing name.
 - Primary industry and region.
-- Target framework or audit objective, such as SOC 2 Type I, SOC 2 Type II, ISO 27001, HIPAA, or customer security review readiness.
+- Target framework or audit objective, such as ISO 42001, SOC 2 Type I, SOC 2 Type II, ISO 27001, HIPAA, or customer security review readiness.
 - Core systems to connect first, such as AWS, Google Workspace, GitHub, Jira, Slack, MDM, or ticketing.
 - Names of the people who own security, engineering, HR, IT, legal, vendor management, and compliance.
 
@@ -162,6 +162,7 @@ Select one or more compliance frameworks from the **Frameworks** section. CloudA
 
 If you are unsure where to start:
 
+- Choose **ISO 42001** if you build, provide, or heavily use AI systems and need to prove AI governance.
 - Choose **SOC 2** if customers are asking for a SOC 2 report.
 - Choose **ISO 27001** if you sell globally or need a formal information security management system.
 - Choose **HIPAA** if you handle protected health information.
@@ -542,7 +543,7 @@ Before creating custom roles, document:
     slug: "compliance-frameworks",
     title: "Compliance Frameworks",
     description:
-      "Guides for SOC 2, ISO 27001, GDPR, HIPAA, PCI DSS, NIST CSF, and custom frameworks.",
+      "Guides for ISO 42001, SOC 2, ISO 27001, GDPR, HIPAA, PCI DSS, NIST CSF, and custom frameworks.",
     icon: "ShieldCheck",
     articles: [
       {
@@ -553,6 +554,12 @@ Before creating custom roles, document:
         content: `## Choosing the Right Framework
 
 Selecting the right compliance framework depends on your industry, customer requirements, and business goals.
+
+### ISO 42001
+
+Best for AI-native teams, companies shipping AI features, and organizations that need to demonstrate governance over AI systems, model providers, training data, RAG pipelines, and human oversight.
+
+**Choose ISO 42001 if:** You build, provide, or rely on AI systems and customers are asking how your AI is governed.
 
 ### SOC 2
 
@@ -592,7 +599,7 @@ A flexible cybersecurity framework developed by the US government. Increasingly 
 
 ### Multiple Frameworks
 
-CloudAnzen supports running multiple frameworks simultaneously with shared controls. This means a single control can satisfy requirements across SOC 2, ISO 27001, and other frameworks—reducing duplicate work.`,
+CloudAnzen supports running multiple frameworks simultaneously with shared controls. This means a single control can satisfy requirements across ISO 42001, SOC 2, ISO 27001, and other frameworks—reducing duplicate work.`,
       },
       {
         slug: "mapping-controls",
@@ -1438,7 +1445,7 @@ Go beyond periodic assessments with continuous vendor monitoring.
 
 CloudAnzen can track public signals about vendor security:
 
-- **Security certifications** — Check if vendors maintain their SOC 2, ISO 27001, or other certifications.
+- **Security certifications** — Check if vendors maintain their ISO 42001, SOC 2, ISO 27001, or other certifications.
 - **Data breach reports** — Monitor for reported breaches involving your vendors.
 - **Compliance status** — Track vendor compliance with regulations like GDPR.
 - **Financial health** — Monitor for signs of financial instability.
@@ -1629,7 +1636,7 @@ Your Trust Center is a public-facing page where prospects and customers can view
 
 ### What to Include
 
-- **Compliance badges** — Display your SOC 2, ISO 27001, and other certifications.
+- **Compliance badges** — Display your ISO 42001, SOC 2, ISO 27001, and other certifications.
 - **Security overview** — Describe your security practices at a high level.
 - **Sub-processors** — List the third-party services you use and their roles.
 - **FAQs** — Answer common security questions from prospects.

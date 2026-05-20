@@ -15,6 +15,28 @@ type Topic = {
 
 const TOPICS: Topic[] = [
   {
+    id: "iso42001",
+    keywords: [
+      "iso 42001",
+      "iso42001",
+      "ai management system",
+      "ai governance",
+      "ai risk",
+      "model governance",
+      "rag",
+      "llm",
+    ],
+    summary:
+      "ISO 42001 is an AI management system standard for organizations that develop, provide, or use AI systems and need structured governance over AI risks and operations.",
+    controls:
+      "Typical ISO 42001 work includes AI system inventory, risk assessment, data and model governance, human oversight, monitoring, incident handling, and supplier or model-provider review.",
+    certification:
+      "ISO 42001 can support formal certification through accredited assessment, but teams still need operating evidence that AI governance practices are actually followed.",
+    cloudanzen:
+      "CloudAnzen helps AI-native teams organize AI assets, controls, risks, policies, evidence, and buyer-facing assurance material so AI governance is reviewable instead of scattered.",
+    demo: "If ISO 42001 or AI governance is becoming a customer requirement, a demo can show how CloudAnzen connects AI-specific controls to evidence and trust workflows.",
+  },
+  {
     id: "soc2",
     keywords: [
       "soc 2",
@@ -199,6 +221,7 @@ const GENERAL_KNOWLEDGE = [
 
 export const CHATBOT_SUGGESTIONS = [
   "What frameworks do you support?",
+  "What is ISO 42001?",
   "What is the difference between SOC 2 and ISO 27001?",
   "What controls do customers usually ask about?",
   "How do you help with audit readiness?",
@@ -249,7 +272,7 @@ function pickRelevantTopics(message: string) {
 
   if (message.includes("framework") || message.includes("certification")) {
     return TOPICS.filter((topic) =>
-      ["soc2", "iso27001", "gdpr"].includes(topic.id),
+      ["iso42001", "soc2", "iso27001", "gdpr"].includes(topic.id),
     );
   }
 
@@ -269,6 +292,7 @@ function shouldMentionDemo(message: string) {
     "questionnaire",
     "audit",
     "soc 2",
+    "iso 42001",
     "iso 27001",
   ].some((token) => message.includes(token));
 }

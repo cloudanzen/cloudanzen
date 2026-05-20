@@ -15,7 +15,7 @@ export default function EnterprisePage() {
       subtitle="CloudAnzen supports complex organizations with multiple frameworks, entities, and business units — with the controls, access, and integrations enterprise teams require."
       description="Large organizations need a GRC platform that can handle multiple compliance frameworks simultaneously, support complex role hierarchies, integrate with enterprise tools, and generate board-level reporting. CloudAnzen is built for that scale."
       benefits={[
-        "Multi-framework support (SOC 2, ISO 27001, GDPR, HIPAA, PCI DSS, NIST CSF) from one platform",
+        "Multi-framework support (ISO 42001, SOC 2, ISO 27001, GDPR, HIPAA, PCI DSS, NIST CSF) from one platform",
         "Multi-entity and business unit support with cross-framework control reuse",
         "SAML/SSO and SCIM provisioning for enterprise identity management",
         "Role-based access control with custom roles and permissions",

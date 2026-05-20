@@ -60,7 +60,7 @@ export default function AuditReadinessPage() {
               {
                 icon: ArrowRight,
                 title: "Multi-audit support",
-                desc: "Run SOC 2, ISO 27001, and custom assessments simultaneously without duplicating evidence.",
+                desc: "Run ISO 42001, SOC 2, ISO 27001, and custom assessments simultaneously without duplicating evidence.",
                 color: "emerald",
               },
             ].map(({ icon: Icon, title, desc }) => (

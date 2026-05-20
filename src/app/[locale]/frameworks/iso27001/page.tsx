@@ -20,7 +20,7 @@ export default function ISO27001Page() {
         "Risk treatment plan workflow aligned with ISO 27001 requirements",
         "Statement of Applicability (SoA) generation",
         "Continuous monitoring to maintain certification between audits",
-        "Shared control library with SOC 2, GDPR, and other frameworks",
+        "Shared control library with ISO 42001, SOC 2, GDPR, and other frameworks",
       ]}
       modules={[
         { title: "ISMS Scope & Context", desc: "Define organizational context, interested parties, and ISMS scope." },

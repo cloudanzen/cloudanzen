@@ -20,7 +20,7 @@ export default function SOC2Page() {
         "Gap analysis to identify missing or failing controls before your audit",
         "Dedicated auditor collaboration workspace with scoped access",
         "Type I and Type II readiness scoring updated in real time",
-        "Shared controls across SOC 2 and other frameworks (ISO 27001, HIPAA, etc.)",
+        "Shared controls across SOC 2 and other frameworks (ISO 42001, ISO 27001, HIPAA, etc.)",
       ]}
       modules={[
         { title: "Security (CC)", desc: "Access controls, logical security, change management, risk assessment, incident response, and more." },

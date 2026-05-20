@@ -54,7 +54,7 @@ export default function ResourcesPage() {
         badge="Resources"
         title="Resources built for"
         titleHighlight="modern compliance operators"
-        subtitle="Browse practical content for SOC 2, ISO 27001, GDPR, HIPAA, vendor risk, trust centers, and day-to-day audit readiness work."
+        subtitle="Browse practical content for ISO 42001, SOC 2, ISO 27001, GDPR, HIPAA, vendor risk, trust centers, and day-to-day audit readiness work."
         ctaPrimary={{ label: "Book a demo", href: "/demo" }}
         ctaSecondary={{ label: "Explore help center", href: "/help" }}
       />

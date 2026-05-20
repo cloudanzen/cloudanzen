@@ -61,7 +61,7 @@ export default function RiskManagementPage() {
           </div>
           <div className="rounded-3xl bg-slate-900 p-10 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">Replace your risk spreadsheet today</h2>
-            <p className="text-slate-400 mb-8 max-w-lg mx-auto">See how teams use CloudAnzen to manage risk across ISO 27001, SOC 2, and internal programs.</p>
+            <p className="text-slate-400 mb-8 max-w-lg mx-auto">See how teams use CloudAnzen to manage risk across ISO 42001, ISO 27001, SOC 2, and internal programs.</p>
             <Link href="/demo" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-indigo-600 text-white font-semibold hover:bg-indigo-500 transition-colors">
               Book a demo <ArrowRight className="w-4 h-4" />
             </Link>

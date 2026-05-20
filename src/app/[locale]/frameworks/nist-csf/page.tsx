@@ -12,12 +12,12 @@ export default function NISTCSFPage() {
       name="NIST CSF"
       fullName="NIST Cybersecurity Framework (CSF) 2.0"
       badge="Frameworks · NIST CSF"
-      description="Structure your entire security program around the NIST CSF 2.0 — Govern, Identify, Protect, Detect, Respond, Recover — and align it with SOC 2, ISO 27001, and other frameworks."
+      description="Structure your entire security program around the NIST CSF 2.0 — Govern, Identify, Protect, Detect, Respond, Recover — and align it with ISO 42001, SOC 2, ISO 27001, and other frameworks."
       whatIs="The NIST Cybersecurity Framework provides a flexible, risk-based approach to managing cybersecurity risk. Version 2.0, released in 2024, adds a new 'Govern' function, making it a comprehensive foundation for enterprise security programs and a common language for board-level reporting."
       benefits={[
         "Pre-mapped controls across all six NIST CSF 2.0 functions",
         "Maturity tier tracking with current and target state scoring",
-        "Cross-framework mapping to SOC 2, ISO 27001, and HIPAA",
+        "Cross-framework mapping to ISO 42001, SOC 2, ISO 27001, and HIPAA",
         "Board-ready reporting dashboards by CSF function",
         "Continuous control monitoring aligned to NIST categories",
         "Custom profile support for sector-specific requirements",
