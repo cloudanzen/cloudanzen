@@ -28,6 +28,8 @@ export async function generateMetadata({
     keywords: [
       "GRC platform",
       "compliance automation",
+      "ISO 42001",
+      "AI governance",
       "SOC 2",
       "ISO 27001",
       "GDPR",

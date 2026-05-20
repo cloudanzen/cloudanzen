@@ -15,7 +15,7 @@ const INITIAL_MESSAGES: ChatMessage[] = [
   {
     id: "welcome",
     role: "assistant",
-    text: "Hi - I am the CloudAnzen AI assistant. I can answer general questions about SOC 2, ISO 27001, GDPR, audit readiness, and how CloudAnzen helps teams stay continuously compliant.",
+    text: "Hi - I am the CloudAnzen AI assistant. I can answer general questions about ISO 42001, SOC 2, ISO 27001, GDPR, audit readiness, and how CloudAnzen helps teams stay continuously compliant.",
   },
   {
     id: "nudge",

@@ -12,7 +12,7 @@ export default function ScaleupsPage() {
       badge="Solutions · For Scale-ups"
       title="Scale your GRC program"
       titleHighlight="without starting over"
-      subtitle="You have SOC 2. Now your customers want ISO 27001. Your EU expansion needs GDPR. CloudAnzen lets you add frameworks without rebuilding your compliance program."
+      subtitle="You have SOC 2. Now your customers want ISO 42001, ISO 27001, or GDPR. CloudAnzen lets you add frameworks without rebuilding your compliance program."
       description="Scale-ups face the hardest GRC challenge: they've already invested in compliance but now need to expand to new frameworks, new regions, and new regulatory requirements — fast. CloudAnzen's cross-framework control reuse is built for exactly this moment."
       benefits={[
         "Add new frameworks without duplicating existing controls or evidence",
@@ -23,6 +23,7 @@ export default function ScaleupsPage() {
         "Advanced reporting for board-level GRC program visibility",
       ]}
       useCases={[
+        { title: "Add ISO 42001 for AI assurance", desc: "Reuse security, risk, policy, and vendor evidence while adding AI governance-specific reviews." },
         { title: "Add ISO 27001 to your SOC 2 program", desc: "Reuse 60–70% of SOC 2 controls and evidence directly in your ISO 27001 program." },
         { title: "GDPR compliance for EU expansion", desc: "Layer GDPR requirements onto your existing privacy and security controls." },
         { title: "Mature vendor risk as you scale", desc: "Move from informal vendor reviews to a structured, auditable third-party risk program." },

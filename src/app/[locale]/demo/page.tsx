@@ -39,7 +39,7 @@ export default function DemoPage() {
                 {
                   icon: CheckCircle2,
                   title: "See your use case live",
-                  desc: "SOC 2, ISO 27001, vendor risk, trust center — we demo what matters to you.",
+                  desc: "ISO 42001, SOC 2, ISO 27001, vendor risk, trust center — we demo what matters to you.",
                 },
                 {
                   icon: Users,

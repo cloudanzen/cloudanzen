@@ -44,7 +44,7 @@ export default function TrustCenterPage() {
               <p className="text-slate-500 mb-8 leading-relaxed">With a CloudAnzen trust center, your compliance badges, policy documents, and security overviews are always available to the right people — gated by NDAs and access requests where needed.</p>
               <ul className="space-y-4">
                 {[
-                  "Public compliance badges (SOC 2, ISO 27001, GDPR, HIPAA)",
+                  "Public compliance badges (ISO 42001, SOC 2, ISO 27001, GDPR, HIPAA)",
                   "Gated document access with NDA workflows",
                   "Security questionnaire request flow",
                   "Always-current policy and report library",
@@ -68,7 +68,7 @@ export default function TrustCenterPage() {
               </div>
               <div className="bg-white p-6">
                 <div className="flex flex-wrap gap-2 mb-6">
-                  {["SOC 2 Type II", "ISO 27001", "GDPR Ready", "HIPAA Compliant"].map((b) => (
+                  {["ISO 42001", "SOC 2 Type II", "ISO 27001", "GDPR Ready", "HIPAA Compliant"].map((b) => (
                     <span key={b} className="rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-xs font-semibold text-emerald-700">{b}</span>
                   ))}
                 </div>

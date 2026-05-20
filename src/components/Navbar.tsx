@@ -48,6 +48,7 @@ export default function Navbar() {
   ];
 
   const frameworkLinks = [
+    { label: t("nav.frameworkLinks.iso42001"), href: "/frameworks/iso42001" },
     { label: t("nav.frameworkLinks.soc2"), href: "/frameworks/soc2" },
     { label: t("nav.frameworkLinks.iso27001"), href: "/frameworks/iso27001" },
     { label: t("nav.frameworkLinks.gdpr"), href: "/frameworks/gdpr" },

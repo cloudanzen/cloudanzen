@@ -39,7 +39,7 @@ const industries = [
   { name: "SaaS", href: "/solutions/saas", desc: "Win enterprise deals with continuous SOC 2 and a proactive trust center." },
   { name: "Fintech", href: "/solutions/enterprise", desc: "Meet SOC 2, PCI DSS, and GDPR requirements in one platform." },
   { name: "Healthcare", href: "/solutions/enterprise", desc: "HIPAA compliance with BAA management and PHI access controls." },
-  { name: "AI Companies", href: "/solutions/startups", desc: "Move fast to SOC 2 while navigating emerging AI governance requirements." },
+  { name: "AI Companies", href: "/solutions/startups", desc: "Move fast on ISO 42001 and SOC 2 while navigating emerging AI governance requirements." },
   { name: "Cloud-native", href: "/solutions/security-teams", desc: "Deep integrations with AWS, GCP, Azure, GitHub, and more." },
 ];
 

@@ -3,7 +3,7 @@ import SolutionPage from "@/components/SolutionPage";
 
 export const metadata: Metadata = {
   title: "For Startups",
-  description: "Get SOC 2 or ISO 27001 done fast without hiring a compliance team. CloudAnzen is built for early-stage companies moving at startup speed.",
+  description: "Get ISO 42001, SOC 2, or ISO 27001 done fast without hiring a compliance team. CloudAnzen is built for early-stage companies moving at startup speed.",
 };
 
 export default function StartupsPage() {
@@ -12,9 +12,10 @@ export default function StartupsPage() {
       badge="Solutions · For Startups"
       title="SOC 2 done in weeks,"
       titleHighlight="not months"
-      subtitle="Get audit-ready for SOC 2 or ISO 27001 without a dedicated compliance team. CloudAnzen guides you from zero to report in the fastest path possible."
+      subtitle="Get audit-ready for ISO 42001, SOC 2, or ISO 27001 without a dedicated compliance team. CloudAnzen guides you from zero to report in the fastest path possible."
       description="Startups face a unique challenge: enterprise buyers want SOC 2 before they'll sign, but you don't have the bandwidth or budget of a large security team. CloudAnzen gives you the automation, templates, and auditor network to get there fast."
       benefits={[
+        "AI governance readiness for ISO 42001 and customer AI security reviews",
         "Pre-built control library for SOC 2 Type I and Type II",
         "Step-by-step readiness plan from day one",
         "Automatic evidence collection from your existing tools (AWS, GitHub, Okta, etc.)",
@@ -24,6 +25,7 @@ export default function StartupsPage() {
         "Startup-friendly pricing that scales as you grow",
       ]}
       useCases={[
+        { title: "ISO 42001 for AI startups", desc: "Show buyers how you govern AI systems, model providers, data use, risk reviews, and human oversight." },
         { title: "SOC 2 Type I in 4–6 weeks", desc: "Get your first report fast to unblock enterprise deals while you work toward Type II." },
         { title: "ISO 27001 for EU expansion", desc: "Satisfy European buyer requirements with a structured ISMS implementation." },
         { title: "Security posture baseline", desc: "Build your security program on a solid foundation that scales to Series B and beyond." },

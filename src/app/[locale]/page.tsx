@@ -78,6 +78,11 @@ const integrationCategories = [
 
 const frameworkCards = [
   {
+    name: "ISO 42001",
+    color: "from-fuchsia-600 via-violet-600 to-emerald-500",
+    href: "/frameworks/iso42001",
+  },
+  {
     name: "SOC 2",
     color: "from-fuchsia-600 to-violet-600",
     href: "/frameworks/soc2",
@@ -411,7 +416,7 @@ export default async function HomePage({
                 ))}
               </ul>
               <Link
-                href="/frameworks/soc2"
+                href="/frameworks/iso42001"
                 className="mt-8 inline-flex items-center gap-2 font-semibold text-fuchsia-600 hover:underline"
               >
                 {t("frameworks.exploreLink")} <ArrowRight className="w-4 h-4" />

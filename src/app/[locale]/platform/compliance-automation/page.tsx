@@ -20,7 +20,7 @@ const features = [
   {
     icon: ClipboardCheck,
     title: "Automated control mapping",
-    desc: "Import controls from SOC 2, ISO 27001, HIPAA, GDPR and other frameworks and map them to your environment automatically.",
+    desc: "Import controls from ISO 42001, SOC 2, ISO 27001, HIPAA, GDPR and other frameworks and map them to your environment automatically.",
   },
   {
     icon: FileText,
@@ -50,7 +50,7 @@ export default function ComplianceAutomationPage() {
         ctaPrimary={{ label: "Book a demo", href: "/demo" }}
         ctaSecondary={{
           label: "See supported frameworks",
-          href: "/frameworks/soc2",
+          href: "/frameworks/iso42001",
         }}
       />
 
@@ -106,10 +106,10 @@ export default function ComplianceAutomationPage() {
                 Book a demo <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
-                href="/frameworks/soc2"
+                href="/frameworks/iso42001"
                 className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white/85 px-7 py-3.5 font-semibold text-slate-700 transition-colors hover:bg-white"
               >
-                See SOC 2 details
+                See ISO 42001 details
               </Link>
             </div>
           </div>

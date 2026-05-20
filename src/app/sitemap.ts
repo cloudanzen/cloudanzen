@@ -24,6 +24,7 @@ const staticRoutes = [
   "/solutions/security-teams",
   "/solutions/grc-teams",
   "/solutions/saas",
+  "/frameworks/iso42001",
   "/frameworks/soc2",
   "/frameworks/iso27001",
   "/frameworks/gdpr",

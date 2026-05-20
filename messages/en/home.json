@@ -194,7 +194,7 @@
     "modules": [
       {
         "title": "Compliance Automation",
-        "desc": "Get SOC 2 and ISO-ready faster with controls, evidence, and audit workflows in one place."
+        "desc": "Get ISO 42001, SOC 2, and ISO 27001-ready faster with controls, evidence, and audit workflows in one place."
       },
       {
         "title": "Trust Center",
@@ -257,7 +257,7 @@
   "frameworks": {
     "label": "Frameworks",
     "title": "Support multiple frameworks without duplicating work",
-    "subtitle": "Build once and reuse controls across your security and privacy program. CloudAnzen maps shared controls automatically, so you never duplicate effort across frameworks.",
+    "subtitle": "Build once and reuse controls across your AI governance, security, and privacy program. CloudAnzen maps shared controls automatically, so you never duplicate effort across frameworks.",
     "features": [
       "Shared control library across all frameworks",
       "Automatic evidence mapping to multiple audits",
@@ -305,7 +305,7 @@
     "ctaLabel": "See Trust Center",
     "mock": {
       "header": "Trust Center — AcmeCorp",
-      "badges": ["SOC 2 Type II", "ISO 27001", "GDPR Compliant", "HIPAA Ready"],
+      "badges": ["ISO 42001", "SOC 2 Type II", "ISO 27001", "GDPR Compliant", "HIPAA Ready"],
       "docs": [
         { "doc": "Security Overview", "status": "Public" },
         { "doc": "SOC 2 Report", "status": "NDA Required" },

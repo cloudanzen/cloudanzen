@@ -181,6 +181,28 @@ const Icon = {
       <path d="M9 17h6" />
     </>
   ),
+  brain: (
+    <>
+      <path d="M9 4.5a3 3 0 0 0-3 3v.4a3.2 3.2 0 0 0-2 3 3.1 3.1 0 0 0 1.2 2.45A3.4 3.4 0 0 0 9 18.5" />
+      <path d="M15 4.5a3 3 0 0 1 3 3v.4a3.2 3.2 0 0 1 2 3 3.1 3.1 0 0 1-1.2 2.45A3.4 3.4 0 0 1 15 18.5" />
+      <path d="M9 4.5v14M15 4.5v14" />
+      <path d="M9 8h2.2M15 8h-2.2M9 12h2.6M15 12h-2.6M9 16h2.2M15 16h-2.2" />
+    </>
+  ),
+  layers: (
+    <>
+      <path d="M12 3 3 8l9 5 9-5-9-5z" />
+      <path d="M3 12l9 5 9-5" />
+      <path d="M3 16l9 5 9-5" />
+    </>
+  ),
+  sparkles: (
+    <>
+      <path d="M12 3l1.8 4.2L18 9l-4.2 1.8L12 15l-1.8-4.2L6 9l4.2-1.8L12 3z" />
+      <path d="M5 15l.9 2.1L8 18l-2.1.9L5 21l-.9-2.1L2 18l2.1-.9L5 15z" />
+      <path d="M19 14l.7 1.6 1.6.7-1.6.7L19 19l-.7-1.6-1.6-.7 1.6-.7L19 14z" />
+    </>
+  ),
   chat: (
     <>
       <path d="M4 5h12a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H9l-4 4V7a2 2 0 0 1-1-2z" />
@@ -210,12 +232,16 @@ const Icon = {
 } satisfies Record<string, ReactNode>;
 
 const SX = 60;
-const SY0 = 70;
+const SY0 = 76;
 const SW = 200;
-const SH = 56;
-const SGAP = 14;
+const SH = 52;
+const SGAP = 9;
 
 const sources = [
+  { key: "rag", icon: "layers", label: "RAG Pipelines" },
+  { key: "models", icon: "brain", label: "AI Models" },
+  { key: "training", icon: "sparkles", label: "Training Data" },
+  { key: "vector", icon: "database", label: "Vector Stores" },
   { key: "cloud", icon: "cloud", label: "Public Cloud (AWS)" },
   { key: "database", icon: "database", label: "Databases" },
   { key: "monitor", icon: "monitor", label: "Monitoring" },
@@ -223,7 +249,10 @@ const sources = [
   { key: "saas", icon: "shield", label: "SaaS & Other Tools" },
 ] satisfies { key: string; icon: IconName; label: string }[];
 
-const sourcePos = sources.map((_, i) => ({ x: SX, y: SY0 + i * (SH + SGAP) }));
+const sourcePos = sources.map((_, i) => ({
+  x: SX,
+  y: SY0 + i * (SH + SGAP),
+}));
 const sourceRight = (i: number): Point => [SX + SW, sourcePos[i].y + SH / 2];
 
 const HOPPER_X = 360;
@@ -282,9 +311,9 @@ function SourceCard({ x, y, icon, label }: { x: number; y: number; icon: IconNam
   return (
     <g>
       <rect x={x} y={y} width={SW} height={SH} rx="12" fill={CA.white} stroke={CA.border} strokeWidth="1.5" />
-      <rect x={x + 14} y={y + 10} width="36" height="36" rx="9" fill={CA.muted} />
-      <IconSvg name={icon} x={x + 22} y={y + 18} size={20} color={CA.blue} />
-      <text x={x + 62} y={y + 31} fontSize="14" fontWeight="500" fill={CA.navy} dominantBaseline="middle">
+      <rect x={x + 14} y={y + 8} width="36" height="36" rx="9" fill={CA.muted} />
+      <IconSvg name={icon} x={x + 22} y={y + 16} size={20} color={CA.blue} />
+      <text x={x + 62} y={y + SH / 2} fontSize="14" fontWeight="500" fill={CA.navy} dominantBaseline="middle">
         {label}
       </text>
     </g>
@@ -555,7 +584,7 @@ function AnimatedDiagram({ time }: { time: number }) {
         strokeLinejoin="round"
       />
       <text x={HOPPER_X - 22} y={HOPPER_TOP_Y - 86} textAnchor="middle" fontSize="11" fontWeight="700" fill={CA.slate} letterSpacing="0.08em">
-        INTIGRATION
+        INTEGRATION
       </text>
 
       {feedPackages.map((feedPackage) => {

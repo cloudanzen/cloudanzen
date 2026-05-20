@@ -5,7 +5,7 @@ import { CheckCircle2, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Pricing",
-  description: "CloudAnzen pricing plans for startups, scale-ups, and enterprises. Start with SOC 2 and expand to any framework.",
+  description: "CloudAnzen pricing plans for startups, scale-ups, and enterprises. Start with ISO 42001 or SOC 2 and expand to any framework.",
 };
 
 const plans = [
@@ -16,7 +16,7 @@ const plans = [
     desc: "For early-stage teams pursuing their first compliance framework.",
     highlight: false,
     features: [
-      "1 framework (SOC 2 or ISO 27001)",
+      "1 framework (ISO 42001, SOC 2, or ISO 27001)",
       "Up to 10 integrations",
       "Continuous monitoring",
       "Evidence room",
@@ -71,7 +71,7 @@ export default function PricingPage() {
         badge="Pricing"
         title="Transparent pricing"
         titleHighlight="for every stage"
-        subtitle="Start with SOC 2 and expand to any framework as your compliance program grows. No surprise fees."
+        subtitle="Start with ISO 42001 or SOC 2 and expand to any framework as your compliance program grows. No surprise fees."
       />
 
       <section className="section-pad bg-white">
@@ -128,7 +128,7 @@ export default function PricingPage() {
             <h2 className="heading-lg text-slate-900 mb-8 text-center">Common questions</h2>
             <div className="space-y-6">
               {[
-                { q: "Can I start with one framework and add more?", a: "Yes. Most customers start with SOC 2 and add ISO 27001, GDPR, or HIPAA later. Controls and evidence are automatically reused across frameworks." },
+                { q: "Can I start with one framework and add more?", a: "Yes. AI-native teams can start with ISO 42001, while many SaaS teams start with SOC 2 and add ISO 27001, GDPR, or HIPAA later. Controls and evidence are automatically reused across frameworks." },
                 { q: "Is there a free trial?", a: "We offer a guided proof of concept for qualified prospects. Book a demo and we'll walk you through your specific use case." },
                 { q: "What counts as an integration?", a: "Each connected tool (AWS, Okta, GitHub, etc.) counts as one integration. The Growth and Enterprise plans include unlimited integrations." },
                 { q: "Do you offer annual billing discounts?", a: "Yes — annual plans include a 20% discount. Ask your account team for details." },

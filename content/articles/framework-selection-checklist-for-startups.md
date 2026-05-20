@@ -1,6 +1,6 @@
 ---
 title: "Framework selection checklist for startups"
-summary: "A checklist for deciding whether SOC 2, ISO 27001, HIPAA, GDPR, or multiple frameworks belong in your near-term roadmap."
+summary: "A checklist for deciding whether ISO 42001, SOC 2, ISO 27001, HIPAA, GDPR, or multiple frameworks belong in your near-term roadmap."
 type: "checklists"
 collection: null
 category: "Framework strategy"
@@ -12,6 +12,7 @@ author: "sarah-jenkins"
 ## Checklist
 
 - [ ] Confirm which frameworks buyers ask for most often
+- [ ] Check whether AI governance, model oversight, or AI supplier risk is now part of buyer diligence
 - [ ] Check whether you handle regulated data such as PHI or EU personal data
 - [ ] Review which markets or geographies shape buyer expectations
 - [ ] Estimate internal capacity for policy, evidence, and review workflows
@@ -28,9 +29,9 @@ It prevents teams from chasing a framework based on generic advice instead of ac
 
 ## How to use the checklist
 
-Start with buyer demand. If customers are explicitly asking for SOC 2, ISO 27001, HIPAA, or GDPR evidence, record how often those requests appear and where they affect deals. A framework selected without buyer context can become a long internal project with limited market value.
+Start with buyer demand. If customers are explicitly asking for ISO 42001, SOC 2, ISO 27001, HIPAA, or GDPR evidence, record how often those requests appear and where they affect deals. A framework selected without buyer context can become a long internal project with limited market value.
 
-Then look at regulated data. HIPAA readiness matters if PHI is involved. GDPR operations matter if you process EU personal data. SOC 2 and ISO 27001 may help with broader security assurance, but they do not replace privacy or healthcare obligations.
+Then look at regulated data and AI usage. ISO 42001 matters if you build, provide, or heavily rely on AI systems and buyers are asking about AI governance, model oversight, training data, RAG pipelines, or human review. HIPAA readiness matters if PHI is involved. GDPR operations matter if you process EU personal data. SOC 2 and ISO 27001 may help with broader security assurance, but they do not replace privacy, healthcare, or AI governance obligations.
 
 ## Compare effort and reuse
 
