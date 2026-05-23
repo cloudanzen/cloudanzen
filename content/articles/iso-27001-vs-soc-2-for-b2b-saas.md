@@ -5,7 +5,7 @@ type: "blog"
 collection: null
 category: "Framework strategy"
 tags: ["ISO 27001","SOC 2","Frameworks"]
-sortOrder: 10
+sortOrder: 11
 author: "james-peterson"
 readTime: "8 min read"
 ---

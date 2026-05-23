@@ -6,7 +6,7 @@ collection: "gdpr"
 category: "GDPR"
 readTime: "6 min read"
 tags: ["GDPR","Privacy by design","Checklists"]
-sortOrder: 35
+sortOrder: 36
 author: "maria-rodriguez"
 ---
 ## Before launch

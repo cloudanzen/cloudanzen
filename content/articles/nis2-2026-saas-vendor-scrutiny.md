@@ -6,7 +6,7 @@ collection: null
 category: "Compliance strategy"
 readTime: "6 min read"
 tags: ["NIS2","vendor risk","EU compliance","supply chain security","SaaS"]
-sortOrder: 42
+sortOrder: 43
 publishedAt: "2026-05-22"
 author: "james-peterson"
 ---

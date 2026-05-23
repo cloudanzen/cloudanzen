@@ -6,7 +6,7 @@ collection: "gdpr"
 category: "GDPR"
 readTime: "7 min read"
 tags: ["GDPR","RoPA","Templates"]
-sortOrder: 23
+sortOrder: 24
 author: "sarah-jenkins"
 ---
 ## Core fields to track
