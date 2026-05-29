@@ -6,7 +6,7 @@ collection: null
 category: "Compliance strategy"
 readTime: "5 min read"
 tags: ["US state privacy","compliance program","data protection","privacy law"]
-sortOrder: 46
+sortOrder: 47
 publishedAt: "2026-05-26"
 author: "maria-rodriguez"
 ---

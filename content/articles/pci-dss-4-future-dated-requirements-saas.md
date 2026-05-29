@@ -6,7 +6,7 @@ collection: null
 category: "PCI DSS"
 readTime: "5 min read"
 tags: ["PCI DSS 4.0","future-dated requirements","SAQ A","payment security","gap assessment"]
-sortOrder: 47
+sortOrder: 48
 publishedAt: "2026-05-27"
 author: "james-peterson"
 ---
