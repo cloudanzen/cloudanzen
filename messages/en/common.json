@@ -12,6 +12,7 @@
     "customers": "Customers",
     "resources": "Resources",
     "pricing": "Pricing",
+    "academy": "Academy",
     "help": "Help",
     "signIn": "Sign in",
     "bookDemo": "Book a demo",
@@ -26,7 +27,8 @@
       "auditReadiness": { "label": "Audit Readiness", "desc": "Streamline auditor collaboration" },
       "trustCenter": { "label": "Trust Center", "desc": "Share your security posture proactively" },
       "questionnaireAutomation": { "label": "Questionnaire Automation", "desc": "Respond to security reviews faster" },
-      "integrations": { "label": "Integrations", "desc": "Connect 100+ systems" }
+      "integrations": { "label": "Integrations", "desc": "Connect 100+ systems" },
+      "cloudanzenAcademy": { "label": "CloudAnzen Academy", "desc": "Framework-aware security training" }
     },
     "solutionLinks": {
       "startups": { "label": "For Startups", "desc": "SOC 2 fast-track for early-stage teams" },
@@ -64,7 +66,9 @@
       "vendorRisk": "Vendor Risk",
       "policyManagement": "Policy Management",
       "trustCenter": "Trust Center",
-      "integrations": "Integrations"
+      "integrations": "Integrations",
+      "cloudanzenAcademy": "CloudAnzen Academy",
+      "academy": "Public Academy"
     },
     "solutionLinks": {
       "startups": "For Startups",

@@ -12,6 +12,7 @@
     "customers": "お客様",
     "resources": "リソース",
     "pricing": "料金",
+    "academy": "アカデミー",
     "help": "ヘルプ",
     "signIn": "ログイン",
     "bookDemo": "デモを予約",
@@ -26,7 +27,8 @@
       "auditReadiness": { "label": "監査対応", "desc": "監査人との連携を効率化" },
       "trustCenter": { "label": "トラストセンター", "desc": "セキュリティ体制を積極的に公開" },
       "questionnaireAutomation": { "label": "質問票自動化", "desc": "セキュリティレビューへの回答を迅速化" },
-      "integrations": { "label": "インテグレーション", "desc": "100以上のシステムと連携" }
+      "integrations": { "label": "インテグレーション", "desc": "100以上のシステムと連携" },
+      "cloudanzenAcademy": { "label": "CloudAnzen アカデミー", "desc": "フレームワーク対応のセキュリティ研修" }
     },
     "solutionLinks": {
       "startups": { "label": "スタートアップ向け", "desc": "アーリーステージチームのためのSOC 2迅速対応" },
@@ -64,7 +66,9 @@
       "vendorRisk": "ベンダーリスク",
       "policyManagement": "ポリシー管理",
       "trustCenter": "トラストセンター",
-      "integrations": "インテグレーション"
+      "integrations": "インテグレーション",
+      "cloudanzenAcademy": "CloudAnzen アカデミー",
+      "academy": "パブリックアカデミー"
     },
     "solutionLinks": {
       "startups": "スタートアップ向け",

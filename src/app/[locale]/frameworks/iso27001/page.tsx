@@ -31,6 +31,10 @@ export default function ISO27001Page() {
       ]}
       ctaLabel="Start your ISO 27001 program"
       accentColor="bg-indigo-700"
+      academyCourse={{
+        slug: "iso-27001-security-awareness",
+        title: "ISO 27001 Security Awareness",
+      }}
     />
   );
 }
