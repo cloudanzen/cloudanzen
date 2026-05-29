@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CheckCircle2, ArrowRight, FileText } from "lucide-react";
+import { CheckCircle2, ArrowRight, FileText, GraduationCap } from "lucide-react";
 import PageHero from "@/components/PageHero";
 
 interface FrameworkPageProps {
@@ -12,6 +12,7 @@ interface FrameworkPageProps {
   modules: { title: string; desc: string }[];
   ctaLabel?: string;
   accentColor?: string;
+  academyCourse?: { slug: string; title: string };
 }
 
 export default function FrameworkPage({
@@ -24,6 +25,7 @@ export default function FrameworkPage({
   modules,
   ctaLabel = "Start your " + name + " journey",
   accentColor = "bg-[linear-gradient(135deg,#fdf4ff_0%,#fff7ed_50%,#ecfdf5_100%)] border border-white/80 shadow-[0_18px_40px_rgba(15,23,42,0.06)]",
+  academyCourse,
 }: FrameworkPageProps) {
   return (
     <div>
@@ -73,6 +75,39 @@ export default function FrameworkPage({
               ))}
             </div>
           </div>
+
+          {academyCourse && (
+            <div className="mb-12 rounded-2xl border border-slate-200 bg-white p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+              <div className="flex items-start gap-4">
+                <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-fuchsia-50 text-fuchsia-600">
+                  <GraduationCap className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 className="text-base font-semibold text-slate-900">
+                    {name} awareness training in CloudAnzen Academy
+                  </h3>
+                  <p className="text-sm text-slate-600 mt-1">
+                    Take the {academyCourse.title} — audit-grade, free, and earn
+                    a verifiable certificate.
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-shrink-0 gap-2">
+                <Link
+                  href={`/academy/courses/${academyCourse.slug}`}
+                  className="inline-flex items-center rounded-lg bg-slate-900 px-4 py-2.5 text-sm font-semibold text-white hover:bg-slate-800"
+                >
+                  Take the course
+                </Link>
+                <Link
+                  href="/platform/cloudanzen-academy"
+                  className="inline-flex items-center rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50"
+                >
+                  Platform module
+                </Link>
+              </div>
+            </div>
+          )}
 
           <div className={`${accentColor} rounded-3xl p-10 text-center`}>
             <h2 className="mb-4 text-2xl font-bold text-slate-900">{ctaLabel}</h2>

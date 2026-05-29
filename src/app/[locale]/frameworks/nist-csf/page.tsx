@@ -31,6 +31,10 @@ export default function NISTCSFPage() {
       ]}
       ctaLabel="Build your NIST CSF program"
       accentColor="bg-sky-700"
+      academyCourse={{
+        slug: "nist-csf-cyber-awareness",
+        title: "NIST CSF Cyber Awareness",
+      }}
     />
   );
 }

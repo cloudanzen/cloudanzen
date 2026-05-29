@@ -31,6 +31,10 @@ export default function HIPAAPage() {
       ]}
       ctaLabel="Start your HIPAA compliance program"
       accentColor="bg-emerald-700"
+      academyCourse={{
+        slug: "hipaa-security-awareness",
+        title: "HIPAA Security Awareness",
+      }}
     />
   );
 }

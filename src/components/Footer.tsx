@@ -25,6 +25,8 @@ export default function Footer() {
         { label: t("footer.platformLinks.policyManagement"), href: "/platform/policy-management" },
         { label: t("footer.platformLinks.trustCenter"), href: "/platform/trust-center" },
         { label: t("footer.platformLinks.integrations"), href: "/platform/integrations" },
+        { label: t("footer.platformLinks.cloudanzenAcademy"), href: "/platform/cloudanzen-academy" },
+        { label: t("footer.platformLinks.academy"), href: "/academy" },
       ],
     },
     {

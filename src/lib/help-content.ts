@@ -1920,6 +1920,147 @@ CloudAnzen includes templates for commonly received security questionnaires.
       },
     ],
   },
+  {
+    slug: "cloudanzen-academy",
+    title: "CloudAnzen Academy",
+    description:
+      "Framework-aware security and AI governance training — how courses are assigned, how scoring works, and how to share verified certificates.",
+    icon: "GraduationCap",
+    articles: [
+      {
+        slug: "what-is-cloudanzen-academy",
+        title: "What is CloudAnzen Academy?",
+        summary:
+          "Overview of the Academy: free framework-aware awareness courses for ISO 42001, ISO 27001, SOC 2, HIPAA, and NIST CSF.",
+        content: `## What is CloudAnzen Academy?
+
+CloudAnzen Academy is a set of audit-grade awareness courses for the five frameworks CloudAnzen supports: ISO 42001, ISO 27001, SOC 2, HIPAA, and NIST CSF. Every course is free, self-paced, and built around what auditors actually expect to see.
+
+There are two surfaces:
+
+- **The public Academy at cloudanzen.com/academy** — anyone can browse and take the courses, anonymously. Pass the quiz and you can claim a verifiable certificate to share on LinkedIn or X.
+- **The Academy module inside the CloudAnzen GRC app** — the same courses, but auto-assigned to your team based on the frameworks your organization runs, with completion tracking and auditor-ready records.
+
+### What a course looks like
+
+Each course is 8–10 short modules covering the awareness topics auditors expect. Modules end with multi-question checks (single choice, multi-choice, scenario, ranking). Pass threshold is 80%.
+
+Scoring happens server-side against the canonical answer key — your score can't be forged client-side. Whether you take the course on the public site or inside the app, the engine is the same.
+
+### Certificates
+
+Public learners who pass earn a verifiable certificate at \`/academy/certificates/<id>\`. The page renders:
+
+- Learner name (the name you entered at claim time)
+- Course title and framework
+- Score and issue date
+- A verified badge
+
+The URL itself is the proof of authenticity. Anyone can visit it.
+
+### When NOT to take the public course
+
+If your employer runs CloudAnzen, take the course inside the app rather than the public site — that way the completion lands in your organization's training audit trail.`,
+      },
+      {
+        slug: "framework-based-training",
+        title: "How framework-based training works",
+        summary:
+          "Each course maps to one framework; activating that framework in CloudAnzen assigns the matching course automatically.",
+        content: `## How framework-based training works
+
+Inside the CloudAnzen app, training assignment is driven by the frameworks your organization has activated.
+
+| Framework | Course |
+|-----------|--------|
+| ISO 42001 | AI Governance Awareness |
+| ISO 27001 | Security Awareness |
+| SOC 2 | Trust Awareness |
+| HIPAA | Security Awareness |
+| NIST CSF | Cyber Awareness |
+
+Activate ISO 42001 and the AI Governance course appears on every required user's onboarding checklist. Deactivate it and the course disappears. No manual rostering.
+
+### Per-role requirements
+
+Some roles don't need awareness training — typically AUDITOR. Per-role configuration lives at **Settings → Onboarding requirements**. The default is that every role except AUDITOR has Security Training required.
+
+### Who counts as "required"
+
+A user must complete the course if:
+
+1. Their organization has the framework active.
+2. Their role has Security Training required.
+
+The onboarding page shows only the courses applicable to that user. Users can take additional courses, but only the required ones gate their onboarding-complete status.`,
+      },
+      {
+        slug: "sharing-badges-and-certificates",
+        title: "Sharing badges and certificates",
+        summary:
+          "How to share a CloudAnzen Academy certificate to LinkedIn (Add to profile) and X, and how to make your certificate private.",
+        content: `## Sharing badges and certificates
+
+Every certificate has a public URL: \`https://www.cloudanzen.com/academy/certificates/<id>\`. The verification page renders a clean certificate card and a verified badge.
+
+### Share options
+
+- **Add to LinkedIn profile** — drops the certification directly onto your LinkedIn profile under Licenses & Certifications. Prefilled with course title, issuer (CloudAnzen), issue date, and certificate ID.
+- **Share to LinkedIn feed** — posts the certificate URL with rich card preview.
+- **Share to X** — drafts a tweet with the certificate URL and a brief blurb.
+- **Copy link** — gives you the raw URL.
+
+The Open Graph image rendered for LinkedIn and X is generated dynamically — your name, course title, and score appear on the share card.
+
+### Making a certificate private
+
+By default, certificates are public so verifiers can confirm authenticity at the URL. You can revoke this at any time:
+
+1. Open the certificate page.
+2. Click "Request a manage link".
+3. Enter the email used at claim time.
+4. Check your inbox — the link is valid for 15 minutes.
+5. Choose "Make certificate private" or "Revoke certificate".
+
+A private certificate renders as "Certificate not available" without leaking your name. A revoked certificate is permanent — after a 30-day grace, your name and email are erased from the row.`,
+      },
+      {
+        slug: "training-records-for-audits",
+        title: "Training records for audits",
+        summary:
+          "How CloudAnzen captures training evidence inside the app so you can prove completion during an ISO 27001, SOC 2, or HIPAA audit.",
+        content: `## Training records for audits
+
+Inside the CloudAnzen app, every training attempt produces an audit-grade record. This is the evidence your auditor expects to see.
+
+### What gets recorded
+
+For every required user, every course, every version:
+
+- Start timestamp
+- Completion timestamp
+- Score (percentage)
+- Pass / fail
+- Submitted attempt payload (which choice the user picked per question)
+- Course version (so a re-issued v2 of a course is distinct from v1)
+
+The data lives in the \`UserOnboardingTraining\` table — one row per user × course × version, indexed for fast org-wide queries.
+
+### Pulling evidence during an audit
+
+1. Open **People → Training**.
+2. Filter by framework, role, or completion status.
+3. Export the report as CSV or PDF.
+4. Attach to the relevant control evidence (ISO 27001 A.7.2.2, SOC 2 CC1.4, HIPAA §164.308(a)(5), NIST CSF PR.AT-1).
+
+Public-site Academy completions are **not** part of your organization's audit trail — they live in a separate public table. If a team member wants their completion to count for audit, they must take the course inside the app.
+
+### Re-training and refreshers
+
+A course version bump (e.g., v2 → v3) clears completion status for affected users. Their onboarding page will show the new version as outstanding. Older completions stay in the audit trail for historical evidence.`,
+      },
+    ],
+  },
 ];
 
 export function getAllArticles(): (HelpArticle & { categorySlug: string; categoryTitle: string })[] {

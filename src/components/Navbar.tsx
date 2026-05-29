@@ -36,6 +36,7 @@ export default function Navbar() {
     { label: t("nav.platformLinks.trustCenter.label"), href: "/platform/trust-center", desc: t("nav.platformLinks.trustCenter.desc") },
     { label: t("nav.platformLinks.questionnaireAutomation.label"), href: "/platform/questionnaire-automation", desc: t("nav.platformLinks.questionnaireAutomation.desc") },
     { label: t("nav.platformLinks.integrations.label"), href: "/platform/integrations", desc: t("nav.platformLinks.integrations.desc") },
+    { label: t("nav.platformLinks.cloudanzenAcademy.label"), href: "/platform/cloudanzen-academy", desc: t("nav.platformLinks.cloudanzenAcademy.desc") },
   ];
 
   const solutionLinks = [
@@ -157,6 +158,7 @@ export default function Navbar() {
                 { label: t("nav.customers"), href: "/customers" },
                 { label: t("nav.resources"), href: "/resources" },
                 { label: t("nav.pricing"), href: "/pricing" },
+                { label: t("nav.academy"), href: "/academy" },
                 { label: t("nav.help"), href: "/help" },
               ].map(({ label, href }) => (
                 <Link
