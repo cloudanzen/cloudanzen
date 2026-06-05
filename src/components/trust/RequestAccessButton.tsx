@@ -131,18 +131,55 @@ export default function RequestAccessButton({
                     />
                   </label>
                   {documentId && (
-                    <label className="flex items-start gap-2 text-sm text-slate-700">
-                      <input
-                        type="checkbox"
-                        checked={nda}
-                        onChange={(e) => setNda(e.target.checked)}
-                        className="mt-1"
-                      />
-                      <span>
-                        I confirm I am bound by an NDA with the document owner
-                        and will treat this material as confidential.
-                      </span>
-                    </label>
+                    <div className="rounded-lg border border-slate-200 bg-slate-50 p-3">
+                      <p className="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-2">
+                        Non-disclosure agreement
+                      </p>
+                      <div className="max-h-40 overflow-y-auto rounded border border-slate-200 bg-white p-3 text-xs leading-relaxed text-slate-700 space-y-2">
+                        <p>
+                          By checking the box below and submitting this request,
+                          you agree:
+                        </p>
+                        <ol className="list-decimal pl-4 space-y-1">
+                          <li>
+                            The document(s) you are about to receive are
+                            confidential and proprietary.
+                          </li>
+                          <li>
+                            You will use the document(s) only to evaluate the
+                            owner&apos;s security posture or for an internal
+                            review related to a present or prospective business
+                            relationship.
+                          </li>
+                          <li>
+                            You will not disclose, copy, redistribute, or
+                            publicly post the document(s) without prior written
+                            consent from the owner.
+                          </li>
+                          <li>
+                            Your IP address, browser fingerprint, and the time
+                            of acceptance are recorded as evidence of your
+                            agreement to this NDA.
+                          </li>
+                        </ol>
+                        <p className="text-slate-500">
+                          Your acceptance constitutes a binding electronic
+                          signature under applicable e-sign laws.
+                        </p>
+                      </div>
+                      <label className="mt-3 flex items-start gap-2 text-sm text-slate-700">
+                        <input
+                          type="checkbox"
+                          checked={nda}
+                          onChange={(e) => setNda(e.target.checked)}
+                          className="mt-1"
+                        />
+                        <span>
+                          I have read and agree to the NDA above. I am
+                          authorized to bind my organization to these terms.
+                        </span>
+                      </label>
+                    </div>
                   )}
                 </div>
 

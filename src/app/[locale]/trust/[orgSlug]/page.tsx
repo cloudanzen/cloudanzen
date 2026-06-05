@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { downloadUrl, getTrustPortal, type TrustAnnouncement } from "@/lib/trust";
 import RequestAccessButton from "@/components/trust/RequestAccessButton";
+import SubscribeForm from "@/components/trust/SubscribeForm";
 
 interface PageParams {
   params: Promise<{ locale: string; orgSlug: string }>;
@@ -301,6 +302,23 @@ export default async function TrustPortalPage({ params }: PageParams) {
               variant="primary"
               label="Request general access"
             />
+          </div>
+        </section>
+
+        {/* Subscribe to updates */}
+        <section className="rounded-2xl border border-slate-200 bg-white p-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <div>
+              <h2 className="text-xl font-bold text-slate-900">
+                Subscribe to updates
+              </h2>
+              <p className="mt-2 text-slate-600">
+                Get notified when {settings.orgName} publishes new security
+                announcements, certifications, or incident updates. One-click
+                unsubscribe.
+              </p>
+            </div>
+            <SubscribeForm orgSlug={settings.orgSlug} />
           </div>
         </section>
       </main>

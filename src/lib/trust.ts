@@ -102,7 +102,7 @@ export async function submitAccessRequest(
     documentId?: string;
     ndaSigned?: boolean;
   },
-): Promise<{ success: true; data: { id: string } }> {
+): Promise<{ success: true; data: { id: string; status?: string } }> {
   const res = await fetch(
     `${TRUST_PUBLIC_BASE}/${encodeURIComponent(orgSlug)}/request-access`,
     {
@@ -112,5 +112,23 @@ export async function submitAccessRequest(
       credentials: "include",
     },
   );
-  return safeJson<{ success: true; data: { id: string } }>(res);
+  return safeJson<{ success: true; data: { id: string; status?: string } }>(
+    res,
+  );
+}
+
+export async function subscribeToTrust(
+  orgSlug: string,
+  body: { email: string; name?: string },
+): Promise<void> {
+  // Backend always returns 202; we don't surface specific errors here
+  // to avoid email-enumeration leaks.
+  await fetch(
+    `${TRUST_PUBLIC_BASE}/${encodeURIComponent(orgSlug)}/subscribe`,
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+    },
+  );
 }
