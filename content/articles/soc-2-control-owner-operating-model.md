@@ -6,7 +6,7 @@ collection: "soc-2"
 category: "SOC 2"
 readTime: "7 min read"
 tags: ["SOC 2","Controls","Ownership"]
-sortOrder: 21
+sortOrder: 22
 author: "chloe-thompson"
 ---
 ## Why ownership breaks down
