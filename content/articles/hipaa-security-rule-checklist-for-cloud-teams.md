@@ -6,7 +6,7 @@ collection: "hipaa"
 category: "HIPAA"
 readTime: "7 min read"
 tags: ["HIPAA","Healthcare","Checklists"]
-sortOrder: 9
+sortOrder: 10
 author: "sarah-jenkins"
 ---
 ## Focus areas

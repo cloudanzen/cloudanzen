@@ -6,7 +6,7 @@ collection: null
 category: "Incident response"
 readTime: "6 min read"
 tags: ["ransomware","endpoint security","EDR","incident response","initial access brokers"]
-sortOrder: 50
+sortOrder: 51
 publishedAt: "2026-05-30"
 author: "maria-rodriguez"
 ---

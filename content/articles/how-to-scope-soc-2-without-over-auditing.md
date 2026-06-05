@@ -5,7 +5,7 @@ type: "blog"
 collection: "soc-2"
 category: "SOC 2"
 tags: ["SOC 2","Scoping","Audit strategy"]
-sortOrder: 4
+sortOrder: 5
 author: "james-peterson"
 readTime: "7 min read"
 ---
