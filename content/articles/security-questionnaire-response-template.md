@@ -6,7 +6,7 @@ collection: "trust-center"
 category: "Trust Center"
 readTime: "7 min read"
 tags: ["Questionnaires","Templates","Sales support"]
-sortOrder: 11
+sortOrder: 12
 author: "maria-rodriguez"
 ---
 ## Use this structure

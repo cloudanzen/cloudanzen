@@ -6,7 +6,7 @@ collection: null
 category: "NIST CSF"
 readTime: "6 min read"
 tags: ["NIST CSF","CSF 2.0","Govern function","security program","compliance framework"]
-sortOrder: 2
+sortOrder: 3
 publishedAt: "2026-05-23"
 author: "james-peterson"
 ---
