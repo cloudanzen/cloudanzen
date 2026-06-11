@@ -123,6 +123,30 @@ export default function PricingPage() {
             ))}
           </div>
 
+          <div className="mb-20 rounded-3xl border border-slate-200 bg-slate-950 p-8 text-white sm:p-10">
+            <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-center">
+              <div className="max-w-2xl">
+                <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-fuchsia-200">
+                  Comparing vendors?
+                </p>
+                <h2 className="heading-lg mb-3">
+                  See how CloudAnzen compares with Vanta and Drata
+                </h2>
+                <p className="text-slate-300">
+                  Compare cost model, Trust Center, AI questionnaires, vendor
+                  risk, compliance automation, and implementation fit before you
+                  commit to a quote-based platform.
+                </p>
+              </div>
+              <Link
+                href="/compare/vanta-drata"
+                className="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-5 py-3 text-sm font-semibold text-slate-950 transition-colors hover:bg-slate-100"
+              >
+                View comparison <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+          </div>
+
           {/* FAQ */}
           <div className="max-w-3xl mx-auto">
             <h2 className="heading-lg text-slate-900 mb-8 text-center">Common questions</h2>

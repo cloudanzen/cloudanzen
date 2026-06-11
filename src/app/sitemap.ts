@@ -34,6 +34,7 @@ const staticRoutes = [
   "/frameworks/custom",
   "/pricing",
   "/customers",
+  "/compare/vanta-drata",
   "/resources",
   "/demo-videos",
   "/demo",
