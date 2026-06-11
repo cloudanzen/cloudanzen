@@ -6,7 +6,7 @@ collection: "soc-2"
 category: "SOC 2"
 readTime: "7 min read"
 tags: ["SOC 2","Evidence","Templates"]
-sortOrder: 15
+sortOrder: 16
 author: "chloe-thompson"
 ---
 ## Why teams need an evidence matrix

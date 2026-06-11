@@ -6,7 +6,7 @@ collection: "trust-center"
 category: "Trust Center"
 readTime: "6 min read"
 tags: ["Trust center","Templates","Content strategy"]
-sortOrder: 33
+sortOrder: 34
 author: "james-peterson"
 ---
 ## Divide content into three groups
