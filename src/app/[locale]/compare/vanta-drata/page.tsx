@@ -79,6 +79,12 @@ const comparisonRows = [
     drata: "AI data handling and retention should be reviewed in Drata's contract, DPA, and AI terms.",
   },
   {
+    category: "Enterprise deployment",
+    cloudanzen: "Standard SaaS, Dedicated Cloud single-tenant deployment, or BYOC/private deployment options for stricter isolation needs.",
+    vanta: "Enterprise deployment and data-isolation requirements should be confirmed during procurement.",
+    drata: "Enterprise deployment and workspace/isolation requirements should be confirmed during procurement.",
+  },
+  {
     category: "Trust Center",
     cloudanzen: "Branded trust center, resource gating, access requests, announcements, and customer trust workflows.",
     vanta: "Mature Trust Center product with customer-facing resources and questionnaire automation options.",
@@ -506,6 +512,7 @@ export default function VantaDrataComparisonPage() {
                     "What implementation support is included?",
                     "Which auditor, penetration test, or advisory fees are separate?",
                     "Can we bring our own AI key and approved model provider?",
+                    "Do we need standard SaaS, dedicated cloud, or BYOC deployment?",
                   ].map((item) => (
                     <div key={item} className="flex items-start gap-3 text-sm text-slate-300">
                       <Minus className="mt-1 h-4 w-4 flex-shrink-0 text-emerald-300" />
