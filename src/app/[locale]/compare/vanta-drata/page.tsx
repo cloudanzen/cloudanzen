@@ -203,6 +203,10 @@ export default function VantaDrataComparisonPage() {
                 AI workflows, Trust Center depth, questionnaires, vendor risk,
                 and audit-readiness fit.
               </p>
+              <p className="mt-5 max-w-2xl rounded-2xl border border-white/10 bg-white/8 p-4 text-base font-semibold leading-relaxed text-white">
+                CloudAnzen is designed to deliver comparable trust and
+                compliance workflows at a lower, more predictable total cost.
+              </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <Link
                   href="/demo"
@@ -377,7 +381,8 @@ export default function VantaDrataComparisonPage() {
               The platform subscription is only one part of the budget. Teams
               should also compare frameworks, trust center packaging,
               questionnaire automation, implementation, and separate auditor
-              fees.
+              fees. CloudAnzen keeps the common startup and growth packages
+              public so teams can plan around a more predictable total cost.
             </p>
           </div>
 
