@@ -9,6 +9,7 @@ import {
   Layers3,
   Library,
   Newspaper,
+  PlayCircle,
 } from "lucide-react";
 import {
   resourceCollections,
@@ -147,6 +148,51 @@ export default function ResourcesPage() {
               </Link>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="section-pad bg-white border-b border-slate-200">
+        <div className="page-shell">
+          <Link
+            href="/demo-videos"
+            className="group grid overflow-hidden rounded-3xl border border-slate-200 bg-slate-950 shadow-sm transition-all hover:border-fuchsia-300 hover:shadow-md lg:grid-cols-[0.85fr_1.15fr]"
+          >
+            <div className="relative min-h-72 overflow-hidden bg-gradient-to-br from-fuchsia-500 via-violet-500 to-emerald-500">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_20%,rgba(255,255,255,0.45),transparent_34%),linear-gradient(135deg,rgba(15,23,42,0.08),rgba(15,23,42,0.5))]" />
+              <div className="absolute inset-x-8 bottom-8 rounded-2xl border border-white/25 bg-white/14 p-5 shadow-2xl backdrop-blur-md">
+                <div className="mb-4 flex items-center gap-1.5">
+                  <span className="h-3 w-3 rounded-full bg-rose-300" />
+                  <span className="h-3 w-3 rounded-full bg-amber-200" />
+                  <span className="h-3 w-3 rounded-full bg-emerald-300" />
+                </div>
+                <div className="space-y-3">
+                  <div className="h-3 w-2/3 rounded-full bg-white/75" />
+                  <div className="h-3 w-full rounded-full bg-white/35" />
+                  <div className="h-3 w-4/5 rounded-full bg-white/35" />
+                </div>
+              </div>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <span className="flex h-16 w-16 items-center justify-center rounded-full bg-white text-slate-950 shadow-xl transition-transform group-hover:scale-105">
+                  <PlayCircle className="h-8 w-8" />
+                </span>
+              </div>
+            </div>
+            <div className="p-8 text-white sm:p-10 lg:p-12">
+              <p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-fuchsia-200">
+                Product videos
+              </p>
+              <h2 className="heading-lg mb-4">
+                Watch CloudAnzen before you book a live walkthrough
+              </h2>
+              <p className="mb-8 max-w-2xl leading-relaxed text-slate-300">
+                View the marketing intro, platform workspace demo, and customer
+                app walkthrough from one lightweight video hub.
+              </p>
+              <span className="inline-flex items-center gap-2 text-sm font-semibold text-white">
+                Open demo videos <ArrowRight className="h-4 w-4" />
+              </span>
+            </div>
+          </Link>
         </div>
       </section>
 
