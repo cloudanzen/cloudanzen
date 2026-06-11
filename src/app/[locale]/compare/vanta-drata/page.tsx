@@ -68,9 +68,15 @@ const comparisonRows = [
   },
   {
     category: "AI direction",
-    cloudanzen: "AI-native workflows across questionnaires, evidence synthesis, risk, remediation, and trust operations.",
+    cloudanzen: "AI-native workflows with bring-your-own-key support, so enterprise teams can route AI work through their approved model/provider.",
     vanta: "Vanta Agent supports trust, questionnaires, audit prep, risk, and related workflows.",
     drata: "Drata positions around agentic trust and AI-powered GRC workflows.",
+  },
+  {
+    category: "AI data control",
+    cloudanzen: "BYOK lets teams use approved OpenAI or Anthropic keys today, preserving enterprise procurement, retention, and data-governance controls.",
+    vanta: "AI data handling and retention should be reviewed in Vanta's contract, DPA, and AI terms.",
+    drata: "AI data handling and retention should be reviewed in Drata's contract, DPA, and AI terms.",
   },
   {
     category: "Trust Center",
@@ -145,8 +151,8 @@ const decisionCards = [
   },
   {
     icon: Bot,
-    title: "Choose CloudAnzen for AI-native trust workflows",
-    text: "CloudAnzen is built around AI-assisted compliance operations, not only static evidence storage or one-off questionnaire drafting.",
+    title: "Choose CloudAnzen for BYOK AI workflows",
+    text: "Enterprise teams can bring approved AI keys instead of sending sensitive trust data through an unapproved default model path.",
   },
   {
     icon: LockKeyhole,
@@ -196,6 +202,10 @@ export default function VantaDrataComparisonPage() {
                 Compare three trust and compliance platforms by cost clarity,
                 AI workflows, Trust Center depth, questionnaires, vendor risk,
                 and audit-readiness fit.
+              </p>
+              <p className="mt-5 max-w-2xl rounded-2xl border border-white/10 bg-white/8 p-4 text-base font-semibold leading-relaxed text-white">
+                CloudAnzen is designed to deliver comparable trust and
+                compliance workflows at a lower, more predictable total cost.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <Link
@@ -371,7 +381,8 @@ export default function VantaDrataComparisonPage() {
               The platform subscription is only one part of the budget. Teams
               should also compare frameworks, trust center packaging,
               questionnaire automation, implementation, and separate auditor
-              fees.
+              fees. CloudAnzen keeps the common startup and growth packages
+              public so teams can plan around a more predictable total cost.
             </p>
           </div>
 
@@ -494,7 +505,7 @@ export default function VantaDrataComparisonPage() {
                     "Are Trust Center and questionnaires included?",
                     "What implementation support is included?",
                     "Which auditor, penetration test, or advisory fees are separate?",
-                    "How does AI handle sensitive customer data?",
+                    "Can we bring our own AI key and approved model provider?",
                   ].map((item) => (
                     <div key={item} className="flex items-start gap-3 text-sm text-slate-300">
                       <Minus className="mt-1 h-4 w-4 flex-shrink-0 text-emerald-300" />
