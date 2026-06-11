@@ -6,7 +6,7 @@ collection: null
 category: "Framework strategy"
 readTime: "6 min read"
 tags: ["Frameworks","Startups","Checklists"]
-sortOrder: 37
+sortOrder: 38
 author: "sarah-jenkins"
 ---
 ## Checklist

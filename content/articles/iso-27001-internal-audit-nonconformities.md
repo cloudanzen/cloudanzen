@@ -6,7 +6,7 @@ collection: "iso-27001"
 category: "ISO 27001"
 readTime: "6 min read"
 tags: ["ISO 27001","internal audit","nonconformities","ISMS","audit evidence"]
-sortOrder: 60
+sortOrder: 61
 publishedAt: "2026-06-09"
 author: "sarah-jenkins"
 ---

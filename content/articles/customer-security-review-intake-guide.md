@@ -6,7 +6,7 @@ collection: "trust-center"
 category: "Trust Center"
 readTime: "7 min read"
 tags: ["Questionnaires","Guides","Revenue support"]
-sortOrder: 22
+sortOrder: 23
 author: "james-peterson"
 ---
 ## The intake problem
