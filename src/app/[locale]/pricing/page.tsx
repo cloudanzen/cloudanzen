@@ -54,6 +54,7 @@ const plans = [
       "Unlimited frameworks",
       "Multi-entity support",
       "SSO / SCIM provisioning",
+      "Dedicated Cloud or BYOC deployment option",
       "Custom roles & permissions",
       "API access",
       "Dedicated CSM & onboarding",
