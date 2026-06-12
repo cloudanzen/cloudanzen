@@ -5,7 +5,7 @@ type: "blog"
 collection: "trust-center"
 category: "Trust Center"
 tags: ["Trust center","Metrics","Revenue support"]
-sortOrder: 35
+sortOrder: 36
 author: "james-peterson"
 readTime: "6 min read"
 ---
