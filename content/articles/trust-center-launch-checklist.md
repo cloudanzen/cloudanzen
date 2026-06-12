@@ -6,7 +6,7 @@ collection: "trust-center"
 category: "Trust Center"
 readTime: "6 min read"
 tags: ["Trust center","Checklists","Sales support"]
-sortOrder: 21
+sortOrder: 22
 author: "sarah-jenkins"
 ---
 ## Before you publish
