@@ -6,7 +6,7 @@ collection: "soc-2"
 category: "SOC 2"
 readTime: "6 min read"
 tags: ["SOC 2","Type II","evidence collection","audit readiness","compliance"]
-sortOrder: 49
+sortOrder: 50
 publishedAt: "2026-05-24"
 author: "chloe-thompson"
 ---

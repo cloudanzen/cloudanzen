@@ -6,7 +6,7 @@ collection: null
 category: "Compliance operations"
 readTime: "4 min read"
 tags: ["Glossary","Controls","Ownership"]
-sortOrder: 23
+sortOrder: 24
 author: "sarah-jenkins"
 ---
 ## Definition

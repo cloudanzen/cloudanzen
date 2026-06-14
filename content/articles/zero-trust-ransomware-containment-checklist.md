@@ -6,7 +6,7 @@ collection: null
 category: "Risk management"
 readTime: "6 min read"
 tags: ["zero-trust","ransomware","access control","network segmentation"]
-sortOrder: 53
+sortOrder: 54
 publishedAt: "2026-05-28"
 author: "james-peterson"
 ---

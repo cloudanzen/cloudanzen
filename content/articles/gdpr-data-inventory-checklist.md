@@ -6,7 +6,7 @@ collection: "gdpr"
 category: "GDPR"
 readTime: "7 min read"
 tags: ["GDPR","Privacy","Checklists"]
-sortOrder: 11
+sortOrder: 12
 author: "maria-rodriguez"
 ---
 ## What a usable data inventory should answer
