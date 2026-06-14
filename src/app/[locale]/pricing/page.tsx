@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
-import { CheckCircle2, ArrowRight } from "lucide-react";
+import { CheckCircle2, ArrowRight, Bot, Building2, ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Pricing",
@@ -65,6 +65,24 @@ const plans = [
   },
 ];
 
+const packageMotions = [
+  {
+    icon: ShieldCheck,
+    name: "ComplianceOps for SaaS",
+    text: "SOC 2, ISO 27001, vendor risk, policies, evidence, questionnaires, and Trust Center workflows for standard SaaS teams.",
+  },
+  {
+    icon: Bot,
+    name: "AI TrustOps for AI companies",
+    text: "AI governance, model/vendor register, ISO 42001 readiness, BYOK story, AI Trust Center content, and buyer questionnaire packs.",
+  },
+  {
+    icon: Building2,
+    name: "Enterprise Dedicated Cloud / BYOC",
+    text: "Package platform.cloudanzen.com and app.cloudanzen.com as a dedicated deployment for stricter isolation, procurement, and data-control needs.",
+  },
+];
+
 export default function PricingPage() {
   return (
     <div>
@@ -122,6 +140,41 @@ export default function PricingPage() {
                 </Link>
               </div>
             ))}
+          </div>
+
+          <div className="mb-20">
+            <div className="mb-10 max-w-3xl">
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-fuchsia-600">
+                Package motions
+              </p>
+              <h2 className="heading-lg mb-4 text-slate-900">
+                Pick the motion that matches the buyer conversation
+              </h2>
+              <p className="leading-relaxed text-slate-600">
+                The same platform can support regular SaaS compliance,
+                AI-native enterprise trust, or a dedicated enterprise
+                deployment when the buyer needs stronger isolation.
+              </p>
+            </div>
+
+            <div className="grid gap-6 lg:grid-cols-3">
+              {packageMotions.map(({ icon: Icon, name, text }) => (
+                <div
+                  key={name}
+                  className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm"
+                >
+                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-950 text-white">
+                    <Icon className="h-6 w-6" />
+                  </div>
+                  <h3 className="mb-3 text-xl font-semibold text-slate-900">
+                    {name}
+                  </h3>
+                  <p className="text-sm leading-relaxed text-slate-600">
+                    {text}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
 
           <div className="mb-20 rounded-3xl border border-slate-200 bg-slate-950 p-8 text-white sm:p-10">

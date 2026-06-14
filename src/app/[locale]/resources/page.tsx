@@ -4,8 +4,11 @@ import PageHero from "@/components/PageHero";
 import {
   ArrowRight,
   BookOpen,
+  Bot,
   CheckSquare,
+  FileQuestion,
   FileText,
+  Globe,
   Layers3,
   Library,
   Newspaper,
@@ -43,6 +46,30 @@ const typeColors: Record<ResourceTypeSlug, string> = {
   glossary: "bg-sky-50 text-sky-700",
   checklists: "bg-emerald-50 text-emerald-700",
 };
+
+const aiTrustResources = [
+  {
+    icon: FileQuestion,
+    title: "AI Security Questionnaire Pack",
+    text: "Prepare approved answers for model providers, customer data, retention, BYOK, and human oversight.",
+    href: "/resources/ai-security-questionnaire-pack",
+    label: "Questionnaire pack",
+  },
+  {
+    icon: Globe,
+    title: "AI Trust Center Checklist",
+    text: "Add buyer-ready AI governance, data handling, model, and BYOK sections to your Trust Center.",
+    href: "/resources/ai-trust-center-checklist",
+    label: "Checklist",
+  },
+  {
+    icon: Bot,
+    title: "AI Vendor and Model Register",
+    text: "Track AI vendors, models, versions, data classes, DPA status, regions, and review cadence.",
+    href: "/resources/ai-vendor-model-register-template",
+    label: "Template",
+  },
+];
 
 export default function ResourcesPage() {
   const featuredResources = getFeaturedArticleMetas();
@@ -145,6 +172,53 @@ export default function ResourcesPage() {
                     View collection <ArrowRight className="w-4 h-4" />
                   </span>
                 </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-pad bg-white border-b border-slate-200">
+        <div className="page-shell">
+          <div className="mb-10 flex flex-col justify-between gap-5 lg:flex-row lg:items-end">
+            <div>
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-fuchsia-600">
+                AI Trust Resources
+              </p>
+              <h2 className="heading-lg text-slate-900">
+                Lead magnets for AI companies selling to enterprises
+              </h2>
+            </div>
+            <Link
+              href="/solutions/ai-startups"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-fuchsia-600 hover:text-fuchsia-700"
+            >
+              See AI startup solution <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+
+          <div className="grid gap-6 lg:grid-cols-3">
+            {aiTrustResources.map(({ icon: Icon, title, text, href, label }) => (
+              <Link
+                key={title}
+                href={href}
+                className="group rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition-all hover:border-fuchsia-200 hover:shadow-md"
+              >
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-950 text-white">
+                  <Icon className="h-6 w-6" />
+                </div>
+                <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
+                  {label}
+                </p>
+                <h3 className="mb-3 text-xl font-semibold text-slate-900">
+                  {title}
+                </h3>
+                <p className="mb-5 text-sm leading-relaxed text-slate-600">
+                  {text}
+                </p>
+                <span className="inline-flex items-center gap-2 text-sm font-semibold text-fuchsia-600">
+                  Open resource <ArrowRight className="h-4 w-4" />
+                </span>
               </Link>
             ))}
           </div>

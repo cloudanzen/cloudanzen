@@ -73,10 +73,22 @@ const comparisonRows = [
     drata: "Drata positions around agentic trust and AI-powered GRC workflows.",
   },
   {
+    category: "AI-native company fit",
+    cloudanzen: "Designed for AI companies selling to enterprises: AI governance, BYOK, Trust Center content, questionnaires, ISO 42001, and buyer proof in one motion.",
+    vanta: "Broad trust management platform; AI-specific workflow fit should be evaluated against the buyer's AI governance requirements.",
+    drata: "Broad compliance and GRC platform; AI-specific workflow fit should be evaluated against the buyer's AI governance requirements.",
+  },
+  {
     category: "AI data control",
     cloudanzen: "BYOK lets teams use approved OpenAI or Anthropic keys today, preserving enterprise procurement, retention, and data-governance controls.",
     vanta: "AI data handling and retention should be reviewed in Vanta's contract, DPA, and AI terms.",
     drata: "AI data handling and retention should be reviewed in Drata's contract, DPA, and AI terms.",
+  },
+  {
+    category: "AI Trust Pack",
+    cloudanzen: "Prepare a customer-facing package for approved models/vendors, data handling, BYOK, human oversight, AI policies, evidence, and Trust Center links.",
+    vanta: "Trust Center and questionnaire workflows are available; confirm support for an AI-specific trust package during procurement.",
+    drata: "Trust Center and questionnaire workflows are available; confirm support for an AI-specific trust package during procurement.",
   },
   {
     category: "Enterprise deployment",
