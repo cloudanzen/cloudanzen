@@ -6,7 +6,7 @@ collection: null
 category: "Incident response"
 readTime: "6 min read"
 tags: ["breach notification","incident response","multi-jurisdiction","DPDP","state laws"]
-sortOrder: 58
+sortOrder: 59
 publishedAt: "2026-06-03"
 author: "maria-rodriguez"
 ---

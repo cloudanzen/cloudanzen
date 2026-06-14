@@ -6,7 +6,7 @@ collection: "hipaa"
 category: "HIPAA"
 readTime: "6 min read"
 tags: ["HIPAA","Business associates","Templates"]
-sortOrder: 31
+sortOrder: 32
 author: "sarah-jenkins"
 ---
 ## Review goals
