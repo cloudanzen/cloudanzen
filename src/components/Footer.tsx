@@ -37,6 +37,7 @@ export default function Footer() {
         { label: t("footer.platformLinks.vendorRisk"), href: "/platform/vendor-risk" },
         { label: t("footer.platformLinks.policyManagement"), href: "/platform/policy-management" },
         { label: t("footer.platformLinks.trustCenter"), href: "/platform/trust-center" },
+        { label: t("footer.platformLinks.aiGovernance"), href: "/platform/ai-governance" },
         { label: t("footer.platformLinks.integrations"), href: "/platform/integrations" },
         { label: t("footer.platformLinks.cloudanzenAcademy"), href: "/platform/cloudanzen-academy" },
         { label: t("footer.platformLinks.academy"), href: "/academy" },
@@ -46,6 +47,7 @@ export default function Footer() {
       title: t("footer.sections.solutions"),
       links: [
         { label: t("footer.solutionLinks.startups"), href: "/solutions/startups" },
+        { label: t("footer.solutionLinks.aiStartups"), href: "/solutions/ai-startups" },
         { label: t("footer.solutionLinks.scaleups"), href: "/solutions/scaleups" },
         { label: t("footer.solutionLinks.enterprise"), href: "/solutions/enterprise" },
         { label: t("footer.solutionLinks.saas"), href: "/solutions/saas" },

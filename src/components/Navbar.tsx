@@ -35,6 +35,7 @@ export default function Navbar() {
     { label: t("nav.platformLinks.auditReadiness.label"), href: "/platform/audit-readiness", desc: t("nav.platformLinks.auditReadiness.desc") },
     { label: t("nav.platformLinks.trustCenter.label"), href: "/platform/trust-center", desc: t("nav.platformLinks.trustCenter.desc") },
     { label: t("nav.platformLinks.questionnaireAutomation.label"), href: "/platform/questionnaire-automation", desc: t("nav.platformLinks.questionnaireAutomation.desc") },
+    { label: t("nav.platformLinks.aiGovernance.label"), href: "/platform/ai-governance", desc: t("nav.platformLinks.aiGovernance.desc") },
     { label: t("nav.platformLinks.integrations.label"), href: "/platform/integrations", desc: t("nav.platformLinks.integrations.desc") },
     { label: t("nav.platformLinks.cloudanzenAcademy.label"), href: "/platform/cloudanzen-academy", desc: t("nav.platformLinks.cloudanzenAcademy.desc") },
   ];
@@ -46,6 +47,7 @@ export default function Navbar() {
     { label: t("nav.solutionLinks.securityTeams.label"), href: "/solutions/security-teams", desc: t("nav.solutionLinks.securityTeams.desc") },
     { label: t("nav.solutionLinks.grcTeams.label"), href: "/solutions/grc-teams", desc: t("nav.solutionLinks.grcTeams.desc") },
     { label: t("nav.solutionLinks.saas.label"), href: "/solutions/saas", desc: t("nav.solutionLinks.saas.desc") },
+    { label: t("nav.solutionLinks.aiStartups.label"), href: "/solutions/ai-startups", desc: t("nav.solutionLinks.aiStartups.desc") },
   ];
 
   const frameworkLinks = [
@@ -344,6 +346,26 @@ export default function Navbar() {
               </button>
             </div>
             <div className="px-6 py-6 space-y-6">
+              <div>
+                <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">
+                  Featured
+                </p>
+                <div className="space-y-1">
+                  {[
+                    { label: t("nav.solutionLinks.aiStartups.label"), href: "/solutions/ai-startups" },
+                    { label: t("nav.platformLinks.aiGovernance.label"), href: "/platform/ai-governance" },
+                  ].map((l) => (
+                    <Link
+                      key={l.href}
+                      href={l.href}
+                      onClick={() => setMobileOpen(false)}
+                      className="block px-3 py-2 text-sm font-semibold text-fuchsia-700 hover:bg-fuchsia-50 rounded-md"
+                    >
+                      {l.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
               <div>
                 <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">
                   {t("nav.platform")}
