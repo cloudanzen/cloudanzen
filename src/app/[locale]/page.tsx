@@ -13,6 +13,8 @@ import {
   Eye,
   Building2,
   Globe,
+  Database,
+  KeyRound,
 } from "lucide-react";
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -111,6 +113,40 @@ const frameworkCards = [
     name: "NIST CSF",
     color: "from-sky-600 to-sky-700",
     href: "/frameworks/nist-csf",
+  },
+];
+
+const aiTrustPillars = [
+  {
+    icon: Database,
+    title: "AI system and model inventory",
+    text: "Track AI features, model providers, customer data exposure, owners, reviews, and evidence before procurement asks.",
+    href: "/platform/ai-governance",
+  },
+  {
+    icon: KeyRound,
+    title: "BYOK and approved model routing",
+    text: "Give enterprise buyers a path to use approved AI providers, keys, retention terms, and deployment models.",
+    href: "/platform/ai-governance",
+  },
+  {
+    icon: ClipboardCheck,
+    title: "Buyer-ready AI Trust Pack",
+    text: "Package AI governance, questionnaires, Trust Center content, and compliance proof into one sales-ready workflow.",
+    href: "/solutions/ai-startups",
+  },
+];
+
+const buyerMotions = [
+  {
+    title: "For AI companies",
+    text: "Govern models, vendors, data handling, BYOK, ISO 42001, and customer-facing AI trust proof.",
+    href: "/solutions/ai-startups",
+  },
+  {
+    title: "For SaaS teams",
+    text: "Run SOC 2, ISO 27001, vendor risk, questionnaires, Trust Center, and audit readiness workflows.",
+    href: "/solutions/saas",
   },
 ];
 
@@ -235,6 +271,68 @@ export default async function HomePage({
               >
                 {badge}
               </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-pad border-b border-slate-200 bg-white">
+        <div className="page-shell">
+          <div className="mb-10 grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
+            <div>
+              <span className="mb-3 block text-sm font-semibold uppercase tracking-wider text-fuchsia-600">
+                AI Trust GTM
+              </span>
+              <h2 className="heading-xl mb-4 text-slate-900">
+                A sharper trust motion for AI-native companies
+              </h2>
+              <p className="text-lg leading-relaxed text-slate-600">
+                CloudAnzen helps teams answer the AI-specific questions that
+                now show up in enterprise security reviews: models, vendors,
+                customer data, BYOK, governance, and Trust Center proof.
+              </p>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {buyerMotions.map((motion) => (
+                <Link
+                  key={motion.title}
+                  href={motion.href}
+                  className="rounded-2xl border border-slate-200 bg-slate-50 p-5 transition-all hover:border-fuchsia-200 hover:bg-white hover:shadow-sm"
+                >
+                  <h3 className="mb-2 font-semibold text-slate-900">
+                    {motion.title}
+                  </h3>
+                  <p className="mb-4 text-sm leading-relaxed text-slate-600">
+                    {motion.text}
+                  </p>
+                  <span className="inline-flex items-center gap-2 text-sm font-semibold text-fuchsia-600">
+                    Explore <ArrowRight className="h-4 w-4" />
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div className="grid gap-6 lg:grid-cols-3">
+            {aiTrustPillars.map(({ icon: Icon, title, text, href }) => (
+              <Link
+                key={title}
+                href={href}
+                className="group rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition-all hover:-translate-y-1 hover:border-fuchsia-200 hover:shadow-xl"
+              >
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-950 text-white">
+                  <Icon className="h-6 w-6" />
+                </div>
+                <h3 className="mb-3 text-xl font-semibold text-slate-900">
+                  {title}
+                </h3>
+                <p className="mb-5 text-sm leading-relaxed text-slate-600">
+                  {text}
+                </p>
+                <span className="inline-flex items-center gap-2 text-sm font-semibold text-fuchsia-600 opacity-0 transition-opacity group-hover:opacity-100">
+                  Learn more <ArrowRight className="h-4 w-4" />
+                </span>
+              </Link>
             ))}
           </div>
         </div>

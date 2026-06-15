@@ -27,6 +27,7 @@
       "auditReadiness": { "label": "Audit Readiness", "desc": "Streamline auditor collaboration" },
       "trustCenter": { "label": "Trust Center", "desc": "Share your security posture proactively" },
       "questionnaireAutomation": { "label": "Questionnaire Automation", "desc": "Respond to security reviews faster" },
+      "aiGovernance": { "label": "AI Governance", "desc": "Govern models, vendors, data, and use cases" },
       "integrations": { "label": "Integrations", "desc": "Connect 100+ systems" },
       "cloudanzenAcademy": { "label": "CloudAnzen Academy", "desc": "Framework-aware security training" }
     },
@@ -36,7 +37,8 @@
       "enterprise": { "label": "For Enterprises", "desc": "Enterprise-grade compliance" },
       "securityTeams": { "label": "For Security Teams", "desc": "Continuous control monitoring" },
       "grcTeams": { "label": "For GRC Teams", "desc": "Purpose-built GRC workflows" },
-      "saas": { "label": "For SaaS Companies", "desc": "Win enterprise deals faster" }
+      "saas": { "label": "For SaaS Companies", "desc": "Win enterprise deals faster" },
+      "aiStartups": { "label": "For AI Startups", "desc": "Win enterprise trust for AI products" }
     },
     "frameworkLinks": {
       "iso42001": "ISO 42001",
@@ -66,6 +68,7 @@
       "vendorRisk": "Vendor Risk",
       "policyManagement": "Policy Management",
       "trustCenter": "Trust Center",
+      "aiGovernance": "AI Governance",
       "integrations": "Integrations",
       "cloudanzenAcademy": "CloudAnzen Academy",
       "academy": "Public Academy"
@@ -74,6 +77,7 @@
       "startups": "For Startups",
       "scaleups": "For Scale-ups",
       "enterprise": "For Enterprises",
+      "aiStartups": "For AI Startups",
       "saas": "For SaaS",
       "securityTeams": "For Security Teams",
       "grcTeams": "For GRC Teams"
