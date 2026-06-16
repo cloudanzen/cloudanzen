@@ -6,7 +6,7 @@ collection: "iso-27001"
 category: "ISO 27001"
 readTime: "6 min read"
 tags: ["ISO 27001","audit evidence","ISMS","Annex A","transition"]
-sortOrder: 0
+sortOrder: 1
 publishedAt: "2026-06-14"
 author: "sarah-jenkins"
 ---
