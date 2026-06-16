@@ -6,7 +6,7 @@ collection: "soc-2"
 category: "SOC 2"
 readTime: "6 min read"
 tags: ["SOC 2","IAM","cloud security","AWS","Azure"]
-sortOrder: 3
+sortOrder: 4
 publishedAt: "2026-06-07"
 author: "chloe-thompson"
 ---

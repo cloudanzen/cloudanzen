@@ -6,7 +6,7 @@ collection: "soc-2"
 category: "SOC 2"
 readTime: "6 min read"
 tags: ["SOC 2","ISO 27001","Control mapping","Dual certification"]
-sortOrder: 44
+sortOrder: 45
 publishedAt: "2026-05-16"
 author: "sarah-jenkins"
 ---
