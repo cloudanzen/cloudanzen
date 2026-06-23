@@ -6,7 +6,7 @@ collection: null
 category: "Risk management"
 readTime: "5 min read"
 tags: ["business continuity","BCP","NIST SP 800-34","audit readiness","risk management"]
-sortOrder: 3
+sortOrder: 4
 publishedAt: "2026-06-11"
 author: "james-peterson"
 ---
