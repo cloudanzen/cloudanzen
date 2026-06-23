@@ -6,7 +6,7 @@ collection: null
 category: "Risk management"
 readTime: "6 min read"
 tags: ["cyber insurance","underwriting","risk management","renewal","controls evidence"]
-sortOrder: 62
+sortOrder: 63
 publishedAt: "2026-06-06"
 author: "james-peterson"
 ---
