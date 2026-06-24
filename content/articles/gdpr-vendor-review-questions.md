@@ -6,7 +6,7 @@ collection: "gdpr"
 category: "GDPR"
 readTime: "6 min read"
 tags: ["GDPR","Vendor risk","Templates"]
-sortOrder: 22
+sortOrder: 23
 author: "maria-rodriguez"
 ---
 ## What this template is for

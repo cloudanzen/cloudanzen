@@ -6,7 +6,7 @@ collection: null
 category: "Compliance operations"
 readTime: "4 min read"
 tags: ["Glossary","Compliance","Monitoring"]
-sortOrder: 40
+sortOrder: 41
 author: "sarah-jenkins"
 ---
 ## Definition
