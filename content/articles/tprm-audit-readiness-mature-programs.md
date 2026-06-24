@@ -6,7 +6,7 @@ collection: null
 category: "Vendor risk"
 readTime: "5 min read"
 tags: ["TPRM","vendor risk","audit readiness","third-party risk","GRC"]
-sortOrder: 67
+sortOrder: 68
 publishedAt: "2026-06-13"
 author: "maria-rodriguez"
 ---

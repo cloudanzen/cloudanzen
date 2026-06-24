@@ -5,7 +5,7 @@ type: "blog"
 collection: null
 category: "Continuous Monitoring"
 tags: ["Monitoring","Controls","Audit readiness"]
-sortOrder: 18
+sortOrder: 19
 author: "sarah-jenkins"
 readTime: "7 min read"
 ---

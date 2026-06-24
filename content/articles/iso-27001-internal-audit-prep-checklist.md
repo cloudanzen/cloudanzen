@@ -6,7 +6,7 @@ collection: "iso-27001"
 category: "ISO 27001"
 readTime: "6 min read"
 tags: ["ISO 27001","Internal audit","Checklists"]
-sortOrder: 31
+sortOrder: 32
 author: "sarah-jenkins"
 ---
 ## Before the audit starts

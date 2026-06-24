@@ -6,7 +6,7 @@ collection: "soc-2"
 category: "SOC 2"
 readTime: "5 min read"
 tags: ["SOC 2","SIEM","logging","audit evidence","CC7"]
-sortOrder: 58
+sortOrder: 59
 publishedAt: "2026-05-31"
 author: "chloe-thompson"
 ---

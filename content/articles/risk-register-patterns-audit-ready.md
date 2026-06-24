@@ -6,7 +6,7 @@ collection: null
 category: "Risk management"
 readTime: "5 min read"
 tags: ["risk register","audit prep","risk management","ISO 27001","GRC"]
-sortOrder: 47
+sortOrder: 48
 publishedAt: "2026-05-17"
 author: "james-peterson"
 ---
