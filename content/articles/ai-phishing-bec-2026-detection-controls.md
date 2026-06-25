@@ -6,7 +6,7 @@ collection: null
 category: "Incident response"
 readTime: "6 min read"
 tags: ["phishing","BEC","incident response","email security","DMARC"]
-sortOrder: 72
+sortOrder: 73
 publishedAt: "2026-06-19"
 author: "maria-rodriguez"
 ---

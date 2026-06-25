@@ -6,7 +6,7 @@ collection: "soc-2"
 category: "SOC 2"
 readTime: "7 min read"
 tags: ["AWS Security Hub","SOC 2","continuous monitoring","cloud compliance","evidence automation"]
-sortOrder: 74
+sortOrder: 75
 publishedAt: "2026-06-21"
 author: "chloe-thompson"
 ---

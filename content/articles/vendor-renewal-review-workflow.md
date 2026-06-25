@@ -5,7 +5,7 @@ type: "blog"
 collection: "vendor-risk"
 category: "Vendor Risk"
 tags: ["Vendor risk","Renewals","Operations"]
-sortOrder: 38
+sortOrder: 39
 author: "maria-rodriguez"
 readTime: "6 min read"
 ---
