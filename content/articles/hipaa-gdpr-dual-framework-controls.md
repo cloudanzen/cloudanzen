@@ -6,7 +6,7 @@ collection: null
 category: "HIPAA"
 readTime: "5 min read"
 tags: ["HIPAA","GDPR","dual-framework compliance","data privacy","breach notification"]
-sortOrder: 61
+sortOrder: 62
 publishedAt: "2026-06-02"
 author: "sarah-jenkins"
 ---

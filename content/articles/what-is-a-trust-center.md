@@ -6,7 +6,7 @@ collection: "trust-center"
 category: "Trust Center"
 readTime: "4 min read"
 tags: ["Glossary","Trust center","Security reviews"]
-sortOrder: 16
+sortOrder: 17
 author: "james-peterson"
 ---
 ## Definition

@@ -6,7 +6,7 @@ collection: null
 category: "Vendor risk"
 readTime: "6 min read"
 tags: ["CCPA","DPA","vendor risk","data privacy","service providers"]
-sortOrder: 65
+sortOrder: 66
 publishedAt: "2026-06-08"
 author: "maria-rodriguez"
 ---

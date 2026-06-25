@@ -5,7 +5,7 @@ type: "blog"
 collection: "soc-2"
 category: "SOC 2"
 tags: ["SOC 2","Vendor risk","Audits"]
-sortOrder: 30
+sortOrder: 31
 author: "maria-rodriguez"
 readTime: "7 min read"
 ---
