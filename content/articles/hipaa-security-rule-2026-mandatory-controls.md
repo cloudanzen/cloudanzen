@@ -6,7 +6,7 @@ collection: null
 category: "HIPAA"
 readTime: "7 min read"
 tags: ["HIPAA","Security Rule","ePHI","risk assessment","health-tech"]
-sortOrder: 5
+sortOrder: 6
 publishedAt: "2026-06-12"
 author: "james-peterson"
 ---

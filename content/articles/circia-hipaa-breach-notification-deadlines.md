@@ -6,7 +6,7 @@ collection: null
 category: "Incident response"
 readTime: "6 min read"
 tags: ["CIRCIA","HIPAA","breach notification","incident response","compliance"]
-sortOrder: 0
+sortOrder: 1
 publishedAt: "2026-06-25"
 author: "maria-rodriguez"
 ---

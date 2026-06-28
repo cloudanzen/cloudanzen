@@ -7,7 +7,7 @@ category: "ISO 27001"
 readTime: "8 min read"
 tags: ["ISO 27001","ISMS","Governance"]
 featured: true
-sortOrder: 14
+sortOrder: 15
 author: "sarah-jenkins"
 ---
 ## ISO 27001 is an operating system

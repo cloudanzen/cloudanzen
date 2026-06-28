@@ -6,7 +6,7 @@ collection: null
 category: "GDPR"
 readTime: "6 min read"
 tags: ["GDPR","cross-border transfers","SCCs","TIA","data protection"]
-sortOrder: 68
+sortOrder: 69
 publishedAt: "2026-06-10"
 author: "sarah-jenkins"
 ---

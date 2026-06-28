@@ -6,7 +6,7 @@ collection: null
 category: "GDPR"
 readTime: "6 min read"
 tags: ["GDPR","DPIA","data protection","privacy","compliance"]
-sortOrder: 70
+sortOrder: 71
 publishedAt: "2026-06-15"
 author: "maria-rodriguez"
 ---
