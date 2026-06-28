@@ -6,7 +6,7 @@ collection: null
 category: "Data protection"
 readTime: "5 min read"
 tags: ["TDPSA","Texas privacy law","data protection","state privacy","consumer rights"]
-sortOrder: 76
+sortOrder: 77
 publishedAt: "2026-06-22"
 author: "maria-rodriguez"
 ---

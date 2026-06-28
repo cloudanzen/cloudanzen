@@ -6,7 +6,7 @@ collection: null
 category: "Access control"
 readTime: "6 min read"
 tags: ["phishing-resistant MFA","FIDO2","access control","identity security"]
-sortOrder: 8
+sortOrder: 9
 publishedAt: "2026-06-05"
 author: "david-chen"
 ---

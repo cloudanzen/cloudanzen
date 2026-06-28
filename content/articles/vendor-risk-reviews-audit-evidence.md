@@ -6,7 +6,7 @@ collection: null
 category: "Vendor risk"
 readTime: "5 min read"
 tags: ["vendor risk","third-party risk","audit evidence","TPRM","ISO 27001"]
-sortOrder: 47
+sortOrder: 48
 publishedAt: "2026-05-15"
 author: "maria-rodriguez"
 ---

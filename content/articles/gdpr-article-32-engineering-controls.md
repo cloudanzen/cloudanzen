@@ -6,7 +6,7 @@ collection: null
 category: "GDPR"
 readTime: "5 min read"
 tags: ["GDPR","Article 32","data protection","encryption","engineering compliance"]
-sortOrder: 3
+sortOrder: 4
 publishedAt: "2026-06-16"
 author: "sarah-jenkins"
 ---
