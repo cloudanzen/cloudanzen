@@ -6,7 +6,7 @@ collection: null
 category: "Vendor risk"
 readTime: "6 min read"
 tags: ["supply chain security","SBOM","vendor risk","CI/CD security","dependency pinning"]
-sortOrder: 3
+sortOrder: 4
 publishedAt: "2026-06-23"
 author: "maria-rodriguez"
 ---

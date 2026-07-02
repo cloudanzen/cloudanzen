@@ -6,7 +6,7 @@ collection: null
 category: "Data protection"
 readTime: "6 min read"
 tags: ["DSAR","GDPR","CCPA","data subject rights","privacy automation"]
-sortOrder: 73
+sortOrder: 74
 publishedAt: "2026-06-18"
 author: "maria-rodriguez"
 ---
