@@ -6,7 +6,7 @@ collection: null
 category: "Data protection"
 readTime: "7 min read"
 tags: ["DPDP","India","Data protection","SaaS compliance"]
-sortOrder: 53
+sortOrder: 54
 publishedAt: "2026-05-20"
 author: "maria-rodriguez"
 ---

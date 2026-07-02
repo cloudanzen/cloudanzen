@@ -6,7 +6,7 @@ collection: "soc-2"
 category: "SOC 2"
 readTime: "6 min read"
 tags: ["IaC","SOC 2","Checkov","Terraform","CI/CD"]
-sortOrder: 72
+sortOrder: 73
 publishedAt: "2026-06-17"
 author: "chloe-thompson"
 ---

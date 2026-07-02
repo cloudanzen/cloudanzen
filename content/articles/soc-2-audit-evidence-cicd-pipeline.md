@@ -6,7 +6,7 @@ collection: "soc-2"
 category: "SOC 2"
 readTime: "5 min read"
 tags: ["SOC 2","CI/CD","audit evidence","DevSecOps","compliance automation"]
-sortOrder: 62
+sortOrder: 63
 publishedAt: "2026-06-01"
 author: "chloe-thompson"
 ---
