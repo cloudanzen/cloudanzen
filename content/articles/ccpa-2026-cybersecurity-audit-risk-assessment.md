@@ -6,7 +6,7 @@ collection: null
 category: "Data protection"
 readTime: "6 min read"
 tags: ["CCPA","risk assessment","cybersecurity audit","data protection","California privacy"]
-sortOrder: 66
+sortOrder: 67
 publishedAt: "2026-06-04"
 author: "maria-rodriguez"
 ---

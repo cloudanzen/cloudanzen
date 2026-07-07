@@ -6,7 +6,7 @@ collection: null
 category: "Risk management"
 readTime: "6 min read"
 tags: ["NIST","risk management","security frameworks","CSF 2.0","RMF"]
-sortOrder: 82
+sortOrder: 83
 publishedAt: "2026-06-30"
 author: "james-peterson"
 ---

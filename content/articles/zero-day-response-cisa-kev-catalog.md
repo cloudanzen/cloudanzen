@@ -6,7 +6,7 @@ collection: null
 category: "Risk management"
 readTime: "6 min read"
 tags: ["zero-day","CISA KEV","vulnerability management","patch management","risk register"]
-sortOrder: 84
+sortOrder: 85
 publishedAt: "2026-07-03"
 author: "james-peterson"
 ---

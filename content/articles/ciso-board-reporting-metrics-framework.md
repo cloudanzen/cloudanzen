@@ -6,7 +6,7 @@ collection: null
 category: "Risk management"
 readTime: "5 min read"
 tags: ["board reporting","CISO metrics","cyber risk","risk management","board governance"]
-sortOrder: 85
+sortOrder: 86
 publishedAt: "2026-07-04"
 author: "james-peterson"
 ---

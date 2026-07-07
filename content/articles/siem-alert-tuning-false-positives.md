@@ -6,7 +6,7 @@ collection: null
 category: "GRC operations"
 readTime: "6 min read"
 tags: ["SIEM tuning","alert fatigue","GRC operations","false positives","monitoring controls"]
-sortOrder: 87
+sortOrder: 88
 publishedAt: "2026-07-06"
 author: "chloe-thompson"
 ---
