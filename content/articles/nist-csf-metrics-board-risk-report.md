@@ -6,7 +6,7 @@ collection: null
 category: "NIST CSF"
 readTime: "5 min read"
 tags: ["NIST CSF 2.0","board reporting","cyber risk","metrics","GRC operations"]
-sortOrder: 11
+sortOrder: 12
 publishedAt: "2026-05-29"
 author: "james-peterson"
 ---

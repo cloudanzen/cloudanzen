@@ -6,7 +6,7 @@ collection: null
 category: "Trust center"
 readTime: "6 min read"
 tags: ["trust center","security portal","buyer trust","SaaS sales","compliance"]
-sortOrder: 3
+sortOrder: 4
 publishedAt: "2026-06-24"
 author: "sarah-jenkins"
 ---

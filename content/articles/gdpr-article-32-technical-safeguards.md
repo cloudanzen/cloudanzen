@@ -6,7 +6,7 @@ collection: "gdpr"
 category: "GDPR"
 readTime: "6 min read"
 tags: ["GDPR","Article 32","data protection","encryption","SaaS compliance"]
-sortOrder: 76
+sortOrder: 77
 publishedAt: "2026-06-20"
 author: "sarah-jenkins"
 ---

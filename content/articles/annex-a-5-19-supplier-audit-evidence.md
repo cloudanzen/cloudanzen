@@ -6,7 +6,7 @@ collection: "iso-27001"
 category: "ISO 27001"
 readTime: "6 min read"
 tags: ["ISO 27001","Annex A 5.19","supplier security","third-party risk","audit evidence"]
-sortOrder: 81
+sortOrder: 82
 publishedAt: "2026-06-29"
 author: "james-peterson"
 ---

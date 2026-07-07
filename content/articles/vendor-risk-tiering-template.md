@@ -7,7 +7,7 @@ category: "Vendor Risk"
 readTime: "6 min read"
 tags: ["Vendor risk","Templates","Procurement"]
 featured: true
-sortOrder: 17
+sortOrder: 18
 author: "maria-rodriguez"
 ---
 ## Goal

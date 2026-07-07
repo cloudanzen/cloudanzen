@@ -6,7 +6,7 @@ collection: "iso-27001"
 category: "ISO 27001"
 readTime: "6 min read"
 tags: ["ISO 27001","supplier management","Annex A","audit evidence","vendor risk"]
-sortOrder: 86
+sortOrder: 87
 publishedAt: "2026-07-05"
 author: "maria-rodriguez"
 ---
