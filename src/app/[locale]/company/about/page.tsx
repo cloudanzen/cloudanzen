@@ -43,61 +43,106 @@ export default function AboutPage() {
           {/* Leadership */}
           <div className="mb-16">
             <p className="mb-3 text-center text-sm font-semibold uppercase tracking-widest text-fuchsia-600">Leadership</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 text-center mb-4">Meet our founder</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 text-center mb-4">Meet our founders</h2>
             <p className="text-slate-500 text-center mb-12 max-w-2xl mx-auto">
               The vision and expertise driving CloudAnzen&apos;s mission to transform compliance into a continuous discipline.
             </p>
 
-            {/* Founder spotlight card */}
-            <div className="rounded-3xl bg-gradient-to-br from-fuchsia-500 via-violet-500 to-emerald-500 p-[1px]">
-              <div className="rounded-3xl bg-white p-8 sm:p-10">
-                <div className="flex flex-col lg:flex-row gap-10 items-center lg:items-start">
+            <div className="grid lg:grid-cols-2 gap-8">
+              {/* Founder spotlight card */}
+              <div className="rounded-3xl bg-gradient-to-br from-fuchsia-500 via-violet-500 to-emerald-500 p-[1px]">
+                <div className="h-full rounded-3xl bg-white p-8 sm:p-10 flex flex-col items-center text-center">
                   {/* Photo */}
-                  <div className="shrink-0">
-                    <div className="relative w-56 h-56 sm:w-64 sm:h-64 rounded-2xl overflow-hidden shadow-lg">
-                      <Image
-                        src="/team/founder.png"
-                        alt="Sumedha Singh"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="mt-5 text-center">
-                      <h3 className="text-2xl font-bold text-slate-900">Sumedha Singh</h3>
-                      <p className="mt-1 font-semibold text-fuchsia-600">Founder &amp; CEO</p>
-                      <a
-                        href="https://www.linkedin.com/in/sumedha-singh-519485400/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="mt-3 inline-flex items-center gap-1.5 text-sm text-slate-400 transition-colors hover:text-fuchsia-600"
-                      >
-                        <Linkedin className="w-4 h-4" />
-                        Connect on LinkedIn
-                      </a>
-                    </div>
+                  <div className="relative w-40 h-40 sm:w-48 sm:h-48 rounded-2xl overflow-hidden shadow-lg shrink-0">
+                    <Image
+                      src="/team/founder.png"
+                      alt="Sumedha Singh"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="mt-5">
+                    <h3 className="text-2xl font-bold text-slate-900">Sumedha Singh</h3>
+                    <p className="mt-1 font-semibold text-fuchsia-600">Founder &amp; CEO</p>
+                    <a
+                      href="https://www.linkedin.com/in/sumedha-singh-519485400/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-3 inline-flex items-center gap-1.5 text-sm text-slate-400 transition-colors hover:text-fuchsia-600"
+                    >
+                      <Linkedin className="w-4 h-4" />
+                      Connect on LinkedIn
+                    </a>
                   </div>
 
                   {/* Bio */}
-                  <div className="flex-1 min-w-0">
-                    <div className="text-slate-600 leading-relaxed space-y-4">
-                      <p>
-                        As the Founder of CloudAnzen, I developed a platform designed to transform compliance into a continuous operational discipline. The platform connects seamlessly with existing systems, enabling real-time monitoring of security and compliance to address organizational challenges and foster ongoing efficiency.
-                      </p>
-                      <p>
-                        My work emphasized collaboration and operational improvement, aiming to eliminate the traditional audit scramble and provide teams with a clear, consistent understanding of their security posture.
-                      </p>
-                      <p>
-                        With an MBA in Finance from JNTUH College of Engineering Hyderabad, I bring expertise in problem solving, IT business analysis, and business process analysis to every initiative. My focus remains on innovating solutions that promote operational resilience and enable organizations to adapt effectively to a dynamic technological landscape.
-                      </p>
-                    </div>
+                  <div className="mt-6 text-left text-slate-600 leading-relaxed space-y-4">
+                    <p>
+                      As the Founder of CloudAnzen, I developed a platform designed to transform compliance into a continuous operational discipline. The platform connects seamlessly with existing systems, enabling real-time monitoring of security and compliance to address organizational challenges and foster ongoing efficiency.
+                    </p>
+                    <p>
+                      My work emphasized collaboration and operational improvement, aiming to eliminate the traditional audit scramble and provide teams with a clear, consistent understanding of their security posture.
+                    </p>
+                    <p>
+                      With an MBA in Finance from JNTUH College of Engineering Hyderabad, I bring expertise in problem solving, IT business analysis, and business process analysis to every initiative. My focus remains on innovating solutions that promote operational resilience and enable organizations to adapt effectively to a dynamic technological landscape.
+                    </p>
+                  </div>
 
-                    <div className="flex flex-wrap gap-2 mt-6">
-                      {["GRC Strategy", "IT Business Analysis", "Process Optimization", "Compliance Automation", "Operational Resilience"].map((tag) => (
-                        <span key={tag} className="px-3 py-1 rounded-full bg-slate-100 text-xs font-medium text-slate-600">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
+                  <div className="flex flex-wrap justify-center gap-2 mt-6">
+                    {["GRC Strategy", "IT Business Analysis", "Process Optimization", "Compliance Automation", "Operational Resilience"].map((tag) => (
+                      <span key={tag} className="px-3 py-1 rounded-full bg-slate-100 text-xs font-medium text-slate-600">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Co-founder spotlight card */}
+              <div className="rounded-3xl bg-gradient-to-br from-fuchsia-500 via-violet-500 to-emerald-500 p-[1px]">
+                <div className="h-full rounded-3xl bg-white p-8 sm:p-10 flex flex-col items-center text-center">
+                  {/* Photo */}
+                  <div className="relative w-40 h-40 sm:w-48 sm:h-48 rounded-2xl overflow-hidden shadow-lg shrink-0">
+                    <Image
+                      src="/team/cofounder.png"
+                      alt="Ajay Narula"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="mt-5">
+                    <h3 className="text-2xl font-bold text-slate-900">Ajay Narula</h3>
+                    <p className="mt-1 font-semibold text-fuchsia-600">Co-Founder &amp; Chief Revenue Officer</p>
+                    <a
+                      href="https://www.linkedin.com/in/ajaynarula007/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-3 inline-flex items-center gap-1.5 text-sm text-slate-400 transition-colors hover:text-fuchsia-600"
+                    >
+                      <Linkedin className="w-4 h-4" />
+                      Connect on LinkedIn
+                    </a>
+                  </div>
+
+                  {/* Bio */}
+                  <div className="mt-6 text-left text-slate-600 leading-relaxed space-y-4">
+                    <p>
+                      As Co-Founder and Chief Revenue Officer, I lead CloudAnzen&apos;s go-to-market strategy — turning continuous compliance from a technical advantage into a business outcome our customers can measure.
+                    </p>
+                    <p>
+                      My focus is building the sales, partnerships, and customer success motions that get GRC programs live faster, so security and revenue teams can move at the same speed.
+                    </p>
+                    <p>
+                      I work closely with our product and engineering teams to make sure what we sell matches what we ship — no gap between the roadmap and the pitch.
+                    </p>
+                  </div>
+
+                  <div className="flex flex-wrap justify-center gap-2 mt-6">
+                    {["Go-to-Market Strategy", "Revenue Leadership", "Customer Success", "Partnerships", "Sales Strategy"].map((tag) => (
+                      <span key={tag} className="px-3 py-1 rounded-full bg-slate-100 text-xs font-medium text-slate-600">
+                        {tag}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </div>
