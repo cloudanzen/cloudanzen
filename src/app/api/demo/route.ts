@@ -167,7 +167,7 @@ function renderHtmlEmail({
             <td style="background:#f8fafc;border-top:1px solid #e2e8f0;padding:24px 40px;text-align:center;">
               <p style="margin:0;font-size:12px;color:#94a3b8;">
                 This email was sent from the demo request form at
-                <a href="https://www.cloudanzen.com/demo" style="color:#1d4ed8;text-decoration:none;">cloudanzen.com/demo</a>
+                <a href="https://www.cloudanzen.ai/demo" style="color:#1d4ed8;text-decoration:none;">cloudanzen.ai/demo</a>
               </p>
             </td>
           </tr>

@@ -2,8 +2,9 @@ import type { MetadataRoute } from "next";
 import { resourceTypes } from "@/lib/resources-content";
 import { getArticleIndex } from "@/lib/articles";
 import { helpCategories } from "@/lib/help-content";
+import { SITE_URL } from "@/lib/site";
 
-const BASE_URL = "https://www.cloudanzen.com";
+const BASE_URL = SITE_URL;
 
 // Static routes (English has no prefix, Japanese gets /ja/)
 const staticRoutes = [

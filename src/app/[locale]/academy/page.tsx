@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Award, BookOpen, Clock, ShieldCheck } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import { listCourses } from "@/lib/academy";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "CloudAnzen Academy — Framework-Aware Security Training",
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
     title: "CloudAnzen Academy",
     description:
       "Take audit-grade ISO 42001, ISO 27001, SOC 2, HIPAA, and NIST CSF courses. Earn verifiable certificates.",
-    url: "https://www.cloudanzen.com/academy",
+    url: `${SITE_URL}/academy`,
     type: "website",
   },
 };

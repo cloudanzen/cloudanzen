@@ -1938,7 +1938,7 @@ CloudAnzen Academy is a set of audit-grade awareness courses for the five framew
 
 There are two surfaces:
 
-- **The public Academy at cloudanzen.com/academy** — anyone can browse and take the courses, anonymously. Pass the quiz and you can claim a verifiable certificate to share on LinkedIn or X.
+- **The public Academy at cloudanzen.ai/academy** — anyone can browse and take the courses, anonymously. Pass the quiz and you can claim a verifiable certificate to share on LinkedIn or X.
 - **The Academy module inside the CloudAnzen GRC app** — the same courses, but auto-assigned to your team based on the frameworks your organization runs, with completion tracking and auditor-ready records.
 
 ### What a course looks like
@@ -2001,7 +2001,7 @@ The onboarding page shows only the courses applicable to that user. Users can ta
           "How to share a CloudAnzen Academy certificate to LinkedIn (Add to profile) and X, and how to make your certificate private.",
         content: `## Sharing badges and certificates
 
-Every certificate has a public URL: \`https://www.cloudanzen.com/academy/certificates/<id>\`. The verification page renders a clean certificate card and a verified badge.
+Every certificate has a public URL: \`https://www.cloudanzen.ai/academy/certificates/<id>\`. The verification page renders a clean certificate card and a verified badge.
 
 ### Share options
 

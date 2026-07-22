@@ -11,6 +11,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import { downloadUrl, getTrustPortal, type TrustAnnouncement } from "@/lib/trust";
+import { SITE_URL } from "@/lib/site";
 import RequestAccessButton from "@/components/trust/RequestAccessButton";
 import SubscribeForm from "@/components/trust/SubscribeForm";
 
@@ -326,7 +327,7 @@ export default async function TrustPortalPage({ params }: PageParams) {
       <footer className="border-t border-slate-200 py-6 text-center text-xs text-slate-500">
         Powered by{" "}
         <a
-          href="https://www.cloudanzen.com"
+          href={SITE_URL}
           className="font-semibold text-slate-700 hover:underline"
         >
           CloudAnzen

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Clock, ArrowLeft } from "lucide-react";
 import { getCourseSummary, listCourses } from "@/lib/academy";
+import { SITE_URL } from "@/lib/site";
 
 interface PageParams {
   params: Promise<{ locale: string; courseSlug: string }>;
@@ -31,7 +32,7 @@ export async function generateMetadata({
     openGraph: {
       title: course.title,
       description: course.description,
-      url: `https://www.cloudanzen.com/academy/courses/${course.slug}`,
+      url: `${SITE_URL}/academy/courses/${course.slug}`,
       type: "article",
     },
   };
@@ -55,7 +56,7 @@ export default async function CourseDetailPage({ params }: PageParams) {
     provider: {
       "@type": "Organization",
       name: "CloudAnzen",
-      sameAs: "https://www.cloudanzen.com",
+      sameAs: SITE_URL,
     },
     educationalLevel: "Awareness",
     timeRequired: `PT${course.estimatedMinutes}M`,

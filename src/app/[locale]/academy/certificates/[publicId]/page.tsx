@@ -4,6 +4,7 @@ import { ShieldX } from "lucide-react";
 import CertificateCard from "@/components/academy/CertificateCard";
 import ShareButtons from "@/components/academy/ShareButtons";
 import { getCertificate } from "@/lib/academy";
+import { SITE_URL } from "@/lib/site";
 
 interface Props {
   params: Promise<{ locale: string; publicId: string }>;
@@ -20,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
   const title = `${cert.learnerName} — ${cert.courseTitle}`;
   const description = `Verified certificate of completion for ${cert.courseTitle}, issued by CloudAnzen Academy.`;
-  const url = `https://www.cloudanzen.com/academy/certificates/${publicId}`;
+  const url = `${SITE_URL}/academy/certificates/${publicId}`;
   return {
     title,
     description,
@@ -83,7 +84,7 @@ export default async function CertificatePage({ params }: Props) {
     identifier: cert.publicId,
     about: cert.courseTitle,
   };
-  const shareUrl = `https://www.cloudanzen.com/academy/certificates/${cert.publicId}`;
+  const shareUrl = `${SITE_URL}/academy/certificates/${cert.publicId}`;
 
   return (
     <>

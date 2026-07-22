@@ -49,7 +49,7 @@ export default function CloudAnzenAcademyPage() {
             Try the courses yourself
           </h2>
           <p className="mt-2 text-slate-600 max-w-2xl">
-            All five courses are free to take on cloudanzen.com — same content,
+            All five courses are free to take on cloudanzen.ai — same content,
             same scoring engine your team gets in the app.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
