@@ -6,6 +6,7 @@ import { locales } from "@/i18n/config";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WebsiteAiChatbot from "@/components/WebsiteAiChatbot";
+import { SITE_URL } from "@/lib/site";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -44,7 +45,7 @@ export async function generateMetadata({
     openGraph: {
       type: "website",
       locale: locale === "ja" ? "ja_JP" : "en_US",
-      url: "https://www.cloudanzen.com",
+      url: SITE_URL,
       siteName: "CloudAnzen",
       title: t("meta.title"),
       description: t("meta.ogDescription"),
@@ -64,11 +65,11 @@ export async function generateMetadata({
       images: ["/og-image.png"],
     },
     alternates: {
-      canonical: locale === "ja" ? "https://www.cloudanzen.com/ja" : "https://www.cloudanzen.com",
+      canonical: locale === "ja" ? `${SITE_URL}/ja` : SITE_URL,
       languages: {
-        en: "https://www.cloudanzen.com",
-        ja: "https://www.cloudanzen.com/ja",
-        "x-default": "https://www.cloudanzen.com",
+        en: SITE_URL,
+        ja: `${SITE_URL}/ja`,
+        "x-default": SITE_URL,
       },
     },
     robots: {
@@ -76,7 +77,7 @@ export async function generateMetadata({
       follow: true,
       googleBot: { index: true, follow: true },
     },
-    metadataBase: new URL("https://www.cloudanzen.com"),
+    metadataBase: new URL(SITE_URL),
   };
 }
 
