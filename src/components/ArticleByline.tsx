@@ -18,14 +18,28 @@ function hueFromSlug(slug: string): number {
   return hash;
 }
 
+function formatDate(isoDate: string): string | null {
+  const date = new Date(`${isoDate}T00:00:00Z`);
+  if (Number.isNaN(date.getTime())) return null;
+  return new Intl.DateTimeFormat("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    timeZone: "UTC",
+  }).format(date);
+}
+
 export default function ArticleByline({
   writer,
   readTime,
+  publishedAt,
 }: {
   writer: Writer;
   readTime: string;
+  publishedAt?: string;
 }) {
   const hue = hueFromSlug(writer.slug);
+  const formattedDate = publishedAt ? formatDate(publishedAt) : null;
   return (
     <div className="flex items-center gap-3 mt-6">
       {writer.avatarUrl ? (
@@ -51,6 +65,7 @@ export default function ArticleByline({
         </p>
         <p className="text-slate-500">
           {writer.role} · {readTime}
+          {formattedDate ? ` · ${formattedDate}` : ""}
         </p>
       </div>
     </div>
