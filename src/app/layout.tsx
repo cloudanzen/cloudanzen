@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import { Noto_Sans_JP } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -29,6 +30,18 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${notoSansJP.variable} antialiased bg-white text-slate-900`}
       >
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-F991S2GBBW"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-F991S2GBBW');
+          `}
+        </Script>
         {children}
       </body>
     </html>
