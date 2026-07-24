@@ -3,6 +3,7 @@ import Link from "next/link";
 
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/login" },
   title: "Sign in",
   description: "Sign in to your CloudAnzen account.",
 };

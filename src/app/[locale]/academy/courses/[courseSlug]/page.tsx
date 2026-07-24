@@ -29,6 +29,7 @@ export async function generateMetadata({
   return {
     title: `${course.title} — CloudAnzen Academy`,
     description: course.description,
+    alternates: { canonical: `/academy/courses/${course.slug}` },
     openGraph: {
       title: course.title,
       description: course.description,

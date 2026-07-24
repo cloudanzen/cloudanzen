@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Mail, MapPin, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/contact" },
   title: "Contact",
   description: "Get in touch with the CloudAnzen team. Sales, support, partnerships, and general enquiries.",
 };

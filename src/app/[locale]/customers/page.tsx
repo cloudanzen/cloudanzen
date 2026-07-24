@@ -4,6 +4,7 @@ import PageHero from "@/components/PageHero";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/customers" },
   title: "Customers",
   description: "See how security-conscious teams use CloudAnzen to automate compliance, manage risk, and prove trust.",
 };

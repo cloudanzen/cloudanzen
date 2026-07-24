@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/platform" },
   title: "Platform Overview",
   description:
     "CloudAnzen gives you one unified platform for compliance automation, continuous monitoring, risk management, vendor risk, and your trust center.",

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import FrameworkPage from "@/components/FrameworkPage";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/frameworks/iso27001" },
   title: "ISO 27001 Compliance",
   description: "Build your ISO 27001 ISMS and achieve certification faster with CloudAnzen's control mapping, risk treatment, and evidence automation.",
 };

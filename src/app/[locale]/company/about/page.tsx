@@ -5,6 +5,7 @@ import PageHero from "@/components/PageHero";
 import { ArrowRight, Linkedin } from "lucide-react";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/company/about" },
   title: "About CloudAnzen",
   description: "CloudAnzen was founded to make continuous GRC accessible to every team — not just those with large compliance budgets.",
 };

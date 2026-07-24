@@ -5,6 +5,7 @@ import PageHero from "@/components/PageHero";
 import { Zap, ArrowRight, Database, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/platform/questionnaire-automation" },
   title: "Questionnaire Automation",
   description: "Answer security questionnaires 10x faster with reusable answers, AI assistance, and auto-populated evidence packages.",
 };

@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/resources/ai-security-questionnaire-pack" },
   title: "AI Security Questionnaire Pack",
   description:
     "A buyer-facing AI security questionnaire pack with common enterprise questions about model providers, customer data, BYOK, retention, and human oversight.",

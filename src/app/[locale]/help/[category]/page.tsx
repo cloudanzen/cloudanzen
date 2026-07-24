@@ -49,6 +49,7 @@ export async function generateMetadata({
   return {
     title: `${category.title} — Help Center`,
     description: category.description,
+    alternates: { canonical: `/help/${slug}` },
   };
 }
 

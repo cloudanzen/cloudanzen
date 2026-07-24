@@ -4,6 +4,7 @@ import { Award, BookOpen, ShieldCheck, Users } from "lucide-react";
 import PageHero from "@/components/PageHero";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/platform/cloudanzen-academy" },
   title: "CloudAnzen Academy",
   description:
     "Framework-aware security and AI governance training built into the CloudAnzen GRC platform. Role-based assignments, auditor-ready training records, verified certificates.",

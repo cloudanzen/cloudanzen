@@ -5,6 +5,7 @@ import PageHero from "@/components/PageHero";
 import { BarChart3, Users, ArrowRight, AlertTriangle, FileCheck } from "lucide-react";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/platform/risk-management" },
   title: "Risk Management",
   description:
     "Log, prioritize, assign, and remediate risks with full audit trails. CloudAnzen's risk management module brings visibility to every risk in your program.",

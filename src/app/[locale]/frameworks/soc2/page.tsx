@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import FrameworkPage from "@/components/FrameworkPage";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/frameworks/soc2" },
   title: "SOC 2 Compliance",
   description: "Automate your SOC 2 Type I and Type II journey with CloudAnzen. Map controls, collect evidence continuously, and collaborate with auditors in one platform.",
 };

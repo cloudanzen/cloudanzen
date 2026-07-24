@@ -5,6 +5,7 @@ import PageHero from "@/components/PageHero";
 import { ArrowRight, Gauge, Globe2, ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/demo-videos" },
   title: "Demo Videos",
   description:
     "Watch short CloudAnzen demo videos covering the marketing overview, platform workspace, and customer app experience.",

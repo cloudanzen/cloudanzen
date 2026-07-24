@@ -4,6 +4,7 @@ import PageHero from "@/components/PageHero";
 import { CheckCircle2, ArrowRight, Bot, Building2, ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/pricing" },
   title: "Pricing",
   description: "CloudAnzen pricing plans for startups, scale-ups, and enterprises. Start with ISO 42001 or SOC 2 and expand to any framework.",
 };

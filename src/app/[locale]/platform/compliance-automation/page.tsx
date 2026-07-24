@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/platform/compliance-automation" },
   title: "Compliance Automation",
   description:
     "Automate evidence collection, map controls to frameworks, and stay audit-ready continuously with CloudAnzen's compliance automation engine.",

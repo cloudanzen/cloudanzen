@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import FrameworkPage from "@/components/FrameworkPage";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/frameworks/hipaa" },
   title: "HIPAA Compliance",
   description: "Map HIPAA Security Rule and Privacy Rule controls, manage Business Associate Agreements, and stay audit-ready with CloudAnzen.",
 };

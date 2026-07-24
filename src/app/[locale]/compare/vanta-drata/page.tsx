@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/compare/vanta-drata" },
   title: "CloudAnzen vs Vanta vs Drata",
   description:
     "Compare CloudAnzen, Vanta, and Drata across features, pricing model, AI workflows, trust center capabilities, and compliance automation fit.",

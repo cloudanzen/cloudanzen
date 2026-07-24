@@ -4,6 +4,7 @@ import PageHero from "@/components/PageHero";
 import { CheckCircle2, ArrowRight, Users, FileCheck } from "lucide-react";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/platform/audit-readiness" },
   title: "Audit Readiness",
   description:
     "Organize evidence, manage auditor access, and collaborate in a dedicated audit workspace. CloudAnzen makes audit preparation operational.",

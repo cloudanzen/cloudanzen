@@ -4,6 +4,7 @@ import PageHero from "@/components/PageHero";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/frameworks/custom" },
   title: "Custom Frameworks",
   description: "Build your own control framework in CloudAnzen. Map internal standards, customer requirements, or bespoke security programs.",
 };

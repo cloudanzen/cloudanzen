@@ -28,6 +28,7 @@ export async function generateMetadata({
   return {
     title: `${collection.title} Collection`,
     description: collection.summary,
+    alternates: { canonical: `/collection/${slug}` },
   };
 }
 

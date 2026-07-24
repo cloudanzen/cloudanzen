@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import ManageFlow from "@/components/academy/ManageFlow";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/academy/certificates/[publicId]/manage" },
   title: "Manage certificate — CloudAnzen Academy",
   robots: { index: false, follow: false },
 };

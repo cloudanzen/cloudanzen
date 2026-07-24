@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import SolutionPage from "@/components/SolutionPage";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/solutions/grc-teams" },
   title: "For GRC Teams",
   description: "Purpose-built GRC workflows for compliance managers, risk leads, and audit teams. Replace spreadsheets with a platform that actually works.",
 };
