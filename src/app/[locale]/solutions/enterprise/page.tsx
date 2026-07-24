@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/solutions/enterprise" },
   title: "For Enterprises",
   description:
     "Enterprise-grade GRC that scales across multiple frameworks, entities, and business units. CloudAnzen supports SaaS, Dedicated Cloud, and private deployment models.",

@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/platform/ai-governance" },
   title: "AI Governance",
   description:
     "Operate AI governance with system inventory, model and vendor register, use-case approvals, risk classification, evidence, and AI Trust Packs.",

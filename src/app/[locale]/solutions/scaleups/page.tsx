@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import SolutionPage from "@/components/SolutionPage";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/solutions/scaleups" },
   title: "For Scale-ups",
   description: "Scale your GRC program from one framework to many without rebuilding from scratch. CloudAnzen grows with your compliance program.",
 };

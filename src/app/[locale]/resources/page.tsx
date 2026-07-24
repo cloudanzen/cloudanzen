@@ -26,6 +26,7 @@ import {
 } from "@/lib/articles";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/resources" },
   title: "Resources",
   description:
     "CloudAnzen guides, checklists, templates, glossary entries, and compliance collections for modern GRC teams.",

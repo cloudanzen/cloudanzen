@@ -22,6 +22,7 @@ import { helpCategories } from "@/lib/help-content";
 import HelpSearch from "@/components/HelpSearch";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/help" },
   title: "Help Center",
   description:
     "Find answers, guides, and resources to get the most out of CloudAnzen's GRC platform.",

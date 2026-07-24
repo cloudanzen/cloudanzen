@@ -35,6 +35,7 @@ export async function generateMetadata({
   return {
     title: `${article.title} | CloudAnzen Resources`,
     description: article.summary,
+    alternates: { canonical: `/resources/${type}/${slug}` },
   };
 }
 

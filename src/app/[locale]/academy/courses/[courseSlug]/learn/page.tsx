@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import CoursePlayer from "@/components/academy/CoursePlayer";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/academy/courses/[courseSlug]/learn" },
   title: "Take the course — CloudAnzen Academy",
   robots: { index: false, follow: true },
 };

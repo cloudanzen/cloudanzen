@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import FrameworkPage from "@/components/FrameworkPage";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/frameworks/gdpr" },
   title: "GDPR Compliance",
   description: "Map GDPR requirements to controls, manage data subject requests, and demonstrate compliance with CloudAnzen.",
 };

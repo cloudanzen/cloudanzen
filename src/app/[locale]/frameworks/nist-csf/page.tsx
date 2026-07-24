@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import FrameworkPage from "@/components/FrameworkPage";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/frameworks/nist-csf" },
   title: "NIST CSF Compliance",
   description: "Implement the NIST Cybersecurity Framework 2.0 to structure your security program and satisfy enterprise and government security requirements.",
 };

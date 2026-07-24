@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import FrameworkPage from "@/components/FrameworkPage";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/frameworks/pci-dss" },
   title: "PCI DSS Compliance",
   description: "Map PCI DSS v4.0 requirements, track scoping decisions, and maintain continuous compliance for cardholder data environments.",
 };

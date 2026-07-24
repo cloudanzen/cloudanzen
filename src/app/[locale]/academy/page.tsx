@@ -6,6 +6,7 @@ import { listCourses } from "@/lib/academy";
 import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/academy" },
   title: "CloudAnzen Academy — Framework-Aware Security Training",
   description:
     "Free, framework-aware security and AI governance training. Take audit-grade ISO 42001, ISO 27001, SOC 2, HIPAA, and NIST CSF courses. Earn verifiable certificates.",

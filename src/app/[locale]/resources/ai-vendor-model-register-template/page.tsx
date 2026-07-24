@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/resources/ai-vendor-model-register-template" },
   title: "AI Vendor and Model Register Template",
   description:
     "A practical register template for tracking AI vendors, models, versions, use cases, data classes, retention terms, DPA status, regions, and risk ratings.",

@@ -5,6 +5,7 @@ import PageHero from "@/components/PageHero";
 import { FileText, CheckCircle2, ArrowRight, Users, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/platform/policy-management" },
   title: "Policy Management",
   description: "Centralize security policies, manage approvals and review cycles, and track employee acknowledgements — all in CloudAnzen.",
 };

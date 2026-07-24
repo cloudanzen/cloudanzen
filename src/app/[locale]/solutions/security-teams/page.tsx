@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import SolutionPage from "@/components/SolutionPage";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/solutions/security-teams" },
   title: "For Security Teams",
   description: "Give your security team continuous control visibility, automated evidence collection, and real-time drift alerting across your entire environment.",
 };

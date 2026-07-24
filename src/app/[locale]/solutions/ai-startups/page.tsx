@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/solutions/ai-startups" },
   title: "For AI Startups",
   description:
     "CloudAnzen helps AI-native companies win enterprise trust with compliance automation, AI governance, Trust Center workflows, and security questionnaire readiness.",

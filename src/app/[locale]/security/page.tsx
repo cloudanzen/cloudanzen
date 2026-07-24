@@ -4,6 +4,7 @@ import { Link } from "@/i18n/navigation";
 import { Shield, Lock, Eye, Server, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/security" },
   title: "Security",
   description: "How CloudAnzen protects your data. Our security practices, certifications, and infrastructure overview.",
 };

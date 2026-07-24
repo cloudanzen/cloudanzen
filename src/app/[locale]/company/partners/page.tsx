@@ -4,6 +4,7 @@ import { CheckCircle2, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/company/partners" },
   title: "Partners",
   description: "Join the CloudAnzen partner program — auditors, consultants, MSSPs, and technology partners.",
 };

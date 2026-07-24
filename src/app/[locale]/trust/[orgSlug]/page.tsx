@@ -33,6 +33,7 @@ export async function generateMetadata({
     description:
       settings.description ??
       `${settings.orgName} security, compliance, and policy documentation.`,
+    alternates: { canonical: `/trust/${orgSlug}` },
     openGraph: {
       title: `${settings.orgName} Trust Center`,
       description: settings.description ?? undefined,

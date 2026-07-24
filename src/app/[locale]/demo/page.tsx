@@ -3,6 +3,7 @@ import DemoForm from "./DemoForm";
 import { CheckCircle2, Clock, Users } from "lucide-react";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/demo" },
   title: "Book a Demo",
   description: "See CloudAnzen in action. Book a personalized 30-minute demo with our team.",
 };

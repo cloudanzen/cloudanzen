@@ -5,6 +5,7 @@ import PageHero from "@/components/PageHero";
 import { ArrowRight, Eye, Bell, Activity, Shield } from "lucide-react";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/platform/continuous-monitoring" },
   title: "Continuous Monitoring",
   description:
     "Replace point-in-time audits with always-on control health monitoring. CloudAnzen alerts you to drift before it becomes an audit finding.",

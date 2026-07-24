@@ -5,6 +5,7 @@ import PageHero from "@/components/PageHero";
 import { Globe, Lock, FileText, ArrowRight, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/platform/trust-center" },
   title: "Trust Center",
   description:
     "Publish a branded trust center that gives customers, prospects, and auditors real-time visibility into your security posture.",

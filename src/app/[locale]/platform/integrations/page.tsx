@@ -5,6 +5,7 @@ import PageHero from "@/components/PageHero";
 import { ArrowRight, Plug2 } from "lucide-react";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/platform/integrations" },
   title: "Integrations",
   description: "Connect CloudAnzen to 100+ cloud, identity, HRIS, ticketing, and collaboration tools to collect evidence automatically.",
 };

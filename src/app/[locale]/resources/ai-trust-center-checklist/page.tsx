@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/resources/ai-trust-center-checklist" },
   title: "AI Trust Center Checklist",
   description:
     "A practical checklist for AI companies building Trust Center sections for AI governance, model providers, data handling, BYOK, and human oversight.",

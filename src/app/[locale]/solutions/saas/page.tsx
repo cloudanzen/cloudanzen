@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import SolutionPage from "@/components/SolutionPage";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/solutions/saas" },
   title: "For SaaS Companies",
   description: "Win enterprise deals faster with continuous compliance, a branded trust center, and questionnaire automation built for SaaS companies.",
 };

@@ -5,6 +5,7 @@ import PageHero from "@/components/PageHero";
 import { Building2, ClipboardCheck, ArrowRight, RotateCcw, ShieldAlert } from "lucide-react";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/platform/vendor-risk" },
   title: "Vendor Risk Management",
   description:
     "Standardize vendor onboarding, assessments, and ongoing oversight. CloudAnzen keeps your third-party risk program organized and auditable.",

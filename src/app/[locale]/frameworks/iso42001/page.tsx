@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import FrameworkPage from "@/components/FrameworkPage";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/frameworks/iso42001" },
   title: "ISO 42001 AI Management System",
   description:
     "Build ISO/IEC 42001 readiness for AI governance, AI risk management, model oversight, and audit-ready evidence with CloudAnzen.",

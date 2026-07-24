@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import SolutionPage from "@/components/SolutionPage";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/solutions/startups" },
   title: "For Startups",
   description: "Get ISO 42001, SOC 2, or ISO 27001 done fast without hiring a compliance team. CloudAnzen is built for early-stage companies moving at startup speed.",
 };

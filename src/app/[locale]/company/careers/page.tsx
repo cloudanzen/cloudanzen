@@ -3,6 +3,7 @@ import PageHero from "@/components/PageHero";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/company/careers" },
   title: "Careers",
   description: "Join CloudAnzen and help build the future of continuous GRC. Open roles in engineering, product, and go-to-market.",
 };
