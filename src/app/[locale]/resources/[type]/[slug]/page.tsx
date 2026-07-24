@@ -114,7 +114,11 @@ export default async function ResourceArticlePage({
           <h1 className="heading-xl mb-3 text-slate-950">{article.title}</h1>
           <p className="max-w-2xl text-lg text-slate-600">{article.summary}</p>
           {writer ? (
-            <ArticleByline writer={writer} readTime={article.readTime} />
+            <ArticleByline
+              writer={writer}
+              readTime={article.readTime}
+              publishedAt={article.publishedAt}
+            />
           ) : null}
         </div>
       </section>

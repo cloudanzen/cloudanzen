@@ -26,6 +26,7 @@ export interface ResourceArticle {
   tags: string[];
   featured?: boolean;
   author?: string;
+  publishedAt?: string;
   content: string;
 }
 

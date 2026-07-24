@@ -227,7 +227,7 @@ export function getResourceArticle(
     (a) => a.meta.type === type && a.meta.slug === slug,
   );
   if (!found) return null;
-  const { slug: foundSlug, title, summary, type: t, collection, category, readTime, tags, featured, author } = found.meta;
+  const { slug: foundSlug, title, summary, type: t, collection, category, readTime, tags, featured, author, publishedAt } = found.meta;
   return {
     slug: foundSlug,
     title,
@@ -239,6 +239,7 @@ export function getResourceArticle(
     tags,
     ...(featured !== undefined ? { featured } : {}),
     ...(author !== undefined ? { author } : {}),
+    ...(publishedAt !== undefined ? { publishedAt } : {}),
     content: found.body,
   };
 }
