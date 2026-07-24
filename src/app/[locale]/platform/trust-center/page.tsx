@@ -25,10 +25,11 @@ export default function TrustCenterPage() {
         <div className="max-w-6xl mx-auto">
           <div className="rounded-2xl border border-slate-200 shadow-2xl overflow-hidden bg-white">
             <Image
-              src="/screenshots/TrustCenter.png"
+              src="/screenshots/TrustCenter.jpg"
               alt="CloudAnzen Trust Center interface"
               width={1200}
               height={675}
+              sizes="(max-width: 1024px) 100vw, 1200px"
               className="w-full h-auto"
               priority
             />

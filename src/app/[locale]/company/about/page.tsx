@@ -55,10 +55,12 @@ export default function AboutPage() {
                   {/* Photo */}
                   <div className="relative w-40 h-40 sm:w-48 sm:h-48 rounded-2xl overflow-hidden shadow-lg shrink-0">
                     <Image
-                      src="/team/founder.png"
+                      src="/team/founder.jpg"
                       alt="Sumedha Singh"
                       fill
+                      sizes="(max-width: 640px) 160px, 192px"
                       className="object-cover"
+                      priority
                     />
                   </div>
                   <div className="mt-5">
@@ -104,10 +106,12 @@ export default function AboutPage() {
                   {/* Photo */}
                   <div className="relative w-40 h-40 sm:w-48 sm:h-48 rounded-2xl overflow-hidden shadow-lg shrink-0">
                     <Image
-                      src="/team/cofounder.png"
+                      src="/team/cofounder.jpg"
                       alt="Ajay Narula"
                       fill
+                      sizes="(max-width: 640px) 160px, 192px"
                       className="object-cover"
+                      priority
                     />
                   </div>
                   <div className="mt-5">
