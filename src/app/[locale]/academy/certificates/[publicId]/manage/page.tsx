@@ -1,11 +1,26 @@
 import type { Metadata } from "next";
+import { localeAlternates } from "@/lib/site";
 import ManageFlow from "@/components/academy/ManageFlow";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/academy/certificates/[publicId]/manage" },
+const metaBase: Omit<Metadata, "alternates"> = {
   title: "Manage certificate — CloudAnzen Academy",
   robots: { index: false, follow: false },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    ...metaBase,
+    alternates: localeAlternates(
+      locale,
+      "/academy/certificates/[publicId]/manage",
+    ),
+  };
+}
 
 interface Props {
   params: Promise<{ locale: string; publicId: string }>;

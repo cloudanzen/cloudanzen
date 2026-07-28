@@ -3,10 +3,9 @@ import Link from "next/link";
 import { Award, BookOpen, Clock, ShieldCheck } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import { listCourses } from "@/lib/academy";
-import { SITE_URL } from "@/lib/site";
+import { SITE_URL, localeAlternates } from "@/lib/site";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/academy" },
+const metaBase: Omit<Metadata, "alternates"> = {
   title: "CloudAnzen Academy — Framework-Aware Security Training",
   description:
     "Free, framework-aware security and AI governance training. Take audit-grade ISO 42001, ISO 27001, SOC 2, HIPAA, and NIST CSF courses. Earn verifiable certificates.",
@@ -18,6 +17,18 @@ export const metadata: Metadata = {
     type: "website",
   },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    ...metaBase,
+    alternates: localeAlternates(locale, "/academy"),
+  };
+}
 
 const FRAMEWORK_ACCENT: Record<string, string> = {
   "iso-42001": "from-fuchsia-500 to-violet-500",
@@ -66,13 +77,15 @@ export default async function AcademyPage() {
         <div className="mb-8">
           <h2 className="text-2xl font-bold text-slate-900">Choose a course</h2>
           <p className="text-slate-600 mt-1">
-            All courses are free, take 35–45 minutes, and require an 80% pass score.
+            All courses are free, take 35–45 minutes, and require an 80% pass
+            score.
           </p>
         </div>
 
         {loadError && (
           <div className="rounded-lg border border-rose-200 bg-rose-50 p-4 text-sm text-rose-700">
-            Unable to load the course catalogue right now. Please refresh in a moment.
+            Unable to load the course catalogue right now. Please refresh in a
+            moment.
           </div>
         )}
 

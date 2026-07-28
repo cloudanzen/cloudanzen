@@ -1,11 +1,24 @@
 import type { Metadata } from "next";
+import { localeAlternates } from "@/lib/site";
 import FrameworkPage from "@/components/FrameworkPage";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/frameworks/pci-dss" },
+const metaBase: Omit<Metadata, "alternates"> = {
   title: "PCI DSS Compliance",
-  description: "Map PCI DSS v4.0 requirements, track scoping decisions, and maintain continuous compliance for cardholder data environments.",
+  description:
+    "Map PCI DSS v4.0 requirements, track scoping decisions, and maintain continuous compliance for cardholder data environments.",
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    ...metaBase,
+    alternates: localeAlternates(locale, "/frameworks/pci-dss"),
+  };
+}
 
 export default function PCIDSSPage() {
   return (
@@ -24,11 +37,26 @@ export default function PCIDSSPage() {
         "Continuous monitoring for key PCI controls",
       ]}
       modules={[
-        { title: "Network Security Controls", desc: "Requirement 1-2: Firewall configuration, network segmentation, and service hardening." },
-        { title: "Account & Access Management", desc: "Requirements 7-8: Least privilege, MFA, and identity lifecycle." },
-        { title: "Protect Cardholder Data", desc: "Requirements 3-4: Encryption, key management, and transmission security." },
-        { title: "Vulnerability Management", desc: "Requirements 5-6: Malware protection, patch management, and application security." },
-        { title: "Monitoring & Testing", desc: "Requirements 10-11: Logging, SIEM integration, and periodic testing programs." },
+        {
+          title: "Network Security Controls",
+          desc: "Requirement 1-2: Firewall configuration, network segmentation, and service hardening.",
+        },
+        {
+          title: "Account & Access Management",
+          desc: "Requirements 7-8: Least privilege, MFA, and identity lifecycle.",
+        },
+        {
+          title: "Protect Cardholder Data",
+          desc: "Requirements 3-4: Encryption, key management, and transmission security.",
+        },
+        {
+          title: "Vulnerability Management",
+          desc: "Requirements 5-6: Malware protection, patch management, and application security.",
+        },
+        {
+          title: "Monitoring & Testing",
+          desc: "Requirements 10-11: Logging, SIEM integration, and periodic testing programs.",
+        },
       ]}
       ctaLabel="Simplify your PCI DSS compliance"
       accentColor="bg-violet-700"

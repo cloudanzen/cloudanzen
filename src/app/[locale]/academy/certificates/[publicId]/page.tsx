@@ -4,14 +4,14 @@ import { ShieldX } from "lucide-react";
 import CertificateCard from "@/components/academy/CertificateCard";
 import ShareButtons from "@/components/academy/ShareButtons";
 import { getCertificate } from "@/lib/academy";
-import { SITE_URL } from "@/lib/site";
+import { SITE_URL, localeAlternates } from "@/lib/site";
 
 interface Props {
   params: Promise<{ locale: string; publicId: string }>;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { publicId } = await params;
+  const { locale, publicId } = await params;
   const cert = await getCertificate(publicId).catch(() => null);
   if (!cert || cert.status !== "verified") {
     return {
@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title,
     description,
-    alternates: { canonical: url },
+    alternates: localeAlternates(locale, `/academy/certificates/${publicId}`),
     openGraph: {
       title,
       description,

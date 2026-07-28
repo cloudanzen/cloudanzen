@@ -1,18 +1,28 @@
 import type { Metadata } from "next";
+import { localeAlternates } from "@/lib/site";
 import Link from "next/link";
-import {
-  ArrowRight,
-  Bot,
-  Database,
-  ShieldCheck,
-} from "lucide-react";
+import { ArrowRight, Bot, Database, ShieldCheck } from "lucide-react";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/resources/ai-vendor-model-register-template" },
+const metaBase: Omit<Metadata, "alternates"> = {
   title: "AI Vendor and Model Register Template",
   description:
     "A practical register template for tracking AI vendors, models, versions, use cases, data classes, retention terms, DPA status, regions, and risk ratings.",
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    ...metaBase,
+    alternates: localeAlternates(
+      locale,
+      "/resources/ai-vendor-model-register-template",
+    ),
+  };
+}
 
 const fields = [
   "Vendor",
@@ -113,7 +123,10 @@ export default function AiVendorModelRegisterTemplatePage() {
                 text: "Track DPA status, risk rating, review owner, and next review date from one governance view.",
               },
             ].map(({ icon: Icon, title, text }) => (
-              <div key={title} className="rounded-2xl border border-slate-200 p-6">
+              <div
+                key={title}
+                className="rounded-2xl border border-slate-200 p-6"
+              >
                 <Icon className="mb-5 h-8 w-8 text-fuchsia-600" />
                 <h3 className="mb-3 font-semibold text-slate-900">{title}</h3>
                 <p className="text-sm leading-relaxed text-slate-600">{text}</p>

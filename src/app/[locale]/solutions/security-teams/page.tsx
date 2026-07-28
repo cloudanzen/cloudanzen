@@ -1,11 +1,24 @@
 import type { Metadata } from "next";
+import { localeAlternates } from "@/lib/site";
 import SolutionPage from "@/components/SolutionPage";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/solutions/security-teams" },
+const metaBase: Omit<Metadata, "alternates"> = {
   title: "For Security Teams",
-  description: "Give your security team continuous control visibility, automated evidence collection, and real-time drift alerting across your entire environment.",
+  description:
+    "Give your security team continuous control visibility, automated evidence collection, and real-time drift alerting across your entire environment.",
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    ...metaBase,
+    alternates: localeAlternates(locale, "/solutions/security-teams"),
+  };
+}
 
 export default function SecurityTeamsPage() {
   return (
@@ -24,9 +37,18 @@ export default function SecurityTeamsPage() {
         "API access for custom integrations and SIEM forwarding",
       ]}
       useCases={[
-        { title: "Replace point-in-time audits", desc: "Monitor controls daily instead of scrambling to prove compliance once a year." },
-        { title: "Catch drift before auditors do", desc: "Get alerted the moment a control fails so you can remediate before it becomes a finding." },
-        { title: "Automate evidence collection", desc: "Free your team from manual evidence gathering with native integrations for every tool in your stack." },
+        {
+          title: "Replace point-in-time audits",
+          desc: "Monitor controls daily instead of scrambling to prove compliance once a year.",
+        },
+        {
+          title: "Catch drift before auditors do",
+          desc: "Get alerted the moment a control fails so you can remediate before it becomes a finding.",
+        },
+        {
+          title: "Automate evidence collection",
+          desc: "Free your team from manual evidence gathering with native integrations for every tool in your stack.",
+        },
       ]}
       accentColor="bg-slate-900"
     />

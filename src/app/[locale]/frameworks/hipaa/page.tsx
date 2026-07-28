@@ -1,11 +1,24 @@
 import type { Metadata } from "next";
+import { localeAlternates } from "@/lib/site";
 import FrameworkPage from "@/components/FrameworkPage";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/frameworks/hipaa" },
+const metaBase: Omit<Metadata, "alternates"> = {
   title: "HIPAA Compliance",
-  description: "Map HIPAA Security Rule and Privacy Rule controls, manage Business Associate Agreements, and stay audit-ready with CloudAnzen.",
+  description:
+    "Map HIPAA Security Rule and Privacy Rule controls, manage Business Associate Agreements, and stay audit-ready with CloudAnzen.",
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    ...metaBase,
+    alternates: localeAlternates(locale, "/frameworks/hipaa"),
+  };
+}
 
 export default function HIPAAPage() {
   return (
@@ -24,11 +37,26 @@ export default function HIPAAPage() {
         "Shared controls with SOC 2 and NIST CSF",
       ]}
       modules={[
-        { title: "Administrative Safeguards", desc: "Risk analysis, workforce training, access management policies, and contingency planning." },
-        { title: "Physical Safeguards", desc: "Facility access controls, workstation security, and device controls." },
-        { title: "Technical Safeguards", desc: "Access controls, audit controls, integrity controls, and transmission security." },
-        { title: "BAA Management", desc: "Track Business Associate Agreements and monitor BA compliance status." },
-        { title: "Breach Notification", desc: "Manage incident tracking and notification obligations under the Breach Notification Rule." },
+        {
+          title: "Administrative Safeguards",
+          desc: "Risk analysis, workforce training, access management policies, and contingency planning.",
+        },
+        {
+          title: "Physical Safeguards",
+          desc: "Facility access controls, workstation security, and device controls.",
+        },
+        {
+          title: "Technical Safeguards",
+          desc: "Access controls, audit controls, integrity controls, and transmission security.",
+        },
+        {
+          title: "BAA Management",
+          desc: "Track Business Associate Agreements and monitor BA compliance status.",
+        },
+        {
+          title: "Breach Notification",
+          desc: "Manage incident tracking and notification obligations under the Breach Notification Rule.",
+        },
       ]}
       ctaLabel="Start your HIPAA compliance program"
       accentColor="bg-emerald-700"

@@ -1,19 +1,48 @@
 import type { Metadata } from "next";
+import { localeAlternates } from "@/lib/site";
 import PageHero from "@/components/PageHero";
 import { ArrowRight } from "lucide-react";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/company/careers" },
+const metaBase: Omit<Metadata, "alternates"> = {
   title: "Careers",
-  description: "Join CloudAnzen and help build the future of continuous GRC. Open roles in engineering, product, and go-to-market.",
+  description:
+    "Join CloudAnzen and help build the future of continuous GRC. Open roles in engineering, product, and go-to-market.",
 };
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    ...metaBase,
+    alternates: localeAlternates(locale, "/company/careers"),
+  };
+}
+
 const roles = [
-  { title: "Senior Full-Stack Engineer", team: "Engineering", location: "Remote (US/EU)" },
+  {
+    title: "Senior Full-Stack Engineer",
+    team: "Engineering",
+    location: "Remote (US/EU)",
+  },
   { title: "GRC Product Manager", team: "Product", location: "Remote" },
-  { title: "Enterprise Account Executive", team: "Sales", location: "San Francisco / Remote" },
-  { title: "Security Solutions Engineer", team: "Sales Engineering", location: "Remote" },
-  { title: "Customer Success Manager", team: "Customer Success", location: "Remote" },
+  {
+    title: "Enterprise Account Executive",
+    team: "Sales",
+    location: "San Francisco / Remote",
+  },
+  {
+    title: "Security Solutions Engineer",
+    team: "Sales Engineering",
+    location: "Remote",
+  },
+  {
+    title: "Customer Success Manager",
+    team: "Customer Success",
+    location: "Remote",
+  },
 ];
 
 export default function CareersPage() {
@@ -31,11 +60,18 @@ export default function CareersPage() {
           <h2 className="heading-xl text-slate-900 mb-8">Open roles</h2>
           <div className="space-y-4 mb-16">
             {roles.map(({ title, team, location }) => (
-              <div key={title} className="group flex items-center justify-between rounded-2xl border border-slate-200 p-6 transition-all hover:border-fuchsia-200 hover:shadow-sm">
+              <div
+                key={title}
+                className="group flex items-center justify-between rounded-2xl border border-slate-200 p-6 transition-all hover:border-fuchsia-200 hover:shadow-sm"
+              >
                 <div>
-                  <h3 className="mb-1 font-semibold text-slate-900 group-hover:text-fuchsia-700">{title}</h3>
+                  <h3 className="mb-1 font-semibold text-slate-900 group-hover:text-fuchsia-700">
+                    {title}
+                  </h3>
                   <div className="flex gap-3">
-                    <span className="rounded-full bg-fuchsia-50 px-2.5 py-0.5 text-xs font-medium text-fuchsia-600">{team}</span>
+                    <span className="rounded-full bg-fuchsia-50 px-2.5 py-0.5 text-xs font-medium text-fuchsia-600">
+                      {team}
+                    </span>
                     <span className="text-xs text-slate-500">{location}</span>
                   </div>
                 </div>
@@ -44,9 +80,17 @@ export default function CareersPage() {
             ))}
           </div>
           <div className="bg-slate-50 rounded-2xl border border-slate-200 p-10 text-center">
-            <h3 className="font-bold text-slate-900 text-xl mb-3">Don&apos;t see a role that fits?</h3>
-            <p className="text-slate-500 mb-6">We&apos;re always interested in meeting talented people. Send us a note and tell us how you&apos;d contribute.</p>
-            <a href="mailto:careers@cloudanzen.com" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-900 text-white font-semibold hover:bg-slate-800 transition-colors text-sm">
+            <h3 className="font-bold text-slate-900 text-xl mb-3">
+              Don&apos;t see a role that fits?
+            </h3>
+            <p className="text-slate-500 mb-6">
+              We&apos;re always interested in meeting talented people. Send us a
+              note and tell us how you&apos;d contribute.
+            </p>
+            <a
+              href="mailto:careers@cloudanzen.com"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-900 text-white font-semibold hover:bg-slate-800 transition-colors text-sm"
+            >
               careers@cloudanzen.com
             </a>
           </div>

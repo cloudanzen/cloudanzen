@@ -1,14 +1,26 @@
 import type { Metadata } from "next";
+import { localeAlternates } from "@/lib/site";
 import Link from "next/link";
 import { Award, BookOpen, ShieldCheck, Users } from "lucide-react";
 import PageHero from "@/components/PageHero";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/platform/cloudanzen-academy" },
+const metaBase: Omit<Metadata, "alternates"> = {
   title: "CloudAnzen Academy",
   description:
     "Framework-aware security and AI governance training built into the CloudAnzen GRC platform. Role-based assignments, auditor-ready training records, verified certificates.",
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    ...metaBase,
+    alternates: localeAlternates(locale, "/platform/cloudanzen-academy"),
+  };
+}
 
 export default function CloudAnzenAcademyPage() {
   return (

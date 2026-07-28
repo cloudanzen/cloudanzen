@@ -1,11 +1,24 @@
 import type { Metadata } from "next";
+import { localeAlternates } from "@/lib/site";
 import FrameworkPage from "@/components/FrameworkPage";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/frameworks/gdpr" },
+const metaBase: Omit<Metadata, "alternates"> = {
   title: "GDPR Compliance",
-  description: "Map GDPR requirements to controls, manage data subject requests, and demonstrate compliance with CloudAnzen.",
+  description:
+    "Map GDPR requirements to controls, manage data subject requests, and demonstrate compliance with CloudAnzen.",
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    ...metaBase,
+    alternates: localeAlternates(locale, "/frameworks/gdpr"),
+  };
+}
 
 export default function GDPRPage() {
   return (
@@ -24,11 +37,26 @@ export default function GDPRPage() {
         "Shared controls with ISO 27001 and SOC 2",
       ]}
       modules={[
-        { title: "Lawful Basis & Consent", desc: "Track legal bases for processing and manage consent records." },
-        { title: "Records of Processing Activities", desc: "Maintain Article 30 RoPA with data flows, recipients, and retention schedules." },
-        { title: "Data Subject Rights", desc: "Manage access, erasure, portability, and objection requests within statutory timelines." },
-        { title: "Data Protection Impact Assessments", desc: "Run DPIA workflows for high-risk processing activities." },
-        { title: "Breach Notification", desc: "Track incidents and manage 72-hour notification obligations." },
+        {
+          title: "Lawful Basis & Consent",
+          desc: "Track legal bases for processing and manage consent records.",
+        },
+        {
+          title: "Records of Processing Activities",
+          desc: "Maintain Article 30 RoPA with data flows, recipients, and retention schedules.",
+        },
+        {
+          title: "Data Subject Rights",
+          desc: "Manage access, erasure, portability, and objection requests within statutory timelines.",
+        },
+        {
+          title: "Data Protection Impact Assessments",
+          desc: "Run DPIA workflows for high-risk processing activities.",
+        },
+        {
+          title: "Breach Notification",
+          desc: "Track incidents and manage 72-hour notification obligations.",
+        },
       ]}
       ctaLabel="Demonstrate GDPR compliance"
       accentColor="bg-[linear-gradient(135deg,#fdf4ff_0%,#fff7ed_50%,#ecfdf5_100%)] border border-white/80 shadow-[0_18px_40px_rgba(15,23,42,0.06)]"

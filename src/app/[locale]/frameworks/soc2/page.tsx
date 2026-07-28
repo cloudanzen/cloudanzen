@@ -1,11 +1,24 @@
 import type { Metadata } from "next";
+import { localeAlternates } from "@/lib/site";
 import FrameworkPage from "@/components/FrameworkPage";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/frameworks/soc2" },
+const metaBase: Omit<Metadata, "alternates"> = {
   title: "SOC 2 Compliance",
-  description: "Automate your SOC 2 Type I and Type II journey with CloudAnzen. Map controls, collect evidence continuously, and collaborate with auditors in one platform.",
+  description:
+    "Automate your SOC 2 Type I and Type II journey with CloudAnzen. Map controls, collect evidence continuously, and collaborate with auditors in one platform.",
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    ...metaBase,
+    alternates: localeAlternates(locale, "/frameworks/soc2"),
+  };
+}
 
 export default function SOC2Page() {
   return (
@@ -24,11 +37,26 @@ export default function SOC2Page() {
         "Shared controls across SOC 2 and other frameworks (ISO 42001, ISO 27001, HIPAA, etc.)",
       ]}
       modules={[
-        { title: "Security (CC)", desc: "Access controls, logical security, change management, risk assessment, incident response, and more." },
-        { title: "Availability (A)", desc: "Uptime monitoring, capacity management, and recovery controls mapped to evidence." },
-        { title: "Confidentiality (C)", desc: "Data classification, encryption, and disposal controls." },
-        { title: "Processing Integrity (PI)", desc: "Input/output controls and processing completeness monitoring." },
-        { title: "Privacy (P)", desc: "Personal data handling aligned with AICPA privacy principles." },
+        {
+          title: "Security (CC)",
+          desc: "Access controls, logical security, change management, risk assessment, incident response, and more.",
+        },
+        {
+          title: "Availability (A)",
+          desc: "Uptime monitoring, capacity management, and recovery controls mapped to evidence.",
+        },
+        {
+          title: "Confidentiality (C)",
+          desc: "Data classification, encryption, and disposal controls.",
+        },
+        {
+          title: "Processing Integrity (PI)",
+          desc: "Input/output controls and processing completeness monitoring.",
+        },
+        {
+          title: "Privacy (P)",
+          desc: "Personal data handling aligned with AICPA privacy principles.",
+        },
       ]}
       ctaLabel="Start your SOC 2 program"
       accentColor="bg-[linear-gradient(135deg,#fdf4ff_0%,#fff7ed_50%,#ecfdf5_100%)] border border-white/80 shadow-[0_18px_40px_rgba(15,23,42,0.06)]"

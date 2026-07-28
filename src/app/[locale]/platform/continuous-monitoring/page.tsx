@@ -1,15 +1,27 @@
 import type { Metadata } from "next";
+import { localeAlternates } from "@/lib/site";
 import Link from "next/link";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import { ArrowRight, Eye, Bell, Activity, Shield } from "lucide-react";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/platform/continuous-monitoring" },
+const metaBase: Omit<Metadata, "alternates"> = {
   title: "Continuous Monitoring",
   description:
     "Replace point-in-time audits with always-on control health monitoring. CloudAnzen alerts you to drift before it becomes an audit finding.",
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    ...metaBase,
+    alternates: localeAlternates(locale, "/platform/continuous-monitoring"),
+  };
+}
 
 const features = [
   {

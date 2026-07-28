@@ -1,11 +1,24 @@
 import type { Metadata } from "next";
+import { localeAlternates } from "@/lib/site";
 import SolutionPage from "@/components/SolutionPage";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/solutions/grc-teams" },
+const metaBase: Omit<Metadata, "alternates"> = {
   title: "For GRC Teams",
-  description: "Purpose-built GRC workflows for compliance managers, risk leads, and audit teams. Replace spreadsheets with a platform that actually works.",
+  description:
+    "Purpose-built GRC workflows for compliance managers, risk leads, and audit teams. Replace spreadsheets with a platform that actually works.",
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    ...metaBase,
+    alternates: localeAlternates(locale, "/solutions/grc-teams"),
+  };
+}
 
 export default function GRCTeamsPage() {
   return (
@@ -25,9 +38,18 @@ export default function GRCTeamsPage() {
         "Management and board-ready reporting out of the box",
       ]}
       useCases={[
-        { title: "Consolidate GRC from spreadsheets", desc: "Move your risk register, control library, and vendor list into a single system of record." },
-        { title: "Run annual audit cycles", desc: "Manage Type I → Type II progression, evidence collection, and auditor coordination in one place." },
-        { title: "Demonstrate program maturity", desc: "Produce board-ready metrics showing risk posture, compliance status, and control health trends." },
+        {
+          title: "Consolidate GRC from spreadsheets",
+          desc: "Move your risk register, control library, and vendor list into a single system of record.",
+        },
+        {
+          title: "Run annual audit cycles",
+          desc: "Manage Type I → Type II progression, evidence collection, and auditor coordination in one place.",
+        },
+        {
+          title: "Demonstrate program maturity",
+          desc: "Produce board-ready metrics showing risk posture, compliance status, and control health trends.",
+        },
       ]}
       accentColor="bg-[linear-gradient(135deg,#fdf4ff_0%,#fff7ed_50%,#ecfdf5_100%)] border border-white/80 shadow-[0_18px_40px_rgba(15,23,42,0.06)]"
     />

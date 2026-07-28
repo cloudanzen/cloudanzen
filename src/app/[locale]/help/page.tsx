@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { localeAlternates } from "@/lib/site";
 import Link from "next/link";
 import {
   Rocket,
@@ -21,12 +22,23 @@ import {
 import { helpCategories } from "@/lib/help-content";
 import HelpSearch from "@/components/HelpSearch";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/help" },
+const metaBase: Omit<Metadata, "alternates"> = {
   title: "Help Center",
   description:
     "Find answers, guides, and resources to get the most out of CloudAnzen's GRC platform.",
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    ...metaBase,
+    alternates: localeAlternates(locale, "/help"),
+  };
+}
 
 const iconMap: Record<string, React.ReactNode> = {
   Rocket: <Rocket className="w-6 h-6" />,

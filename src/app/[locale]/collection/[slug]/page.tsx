@@ -8,6 +8,7 @@ import {
   resourceTypes,
 } from "@/lib/resources-content";
 import { getArticleMetasByCollection } from "@/lib/articles";
+import { localeAlternates } from "@/lib/site";
 
 export async function generateStaticParams() {
   return resourceCollections.map((collection) => ({ slug: collection.slug }));
@@ -16,9 +17,9 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
-  const { slug } = await params;
+  const { locale, slug } = await params;
   const collection = getCollection(slug);
 
   if (!collection) {
@@ -28,7 +29,7 @@ export async function generateMetadata({
   return {
     title: `${collection.title} Collection`,
     description: collection.summary,
-    alternates: { canonical: `/collection/${slug}` },
+    alternates: localeAlternates(locale, `/collection/${slug}`),
   };
 }
 
@@ -115,7 +116,7 @@ export default async function CollectionPage({
         <div className="page-shell">
           <div className="flex items-center justify-between gap-6 mb-10">
             <div>
-               <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-fuchsia-600">
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-fuchsia-600">
                 Collection Articles
               </p>
               <h2 className="heading-lg text-slate-900">Browse the full set</h2>

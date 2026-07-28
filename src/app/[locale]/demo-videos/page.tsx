@@ -1,15 +1,27 @@
 import type { Metadata } from "next";
+import { localeAlternates } from "@/lib/site";
 import Link from "next/link";
 import DemoVideoGallery from "@/components/DemoVideoGallery";
 import PageHero from "@/components/PageHero";
 import { ArrowRight, Gauge, Globe2, ShieldCheck } from "lucide-react";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/demo-videos" },
+const metaBase: Omit<Metadata, "alternates"> = {
   title: "Demo Videos",
   description:
     "Watch short CloudAnzen demo videos covering the marketing overview, platform workspace, and customer app experience.",
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    ...metaBase,
+    alternates: localeAlternates(locale, "/demo-videos"),
+  };
+}
 
 const demoVideos = [
   {
@@ -100,7 +112,10 @@ export default function DemoVideosPage() {
         <div className="page-shell">
           <div className="grid gap-6 lg:grid-cols-3">
             {deliveryNotes.map(({ icon: Icon, title, description }) => (
-              <div key={title} className="rounded-2xl border border-slate-200 bg-white p-6">
+              <div
+                key={title}
+                className="rounded-2xl border border-slate-200 bg-white p-6"
+              >
                 <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-xl bg-fuchsia-50 text-fuchsia-700">
                   <Icon className="h-5 w-5" />
                 </div>
@@ -123,7 +138,9 @@ export default function DemoVideosPage() {
               <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-fuchsia-200">
                 Want the guided version?
               </p>
-              <h2 className="heading-lg mb-3">Walk through CloudAnzen with us</h2>
+              <h2 className="heading-lg mb-3">
+                Walk through CloudAnzen with us
+              </h2>
               <p className="text-slate-300">
                 Use the videos for async evaluation, then book time when you
                 want to map CloudAnzen to your frameworks, integrations, and

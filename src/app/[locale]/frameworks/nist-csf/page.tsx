@@ -1,11 +1,24 @@
 import type { Metadata } from "next";
+import { localeAlternates } from "@/lib/site";
 import FrameworkPage from "@/components/FrameworkPage";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/frameworks/nist-csf" },
+const metaBase: Omit<Metadata, "alternates"> = {
   title: "NIST CSF Compliance",
-  description: "Implement the NIST Cybersecurity Framework 2.0 to structure your security program and satisfy enterprise and government security requirements.",
+  description:
+    "Implement the NIST Cybersecurity Framework 2.0 to structure your security program and satisfy enterprise and government security requirements.",
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    ...metaBase,
+    alternates: localeAlternates(locale, "/frameworks/nist-csf"),
+  };
+}
 
 export default function NISTCSFPage() {
   return (
@@ -24,11 +37,26 @@ export default function NISTCSFPage() {
         "Custom profile support for sector-specific requirements",
       ]}
       modules={[
-        { title: "Govern (GV)", desc: "Organizational context, risk strategy, supply chain risk, and oversight — the new CSF 2.0 function." },
-        { title: "Identify (ID)", desc: "Asset management, risk assessment, and improvement planning." },
-        { title: "Protect (PR)", desc: "Identity management, awareness training, data protection, and platform security." },
-        { title: "Detect (DE)", desc: "Continuous monitoring, adverse event detection, and anomaly analysis." },
-        { title: "Respond & Recover (RS/RC)", desc: "Incident management, communications, analysis, and recovery planning." },
+        {
+          title: "Govern (GV)",
+          desc: "Organizational context, risk strategy, supply chain risk, and oversight — the new CSF 2.0 function.",
+        },
+        {
+          title: "Identify (ID)",
+          desc: "Asset management, risk assessment, and improvement planning.",
+        },
+        {
+          title: "Protect (PR)",
+          desc: "Identity management, awareness training, data protection, and platform security.",
+        },
+        {
+          title: "Detect (DE)",
+          desc: "Continuous monitoring, adverse event detection, and anomaly analysis.",
+        },
+        {
+          title: "Respond & Recover (RS/RC)",
+          desc: "Incident management, communications, analysis, and recovery planning.",
+        },
       ]}
       ctaLabel="Build your NIST CSF program"
       accentColor="bg-sky-700"

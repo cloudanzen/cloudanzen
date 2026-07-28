@@ -11,6 +11,7 @@ import {
 } from "@/lib/articles";
 import { markdownToHtml } from "@/lib/markdown-to-html";
 import { getWriter } from "@/lib/writers";
+import { localeAlternates } from "@/lib/site";
 import ArticleByline from "@/components/ArticleByline";
 
 export async function generateStaticParams() {
@@ -23,9 +24,9 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ type: string; slug: string }>;
+  params: Promise<{ locale: string; type: string; slug: string }>;
 }): Promise<Metadata> {
-  const { type, slug } = await params;
+  const { locale, type, slug } = await params;
   const article = getResourceArticleMeta(type, slug);
 
   if (!article) {
@@ -35,7 +36,7 @@ export async function generateMetadata({
   return {
     title: `${article.title} | CloudAnzen Resources`,
     description: article.summary,
-    alternates: { canonical: `/resources/${type}/${slug}` },
+    alternates: localeAlternates(locale, `/resources/${type}/${slug}`),
   };
 }
 

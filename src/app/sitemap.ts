@@ -6,6 +6,38 @@ import { SITE_URL } from "@/lib/site";
 
 const BASE_URL = SITE_URL;
 
+type SitemapEntry = MetadataRoute.Sitemap[number];
+
+// hreflang cluster for a path, matching the on-page <link rel="alternate"> tags.
+function languages(path: string) {
+  const en = `${BASE_URL}${path}`;
+  const ja = `${BASE_URL}/ja${path}`;
+  return { en, ja, "x-default": en };
+}
+
+// Emit the en + /ja pair for a path. lastModified is only set when we have a
+// real date — a per-request "now" on every URL trains Google to distrust it.
+function localePair(
+  path: string,
+  opts: {
+    changeFrequency?: SitemapEntry["changeFrequency"];
+    priority?: number;
+    lastModified?: Date;
+  },
+): SitemapEntry[] {
+  const langs = languages(path);
+  const base: Omit<SitemapEntry, "url"> = {
+    ...(opts.lastModified ? { lastModified: opts.lastModified } : {}),
+    ...(opts.changeFrequency ? { changeFrequency: opts.changeFrequency } : {}),
+    ...(opts.priority !== undefined ? { priority: opts.priority } : {}),
+    alternates: { languages: langs },
+  };
+  return [
+    { url: langs.en, ...base },
+    { url: langs.ja, ...base },
+  ];
+}
+
 // Static routes (English has no prefix, Japanese gets /ja/)
 const staticRoutes = [
   "",
@@ -55,125 +87,56 @@ const staticRoutes = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
   const entries: MetadataRoute.Sitemap = [];
 
-  // Static routes — both locales
+  // Static routes — no lastModified (nothing reliable to report).
   for (const route of staticRoutes) {
-    const enUrl = `${BASE_URL}${route}`;
-    const jaUrl = `${BASE_URL}/ja${route}`;
     entries.push(
-      {
-        url: enUrl,
-        lastModified: now,
+      ...localePair(route, {
         changeFrequency: "weekly",
         priority: route === "" ? 1.0 : 0.8,
-        alternates: {
-          languages: {
-            en: enUrl,
-            ja: jaUrl,
-          },
-        },
-      },
-      {
-        url: jaUrl,
-        lastModified: now,
-        changeFrequency: "weekly",
-        priority: route === "" ? 1.0 : 0.8,
-        alternates: {
-          languages: {
-            en: enUrl,
-            ja: jaUrl,
-          },
-        },
-      }
+      }),
     );
   }
 
   // Resource type index pages
   for (const type of resourceTypes) {
-    const enUrl = `${BASE_URL}/resources/${type.slug}`;
-    const jaUrl = `${BASE_URL}/ja/resources/${type.slug}`;
     entries.push(
-      {
-        url: enUrl,
-        lastModified: now,
+      ...localePair(`/resources/${type.slug}`, {
         changeFrequency: "weekly",
         priority: 0.7,
-        alternates: { languages: { en: enUrl, ja: jaUrl } },
-      },
-      {
-        url: jaUrl,
-        lastModified: now,
-        changeFrequency: "weekly",
-        priority: 0.7,
-        alternates: { languages: { en: enUrl, ja: jaUrl } },
-      }
+      }),
     );
   }
 
-  // Resource articles
+  // Resource articles — real publishedAt where present.
   for (const article of getArticleIndex()) {
-    const enUrl = `${BASE_URL}/resources/${article.type}/${article.slug}`;
-    const jaUrl = `${BASE_URL}/ja/resources/${article.type}/${article.slug}`;
     entries.push(
-      {
-        url: enUrl,
-        lastModified: now,
+      ...localePair(`/resources/${article.type}/${article.slug}`, {
         changeFrequency: "monthly",
         priority: 0.6,
-        alternates: { languages: { en: enUrl, ja: jaUrl } },
-      },
-      {
-        url: jaUrl,
-        lastModified: now,
-        changeFrequency: "monthly",
-        priority: 0.6,
-        alternates: { languages: { en: enUrl, ja: jaUrl } },
-      }
+        lastModified: article.publishedAt
+          ? new Date(article.publishedAt)
+          : undefined,
+      }),
     );
   }
 
-  // Help category pages
+  // Help category pages + articles
   for (const category of helpCategories) {
-    const enUrl = `${BASE_URL}/help/${category.slug}`;
-    const jaUrl = `${BASE_URL}/ja/help/${category.slug}`;
     entries.push(
-      {
-        url: enUrl,
-        lastModified: now,
+      ...localePair(`/help/${category.slug}`, {
         changeFrequency: "monthly",
         priority: 0.6,
-        alternates: { languages: { en: enUrl, ja: jaUrl } },
-      },
-      {
-        url: jaUrl,
-        lastModified: now,
-        changeFrequency: "monthly",
-        priority: 0.6,
-        alternates: { languages: { en: enUrl, ja: jaUrl } },
-      }
+      }),
     );
 
-    // Help articles
     for (const article of category.articles) {
-      const enArticleUrl = `${BASE_URL}/help/${category.slug}/${article.slug}`;
-      const jaArticleUrl = `${BASE_URL}/ja/help/${category.slug}/${article.slug}`;
       entries.push(
-        {
-          url: enArticleUrl,
-          lastModified: now,
+        ...localePair(`/help/${category.slug}/${article.slug}`, {
           changeFrequency: "monthly",
           priority: 0.5,
-          alternates: { languages: { en: enArticleUrl, ja: jaArticleUrl } },
-        },
-        {
-          url: jaArticleUrl,
-          lastModified: now,
-          changeFrequency: "monthly",
-          priority: 0.5,
-          alternates: { languages: { en: enArticleUrl, ja: jaArticleUrl } },
-        }
+        }),
       );
     }
   }

@@ -1,11 +1,24 @@
 import type { Metadata } from "next";
+import { localeAlternates } from "@/lib/site";
 import SolutionPage from "@/components/SolutionPage";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/solutions/saas" },
+const metaBase: Omit<Metadata, "alternates"> = {
   title: "For SaaS Companies",
-  description: "Win enterprise deals faster with continuous compliance, a branded trust center, and questionnaire automation built for SaaS companies.",
+  description:
+    "Win enterprise deals faster with continuous compliance, a branded trust center, and questionnaire automation built for SaaS companies.",
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    ...metaBase,
+    alternates: localeAlternates(locale, "/solutions/saas"),
+  };
+}
 
 export default function SaaSPage() {
   return (
@@ -25,12 +38,22 @@ export default function SaaSPage() {
         "Multi-framework coverage (ISO 42001 + SOC 2 + GDPR + HIPAA) without duplicate work",
       ]}
       useCases={[
-        { title: "Unblock enterprise deals", desc: "Give security questionnaire responders the tools to respond in days, not weeks." },
-        { title: "Proactive trust center", desc: "Publish compliance status so prospects can self-serve before they even ask." },
-        { title: "Scale beyond one framework", desc: "Add ISO 42001, GDPR, HIPAA, or ISO 27001 alongside SOC 2 without starting from scratch." },
+        {
+          title: "Unblock enterprise deals",
+          desc: "Give security questionnaire responders the tools to respond in days, not weeks.",
+        },
+        {
+          title: "Proactive trust center",
+          desc: "Publish compliance status so prospects can self-serve before they even ask.",
+        },
+        {
+          title: "Scale beyond one framework",
+          desc: "Add ISO 42001, GDPR, HIPAA, or ISO 27001 alongside SOC 2 without starting from scratch.",
+        },
       ]}
       testimonial={{
-        quote: "Our trust center removes the friction from enterprise security reviews. Deals that used to take 3 extra weeks for security paperwork now move in days.",
+        quote:
+          "Our trust center removes the friction from enterprise security reviews. Deals that used to take 3 extra weeks for security paperwork now move in days.",
         name: "Sarah Chen",
         role: "Head of Security, B2B SaaS",
       }}

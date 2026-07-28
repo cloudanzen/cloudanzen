@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { localeAlternates } from "@/lib/site";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -8,12 +9,26 @@ import {
   ShieldCheck,
 } from "lucide-react";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/resources/ai-security-questionnaire-pack" },
+const metaBase: Omit<Metadata, "alternates"> = {
   title: "AI Security Questionnaire Pack",
   description:
     "A buyer-facing AI security questionnaire pack with common enterprise questions about model providers, customer data, BYOK, retention, and human oversight.",
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    ...metaBase,
+    alternates: localeAlternates(
+      locale,
+      "/resources/ai-security-questionnaire-pack",
+    ),
+  };
+}
 
 const questionGroups = [
   {
@@ -99,7 +114,10 @@ export default function AiSecurityQuestionnairePackPage() {
 
           <div className="grid gap-6 lg:grid-cols-3">
             {questionGroups.map(({ title, questions }) => (
-              <div key={title} className="rounded-3xl border border-slate-200 p-7">
+              <div
+                key={title}
+                className="rounded-3xl border border-slate-200 p-7"
+              >
                 <FileQuestion className="mb-5 h-8 w-8 text-fuchsia-600" />
                 <h3 className="mb-4 text-xl font-semibold text-slate-900">
                   {title}
@@ -129,7 +147,10 @@ export default function AiSecurityQuestionnairePackPage() {
                 text: "Prepare answers for BYOK, data retention, model routing, customer opt-out, and dedicated deployment questions.",
               },
             ].map(({ icon: Icon, title, text }) => (
-              <div key={title} className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+              <div
+                key={title}
+                className="rounded-2xl border border-slate-200 bg-slate-50 p-6"
+              >
                 <Icon className="mb-5 h-8 w-8 text-slate-950" />
                 <h3 className="mb-3 font-semibold text-slate-900">{title}</h3>
                 <p className="text-sm leading-relaxed text-slate-600">{text}</p>
