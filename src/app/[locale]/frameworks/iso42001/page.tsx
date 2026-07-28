@@ -1,12 +1,24 @@
 import type { Metadata } from "next";
+import { localeAlternates } from "@/lib/site";
 import FrameworkPage from "@/components/FrameworkPage";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/frameworks/iso42001" },
+const metaBase: Omit<Metadata, "alternates"> = {
   title: "ISO 42001 AI Management System",
   description:
     "Build ISO/IEC 42001 readiness for AI governance, AI risk management, model oversight, and audit-ready evidence with CloudAnzen.",
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    ...metaBase,
+    alternates: localeAlternates(locale, "/frameworks/iso42001"),
+  };
+}
 
 export default function ISO42001Page() {
   return (
@@ -25,11 +37,26 @@ export default function ISO42001Page() {
         "Trust-center and questionnaire evidence packages for enterprise AI security reviews",
       ]}
       modules={[
-        { title: "AI System Inventory", desc: "Track AI features, models, providers, RAG pipelines, training data, owners, and customer-data exposure." },
-        { title: "AI Risk Management", desc: "Review risks around prompt injection, data leakage, model output quality, human oversight, and provider dependency." },
-        { title: "Governance & Accountability", desc: "Assign owners, approve AI use cases, review policies, and maintain decision history for AI operations." },
-        { title: "Monitoring & Evidence", desc: "Collect evidence from integrations, manual reviews, incidents, model changes, and recurring AI control checks." },
-        { title: "Buyer Assurance", desc: "Package AI governance evidence for security questionnaires, trust centers, audits, and enterprise diligence." },
+        {
+          title: "AI System Inventory",
+          desc: "Track AI features, models, providers, RAG pipelines, training data, owners, and customer-data exposure.",
+        },
+        {
+          title: "AI Risk Management",
+          desc: "Review risks around prompt injection, data leakage, model output quality, human oversight, and provider dependency.",
+        },
+        {
+          title: "Governance & Accountability",
+          desc: "Assign owners, approve AI use cases, review policies, and maintain decision history for AI operations.",
+        },
+        {
+          title: "Monitoring & Evidence",
+          desc: "Collect evidence from integrations, manual reviews, incidents, model changes, and recurring AI control checks.",
+        },
+        {
+          title: "Buyer Assurance",
+          desc: "Package AI governance evidence for security questionnaires, trust centers, audits, and enterprise diligence.",
+        },
       ]}
       ctaLabel="Build your ISO 42001 program"
       accentColor="bg-[linear-gradient(135deg,#fdf4ff_0%,#fff7ed_50%,#ecfdf5_100%)] border border-white/80 shadow-[0_18px_40px_rgba(15,23,42,0.06)]"

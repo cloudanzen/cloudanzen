@@ -1,11 +1,24 @@
 import type { Metadata } from "next";
+import { localeAlternates } from "@/lib/site";
 import SolutionPage from "@/components/SolutionPage";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/solutions/scaleups" },
+const metaBase: Omit<Metadata, "alternates"> = {
   title: "For Scale-ups",
-  description: "Scale your GRC program from one framework to many without rebuilding from scratch. CloudAnzen grows with your compliance program.",
+  description:
+    "Scale your GRC program from one framework to many without rebuilding from scratch. CloudAnzen grows with your compliance program.",
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    ...metaBase,
+    alternates: localeAlternates(locale, "/solutions/scaleups"),
+  };
+}
 
 export default function ScaleupsPage() {
   return (
@@ -24,10 +37,22 @@ export default function ScaleupsPage() {
         "Advanced reporting for board-level GRC program visibility",
       ]}
       useCases={[
-        { title: "Add ISO 42001 for AI assurance", desc: "Reuse security, risk, policy, and vendor evidence while adding AI governance-specific reviews." },
-        { title: "Add ISO 27001 to your SOC 2 program", desc: "Reuse 60–70% of SOC 2 controls and evidence directly in your ISO 27001 program." },
-        { title: "GDPR compliance for EU expansion", desc: "Layer GDPR requirements onto your existing privacy and security controls." },
-        { title: "Mature vendor risk as you scale", desc: "Move from informal vendor reviews to a structured, auditable third-party risk program." },
+        {
+          title: "Add ISO 42001 for AI assurance",
+          desc: "Reuse security, risk, policy, and vendor evidence while adding AI governance-specific reviews.",
+        },
+        {
+          title: "Add ISO 27001 to your SOC 2 program",
+          desc: "Reuse 60–70% of SOC 2 controls and evidence directly in your ISO 27001 program.",
+        },
+        {
+          title: "GDPR compliance for EU expansion",
+          desc: "Layer GDPR requirements onto your existing privacy and security controls.",
+        },
+        {
+          title: "Mature vendor risk as you scale",
+          desc: "Move from informal vendor reviews to a structured, auditable third-party risk program.",
+        },
       ]}
       accentColor="bg-indigo-700"
     />

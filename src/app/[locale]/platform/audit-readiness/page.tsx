@@ -1,14 +1,26 @@
 import type { Metadata } from "next";
+import { localeAlternates } from "@/lib/site";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import { CheckCircle2, ArrowRight, Users, FileCheck } from "lucide-react";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/platform/audit-readiness" },
+const metaBase: Omit<Metadata, "alternates"> = {
   title: "Audit Readiness",
   description:
     "Organize evidence, manage auditor access, and collaborate in a dedicated audit workspace. CloudAnzen makes audit preparation operational.",
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    ...metaBase,
+    alternates: localeAlternates(locale, "/platform/audit-readiness"),
+  };
+}
 
 export default function AuditReadinessPage() {
   return (

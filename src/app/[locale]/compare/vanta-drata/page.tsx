@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { localeAlternates } from "@/lib/site";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -14,17 +15,29 @@ import {
   Sparkles,
 } from "lucide-react";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/compare/vanta-drata" },
+const metaBase: Omit<Metadata, "alternates"> = {
   title: "CloudAnzen vs Vanta vs Drata",
   description:
     "Compare CloudAnzen, Vanta, and Drata across features, pricing model, AI workflows, trust center capabilities, and compliance automation fit.",
 };
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    ...metaBase,
+    alternates: localeAlternates(locale, "/compare/vanta-drata"),
+  };
+}
+
 const competitors = [
   {
     name: "CloudAnzen",
-    position: "AI-native trust operations for lean teams and growing GRC programs",
+    position:
+      "AI-native trust operations for lean teams and growing GRC programs",
     pricing: "$499/mo Startup, $1,499/mo Growth, custom Enterprise",
     bestFor:
       "Teams that want transparent pricing, trust workflows, AI-assisted questionnaires, risk, vendor, evidence, and compliance in one workspace.",
@@ -33,7 +46,8 @@ const competitors = [
   {
     name: "Vanta",
     position: "Established trust management and compliance automation platform",
-    pricing: "Personalized quote; final cost varies by plan, company size, frameworks, and add-ons",
+    pricing:
+      "Personalized quote; final cost varies by plan, company size, frameworks, and add-ons",
     bestFor:
       "Teams that want a mature vendor ecosystem and broad compliance automation with quote-based packaging.",
     highlight: false,
@@ -41,7 +55,8 @@ const competitors = [
   {
     name: "Drata",
     position: "Established compliance automation and GRC platform",
-    pricing: "Personalized quote; packaged by plan, framework scope, GRC needs, and add-ons",
+    pricing:
+      "Personalized quote; packaged by plan, framework scope, GRC needs, and add-ons",
     bestFor:
       "Teams that want a larger GRC platform with implementation support and enterprise/compliance automation depth.",
     highlight: false,
@@ -51,9 +66,12 @@ const competitors = [
 const comparisonRows = [
   {
     category: "Published cost clarity",
-    cloudanzen: "Transparent public pricing for Startup and Growth; Enterprise is custom.",
-    vanta: "Quote-based pricing; Vanta asks buyers to request personalized pricing.",
-    drata: "Quote-based pricing; Drata presents plan tiers and routes buyers to sales.",
+    cloudanzen:
+      "Transparent public pricing for Startup and Growth; Enterprise is custom.",
+    vanta:
+      "Quote-based pricing; Vanta asks buyers to request personalized pricing.",
+    drata:
+      "Quote-based pricing; Drata presents plan tiers and routes buyers to sales.",
   },
   {
     category: "Starting price signal",
@@ -63,69 +81,100 @@ const comparisonRows = [
   },
   {
     category: "Compliance automation",
-    cloudanzen: "SOC 2, ISO 27001, ISO 42001, GDPR, HIPAA, PCI DSS, NIST CSF, custom frameworks.",
-    vanta: "Strong fit for common frameworks including SOC 2, ISO 27001, HIPAA, PCI, GDPR, and related programs.",
-    drata: "Strong multi-framework automation for SOC 2, ISO 27001, HIPAA, GDPR, CMMC, and enterprise programs.",
+    cloudanzen:
+      "SOC 2, ISO 27001, ISO 42001, GDPR, HIPAA, PCI DSS, NIST CSF, custom frameworks.",
+    vanta:
+      "Strong fit for common frameworks including SOC 2, ISO 27001, HIPAA, PCI, GDPR, and related programs.",
+    drata:
+      "Strong multi-framework automation for SOC 2, ISO 27001, HIPAA, GDPR, CMMC, and enterprise programs.",
   },
   {
     category: "AI direction",
-    cloudanzen: "AI-native workflows with bring-your-own-key support, so enterprise teams can route AI work through their approved model/provider.",
-    vanta: "Vanta Agent supports trust, questionnaires, audit prep, risk, and related workflows.",
+    cloudanzen:
+      "AI-native workflows with bring-your-own-key support, so enterprise teams can route AI work through their approved model/provider.",
+    vanta:
+      "Vanta Agent supports trust, questionnaires, audit prep, risk, and related workflows.",
     drata: "Drata positions around agentic trust and AI-powered GRC workflows.",
   },
   {
     category: "AI-native company fit",
-    cloudanzen: "Designed for AI companies selling to enterprises: AI governance, BYOK, Trust Center content, questionnaires, ISO 42001, and buyer proof in one motion.",
-    vanta: "Broad trust management platform; AI-specific workflow fit should be evaluated against the buyer's AI governance requirements.",
-    drata: "Broad compliance and GRC platform; AI-specific workflow fit should be evaluated against the buyer's AI governance requirements.",
+    cloudanzen:
+      "Designed for AI companies selling to enterprises: AI governance, BYOK, Trust Center content, questionnaires, ISO 42001, and buyer proof in one motion.",
+    vanta:
+      "Broad trust management platform; AI-specific workflow fit should be evaluated against the buyer's AI governance requirements.",
+    drata:
+      "Broad compliance and GRC platform; AI-specific workflow fit should be evaluated against the buyer's AI governance requirements.",
   },
   {
     category: "AI data control",
-    cloudanzen: "BYOK lets teams use approved OpenAI or Anthropic keys today, preserving enterprise procurement, retention, and data-governance controls.",
-    vanta: "AI data handling and retention should be reviewed in Vanta's contract, DPA, and AI terms.",
-    drata: "AI data handling and retention should be reviewed in Drata's contract, DPA, and AI terms.",
+    cloudanzen:
+      "BYOK lets teams use approved OpenAI or Anthropic keys today, preserving enterprise procurement, retention, and data-governance controls.",
+    vanta:
+      "AI data handling and retention should be reviewed in Vanta's contract, DPA, and AI terms.",
+    drata:
+      "AI data handling and retention should be reviewed in Drata's contract, DPA, and AI terms.",
   },
   {
     category: "AI Trust Pack",
-    cloudanzen: "Prepare a customer-facing package for approved models/vendors, data handling, BYOK, human oversight, AI policies, evidence, and Trust Center links.",
-    vanta: "Trust Center and questionnaire workflows are available; confirm support for an AI-specific trust package during procurement.",
-    drata: "Trust Center and questionnaire workflows are available; confirm support for an AI-specific trust package during procurement.",
+    cloudanzen:
+      "Prepare a customer-facing package for approved models/vendors, data handling, BYOK, human oversight, AI policies, evidence, and Trust Center links.",
+    vanta:
+      "Trust Center and questionnaire workflows are available; confirm support for an AI-specific trust package during procurement.",
+    drata:
+      "Trust Center and questionnaire workflows are available; confirm support for an AI-specific trust package during procurement.",
   },
   {
     category: "Enterprise deployment",
-    cloudanzen: "Standard SaaS, Dedicated Cloud single-tenant deployment, or BYOC/private deployment options for stricter isolation needs.",
-    vanta: "Enterprise deployment and data-isolation requirements should be confirmed during procurement.",
-    drata: "Enterprise deployment and workspace/isolation requirements should be confirmed during procurement.",
+    cloudanzen:
+      "Standard SaaS, Dedicated Cloud single-tenant deployment, or BYOC/private deployment options for stricter isolation needs.",
+    vanta:
+      "Enterprise deployment and data-isolation requirements should be confirmed during procurement.",
+    drata:
+      "Enterprise deployment and workspace/isolation requirements should be confirmed during procurement.",
   },
   {
     category: "Trust Center",
-    cloudanzen: "Branded trust center, resource gating, access requests, announcements, and customer trust workflows.",
-    vanta: "Mature Trust Center product with customer-facing resources and questionnaire automation options.",
-    drata: "Trust Center and SafeBase-related capabilities for customer-facing security review workflows.",
+    cloudanzen:
+      "Branded trust center, resource gating, access requests, announcements, and customer trust workflows.",
+    vanta:
+      "Mature Trust Center product with customer-facing resources and questionnaire automation options.",
+    drata:
+      "Trust Center and SafeBase-related capabilities for customer-facing security review workflows.",
   },
   {
     category: "Questionnaires",
-    cloudanzen: "AI-assisted response generation backed by evidence, policies, controls, and prior answers.",
+    cloudanzen:
+      "AI-assisted response generation backed by evidence, policies, controls, and prior answers.",
     vanta: "Questionnaire automation is a major trust workflow focus.",
-    drata: "AI questionnaire assistance is part of the broader Drata trust/GRC suite.",
+    drata:
+      "AI questionnaire assistance is part of the broader Drata trust/GRC suite.",
   },
   {
     category: "Vendor risk",
-    cloudanzen: "Vendor inventory, tiering, assessment workflows, and continuous review context.",
-    vanta: "Third-party risk capabilities are available, with agentic TPRM emphasis in recent positioning.",
-    drata: "Third-party risk management is a core module with enterprise workflow depth.",
+    cloudanzen:
+      "Vendor inventory, tiering, assessment workflows, and continuous review context.",
+    vanta:
+      "Third-party risk capabilities are available, with agentic TPRM emphasis in recent positioning.",
+    drata:
+      "Third-party risk management is a core module with enterprise workflow depth.",
   },
   {
     category: "Implementation style",
-    cloudanzen: "Designed for fast setup, direct workflows, and guided support when needed.",
-    vanta: "Structured onboarding and self-serve resources with sales-led packaging.",
-    drata: "Guided implementation and customer success are emphasized for larger programs.",
+    cloudanzen:
+      "Designed for fast setup, direct workflows, and guided support when needed.",
+    vanta:
+      "Structured onboarding and self-serve resources with sales-led packaging.",
+    drata:
+      "Guided implementation and customer success are emphasized for larger programs.",
   },
   {
     category: "Best buyer fit",
-    cloudanzen: "Teams that want modern trust operations without surprise add-on complexity.",
-    vanta: "Teams standardizing on an established category leader with a broad partner ecosystem.",
-    drata: "Teams needing a mature enterprise GRC/compliance automation platform.",
+    cloudanzen:
+      "Teams that want modern trust operations without surprise add-on complexity.",
+    vanta:
+      "Teams standardizing on an established category leader with a broad partner ecosystem.",
+    drata:
+      "Teams needing a mature enterprise GRC/compliance automation platform.",
   },
 ];
 
@@ -138,7 +187,8 @@ const costRows = [
   },
   {
     item: "Additional frameworks",
-    cloudanzen: "Startup includes 1 framework; Growth includes up to 4; Enterprise unlimited.",
+    cloudanzen:
+      "Startup includes 1 framework; Growth includes up to 4; Enterprise unlimited.",
     vanta: "Typically plan/add-on dependent; confirm in quote.",
     drata: "Typically plan/add-on dependent; confirm in quote.",
   },
@@ -151,7 +201,8 @@ const costRows = [
   {
     item: "Questionnaire automation",
     cloudanzen: "Included in Growth.",
-    vanta: "Available through Vanta Trust Center/questionnaire workflows; confirm packaging.",
+    vanta:
+      "Available through Vanta Trust Center/questionnaire workflows; confirm packaging.",
     drata: "Available as AI Questionnaire Assistance; confirm packaging.",
   },
   {
@@ -184,12 +235,22 @@ const featureGroups = [
   {
     icon: ShieldCheck,
     title: "Compliance automation",
-    points: ["Control mapping", "Evidence collection", "Framework reuse", "Continuous monitoring"],
+    points: [
+      "Control mapping",
+      "Evidence collection",
+      "Framework reuse",
+      "Continuous monitoring",
+    ],
   },
   {
     icon: FileCheck2,
     title: "Customer trust",
-    points: ["Trust Center", "Private resources", "Questionnaires", "Security review workflows"],
+    points: [
+      "Trust Center",
+      "Private resources",
+      "Questionnaires",
+      "Security review workflows",
+    ],
   },
   {
     icon: Layers3,
@@ -199,7 +260,12 @@ const featureGroups = [
   {
     icon: Sparkles,
     title: "AI assistance",
-    points: ["Answer drafts", "Evidence synthesis", "Remediation ideas", "Context-aware guidance"],
+    points: [
+      "Answer drafts",
+      "Evidence synthesis",
+      "Remediation ideas",
+      "Context-aware guidance",
+    ],
   },
 ];
 
@@ -218,9 +284,9 @@ export default function VantaDrataComparisonPage() {
                 CloudAnzen vs Vanta vs Drata
               </h1>
               <p className="max-w-2xl text-lg leading-relaxed text-slate-300">
-                Compare three trust and compliance platforms by cost clarity,
-                AI workflows, Trust Center depth, questionnaires, vendor risk,
-                and audit-readiness fit.
+                Compare three trust and compliance platforms by cost clarity, AI
+                workflows, Trust Center depth, questionnaires, vendor risk, and
+                audit-readiness fit.
               </p>
               <p className="mt-5 max-w-2xl rounded-2xl border border-white/10 bg-white/8 p-4 text-base font-semibold leading-relaxed text-white">
                 CloudAnzen is designed to deliver comparable trust and
@@ -484,7 +550,10 @@ export default function VantaDrataComparisonPage() {
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {featureGroups.map(({ icon: Icon, title, points }) => (
-              <div key={title} className="rounded-2xl border border-slate-200 p-6">
+              <div
+                key={title}
+                className="rounded-2xl border border-slate-200 p-6"
+              >
                 <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-xl bg-slate-950 text-white">
                   <Icon className="h-5 w-5" />
                 </div>
@@ -527,7 +596,10 @@ export default function VantaDrataComparisonPage() {
                     "Can we bring our own AI key and approved model provider?",
                     "Do we need standard SaaS, dedicated cloud, or BYOC deployment?",
                   ].map((item) => (
-                    <div key={item} className="flex items-start gap-3 text-sm text-slate-300">
+                    <div
+                      key={item}
+                      className="flex items-start gap-3 text-sm text-slate-300"
+                    >
                       <Minus className="mt-1 h-4 w-4 flex-shrink-0 text-emerald-300" />
                       {item}
                     </div>

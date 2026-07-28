@@ -1,18 +1,38 @@
 import type { Metadata } from "next";
+import { localeAlternates } from "@/lib/site";
 import Link from "next/link";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import {
-  ClipboardCheck, Eye, BarChart3, Building2, FileText,
-  CheckCircle2, Globe, Zap, Plug2, ArrowRight,
+  ClipboardCheck,
+  Eye,
+  BarChart3,
+  Building2,
+  FileText,
+  CheckCircle2,
+  Globe,
+  Zap,
+  Plug2,
+  ArrowRight,
 } from "lucide-react";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/platform" },
+const metaBase: Omit<Metadata, "alternates"> = {
   title: "Platform Overview",
   description:
     "CloudAnzen gives you one unified platform for compliance automation, continuous monitoring, risk management, vendor risk, and your trust center.",
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    ...metaBase,
+    alternates: localeAlternates(locale, "/platform"),
+  };
+}
 
 const modules = [
   {
@@ -89,7 +109,10 @@ export default function PlatformPage() {
         titleHighlight="compliance, risk, and trust"
         subtitle="CloudAnzen brings every GRC workflow into a single, connected system — so your controls, evidence, risks, policies, and vendor reviews stay synchronized."
         ctaPrimary={{ label: "Book a demo", href: "/demo" }}
-        ctaSecondary={{ label: "See integrations", href: "/platform/integrations" }}
+        ctaSecondary={{
+          label: "See integrations",
+          href: "/platform/integrations",
+        }}
       />
 
       <section className="relative -mt-12 pb-20 px-4 sm:px-6 lg:px-8">
@@ -117,11 +140,17 @@ export default function PlatformPage() {
                 href={href}
                 className="group flex flex-col rounded-2xl border border-slate-200 bg-white p-7 transition-all hover:-translate-y-1 hover:border-fuchsia-200 hover:shadow-xl"
               >
-                <div className={`w-11 h-11 rounded-xl border flex items-center justify-center mb-5 ${color}`}>
+                <div
+                  className={`w-11 h-11 rounded-xl border flex items-center justify-center mb-5 ${color}`}
+                >
                   <Icon className="w-5 h-5" />
                 </div>
-                <h3 className="font-semibold text-slate-900 text-lg mb-2">{title}</h3>
-                <p className="text-sm text-slate-500 leading-relaxed flex-1">{desc}</p>
+                <h3 className="font-semibold text-slate-900 text-lg mb-2">
+                  {title}
+                </h3>
+                <p className="text-sm text-slate-500 leading-relaxed flex-1">
+                  {desc}
+                </p>
                 <div className="mt-5 flex items-center gap-1.5 text-sm font-medium text-fuchsia-600 opacity-0 transition-opacity group-hover:opacity-100">
                   Explore <ArrowRight className="w-3.5 h-3.5" />
                 </div>

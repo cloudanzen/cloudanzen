@@ -1,13 +1,26 @@
 import type { Metadata } from "next";
+import { localeAlternates } from "@/lib/site";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/frameworks/custom" },
+const metaBase: Omit<Metadata, "alternates"> = {
   title: "Custom Frameworks",
-  description: "Build your own control framework in CloudAnzen. Map internal standards, customer requirements, or bespoke security programs.",
+  description:
+    "Build your own control framework in CloudAnzen. Map internal standards, customer requirements, or bespoke security programs.",
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    ...metaBase,
+    alternates: localeAlternates(locale, "/frameworks/custom"),
+  };
+}
 
 export default function CustomFrameworksPage() {
   return (
@@ -21,7 +34,9 @@ export default function CustomFrameworksPage() {
       />
       <section className="section-pad bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="heading-lg text-slate-900 mb-8 text-center">Built for complex programs</h2>
+          <h2 className="heading-lg text-slate-900 mb-8 text-center">
+            Built for complex programs
+          </h2>
           <div className="grid md:grid-cols-2 gap-6 mb-16">
             {[
               "Build frameworks from scratch or import from spreadsheets",
@@ -31,16 +46,27 @@ export default function CustomFrameworksPage() {
               "Generate custom audit reports for internal or external stakeholders",
               "Version custom frameworks as requirements evolve",
             ].map((f) => (
-              <div key={f} className="flex items-start gap-3 p-5 rounded-xl border border-slate-200 bg-slate-50">
+              <div
+                key={f}
+                className="flex items-start gap-3 p-5 rounded-xl border border-slate-200 bg-slate-50"
+              >
                 <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-emerald-500" />
                 <span className="text-slate-700 text-sm">{f}</span>
               </div>
             ))}
           </div>
           <div className="rounded-3xl bg-slate-900 p-10 text-center">
-            <h2 className="text-2xl font-bold text-white mb-4">Need a custom framework?</h2>
-            <p className="text-slate-400 mb-8">Talk to our team about your specific requirements — customer mandates, internal standards, or sector regulations.</p>
-            <Link href="/contact" className="inline-flex items-center gap-2 rounded-xl bg-slate-950 px-7 py-3.5 font-semibold text-white transition-colors hover:bg-slate-800">
+            <h2 className="text-2xl font-bold text-white mb-4">
+              Need a custom framework?
+            </h2>
+            <p className="text-slate-400 mb-8">
+              Talk to our team about your specific requirements — customer
+              mandates, internal standards, or sector regulations.
+            </p>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 rounded-xl bg-slate-950 px-7 py-3.5 font-semibold text-white transition-colors hover:bg-slate-800"
+            >
               Get in touch <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

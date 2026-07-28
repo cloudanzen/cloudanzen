@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { localeAlternates } from "@/lib/site";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import {
@@ -13,12 +14,23 @@ import {
   ShieldCheck,
 } from "lucide-react";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/solutions/ai-startups" },
+const metaBase: Omit<Metadata, "alternates"> = {
   title: "For AI Startups",
   description:
     "CloudAnzen helps AI-native companies win enterprise trust with compliance automation, AI governance, Trust Center workflows, and security questionnaire readiness.",
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    ...metaBase,
+    alternates: localeAlternates(locale, "/solutions/ai-startups"),
+  };
+}
 
 const buyerQuestions = [
   "Do you train models on customer data?",
@@ -66,7 +78,10 @@ export default function AiStartupsPage() {
         titleHighlight="for your AI product"
         subtitle="CloudAnzen helps AI-native teams prove security, compliance, AI governance, and customer data controls without hiring a full GRC team."
         ctaPrimary={{ label: "Book AI Trust Demo", href: "/demo" }}
-        ctaSecondary={{ label: "See Vanta comparison", href: "/compare/vanta-drata" }}
+        ctaSecondary={{
+          label: "See Vanta comparison",
+          href: "/compare/vanta-drata",
+        }}
       />
 
       <section className="section-pad border-b border-slate-200 bg-white">
@@ -197,7 +212,10 @@ export default function AiStartupsPage() {
                 text: "Publish or gate AI governance, data handling, and model-provider answers.",
               },
             ].map(({ icon: Icon, title, text }) => (
-              <div key={title} className="rounded-2xl border border-slate-200 p-6">
+              <div
+                key={title}
+                className="rounded-2xl border border-slate-200 p-6"
+              >
                 <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-xl bg-fuchsia-50 text-fuchsia-700">
                   <Icon className="h-5 w-5" />
                 </div>

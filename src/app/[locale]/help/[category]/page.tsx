@@ -18,6 +18,7 @@ import {
   MessageSquareText,
 } from "lucide-react";
 import { getCategory, helpCategories } from "@/lib/help-content";
+import { localeAlternates } from "@/lib/site";
 
 const iconMap: Record<string, React.ReactNode> = {
   Rocket: <Rocket className="w-7 h-7" />,
@@ -41,15 +42,15 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ category: string }>;
+  params: Promise<{ locale: string; category: string }>;
 }): Promise<Metadata> {
-  const { category: slug } = await params;
+  const { locale, category: slug } = await params;
   const category = getCategory(slug);
   if (!category) return { title: "Not Found" };
   return {
     title: `${category.title} — Help Center`,
     description: category.description,
-    alternates: { canonical: `/help/${slug}` },
+    alternates: localeAlternates(locale, `/help/${slug}`),
   };
 }
 
@@ -87,7 +88,9 @@ export default async function CategoryPage({
               {iconMap[category.icon]}
             </div>
             <div>
-              <h1 className="heading-xl mb-2 text-slate-900">{category.title}</h1>
+              <h1 className="heading-xl mb-2 text-slate-900">
+                {category.title}
+              </h1>
               <p className="max-w-2xl text-lg text-slate-600">
                 {category.description}
               </p>

@@ -1,13 +1,26 @@
 import type { Metadata } from "next";
+import { localeAlternates } from "@/lib/site";
 import PageHero from "@/components/PageHero";
 import { Link } from "@/i18n/navigation";
 import { Shield, Lock, Eye, Server, CheckCircle2 } from "lucide-react";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/security" },
+const metaBase: Omit<Metadata, "alternates"> = {
   title: "Security",
-  description: "How CloudAnzen protects your data. Our security practices, certifications, and infrastructure overview.",
+  description:
+    "How CloudAnzen protects your data. Our security practices, certifications, and infrastructure overview.",
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    ...metaBase,
+    alternates: localeAlternates(locale, "/security"),
+  };
+}
 
 const sections = [
   {
@@ -67,7 +80,10 @@ export default function SecurityPage() {
         <div className="page-shell">
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             {sections.map(({ icon: Icon, title, items }) => (
-              <div key={title} className="p-8 rounded-2xl border border-slate-200 bg-slate-50">
+              <div
+                key={title}
+                className="p-8 rounded-2xl border border-slate-200 bg-slate-50"
+              >
                 <div className="flex items-center gap-3 mb-6">
                   <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-fuchsia-100">
                     <Icon className="w-5 h-5 text-fuchsia-600" />
@@ -76,7 +92,10 @@ export default function SecurityPage() {
                 </div>
                 <ul className="space-y-3">
                   {items.map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-sm text-slate-600">
+                    <li
+                      key={item}
+                      className="flex items-start gap-3 text-sm text-slate-600"
+                    >
                       <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-500" />
                       {item}
                     </li>
@@ -87,9 +106,13 @@ export default function SecurityPage() {
           </div>
 
           <div className="rounded-3xl border border-white/80 bg-[linear-gradient(135deg,#fdf4ff_0%,#fff7ed_50%,#ecfdf5_100%)] p-10 text-center shadow-[0_18px_40px_rgba(15,23,42,0.06)]">
-            <h2 className="mb-4 text-2xl font-bold text-slate-900">Need our security documentation?</h2>
+            <h2 className="mb-4 text-2xl font-bold text-slate-900">
+              Need our security documentation?
+            </h2>
             <p className="mb-8 text-slate-600">
-              SOC 2 reports, penetration test summaries, security policies, and our completed questionnaires are available through our trust center.
+              SOC 2 reports, penetration test summaries, security policies, and
+              our completed questionnaires are available through our trust
+              center.
             </p>
             <Link
               href="/platform/trust-center"

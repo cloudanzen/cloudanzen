@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { ChevronRight, ArrowLeft, ArrowRight } from "lucide-react";
 import { getArticle, getCategory, helpCategories } from "@/lib/help-content";
 import { markdownToHtml } from "@/lib/markdown-to-html";
+import { localeAlternates } from "@/lib/site";
 
 export async function generateStaticParams() {
   return helpCategories.flatMap((cat) =>
@@ -17,15 +18,15 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ category: string; slug: string }>;
+  params: Promise<{ locale: string; category: string; slug: string }>;
 }): Promise<Metadata> {
-  const { category, slug } = await params;
+  const { locale, category, slug } = await params;
   const article = getArticle(category, slug);
   if (!article) return { title: "Not Found" };
   return {
     title: `${article.title} — Help Center`,
     description: article.summary,
-    alternates: { canonical: `/help/${category}/${slug}` },
+    alternates: localeAlternates(locale, `/help/${category}/${slug}`),
   };
 }
 

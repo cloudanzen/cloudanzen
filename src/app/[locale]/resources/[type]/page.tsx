@@ -5,6 +5,7 @@ import { ArrowRight, ChevronRight } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import { getResourceType, resourceTypes } from "@/lib/resources-content";
 import { getArticleMetasByType } from "@/lib/articles";
+import { localeAlternates } from "@/lib/site";
 
 export async function generateStaticParams() {
   return resourceTypes.map((type) => ({ type: type.slug }));
@@ -13,9 +14,9 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ type: string }>;
+  params: Promise<{ locale: string; type: string }>;
 }): Promise<Metadata> {
-  const { type } = await params;
+  const { locale, type } = await params;
   const resourceType = getResourceType(type);
 
   if (!resourceType) {
@@ -25,7 +26,7 @@ export async function generateMetadata({
   return {
     title: `${resourceType.title} Resources`,
     description: resourceType.description,
-    alternates: { canonical: `/resources/${type}` },
+    alternates: localeAlternates(locale, `/resources/${type}`),
   };
 }
 

@@ -10,8 +10,12 @@ import {
   Mail,
   ShieldCheck,
 } from "lucide-react";
-import { downloadUrl, getTrustPortal, type TrustAnnouncement } from "@/lib/trust";
-import { SITE_URL } from "@/lib/site";
+import {
+  downloadUrl,
+  getTrustPortal,
+  type TrustAnnouncement,
+} from "@/lib/trust";
+import { SITE_URL, localeAlternates } from "@/lib/site";
 import RequestAccessButton from "@/components/trust/RequestAccessButton";
 import SubscribeForm from "@/components/trust/SubscribeForm";
 
@@ -22,7 +26,7 @@ interface PageParams {
 export async function generateMetadata({
   params,
 }: PageParams): Promise<Metadata> {
-  const { orgSlug } = await params;
+  const { locale, orgSlug } = await params;
   const portal = await getTrustPortal(orgSlug);
   if (!portal) {
     return { title: "Trust Center", robots: { index: false, follow: false } };
@@ -33,7 +37,7 @@ export async function generateMetadata({
     description:
       settings.description ??
       `${settings.orgName} security, compliance, and policy documentation.`,
-    alternates: { canonical: `/trust/${orgSlug}` },
+    alternates: localeAlternates(locale, `/trust/${orgSlug}`),
     openGraph: {
       title: `${settings.orgName} Trust Center`,
       description: settings.description ?? undefined,
@@ -136,7 +140,8 @@ export default async function TrustPortalPage({ params }: PageParams) {
                 </p>
                 <p className="mt-1 text-sm text-slate-600">
                   {metricsSnapshot.completedControls} of{" "}
-                  {metricsSnapshot.controlCount} controls — {metricsSnapshot.frameworkName}
+                  {metricsSnapshot.controlCount} controls —{" "}
+                  {metricsSnapshot.frameworkName}
                 </p>
               </div>
             )}
@@ -168,7 +173,13 @@ export default async function TrustPortalPage({ params }: PageParams) {
                   publicResources.filter((d) => d.category === "CERTIFICATE")
                     .length
                 }{" "}
-                public · {requestableResources.filter((d) => d.category === "CERTIFICATE").length} requestable
+                public ·{" "}
+                {
+                  requestableResources.filter(
+                    (d) => d.category === "CERTIFICATE",
+                  ).length
+                }{" "}
+                requestable
               </p>
               <p className="mt-1 text-sm text-slate-600">
                 Latest attestations available below.
@@ -263,7 +274,8 @@ export default async function TrustPortalPage({ params }: PageParams) {
               Available on request
             </h2>
             <p className="text-sm text-slate-600 mb-4">
-              These documents require an NDA. Submit a request and the {settings.orgName} team will review.
+              These documents require an NDA. Submit a request and the{" "}
+              {settings.orgName} team will review.
             </p>
             <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
               {requestableResources.map((doc) => (
@@ -296,7 +308,8 @@ export default async function TrustPortalPage({ params }: PageParams) {
             Need something not listed?
           </h2>
           <p className="mt-2 text-slate-600 max-w-xl mx-auto">
-            Request general access to {settings.orgName}&apos;s Trust Center. We&apos;ll review and respond with a download link.
+            Request general access to {settings.orgName}&apos;s Trust Center.
+            We&apos;ll review and respond with a download link.
           </p>
           <div className="mt-5">
             <RequestAccessButton

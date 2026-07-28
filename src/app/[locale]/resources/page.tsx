@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { localeAlternates } from "@/lib/site";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import {
@@ -25,12 +26,23 @@ import {
   getLatestArticleMetas,
 } from "@/lib/articles";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/resources" },
+const metaBase: Omit<Metadata, "alternates"> = {
   title: "Resources",
   description:
     "CloudAnzen guides, checklists, templates, glossary entries, and compliance collections for modern GRC teams.",
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    ...metaBase,
+    alternates: localeAlternates(locale, "/resources"),
+  };
+}
 
 const typeIcons: Record<ResourceTypeSlug, typeof Newspaper> = {
   blog: Newspaper,
@@ -199,29 +211,31 @@ export default function ResourcesPage() {
           </div>
 
           <div className="grid gap-6 lg:grid-cols-3">
-            {aiTrustResources.map(({ icon: Icon, title, text, href, label }) => (
-              <Link
-                key={title}
-                href={href}
-                className="group rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition-all hover:border-fuchsia-200 hover:shadow-md"
-              >
-                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-950 text-white">
-                  <Icon className="h-6 w-6" />
-                </div>
-                <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
-                  {label}
-                </p>
-                <h3 className="mb-3 text-xl font-semibold text-slate-900">
-                  {title}
-                </h3>
-                <p className="mb-5 text-sm leading-relaxed text-slate-600">
-                  {text}
-                </p>
-                <span className="inline-flex items-center gap-2 text-sm font-semibold text-fuchsia-600">
-                  Open resource <ArrowRight className="h-4 w-4" />
-                </span>
-              </Link>
-            ))}
+            {aiTrustResources.map(
+              ({ icon: Icon, title, text, href, label }) => (
+                <Link
+                  key={title}
+                  href={href}
+                  className="group rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition-all hover:border-fuchsia-200 hover:shadow-md"
+                >
+                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-950 text-white">
+                    <Icon className="h-6 w-6" />
+                  </div>
+                  <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
+                    {label}
+                  </p>
+                  <h3 className="mb-3 text-xl font-semibold text-slate-900">
+                    {title}
+                  </h3>
+                  <p className="mb-5 text-sm leading-relaxed text-slate-600">
+                    {text}
+                  </p>
+                  <span className="inline-flex items-center gap-2 text-sm font-semibold text-fuchsia-600">
+                    Open resource <ArrowRight className="h-4 w-4" />
+                  </span>
+                </Link>
+              ),
+            )}
           </div>
         </div>
       </section>
@@ -275,7 +289,7 @@ export default function ResourcesPage() {
         <div className="page-shell">
           <div className="flex items-center justify-between gap-6 mb-10">
             <div>
-               <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-fuchsia-600">
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-fuchsia-600">
                 Featured
               </p>
               <h2 className="heading-lg text-slate-900">

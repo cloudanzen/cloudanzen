@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { localeAlternates } from "@/lib/site";
 import Link from "next/link";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
@@ -10,12 +11,23 @@ import {
   Zap,
 } from "lucide-react";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/platform/compliance-automation" },
+const metaBase: Omit<Metadata, "alternates"> = {
   title: "Compliance Automation",
   description:
     "Automate evidence collection, map controls to frameworks, and stay audit-ready continuously with CloudAnzen's compliance automation engine.",
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    ...metaBase,
+    alternates: localeAlternates(locale, "/platform/compliance-automation"),
+  };
+}
 
 const features = [
   {
@@ -137,7 +149,9 @@ export default function ComplianceAutomationPage() {
               },
             ].map(({ stat, label }) => (
               <div key={label}>
-                <p className="mb-2 text-4xl font-black text-fuchsia-600">{stat}</p>
+                <p className="mb-2 text-4xl font-black text-fuchsia-600">
+                  {stat}
+                </p>
                 <p className="text-sm text-slate-500">{label}</p>
               </div>
             ))}

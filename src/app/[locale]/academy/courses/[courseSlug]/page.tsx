@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Clock, ArrowLeft } from "lucide-react";
 import { getCourseSummary, listCourses } from "@/lib/academy";
-import { SITE_URL } from "@/lib/site";
+import { SITE_URL, localeAlternates } from "@/lib/site";
 
 interface PageParams {
   params: Promise<{ locale: string; courseSlug: string }>;
@@ -21,7 +21,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: PageParams): Promise<Metadata> {
-  const { courseSlug } = await params;
+  const { locale, courseSlug } = await params;
   const course = await getCourseSummary(courseSlug).catch(() => undefined);
   if (!course) {
     return { title: "Course not found" };
@@ -29,7 +29,7 @@ export async function generateMetadata({
   return {
     title: `${course.title} — CloudAnzen Academy`,
     description: course.description,
-    alternates: { canonical: `/academy/courses/${course.slug}` },
+    alternates: localeAlternates(locale, `/academy/courses/${course.slug}`),
     openGraph: {
       title: course.title,
       description: course.description,

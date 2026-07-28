@@ -6,7 +6,7 @@ import { locales } from "@/i18n/config";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WebsiteAiChatbot from "@/components/WebsiteAiChatbot";
-import { SITE_URL } from "@/lib/site";
+import { SITE_URL, localeAlternates } from "@/lib/site";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -64,14 +64,10 @@ export async function generateMetadata({
       description: t("meta.ogDescription"),
       images: ["/og-image.png"],
     },
-    alternates: {
-      canonical: locale === "ja" ? `${SITE_URL}/ja` : SITE_URL,
-      languages: {
-        en: SITE_URL,
-        ja: `${SITE_URL}/ja`,
-        "x-default": SITE_URL,
-      },
-    },
+    // Homepage default. Every non-root page defines its own locale-aware
+    // alternates via generateMetadata (which replaces this whole object under
+    // Next's shallow metadata merge), so this only governs "/" and "/ja".
+    alternates: localeAlternates(locale, ""),
     robots: {
       index: true,
       follow: true,

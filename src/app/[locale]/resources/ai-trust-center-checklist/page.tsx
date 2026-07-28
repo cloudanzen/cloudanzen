@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { localeAlternates } from "@/lib/site";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -9,12 +10,26 @@ import {
   ShieldCheck,
 } from "lucide-react";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/resources/ai-trust-center-checklist" },
+const metaBase: Omit<Metadata, "alternates"> = {
   title: "AI Trust Center Checklist",
   description:
     "A practical checklist for AI companies building Trust Center sections for AI governance, model providers, data handling, BYOK, and human oversight.",
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    ...metaBase,
+    alternates: localeAlternates(
+      locale,
+      "/resources/ai-trust-center-checklist",
+    ),
+  };
+}
 
 const checklist = [
   "AI governance overview",
@@ -44,8 +59,8 @@ export default function AiTrustCenterChecklistPage() {
                 Show buyers how your AI is governed
               </h1>
               <p className="max-w-2xl text-lg leading-relaxed text-slate-600">
-                Use this checklist to add buyer-ready AI governance, model,
-                data handling, BYOK, and human oversight sections to your Trust
+                Use this checklist to add buyer-ready AI governance, model, data
+                handling, BYOK, and human oversight sections to your Trust
                 Center.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -104,7 +119,10 @@ export default function AiTrustCenterChecklistPage() {
                 text: "Share model cards, AI governance summaries, subprocessors, and impact assessments publicly or behind access approval.",
               },
             ].map(({ icon: Icon, title, text }) => (
-              <div key={title} className="rounded-2xl border border-slate-200 p-6">
+              <div
+                key={title}
+                className="rounded-2xl border border-slate-200 p-6"
+              >
                 <Icon className="mb-5 h-8 w-8 text-fuchsia-600" />
                 <h3 className="mb-3 font-semibold text-slate-900">{title}</h3>
                 <p className="text-sm leading-relaxed text-slate-600">{text}</p>

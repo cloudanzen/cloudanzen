@@ -1,19 +1,41 @@
 import type { Metadata } from "next";
+import { localeAlternates } from "@/lib/site";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/privacy" },
+const metaBase: Omit<Metadata, "alternates"> = {
   title: "Privacy Policy",
-  description: "CloudAnzen Privacy Policy — how we collect, use, and protect your personal data.",
+  description:
+    "CloudAnzen Privacy Policy — how we collect, use, and protect your personal data.",
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    ...metaBase,
+    alternates: localeAlternates(locale, "/privacy"),
+  };
+}
 
 export default function PrivacyPage() {
   return (
     <div className="min-h-screen bg-white pt-24 pb-16">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-10">
-          <p className="text-sm text-slate-500 mb-2">Last updated: January 2025</p>
-          <h1 className="text-4xl font-bold text-slate-900 mb-4">Privacy Policy</h1>
-          <p className="text-slate-500">This Privacy Policy describes how CloudAnzen, Inc. (&quot;CloudAnzen,&quot; &quot;we,&quot; or &quot;us&quot;) collects, uses, and shares information about you when you use our services, website, and applications.</p>
+          <p className="text-sm text-slate-500 mb-2">
+            Last updated: January 2025
+          </p>
+          <h1 className="text-4xl font-bold text-slate-900 mb-4">
+            Privacy Policy
+          </h1>
+          <p className="text-slate-500">
+            This Privacy Policy describes how CloudAnzen, Inc.
+            (&quot;CloudAnzen,&quot; &quot;we,&quot; or &quot;us&quot;)
+            collects, uses, and shares information about you when you use our
+            services, website, and applications.
+          </p>
         </div>
         <div className="prose prose-slate max-w-none">
           {[
@@ -47,7 +69,9 @@ export default function PrivacyPage() {
             },
           ].map(({ heading, body }) => (
             <div key={heading} className="mb-8">
-              <h2 className="text-xl font-semibold text-slate-900 mb-3">{heading}</h2>
+              <h2 className="text-xl font-semibold text-slate-900 mb-3">
+                {heading}
+              </h2>
               <p className="text-slate-600 leading-relaxed">{body}</p>
             </div>
           ))}

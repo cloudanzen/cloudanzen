@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { localeAlternates } from "@/lib/site";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import {
@@ -13,12 +14,23 @@ import {
   ShieldAlert,
 } from "lucide-react";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/platform/ai-governance" },
+const metaBase: Omit<Metadata, "alternates"> = {
   title: "AI Governance",
   description:
     "Operate AI governance with system inventory, model and vendor register, use-case approvals, risk classification, evidence, and AI Trust Packs.",
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    ...metaBase,
+    alternates: localeAlternates(locale, "/platform/ai-governance"),
+  };
+}
 
 const modules = [
   {
@@ -71,7 +83,10 @@ export default function AiGovernancePage() {
         titleHighlight="with evidence"
         subtitle="CloudAnzen gives AI-native teams a system of record for models, vendors, use cases, risks, evidence, and customer-facing AI trust commitments."
         ctaPrimary={{ label: "Book AI Trust Demo", href: "/demo" }}
-        ctaSecondary={{ label: "For AI startups", href: "/solutions/ai-startups" }}
+        ctaSecondary={{
+          label: "For AI startups",
+          href: "/solutions/ai-startups",
+        }}
       />
 
       <section className="section-pad border-b border-slate-200 bg-white">

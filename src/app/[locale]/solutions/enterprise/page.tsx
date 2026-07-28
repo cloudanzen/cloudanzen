@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { localeAlternates } from "@/lib/site";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import {
@@ -13,12 +14,23 @@ import {
   ShieldCheck,
 } from "lucide-react";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/solutions/enterprise" },
+const metaBase: Omit<Metadata, "alternates"> = {
   title: "For Enterprises",
   description:
     "Enterprise-grade GRC that scales across multiple frameworks, entities, and business units. CloudAnzen supports SaaS, Dedicated Cloud, and private deployment models.",
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    ...metaBase,
+    alternates: localeAlternates(locale, "/solutions/enterprise"),
+  };
+}
 
 const benefits = [
   "Multi-framework support across ISO 42001, SOC 2, ISO 27001, GDPR, HIPAA, PCI DSS, NIST CSF, and custom frameworks",
@@ -51,7 +63,11 @@ const deploymentOptions = [
     name: "CloudAnzen SaaS",
     label: "Standard",
     desc: "The standard managed CloudAnzen service for teams that want fast deployment, continuous updates, and lower operational overhead.",
-    points: ["Managed by CloudAnzen", "Shared SaaS control plane", "Fastest onboarding"],
+    points: [
+      "Managed by CloudAnzen",
+      "Shared SaaS control plane",
+      "Fastest onboarding",
+    ],
   },
   {
     icon: LockKeyhole,
@@ -69,7 +85,11 @@ const deploymentOptions = [
     name: "CloudAnzen BYOC / Private Deployment",
     label: "Regulated",
     desc: "For highly regulated customers that require CloudAnzen to run in their cloud account or private network with customer-controlled infrastructure boundaries.",
-    points: ["Customer cloud or private network", "Custom network controls", "Designed for strict procurement needs"],
+    points: [
+      "Customer cloud or private network",
+      "Custom network controls",
+      "Designed for strict procurement needs",
+    ],
   },
 ];
 
@@ -100,7 +120,10 @@ export default function EnterprisePage() {
         titleHighlight="at any scale"
         subtitle="CloudAnzen supports complex organizations with multiple frameworks, entities, and business units, plus dedicated deployment options for teams with stricter data-isolation and AI-governance requirements."
         ctaPrimary={{ label: "Book a demo", href: "/demo" }}
-        ctaSecondary={{ label: "Compare vendors", href: "/compare/vanta-drata" }}
+        ctaSecondary={{
+          label: "Compare vendors",
+          href: "/compare/vanta-drata",
+        }}
       />
 
       <section className="section-pad bg-white">
@@ -163,38 +186,40 @@ export default function EnterprisePage() {
           </div>
 
           <div className="grid gap-6 lg:grid-cols-3">
-            {deploymentOptions.map(({ icon: Icon, name, label, desc, points }) => (
-              <article
-                key={name}
-                className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm"
-              >
-                <div className="mb-5 flex items-center justify-between gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-950 text-white">
-                    <Icon className="h-6 w-6" />
+            {deploymentOptions.map(
+              ({ icon: Icon, name, label, desc, points }) => (
+                <article
+                  key={name}
+                  className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm"
+                >
+                  <div className="mb-5 flex items-center justify-between gap-4">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-950 text-white">
+                      <Icon className="h-6 w-6" />
+                    </div>
+                    <span className="rounded-full bg-fuchsia-50 px-3 py-1 text-xs font-semibold text-fuchsia-700">
+                      {label}
+                    </span>
                   </div>
-                  <span className="rounded-full bg-fuchsia-50 px-3 py-1 text-xs font-semibold text-fuchsia-700">
-                    {label}
-                  </span>
-                </div>
-                <h3 className="mb-3 text-xl font-semibold text-slate-900">
-                  {name}
-                </h3>
-                <p className="mb-6 text-sm leading-relaxed text-slate-600">
-                  {desc}
-                </p>
-                <ul className="space-y-3">
-                  {points.map((point) => (
-                    <li
-                      key={point}
-                      className="flex items-start gap-2 text-sm text-slate-600"
-                    >
-                      <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-500" />
-                      {point}
-                    </li>
-                  ))}
-                </ul>
-              </article>
-            ))}
+                  <h3 className="mb-3 text-xl font-semibold text-slate-900">
+                    {name}
+                  </h3>
+                  <p className="mb-6 text-sm leading-relaxed text-slate-600">
+                    {desc}
+                  </p>
+                  <ul className="space-y-3">
+                    {points.map((point) => (
+                      <li
+                        key={point}
+                        className="flex items-start gap-2 text-sm text-slate-600"
+                      >
+                        <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-500" />
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
+                </article>
+              ),
+            )}
           </div>
         </div>
       </section>
@@ -227,7 +252,9 @@ export default function EnterprisePage() {
                     <Icon className="h-5 w-5" />
                   </div>
                   <h3 className="mb-3 font-semibold text-slate-900">{title}</h3>
-                  <p className="text-sm leading-relaxed text-slate-600">{desc}</p>
+                  <p className="text-sm leading-relaxed text-slate-600">
+                    {desc}
+                  </p>
                 </div>
               ))}
             </div>
