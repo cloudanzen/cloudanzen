@@ -42,6 +42,9 @@ const BACKEND_URL =
  * `cloudanzen.com/trust/<slug>` to keep working for direct deep links.
  */
 const FIRST_PARTY_HOSTS = new Set([
+  'cloudanzen.ai',
+  'www.cloudanzen.ai',
+  'trust.cloudanzen.ai',
   'cloudanzen.com',
   'www.cloudanzen.com',
   'trust.cloudanzen.com',
@@ -81,7 +84,12 @@ export default async function middleware(
 ): Promise<NextResponse> {
   const host = normaliseHost(request.headers.get('host'));
 
-  if (host && !FIRST_PARTY_HOSTS.has(host) && !host.endsWith('.cloudanzen.com')) {
+  if (
+    host &&
+    !FIRST_PARTY_HOSTS.has(host) &&
+    !host.endsWith('.cloudanzen.ai') &&
+    !host.endsWith('.cloudanzen.com')
+  ) {
     const orgSlug = await lookupCustomDomain(host);
     if (orgSlug) {
       // Internal rewrite so the existing [orgSlug] page renders. URL bar
