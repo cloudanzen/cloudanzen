@@ -6,7 +6,7 @@ collection: "iso-27001"
 category: "ISO 27001"
 readTime: "7 min read"
 tags: ["ISO 27001","SoA","Templates"]
-sortOrder: 35
+sortOrder: 36
 author: "sarah-jenkins"
 ---
 ## What the SoA should capture

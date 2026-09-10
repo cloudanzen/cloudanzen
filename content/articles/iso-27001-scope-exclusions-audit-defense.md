@@ -6,7 +6,7 @@ collection: "iso-27001"
 category: "ISO 27001"
 readTime: "6 min read"
 tags: ["ISO 27001","ISMS scope","audit prep","SaaS compliance","scope exclusions"]
-sortOrder: 117
+sortOrder: 118
 publishedAt: "2026-08-07"
 author: "sarah-jenkins"
 ---

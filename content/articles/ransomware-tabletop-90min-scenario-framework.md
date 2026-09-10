@@ -6,7 +6,7 @@ collection: null
 category: "Incident response"
 readTime: "6 min read"
 tags: ["ransomware","tabletop exercise","incident response","legal","IR planning"]
-sortOrder: 97
+sortOrder: 98
 publishedAt: "2026-07-17"
 author: "maria-rodriguez"
 ---

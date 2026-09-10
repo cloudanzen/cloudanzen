@@ -6,7 +6,7 @@ collection: "iso-27001"
 category: "ISO 27001"
 readTime: "5 min read"
 tags: ["ISO 27001","SoA","audit readiness","ISMS","control selection"]
-sortOrder: 98
+sortOrder: 99
 publishedAt: "2026-07-18"
 author: "sarah-jenkins"
 ---

@@ -5,7 +5,7 @@ type: "blog"
 collection: "hipaa"
 category: "HIPAA"
 tags: ["HIPAA","Incident response","Healthtech"]
-sortOrder: 40
+sortOrder: 41
 author: "maria-rodriguez"
 readTime: "7 min read"
 ---

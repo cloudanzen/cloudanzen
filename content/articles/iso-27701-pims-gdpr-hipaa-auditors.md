@@ -6,7 +6,7 @@ collection: "iso-27001"
 category: "ISO 27001"
 readTime: "5 min read"
 tags: ["ISO 27701","PIMS","GDPR","HIPAA","privacy management"]
-sortOrder: 112
+sortOrder: 113
 publishedAt: "2026-08-01"
 author: "sarah-jenkins"
 ---

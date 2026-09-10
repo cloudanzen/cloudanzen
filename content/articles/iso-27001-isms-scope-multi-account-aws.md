@@ -6,7 +6,7 @@ collection: "iso-27001"
 category: "ISO 27001"
 readTime: "5 min read"
 tags: ["ISO 27001","ISMS","AWS","multi-account","scoping"]
-sortOrder: 125
+sortOrder: 126
 publishedAt: "2026-08-16"
 author: "sarah-jenkins"
 ---

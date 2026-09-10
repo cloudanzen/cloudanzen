@@ -6,7 +6,7 @@ collection: null
 category: "Access control"
 readTime: "6 min read"
 tags: ["SOC 2","CC6","AI agents","access control","audit readiness"]
-sortOrder: 104
+sortOrder: 105
 publishedAt: "2026-07-24"
 author: "chloe-thompson"
 ---

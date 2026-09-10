@@ -6,7 +6,7 @@ collection: null
 category: "Incident response"
 readTime: "6 min read"
 tags: ["ransomware","initial access","identity security","NIST CSF","incident response"]
-sortOrder: 110
+sortOrder: 111
 publishedAt: "2026-07-30"
 author: "maria-rodriguez"
 ---

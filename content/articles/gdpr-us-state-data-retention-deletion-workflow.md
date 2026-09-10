@@ -6,7 +6,7 @@ collection: null
 category: "Data protection"
 readTime: "5 min read"
 tags: ["data retention","GDPR","US privacy laws","data deletion","privacy compliance"]
-sortOrder: 114
+sortOrder: 115
 publishedAt: "2026-08-03"
 author: "sarah-jenkins"
 ---

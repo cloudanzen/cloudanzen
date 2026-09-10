@@ -6,7 +6,7 @@ collection: "gdpr"
 category: "GDPR"
 readTime: "6 min read"
 tags: ["GDPR","data transfers","TIA","Schrems II","DPA enforcement"]
-sortOrder: 102
+sortOrder: 103
 publishedAt: "2026-07-22"
 author: "sarah-jenkins"
 ---

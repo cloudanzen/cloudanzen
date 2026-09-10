@@ -6,7 +6,7 @@ collection: null
 category: "Access control"
 readTime: "5 min read"
 tags: ["Zero Trust","ISO 27001","Annex A","access control","audit evidence"]
-sortOrder: 101
+sortOrder: 102
 publishedAt: "2026-07-21"
 author: "sarah-jenkins"
 ---

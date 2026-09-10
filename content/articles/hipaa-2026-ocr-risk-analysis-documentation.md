@@ -6,7 +6,7 @@ collection: null
 category: "HIPAA"
 readTime: "5 min read"
 tags: ["HIPAA","risk analysis","OCR","Security Rule","2026"]
-sortOrder: 96
+sortOrder: 97
 publishedAt: "2026-07-16"
 author: "james-peterson"
 ---

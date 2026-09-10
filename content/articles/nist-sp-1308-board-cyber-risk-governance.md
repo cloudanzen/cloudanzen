@@ -6,7 +6,7 @@ collection: null
 category: "Risk management"
 readTime: "5 min read"
 tags: ["NIST SP 1308","board governance","enterprise risk","CSF 2.0","GRC"]
-sortOrder: 113
+sortOrder: 114
 publishedAt: "2026-08-02"
 author: "james-peterson"
 ---

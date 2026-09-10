@@ -6,7 +6,7 @@ collection: "soc-2"
 category: "SOC 2"
 readTime: "6 min read"
 tags: ["Kubernetes","SOC 2","cluster hardening","Trust Services Criteria","K8s compliance"]
-sortOrder: 1
+sortOrder: 2
 publishedAt: "2026-07-02"
 author: "chloe-thompson"
 ---

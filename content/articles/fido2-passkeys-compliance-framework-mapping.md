@@ -6,7 +6,7 @@ collection: null
 category: "Access control"
 readTime: "6 min read"
 tags: ["FIDO2","passkeys","phishing-resistant MFA","access control","compliance evidence"]
-sortOrder: 94
+sortOrder: 95
 publishedAt: "2026-07-14"
 author: "sarah-jenkins"
 ---

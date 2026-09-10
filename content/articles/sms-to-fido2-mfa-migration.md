@@ -6,7 +6,7 @@ collection: null
 category: "Access control"
 readTime: "6 min read"
 tags: ["phishing-resistant MFA","FIDO2","access control","SOC 2","ISO 27001"]
-sortOrder: 106
+sortOrder: 107
 publishedAt: "2026-07-26"
 author: "sarah-jenkins"
 ---

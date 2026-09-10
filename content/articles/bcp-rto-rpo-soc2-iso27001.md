@@ -6,7 +6,7 @@ collection: null
 category: "Risk management"
 readTime: "5 min read"
 tags: ["business continuity","RTO RPO","SOC 2","ISO 27001","BCP"]
-sortOrder: 81
+sortOrder: 82
 publishedAt: "2026-06-27"
 author: "james-peterson"
 ---

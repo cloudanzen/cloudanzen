@@ -6,7 +6,7 @@ collection: "soc-2"
 category: "SOC 2"
 readTime: "6 min read"
 tags: ["SOC 2","SIEM","logging","audit evidence","continuous monitoring"]
-sortOrder: 109
+sortOrder: 110
 publishedAt: "2026-07-29"
 author: "chloe-thompson"
 ---

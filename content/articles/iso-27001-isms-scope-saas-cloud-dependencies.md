@@ -6,7 +6,7 @@ collection: "iso-27001"
 category: "ISO 27001"
 readTime: "5 min read"
 tags: ["ISO 27001","ISMS","SaaS","cloud compliance","audit readiness"]
-sortOrder: 118
+sortOrder: 119
 publishedAt: "2026-08-09"
 author: "sarah-jenkins"
 ---
