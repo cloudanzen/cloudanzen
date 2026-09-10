@@ -6,7 +6,7 @@ collection: null
 category: "Vendor risk"
 readTime: "6 min read"
 tags: ["vendor DPA","state privacy laws","vendor risk","data privacy","service providers"]
-sortOrder: 99
+sortOrder: 100
 publishedAt: "2026-07-19"
 author: "maria-rodriguez"
 ---

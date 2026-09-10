@@ -6,7 +6,7 @@ collection: null
 category: "Vendor risk"
 readTime: "6 min read"
 tags: ["vendor risk","TPRM","ISO 27001","NIST CSF 2.0","DORA"]
-sortOrder: 105
+sortOrder: 106
 publishedAt: "2026-07-25"
 author: "maria-rodriguez"
 ---

@@ -6,7 +6,7 @@ collection: null
 category: "NIST CSF"
 readTime: "5 min read"
 tags: ["NIST CSF 2.0","board reporting","executive communication","security maturity","GRC"]
-sortOrder: 91
+sortOrder: 92
 publishedAt: "2026-07-11"
 author: "james-peterson"
 ---

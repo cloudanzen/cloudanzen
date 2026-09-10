@@ -6,7 +6,7 @@ collection: "iso-27001"
 category: "ISO 27001"
 readTime: "6 min read"
 tags: ["ISO 27001","ISMS scope","Series B","India SaaS","Stage 1 audit"]
-sortOrder: 141
+sortOrder: 142
 publishedAt: "2026-09-05"
 author: "sarah-jenkins"
 ---

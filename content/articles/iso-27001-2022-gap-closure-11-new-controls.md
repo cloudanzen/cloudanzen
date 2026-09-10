@@ -6,7 +6,7 @@ collection: "iso-27001"
 category: "ISO 27001"
 readTime: "5 min read"
 tags: ["ISO 27001","Annex A","gap closure","surveillance audit"]
-sortOrder: 100
+sortOrder: 101
 publishedAt: "2026-07-20"
 author: "sarah-jenkins"
 ---

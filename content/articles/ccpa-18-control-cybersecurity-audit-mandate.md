@@ -6,7 +6,7 @@ collection: null
 category: "Audit strategy"
 readTime: "5 min read"
 tags: ["CCPA","cybersecurity audit","CPPA","California privacy","compliance audit"]
-sortOrder: 107
+sortOrder: 108
 publishedAt: "2026-07-27"
 author: "sarah-jenkins"
 ---

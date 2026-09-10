@@ -6,7 +6,7 @@ collection: "iso-27001"
 category: "ISO 27001"
 readTime: "5 min read"
 tags: ["ISO 27001","ISMS scope","on-premise deployment","hybrid SaaS","Stage 1 audit"]
-sortOrder: 142
+sortOrder: 143
 publishedAt: "2026-09-06"
 author: "sarah-jenkins"
 ---

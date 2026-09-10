@@ -6,7 +6,7 @@ collection: "iso-27001"
 category: "ISO 27001"
 readTime: "5 min read"
 tags: ["ISO 27001","ISMS scope","offshore teams","SaaS compliance","audit readiness"]
-sortOrder: 123
+sortOrder: 124
 publishedAt: "2026-08-14"
 author: "sarah-jenkins"
 ---

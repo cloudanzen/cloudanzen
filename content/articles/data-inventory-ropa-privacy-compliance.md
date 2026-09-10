@@ -6,7 +6,7 @@ collection: null
 category: "Data protection"
 readTime: "7 min read"
 tags: ["data inventory","RoPA","GDPR","CCPA","privacy compliance"]
-sortOrder: 93
+sortOrder: 94
 publishedAt: "2026-07-13"
 author: "sarah-jenkins"
 ---

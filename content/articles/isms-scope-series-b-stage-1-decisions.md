@@ -6,7 +6,7 @@ collection: "iso-27001"
 category: "ISO 27001"
 readTime: "5 min read"
 tags: ["ISO 27001 scope","ISMS boundaries","Series B SaaS","stage 1 audit","SaaS compliance"]
-sortOrder: 138
+sortOrder: 139
 publishedAt: "2026-09-02"
 author: "sarah-jenkins"
 ---

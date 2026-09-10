@@ -6,7 +6,7 @@ collection: "iso-27001"
 category: "ISO 27001"
 readTime: "5 min read"
 tags: ["ISO 27001","ISMS","enterprise sales","vendor security review","Series B"]
-sortOrder: 122
+sortOrder: 123
 publishedAt: "2026-08-13"
 author: "sarah-jenkins"
 ---

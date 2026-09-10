@@ -6,7 +6,7 @@ collection: "iso-27001"
 category: "ISO 27001"
 readTime: "6 min read"
 tags: ["ISO 27001","ISMS","scope statement","cloud-native","audit readiness"]
-sortOrder: 119
+sortOrder: 120
 publishedAt: "2026-08-10"
 author: "sarah-jenkins"
 ---

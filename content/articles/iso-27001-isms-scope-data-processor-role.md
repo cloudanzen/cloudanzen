@@ -6,7 +6,7 @@ collection: "iso-27001"
 category: "ISO 27001"
 readTime: "5 min read"
 tags: ["ISO 27001","ISMS scope","data processor","enterprise compliance","Stage 1 audit"]
-sortOrder: 145
+sortOrder: 146
 publishedAt: "2026-09-09"
 author: "sarah-jenkins"
 ---

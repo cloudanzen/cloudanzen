@@ -6,7 +6,7 @@ collection: "iso-27001"
 category: "ISO 27001"
 readTime: "6 min read"
 tags: ["ISO 27001 scope","ISMS budget","compliance costs","Series B SaaS","audit prep"]
-sortOrder: 133
+sortOrder: 134
 publishedAt: "2026-08-27"
 author: "sarah-jenkins"
 ---

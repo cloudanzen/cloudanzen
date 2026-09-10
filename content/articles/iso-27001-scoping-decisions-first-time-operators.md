@@ -6,7 +6,7 @@ collection: "iso-27001"
 category: "ISO 27001"
 readTime: "6 min read"
 tags: ["ISO 27001","ISMS scoping","cloud-native SaaS","scope exclusions","audit readiness"]
-sortOrder: 121
+sortOrder: 122
 publishedAt: "2026-08-12"
 author: "sarah-jenkins"
 ---

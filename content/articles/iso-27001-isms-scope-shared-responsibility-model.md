@@ -6,7 +6,7 @@ collection: "iso-27001"
 category: "ISO 27001"
 readTime: "6 min read"
 tags: ["ISO 27001","ISMS scope","shared responsibility","SaaS compliance","Series B"]
-sortOrder: 130
+sortOrder: 131
 publishedAt: "2026-08-23"
 author: "sarah-jenkins"
 ---

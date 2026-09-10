@@ -6,7 +6,7 @@ collection: null
 category: "NIST CSF"
 readTime: "6 min read"
 tags: ["NIST CSF 2.0","Govern function","policy map","roles responsibilities","assessment readiness"]
-sortOrder: 103
+sortOrder: 104
 publishedAt: "2026-07-23"
 author: "maria-rodriguez"
 ---
