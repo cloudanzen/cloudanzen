@@ -6,7 +6,7 @@ collection: "iso-27001"
 category: "ISO 27001"
 readTime: "6 min read"
 tags: ["ISO 27001","ISMS scope","SaaS toolchain","supplier management"]
-sortOrder: 155
+sortOrder: 156
 publishedAt: "2026-09-19"
 author: "sarah-jenkins"
 ---

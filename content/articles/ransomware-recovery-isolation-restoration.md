@@ -6,7 +6,7 @@ collection: null
 category: "Incident response"
 readTime: "6 min read"
 tags: ["incident response","ransomware","IR playbook","business continuity"]
-sortOrder: 3
+sortOrder: 4
 publishedAt: "2026-06-28"
 author: "maria-rodriguez"
 ---

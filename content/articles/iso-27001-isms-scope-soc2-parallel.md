@@ -6,7 +6,7 @@ collection: "iso-27001"
 category: "ISO 27001"
 readTime: "6 min read"
 tags: ["ISO 27001 scope","SOC 2","ISMS boundaries","dual framework"]
-sortOrder: 168
+sortOrder: 169
 publishedAt: "2026-10-03"
 author: "sarah-jenkins"
 ---

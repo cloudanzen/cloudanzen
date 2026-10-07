@@ -6,7 +6,7 @@ collection: null
 category: "Risk management"
 readTime: "5 min read"
 tags: ["threat intelligence","risk management","lean security","CISA KEV","SOC operations"]
-sortOrder: 85
+sortOrder: 86
 publishedAt: "2026-07-01"
 author: "james-peterson"
 ---

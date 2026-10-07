@@ -6,7 +6,7 @@ collection: null
 category: "Risk management"
 readTime: "6 min read"
 tags: ["cyber insurance","underwriting","risk management","MFA","EDR"]
-sortOrder: 109
+sortOrder: 110
 publishedAt: "2026-07-28"
 author: "james-peterson"
 ---

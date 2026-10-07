@@ -6,7 +6,7 @@ collection: "soc-2"
 category: "SOC 2"
 readTime: "5 min read"
 tags: ["SOC 2","AI systems","ML controls","audit evidence"]
-sortOrder: 96
+sortOrder: 97
 publishedAt: "2026-07-15"
 author: "chloe-thompson"
 ---

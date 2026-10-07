@@ -6,7 +6,7 @@ collection: "iso-27001"
 category: "ISO 27001"
 readTime: "6 min read"
 tags: ["ISO 27001","ISMS scope","multi-region SaaS","audit readiness"]
-sortOrder: 132
+sortOrder: 133
 publishedAt: "2026-08-25"
 author: "sarah-jenkins"
 ---

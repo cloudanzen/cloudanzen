@@ -6,7 +6,7 @@ collection: null
 category: "GRC operations"
 readTime: "7 min read"
 tags: ["package repository attacks","CI/CD security","credential theft","supply chain","npm PyPI"]
-sortOrder: 116
+sortOrder: 117
 publishedAt: "2026-08-04"
 author: "james-peterson"
 ---

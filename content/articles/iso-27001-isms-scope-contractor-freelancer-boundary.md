@@ -6,7 +6,7 @@ collection: "iso-27001"
 category: "ISO 27001"
 readTime: "7 min read"
 tags: ["ISO 27001","ISMS scope","contractor compliance","access control","audit readiness"]
-sortOrder: 159
+sortOrder: 160
 publishedAt: "2026-09-23"
 author: "sarah-jenkins"
 ---

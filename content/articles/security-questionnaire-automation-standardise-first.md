@@ -6,7 +6,7 @@ collection: null
 category: "Questionnaires"
 readTime: "6 min read"
 tags: ["security questionnaire","questionnaire automation","vendor due diligence","GRC operations"]
-sortOrder: 164
+sortOrder: 165
 publishedAt: "2026-09-28"
 author: "chloe-thompson"
 ---

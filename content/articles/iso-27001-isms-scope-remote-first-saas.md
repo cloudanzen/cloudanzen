@@ -6,7 +6,7 @@ collection: "iso-27001"
 category: "ISO 27001"
 readTime: "5 min read"
 tags: ["ISO 27001","ISMS scope","remote work","SaaS compliance","Series B"]
-sortOrder: 157
+sortOrder: 158
 publishedAt: "2026-09-21"
 author: "sarah-jenkins"
 ---

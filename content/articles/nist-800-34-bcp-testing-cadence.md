@@ -6,7 +6,7 @@ collection: null
 category: "Risk management"
 readTime: "6 min read"
 tags: ["NIST 800-34","business continuity","BCP testing","contingency planning","risk management"]
-sortOrder: 91
+sortOrder: 92
 publishedAt: "2026-07-09"
 author: "james-peterson"
 ---
