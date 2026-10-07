@@ -6,7 +6,7 @@ collection: null
 category: "HIPAA"
 readTime: "6 min read"
 tags: ["HIPAA","business associates","ePHI","mandatory controls","BAA"]
-sortOrder: 112
+sortOrder: 113
 publishedAt: "2026-07-31"
 author: "james-peterson"
 ---

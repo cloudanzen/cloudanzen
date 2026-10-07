@@ -6,7 +6,7 @@ collection: null
 category: "MDM"
 readTime: "6 min read"
 tags: ["MDM","device inventory","endpoint compliance","asset management","audit evidence"]
-sortOrder: 130
+sortOrder: 131
 publishedAt: "2026-08-22"
 author: "sarah-jenkins"
 ---

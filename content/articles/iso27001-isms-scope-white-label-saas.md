@@ -6,7 +6,7 @@ collection: "iso-27001"
 category: "ISO 27001"
 readTime: "6 min read"
 tags: ["ISO 27001","ISMS scope","white-label SaaS","SaaS compliance","certification"]
-sortOrder: 167
+sortOrder: 168
 publishedAt: "2026-10-02"
 author: "sarah-jenkins"
 ---

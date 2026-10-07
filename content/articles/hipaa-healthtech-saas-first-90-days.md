@@ -6,7 +6,7 @@ collection: null
 category: "HIPAA"
 readTime: "6 min read"
 tags: ["HIPAA compliance","health-tech SaaS","BAA","risk analysis","PHI"]
-sortOrder: 148
+sortOrder: 149
 publishedAt: "2026-09-12"
 author: "sarah-jenkins"
 ---

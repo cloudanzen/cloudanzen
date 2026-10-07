@@ -6,7 +6,7 @@ collection: null
 category: "Audit strategy"
 readTime: "5 min read"
 tags: ["audit evidence","evidence collection","SOC 2","ISO 27001","audit readiness"]
-sortOrder: 117
+sortOrder: 118
 publishedAt: "2026-08-05"
 author: "sarah-jenkins"
 ---

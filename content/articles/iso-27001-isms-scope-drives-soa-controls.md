@@ -6,7 +6,7 @@ collection: "iso-27001"
 category: "ISO 27001"
 readTime: "5 min read"
 tags: ["ISO 27001","ISMS scope","Statement of Applicability","Annex A","SaaS compliance"]
-sortOrder: 166
+sortOrder: 167
 publishedAt: "2026-10-01"
 author: "sarah-jenkins"
 ---

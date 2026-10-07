@@ -6,7 +6,7 @@ collection: null
 category: "Policy management"
 readTime: "6 min read"
 tags: ["policy management","compliance policies","policy lifecycle","ISO 27001","audit readiness"]
-sortOrder: 121
+sortOrder: 122
 publishedAt: "2026-08-11"
 author: "sarah-jenkins"
 ---

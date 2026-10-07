@@ -6,7 +6,7 @@ collection: "soc-2"
 category: "SOC 2"
 readTime: "6 min read"
 tags: ["ci-cd","soc-2","iso-27001","devsecops","evidence"]
-sortOrder: 1
+sortOrder: 2
 publishedAt: "2026-07-07"
 author: "chloe-thompson"
 ---

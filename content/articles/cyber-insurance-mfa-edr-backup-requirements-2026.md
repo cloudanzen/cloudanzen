@@ -6,7 +6,7 @@ collection: null
 category: "Risk management"
 readTime: "5 min read"
 tags: ["cyber insurance","MFA","EDR","backup","risk management"]
-sortOrder: 93
+sortOrder: 94
 publishedAt: "2026-07-12"
 author: "james-peterson"
 ---

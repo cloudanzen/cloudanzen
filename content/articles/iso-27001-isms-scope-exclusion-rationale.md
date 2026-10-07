@@ -6,7 +6,7 @@ collection: "iso-27001"
 category: "ISO 27001"
 readTime: "6 min read"
 tags: ["ISO 27001","ISMS scope","audit readiness","exclusions","compliance"]
-sortOrder: 153
+sortOrder: 154
 publishedAt: "2026-09-17"
 author: "sarah-jenkins"
 ---

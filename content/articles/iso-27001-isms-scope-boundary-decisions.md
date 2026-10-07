@@ -6,7 +6,7 @@ collection: "iso-27001"
 category: "ISO 27001"
 readTime: "5 min read"
 tags: ["ISO 27001","ISMS scope","Series B","certification","audit readiness"]
-sortOrder: 163
+sortOrder: 164
 publishedAt: "2026-09-27"
 author: "sarah-jenkins"
 ---
