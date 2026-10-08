@@ -124,7 +124,7 @@ export default function Footer() {
                 },
                 {
                   icon: Linkedin,
-                  href: "https://www.linkedin.com/company/cloudanzen/",
+                  href: "https://www.linkedin.com/company/cloudanzen-ai/home/?viewAsMember=true",
                   label: "LinkedIn",
                 },
               ].map(({ icon: Icon, href, label }) => (
